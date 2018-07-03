@@ -2,8 +2,8 @@
 
 ## Mission
 
-Most of the majors shipping carriers offer the possibility to create in-house integrated solutions
-using their API. That is quite convenient, however, the integration task can be quite consuming in term of resources (time and effort).
+Most of the majors shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
+That is quite convenient, however, the integration task can be quite consuming in term of resources (time and effort).
 
 OpenShip is an open source library with the mission of making such tasks the easiest possible for developers.
 
