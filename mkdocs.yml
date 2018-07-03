@@ -1,4 +1,7 @@
 site_name: OpenShip
+site_description: 'Shipping carriers API integration library documentation'
+site_author: 'DanielK'
+site_url: 'https://openship.xyz'
 
 pages:
     - Home: index.md
@@ -11,6 +14,7 @@ theme:
   palette:
     primary: 'purple'
     accent: 'purple'
+  favicon: 'assets/images/favicon.png'
 
 google_analytics:
   - 'UA-111378601-2'

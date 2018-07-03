@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>/</loc>
+     <loc>https://openship.xyz/</loc>
      <lastmod>2018-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/architecture/</loc>
+     <loc>https://openship.xyz/architecture/</loc>
      <lastmod>2018-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/fedex/</loc>
+     <loc>https://openship.xyz/fedex/</loc>
      <lastmod>2018-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/dhl/</loc>
+     <loc>https://openship.xyz/dhl/</loc>
      <lastmod>2018-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
