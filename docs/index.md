@@ -20,6 +20,7 @@ Openship prevent you from reinvinting the wheel and is easy to use:
 ```shell
 >>> from openship.mappers.dhl import  DHLClient, DHLProxy
 >>> from openship.domain.entities Tracking
+>>> from gds_helpers import jsonify
 >>> client = DHLClient(
     "https://xmlpi-ea.dhl.com/XMLShippingServlet",
     "YOUR_DHL_SITE_ID",
@@ -32,6 +33,187 @@ Openship prevent you from reinvinting the wheel and is easy to use:
 >>> tracking_req_xml_obj = proxy.mapper.create_tracking_request(payload)
 >>> response = proxy.get_trackings(tracking_req_xml_obj)
 >>> trackings = proxy.mapper.parse_tracking_response(response)
+>>> print(jsonify(trackings))
+'''
+[
+    [
+        {
+            "carrier": "carrier_name",
+            "events": [
+                {
+                    "code": "PU",
+                    "date": "2009-08-28",
+                    "description": "Shipment picked up",
+                    "location": "Barcelona - Spain ",
+                    "signatory": "960528602",
+                    "time": "13:26:00"
+                },
+                {
+                    "code": "PO",
+                    "date": "2009-08-28",
+                    "description": "Departing origin",
+                    "location": "Barcelona - Spain ",
+                    "signatory": " 00:00:00",
+                    "time": "19:27:00"
+                },
+                {
+                    "code": "RW",
+                    "date": "2009-08-28",
+                    "description": "",
+                    "location": "Barcelona - Spain ",
+                    "signatory": "",
+                    "time": "19:27:00"
+                },
+                {
+                    "code": "PL",
+                    "date": "2009-08-28",
+                    "description": "Processed at Location Barcelona - Spain ",
+                    "location": "Barcelona - Spain ",
+                    "signatory": "",
+                    "time": "20:39:01"
+                },
+                {
+                    "code": "AF",
+                    "date": "2009-08-28",
+                    "description": "Arrived at DHL facility in Barcelona -\n                        Spain ",
+                    "location": "Barcelona - Spain ",
+                    "signatory": "",
+                    "time": "21:17:57"
+                },
+                {
+                    "code": "DF",
+                    "date": "2009-08-28",
+                    "description": "Departed from DHL facility in Barcelona\n                        - Spain ",
+                    "location": "Barcelona - Spain ",
+                    "signatory": "",
+                    "time": "22:01:00"
+                },
+                {
+                    "code": "AF",
+                    "date": "2009-08-29",
+                    "description": "Arrived at DHL facility in Leipzig -\n                        Germany ",
+                    "location": "Leipzig - Germany ",
+                    "signatory": "",
+                    "time": "00:32:16"
+                },
+                {
+                    "code": "PL",
+                    "date": "2009-08-29",
+                    "description": "Processed at Location Leipzig - Germany ",
+                    "location": "Leipzig - Germany ",
+                    "signatory": "",
+                    "time": "01:05:03"
+                },
+                {
+                    "code": "DF",
+                    "date": "2009-08-29",
+                    "description": "Departed from DHL facility in Leipzig -\n                        Germany ",
+                    "location": "Leipzig - Germany ",
+                    "signatory": "",
+                    "time": "05:52:19"
+                },
+                {
+                    "code": "AF",
+                    "date": "2009-08-30",
+                    "description": "Arrived at DHL facility in Bergamo -\n                        Italy ",
+                    "location": "Bergamo - Italy ",
+                    "signatory": "",
+                    "time": "19:43:22"
+                },
+                {
+                    "code": "PL",
+                    "date": "2009-08-30",
+                    "description": "Processed at Location Bergamo - Italy ",
+                    "location": "Bergamo - Italy ",
+                    "signatory": "",
+                    "time": "23:30:00"
+                },
+                {
+                    "code": "DF",
+                    "date": "2009-08-31",
+                    "description": "Departed from DHL facility in Bergamo -\n                        Italy ",
+                    "location": "Bergamo - Italy ",
+                    "signatory": "",
+                    "time": "02:06:00"
+                },
+                {
+                    "code": "DF",
+                    "date": "2009-08-31",
+                    "description": "Departed from DHL facility in Milan -\n                        Italy ",
+                    "location": "Milan - Italy ",
+                    "signatory": "",
+                    "time": "06:23:00"
+                },
+                {
+                    "code": "AR",
+                    "date": "2009-08-31",
+                    "description": "Arrived at DHL facility in Milan -\n                        Italy ",
+                    "location": "Milan - Italy ",
+                    "signatory": "",
+                    "time": "08:59:00"
+                },
+                {
+                    "code": "WC",
+                    "date": "2009-08-31",
+                    "description": "With delivery courier",
+                    "location": "Milan - Italy ",
+                    "signatory": "",
+                    "time": "09:19:00"
+                },
+                {
+                    "code": "OK",
+                    "date": "2009-08-31",
+                    "description": "Shipment delivered",
+                    "location": "Milan - Italy ",
+                    "signatory": "CAMPAGNA",
+                    "time": "10:09:00"
+                }
+            ],
+            "shipment_date": "2009-08-28 13:26:00",
+            "tracking_number": "3180831640"
+        },
+        {
+            "carrier": "carrier_name",
+            "events": [
+                {
+                    "code": "PU",
+                    "date": "2009-08-26",
+                    "description": "Shipment picked up",
+                    "location": "Singapore - Singapore ",
+                    "signatory": "",
+                    "time": "10:00:00"
+                }
+            ],
+            "shipment_date": "2009-08-26 10:00:00",
+            "tracking_number": "7740842550"
+        },
+        {
+            "carrier": "carrier_name",
+            "events": [
+                {
+                    "code": "PU",
+                    "date": "2009-08-13",
+                    "description": "Shipment picked up",
+                    "location": "Hong Kong - Hong Kong ",
+                    "signatory": "",
+                    "time": "23:58:00"
+                },
+                {
+                    "code": "RW",
+                    "date": "2009-08-14",
+                    "description": "",
+                    "location": "Hong Kong - Hong Kong ",
+                    "signatory": "21.20",
+                    "time": "02:19:50"
+                }
+            ],
+            "shipment_date": "2009-08-13 23:58:00",
+            "tracking_number": "1815115363"
+        }
+    ],
+    []
+]
+'''
 ```
 
 ## Navigation
