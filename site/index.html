@@ -471,6 +471,7 @@ using their API. That is quite convenient, however, the integration task can be 
 <p>Openship prevent you from reinvinting the wheel and is easy to use:</p>
 <pre><code class="shell">&gt;&gt;&gt; from openship.mappers.dhl import  DHLClient, DHLProxy
 &gt;&gt;&gt; from openship.domain.entities Tracking
+&gt;&gt;&gt; from gds_helpers import jsonify
 &gt;&gt;&gt; client = DHLClient(
     &quot;https://xmlpi-ea.dhl.com/XMLShippingServlet&quot;,
     &quot;YOUR_DHL_SITE_ID&quot;,
@@ -483,6 +484,187 @@ using their API. That is quite convenient, however, the integration task can be 
 &gt;&gt;&gt; tracking_req_xml_obj = proxy.mapper.create_tracking_request(payload)
 &gt;&gt;&gt; response = proxy.get_trackings(tracking_req_xml_obj)
 &gt;&gt;&gt; trackings = proxy.mapper.parse_tracking_response(response)
+&gt;&gt;&gt; print(jsonify(trackings))
+'''
+[
+    [
+        {
+            &quot;carrier&quot;: &quot;carrier_name&quot;,
+            &quot;events&quot;: [
+                {
+                    &quot;code&quot;: &quot;PU&quot;,
+                    &quot;date&quot;: &quot;2009-08-28&quot;,
+                    &quot;description&quot;: &quot;Shipment picked up&quot;,
+                    &quot;location&quot;: &quot;Barcelona - Spain &quot;,
+                    &quot;signatory&quot;: &quot;960528602&quot;,
+                    &quot;time&quot;: &quot;13:26:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;PO&quot;,
+                    &quot;date&quot;: &quot;2009-08-28&quot;,
+                    &quot;description&quot;: &quot;Departing origin&quot;,
+                    &quot;location&quot;: &quot;Barcelona - Spain &quot;,
+                    &quot;signatory&quot;: &quot; 00:00:00&quot;,
+                    &quot;time&quot;: &quot;19:27:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;RW&quot;,
+                    &quot;date&quot;: &quot;2009-08-28&quot;,
+                    &quot;description&quot;: &quot;&quot;,
+                    &quot;location&quot;: &quot;Barcelona - Spain &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;19:27:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;PL&quot;,
+                    &quot;date&quot;: &quot;2009-08-28&quot;,
+                    &quot;description&quot;: &quot;Processed at Location Barcelona - Spain &quot;,
+                    &quot;location&quot;: &quot;Barcelona - Spain &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;20:39:01&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;AF&quot;,
+                    &quot;date&quot;: &quot;2009-08-28&quot;,
+                    &quot;description&quot;: &quot;Arrived at DHL facility in Barcelona -\n                        Spain &quot;,
+                    &quot;location&quot;: &quot;Barcelona - Spain &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;21:17:57&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;DF&quot;,
+                    &quot;date&quot;: &quot;2009-08-28&quot;,
+                    &quot;description&quot;: &quot;Departed from DHL facility in Barcelona\n                        - Spain &quot;,
+                    &quot;location&quot;: &quot;Barcelona - Spain &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;22:01:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;AF&quot;,
+                    &quot;date&quot;: &quot;2009-08-29&quot;,
+                    &quot;description&quot;: &quot;Arrived at DHL facility in Leipzig -\n                        Germany &quot;,
+                    &quot;location&quot;: &quot;Leipzig - Germany &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;00:32:16&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;PL&quot;,
+                    &quot;date&quot;: &quot;2009-08-29&quot;,
+                    &quot;description&quot;: &quot;Processed at Location Leipzig - Germany &quot;,
+                    &quot;location&quot;: &quot;Leipzig - Germany &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;01:05:03&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;DF&quot;,
+                    &quot;date&quot;: &quot;2009-08-29&quot;,
+                    &quot;description&quot;: &quot;Departed from DHL facility in Leipzig -\n                        Germany &quot;,
+                    &quot;location&quot;: &quot;Leipzig - Germany &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;05:52:19&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;AF&quot;,
+                    &quot;date&quot;: &quot;2009-08-30&quot;,
+                    &quot;description&quot;: &quot;Arrived at DHL facility in Bergamo -\n                        Italy &quot;,
+                    &quot;location&quot;: &quot;Bergamo - Italy &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;19:43:22&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;PL&quot;,
+                    &quot;date&quot;: &quot;2009-08-30&quot;,
+                    &quot;description&quot;: &quot;Processed at Location Bergamo - Italy &quot;,
+                    &quot;location&quot;: &quot;Bergamo - Italy &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;23:30:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;DF&quot;,
+                    &quot;date&quot;: &quot;2009-08-31&quot;,
+                    &quot;description&quot;: &quot;Departed from DHL facility in Bergamo -\n                        Italy &quot;,
+                    &quot;location&quot;: &quot;Bergamo - Italy &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;02:06:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;DF&quot;,
+                    &quot;date&quot;: &quot;2009-08-31&quot;,
+                    &quot;description&quot;: &quot;Departed from DHL facility in Milan -\n                        Italy &quot;,
+                    &quot;location&quot;: &quot;Milan - Italy &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;06:23:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;AR&quot;,
+                    &quot;date&quot;: &quot;2009-08-31&quot;,
+                    &quot;description&quot;: &quot;Arrived at DHL facility in Milan -\n                        Italy &quot;,
+                    &quot;location&quot;: &quot;Milan - Italy &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;08:59:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;WC&quot;,
+                    &quot;date&quot;: &quot;2009-08-31&quot;,
+                    &quot;description&quot;: &quot;With delivery courier&quot;,
+                    &quot;location&quot;: &quot;Milan - Italy &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;09:19:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;OK&quot;,
+                    &quot;date&quot;: &quot;2009-08-31&quot;,
+                    &quot;description&quot;: &quot;Shipment delivered&quot;,
+                    &quot;location&quot;: &quot;Milan - Italy &quot;,
+                    &quot;signatory&quot;: &quot;CAMPAGNA&quot;,
+                    &quot;time&quot;: &quot;10:09:00&quot;
+                }
+            ],
+            &quot;shipment_date&quot;: &quot;2009-08-28 13:26:00&quot;,
+            &quot;tracking_number&quot;: &quot;3180831640&quot;
+        },
+        {
+            &quot;carrier&quot;: &quot;carrier_name&quot;,
+            &quot;events&quot;: [
+                {
+                    &quot;code&quot;: &quot;PU&quot;,
+                    &quot;date&quot;: &quot;2009-08-26&quot;,
+                    &quot;description&quot;: &quot;Shipment picked up&quot;,
+                    &quot;location&quot;: &quot;Singapore - Singapore &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;10:00:00&quot;
+                }
+            ],
+            &quot;shipment_date&quot;: &quot;2009-08-26 10:00:00&quot;,
+            &quot;tracking_number&quot;: &quot;7740842550&quot;
+        },
+        {
+            &quot;carrier&quot;: &quot;carrier_name&quot;,
+            &quot;events&quot;: [
+                {
+                    &quot;code&quot;: &quot;PU&quot;,
+                    &quot;date&quot;: &quot;2009-08-13&quot;,
+                    &quot;description&quot;: &quot;Shipment picked up&quot;,
+                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;23:58:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;RW&quot;,
+                    &quot;date&quot;: &quot;2009-08-14&quot;,
+                    &quot;description&quot;: &quot;&quot;,
+                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,
+                    &quot;signatory&quot;: &quot;21.20&quot;,
+                    &quot;time&quot;: &quot;02:19:50&quot;
+                }
+            ],
+            &quot;shipment_date&quot;: &quot;2009-08-13 23:58:00&quot;,
+            &quot;tracking_number&quot;: &quot;1815115363&quot;
+        }
+    ],
+    []
+]
+'''
 </code></pre>
 
 <h2 id="navigation">Navigation</h2>
