@@ -1,0 +1,24 @@
+site_name: OpenShip
+
+pages:
+    - Home: index.md
+    - Architecture: architecture.md
+    - FedEx: fedex.md
+    - DHL: dhl.md
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'purple'
+    accent: 'purple'
+
+google_analytics:
+  - 'UA-111378601-2'
+  - 'auto'
+
+# Repository
+repo_name: 'OpenShip/openship'
+repo_url: 'https://github.com/OpenShip/openship'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 DanielK'

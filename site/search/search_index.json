@@ -1,0 +1,109 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to OpenShip\n\n\nMission\n\n\nMost of the majors shipping carriers offer the possibility to create in-house integrated solutions\nusing their API. That is quite convenient, however, the integration task can be quite consuming in term of resources (time and effort).\n\n\nOpenShip is an open source library with the mission of making such tasks the easiest possible for developers.\n\n\nTo fulfill this mission this library focus on proposing a united API in front of specifics carrier's API.\n\n\n\n\nIntegrate multiple cariers: DHL, FedEx and more with ease\n\n\nUse an intuitive unified API accross multiple cariers\n\n\nMove fast by just reading the carier API documentation\n\n\nUse your own developer credentials with negociated rates\n\n\nTested\n\n\n\n\nOpenship prevent you from reinvinting the wheel and is easy to use:\n\n\n>>> from openship.mappers.dhl import  DHLClient, DHLProxy\n>>> from openship.domain.entities Tracking\n>>> client = DHLClient(\n    \"https://xmlpi-ea.dhl.com/XMLShippingServlet\",\n    \"YOUR_DHL_SITE_ID\",\n    \"YOUR_DHL_SITE_PASSWORD\",\n    \"YOUR_DHL_ACCOUNT_NUMBER\",\n    \"CARRIER_NAME\"\n  )\n>>> proxy = DHLProxy(client)\n>>> payload = Tracking.create(tracking_numbers=[\"8346088391\"])\n>>> tracking_req_xml_obj = proxy.mapper.create_tracking_request(payload)\n>>> response = proxy.get_trackings(tracking_req_xml_obj)\n>>> trackings = proxy.mapper.parse_tracking_response(response)\n\n\n\n\nNavigation\n\n\n\n\nArchitecture\n\n\nMappers\n\n\nDHL\n\n\nFeDex\n\n\n\n\n\n\n\n\nPrerequisites\n\n\nOpenShip is compatible with Python 3 +\n\n\nInstalling\n\n\nOpenShip can be installed with \npip\n:\n\n\npip install --process-dependency-links -e git://github.com/OpenShip/openship.git#egg=openship\n\n\n\n\nAlternatively, you can grab the latest source code from \nGitHub\n:\n\n\ngit clone https://github.com/OpenShip/openship.git\ncd openship\npython setup.py install\n\n\n\n\nLicense\n\n\nThis project is licensed under the LGPL License - see the \nLICENSE.md\n file for details\n\n\nContributing\n\n\nWe happily welcome contributions, please see \nCONTRIBUTING.md\n for details.",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-openship",
+            "text": "",
+            "title": "Welcome to OpenShip"
+        },
+        {
+            "location": "/#mission",
+            "text": "Most of the majors shipping carriers offer the possibility to create in-house integrated solutions\nusing their API. That is quite convenient, however, the integration task can be quite consuming in term of resources (time and effort).  OpenShip is an open source library with the mission of making such tasks the easiest possible for developers.  To fulfill this mission this library focus on proposing a united API in front of specifics carrier's API.   Integrate multiple cariers: DHL, FedEx and more with ease  Use an intuitive unified API accross multiple cariers  Move fast by just reading the carier API documentation  Use your own developer credentials with negociated rates  Tested   Openship prevent you from reinvinting the wheel and is easy to use:  >>> from openship.mappers.dhl import  DHLClient, DHLProxy\n>>> from openship.domain.entities Tracking\n>>> client = DHLClient(\n    \"https://xmlpi-ea.dhl.com/XMLShippingServlet\",\n    \"YOUR_DHL_SITE_ID\",\n    \"YOUR_DHL_SITE_PASSWORD\",\n    \"YOUR_DHL_ACCOUNT_NUMBER\",\n    \"CARRIER_NAME\"\n  )\n>>> proxy = DHLProxy(client)\n>>> payload = Tracking.create(tracking_numbers=[\"8346088391\"])\n>>> tracking_req_xml_obj = proxy.mapper.create_tracking_request(payload)\n>>> response = proxy.get_trackings(tracking_req_xml_obj)\n>>> trackings = proxy.mapper.parse_tracking_response(response)",
+            "title": "Mission"
+        },
+        {
+            "location": "/#navigation",
+            "text": "Architecture  Mappers  DHL  FeDex",
+            "title": "Navigation"
+        },
+        {
+            "location": "/#prerequisites",
+            "text": "OpenShip is compatible with Python 3 +",
+            "title": "Prerequisites"
+        },
+        {
+            "location": "/#installing",
+            "text": "OpenShip can be installed with  pip :  pip install --process-dependency-links -e git://github.com/OpenShip/openship.git#egg=openship  Alternatively, you can grab the latest source code from  GitHub :  git clone https://github.com/OpenShip/openship.git\ncd openship\npython setup.py install",
+            "title": "Installing"
+        },
+        {
+            "location": "/#license",
+            "text": "This project is licensed under the LGPL License - see the  LICENSE.md  file for details",
+            "title": "License"
+        },
+        {
+            "location": "/#contributing",
+            "text": "We happily welcome contributions, please see  CONTRIBUTING.md  for details.",
+            "title": "Contributing"
+        },
+        {
+            "location": "/architecture/",
+            "text": "Domain\n\n\n\n\nClient\n\n\nMapper\n\n\nProxy\n\n\n\n\nEntities",
+            "title": "Architecture"
+        },
+        {
+            "location": "/architecture/#domain",
+            "text": "Client  Mapper  Proxy",
+            "title": "Domain"
+        },
+        {
+            "location": "/architecture/#entities",
+            "text": "",
+            "title": "Entities"
+        },
+        {
+            "location": "/fedex/",
+            "text": "FedEx\n\n\nClient\n\n\nConfig your client\n\n\nfrom openship.mappers.fedex import  FedexClient\n\nfedexClient = FedexClient(\n  \"https://wsbeta.fedex.com:443/web-services\",\n  \"FEDEX_USER_KEY\",\n  \"FEDEX_PASSWORD\",\n  \"FEDEX_ACCOUNT_NUMBER\",\n  \"FEDEX_METER_NUMBER\",\n  \"CARRIER_NAME\"              # optional will be FeDex by default\n)\n\n\n\n\nProxy\n\n\nUse the default proxy\n\n\nfrom openship.mappers.fedex import FedexProxy\n\nfedexProxy = FedexProxy(fedexClient)\n\n\n\n\nQuotes (Rate)\n\n\nUse FedEx mapper and proxy to get quotes\n\n\nfrom openship.domain.entities import Quote\nfrom gds_helpers import jsonify\n\n# JSON data\n\nshipper = {\"address\": {\"postal_code\":\"H3N1S4\", \"country_code\":\"CA\"}}\nrecipient = {\"address\": {\"city\":\"Lome\", \"country_code\":\"TG\"}}\nshipment_details = {\"packages\": [{\"id\":\"1\", \"height\":3, \"lenght\":10, \"width\":3,\"weight\":4.0}]}\n\n# create domain quote request object from json\npayload = Quote.create(shipper=shipper, recipient=recipient, shipment_details=shipment_details)\n\n# get Fedex quote request xml object from payload\nrequest = fedexProxy.mapper.create_quote_request(payload)\n\n# request quotes from Fedex servers using the proxy\nresponse = fedexProxy.get_quotes(request)\n\n# extract domain response from Fedex quote response\nquotes = fedexProxy.mapper.parse_quote_response(response)\n\nprint(jsonify(quotes))\n# -->\n'''\n[\n    [\n        {\n            \"base_charge\": 230.49,\n            \"carrier\": \"Fedex\",\n            \"delivery_date\": null,\n            \"delivery_time\": null,\n            \"discount\": 0.0,\n            \"duties_and_taxes\": 0.0,\n            \"extra_charges\": [\n                {\n                    \"name\": \"FUEL\",\n                    \"value\": 9.22\n                }\n            ],\n            \"pickup_date\": null,\n            \"pickup_time\": null,\n            \"service_name\": \"INTERNATIONAL_PRIORITY\",\n            \"service_type\": \"PAYOR_ACCOUNT_SHIPMENT\",\n            \"total_charge\": 239.71\n        },\n        {\n            \"base_charge\": 207.47,\n            \"carrier\": \"Fedex\",\n            \"delivery_date\": null,\n            \"delivery_time\": null,\n            \"discount\": 0.0,\n            \"duties_and_taxes\": 0.0,\n            \"extra_charges\": [\n                {\n                    \"name\": \"FUEL\",\n                    \"value\": 8.3\n                }\n            ],\n            \"pickup_date\": null,\n            \"pickup_time\": null,\n            \"service_name\": \"INTERNATIONAL_ECONOMY\",\n            \"service_type\": \"PAYOR_ACCOUNT_SHIPMENT\",\n            \"total_charge\": 215.77\n        }\n    ],\n    []\n]\n'''",
+            "title": "FedEx"
+        },
+        {
+            "location": "/fedex/#fedex",
+            "text": "",
+            "title": "FedEx"
+        },
+        {
+            "location": "/fedex/#client",
+            "text": "Config your client  from openship.mappers.fedex import  FedexClient\n\nfedexClient = FedexClient(\n  \"https://wsbeta.fedex.com:443/web-services\",\n  \"FEDEX_USER_KEY\",\n  \"FEDEX_PASSWORD\",\n  \"FEDEX_ACCOUNT_NUMBER\",\n  \"FEDEX_METER_NUMBER\",\n  \"CARRIER_NAME\"              # optional will be FeDex by default\n)",
+            "title": "Client"
+        },
+        {
+            "location": "/fedex/#proxy",
+            "text": "Use the default proxy  from openship.mappers.fedex import FedexProxy\n\nfedexProxy = FedexProxy(fedexClient)",
+            "title": "Proxy"
+        },
+        {
+            "location": "/fedex/#quotes-rate",
+            "text": "Use FedEx mapper and proxy to get quotes  from openship.domain.entities import Quote\nfrom gds_helpers import jsonify\n\n# JSON data\n\nshipper = {\"address\": {\"postal_code\":\"H3N1S4\", \"country_code\":\"CA\"}}\nrecipient = {\"address\": {\"city\":\"Lome\", \"country_code\":\"TG\"}}\nshipment_details = {\"packages\": [{\"id\":\"1\", \"height\":3, \"lenght\":10, \"width\":3,\"weight\":4.0}]}\n\n# create domain quote request object from json\npayload = Quote.create(shipper=shipper, recipient=recipient, shipment_details=shipment_details)\n\n# get Fedex quote request xml object from payload\nrequest = fedexProxy.mapper.create_quote_request(payload)\n\n# request quotes from Fedex servers using the proxy\nresponse = fedexProxy.get_quotes(request)\n\n# extract domain response from Fedex quote response\nquotes = fedexProxy.mapper.parse_quote_response(response)\n\nprint(jsonify(quotes))\n# -->\n'''\n[\n    [\n        {\n            \"base_charge\": 230.49,\n            \"carrier\": \"Fedex\",\n            \"delivery_date\": null,\n            \"delivery_time\": null,\n            \"discount\": 0.0,\n            \"duties_and_taxes\": 0.0,\n            \"extra_charges\": [\n                {\n                    \"name\": \"FUEL\",\n                    \"value\": 9.22\n                }\n            ],\n            \"pickup_date\": null,\n            \"pickup_time\": null,\n            \"service_name\": \"INTERNATIONAL_PRIORITY\",\n            \"service_type\": \"PAYOR_ACCOUNT_SHIPMENT\",\n            \"total_charge\": 239.71\n        },\n        {\n            \"base_charge\": 207.47,\n            \"carrier\": \"Fedex\",\n            \"delivery_date\": null,\n            \"delivery_time\": null,\n            \"discount\": 0.0,\n            \"duties_and_taxes\": 0.0,\n            \"extra_charges\": [\n                {\n                    \"name\": \"FUEL\",\n                    \"value\": 8.3\n                }\n            ],\n            \"pickup_date\": null,\n            \"pickup_time\": null,\n            \"service_name\": \"INTERNATIONAL_ECONOMY\",\n            \"service_type\": \"PAYOR_ACCOUNT_SHIPMENT\",\n            \"total_charge\": 215.77\n        }\n    ],\n    []\n]\n'''",
+            "title": "Quotes (Rate)"
+        },
+        {
+            "location": "/dhl/",
+            "text": "DHL\n\n\nClient\n\n\nConfigure your client\n\n\nfrom openship.mappers.dhl import  DHLClient\n\ndhlClient = DHLClient(\n  \"https://xmlpi-ea.dhl.com/XMLShippingServlet\",\n  \"YOUR_DHL_SITE_ID\",\n  \"YOUR_DHL_SITE_PASSWORD\",\n  \"YOUR_DHL_ACCOUNT_NUMBER\",\n  \"CARRIER_NAME\"              # optional will be DHL by default\n)\n\n\n\n\nProxy\n\n\nUse the default proxy\n\n\nfrom openship.mappers.dhl import DHLProxy\n\ndhlProxy = DHLProxy(dhlClient)\n\n\n\n\nOr create a proxy with a custom mapper\n\n\nfrom openship.mappers.dhl.dhl_mapper import DHLMapper\n\ndhlMapper = DHLMapper(dhlClient)\ncustomProxy = DHLProxy(dhlClient, dhlMapper)\n\n\n\n\nQuotes\n\n\nUse DHL mapper and proxy to get quotes\n\n\nfrom openship.domain.entities import Quote\nfrom gds_helpers import jsonify\n\n# json data\n\nshipper = {\"address\": {\"postal_code\":\"H3N1S4\", \"country_code\":\"CA\"}}\nrecipient = {\"address\": {\"city\":\"Lome\", \"country_code\":\"TG\"}}\nshipment_details = {\"packages\": [{\"id\":\"1\", \"height\":3, \"lenght\":10, \"width\":3,\"weight\":4.0}]}\n\n# create domain quote request payload from json\npayload = Quote.create(shipper=shipper, recipient=recipient, shipment_details=shipment_details)\n\n# get DHL quote request xml object from payload \nrequest = dhlProxy.mapper.create_quote_request(payload)\n\n#request quotes from DHL servers using the provider\nresponse = dhlProxy.get_quotes(request)\n\n#extract domain response from DHL quote response\nquotes = dhlProxy.mapper.parse_quote_response(response)\n\nprint(jsonify(quotes))\n# -->\n#[\n#    [\n#        {\n#            \"base_charge\": 195.32,\n#            \"carrier\": \"DHL\",\n#            \"discount\": 0,\n#            \"duties_and_taxes\": 0,\n#            \"extra_charges\": [\n#                {\n#                    \"name\": \"FUEL SURCHARGE\",\n#                    \"value\": 12.7\n#                }\n#            ],\n#            \"service_name\": \"EXPRESS WORLDWIDE DOC\",\n#            \"service_type\": \"TD\",\n#            \"total_charge\": 208.02\n#        }\n#    ],\n#    []--> Error list\n#]",
+            "title": "DHL"
+        },
+        {
+            "location": "/dhl/#dhl",
+            "text": "",
+            "title": "DHL"
+        },
+        {
+            "location": "/dhl/#client",
+            "text": "Configure your client  from openship.mappers.dhl import  DHLClient\n\ndhlClient = DHLClient(\n  \"https://xmlpi-ea.dhl.com/XMLShippingServlet\",\n  \"YOUR_DHL_SITE_ID\",\n  \"YOUR_DHL_SITE_PASSWORD\",\n  \"YOUR_DHL_ACCOUNT_NUMBER\",\n  \"CARRIER_NAME\"              # optional will be DHL by default\n)",
+            "title": "Client"
+        },
+        {
+            "location": "/dhl/#proxy",
+            "text": "Use the default proxy  from openship.mappers.dhl import DHLProxy\n\ndhlProxy = DHLProxy(dhlClient)  Or create a proxy with a custom mapper  from openship.mappers.dhl.dhl_mapper import DHLMapper\n\ndhlMapper = DHLMapper(dhlClient)\ncustomProxy = DHLProxy(dhlClient, dhlMapper)",
+            "title": "Proxy"
+        },
+        {
+            "location": "/dhl/#quotes",
+            "text": "Use DHL mapper and proxy to get quotes  from openship.domain.entities import Quote\nfrom gds_helpers import jsonify\n\n# json data\n\nshipper = {\"address\": {\"postal_code\":\"H3N1S4\", \"country_code\":\"CA\"}}\nrecipient = {\"address\": {\"city\":\"Lome\", \"country_code\":\"TG\"}}\nshipment_details = {\"packages\": [{\"id\":\"1\", \"height\":3, \"lenght\":10, \"width\":3,\"weight\":4.0}]}\n\n# create domain quote request payload from json\npayload = Quote.create(shipper=shipper, recipient=recipient, shipment_details=shipment_details)\n\n# get DHL quote request xml object from payload \nrequest = dhlProxy.mapper.create_quote_request(payload)\n\n#request quotes from DHL servers using the provider\nresponse = dhlProxy.get_quotes(request)\n\n#extract domain response from DHL quote response\nquotes = dhlProxy.mapper.parse_quote_response(response)\n\nprint(jsonify(quotes))\n# -->\n#[\n#    [\n#        {\n#            \"base_charge\": 195.32,\n#            \"carrier\": \"DHL\",\n#            \"discount\": 0,\n#            \"duties_and_taxes\": 0,\n#            \"extra_charges\": [\n#                {\n#                    \"name\": \"FUEL SURCHARGE\",\n#                    \"value\": 12.7\n#                }\n#            ],\n#            \"service_name\": \"EXPRESS WORLDWIDE DOC\",\n#            \"service_type\": \"TD\",\n#            \"total_charge\": 208.02\n#        }\n#    ],\n#    []--> Error list\n#]",
+            "title": "Quotes"
+        }
+    ]
+}
