@@ -457,8 +457,8 @@
                 
                 <h1 id="welcome-to-openship">Welcome to OpenShip</h1>
 <h2 id="mission">Mission</h2>
-<p>Most of the majors shipping carriers offer the possibility to create in-house integrated solutions
-using their API. That is quite convenient, however, the integration task can be quite consuming in term of resources (time and effort).</p>
+<p>Most of the majors shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
+That is quite convenient, however, the integration task can be quite consuming in term of resources (time and effort).</p>
 <p>OpenShip is an open source library with the mission of making such tasks the easiest possible for developers.</p>
 <p>To fulfill this mission this library focus on proposing a united API in front of specifics carrier's API.</p>
 <ul>
@@ -530,6 +530,7 @@ using their API. That is quite convenient, however, the integration task can be 
 <p>OpenShip is compatible with Python 3 +</p>
 <h3 id="installing">Installing</h3>
 <p>OpenShip can be installed with <a href="https://pip.pypa.io/">pip</a>:</p>
+<p>For latest dev versions</p>
 <pre><code class="shell">pip install --process-dependency-links -e git://github.com/OpenShip/openship.git#egg=openship
 </code></pre>
 
@@ -537,6 +538,10 @@ using their API. That is quite convenient, however, the integration task can be 
 <pre><code class="shell">git clone https://github.com/OpenShip/openship.git
 cd openship
 python setup.py install
+</code></pre>
+
+<p>For released version (change '@version' at your convenience)</p>
+<pre><code class="shell">pip install --process-dependency-links git+git://github.com/OpenShip/openship.git@v1.0-beta
 </code></pre>
 
 <h2 id="license">License</h2>

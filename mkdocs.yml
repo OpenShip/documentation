@@ -3,16 +3,11 @@ site_description: 'Shipping carriers API integration library documentation'
 site_author: 'DanielK'
 site_url: 'https://openship.xyz'
 
-markdown_extensions:
-    - mkdocs_tree
-    - mkdocs_autodoc
-
 pages:
     - Home: index.md
     - Architecture: architecture.md
     - FedEx: fedex.md
     - DHL: dhl.md
-    - ['tree:docs/mkdocs', 'API', 'mkdocs']
 
 theme:
   name: 'material'
