@@ -9,9 +9,9 @@ OpenShip is an open source library with the mission of making such tasks the eas
 
 To fulfill this mission this library focus on proposing a united API in front of specifics carrier's API.
 
-- Integrate multiple cariers: DHL, FedEx and more with ease
+- Integrate multiple carriers: DHL, FedEx and more with ease
 - Use an intuitive unified API accross multiple cariers
-- Move fast by just reading the carier API documentation
+- Move fast by just reading the carrier API documentation
 - Use your own developer credentials with negociated rates
 - Tested
 
