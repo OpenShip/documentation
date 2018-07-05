@@ -98,7 +98,7 @@ python setup.py install
 For released version (change '@version' at your convenience)
 
 ```shell
-pip install --process-dependency-links git+git://github.com/OpenShip/openship.git@v1.0-beta
+pip install --process-dependency-links -e git+git://github.com/OpenShip/openship.git@v1.0-beta#egg=openship
 ```
 
 ## License
