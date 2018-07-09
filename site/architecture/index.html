@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#domain" tabindex="1" class="md-skip">
+      <a href="#json-in-json-out" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -282,22 +282,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#domain" title="Domain" class="md-nav__link">
-    Domain
+  <a href="#json-in-json-out" title="Json In ... Json out" class="md-nav__link">
+    Json In ... Json out
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#entities" title="Entities" class="md-nav__link">
-    Entities
+  <a href="#incoming-flow" title="Incoming flow" class="md-nav__link">
+    Incoming flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-flow" title="Outgoing flow" class="md-nav__link">
+    Outgoing flow
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstractions" title="Abstractions" class="md-nav__link">
+    Abstractions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain" title="Domain" class="md-nav__link">
+    Domain
+  </a>
   
 </li>
       
@@ -355,22 +376,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#domain" title="Domain" class="md-nav__link">
-    Domain
+  <a href="#json-in-json-out" title="Json In ... Json out" class="md-nav__link">
+    Json In ... Json out
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#entities" title="Entities" class="md-nav__link">
-    Entities
+  <a href="#incoming-flow" title="Incoming flow" class="md-nav__link">
+    Incoming flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-flow" title="Outgoing flow" class="md-nav__link">
+    Outgoing flow
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstractions" title="Abstractions" class="md-nav__link">
+    Abstractions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain" title="Domain" class="md-nav__link">
+    Domain
+  </a>
   
 </li>
       
@@ -395,13 +437,60 @@
                 
                   <h1>Architecture</h1>
                 
-                <h2 id="domain">Domain</h2>
+                <h2 id="json-in-json-out">Json In ... Json out</h2>
+<h3 id="incoming-flow">Incoming flow</h3>
+<p><img alt="Incoming flow" src="../assets/images/architecture_1.png" /></p>
+<h3 id="outgoing-flow">Outgoing flow</h3>
+<p><img alt="Outgoing flow" src="../assets/images/architecture_2.png" /></p>
+<h2 id="abstractions">Abstractions</h2>
+<table>
+<thead>
+<tr>
+<th>Layers of abstraction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proxy</td>
+</tr>
+<tr>
+<td>Client, Mapper</td>
+</tr>
+<tr>
+<td>Generated Data Types (from Carriers specifications)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="domain">Domain</h2>
 <ul>
-<li>Client</li>
-<li>Mapper</li>
-<li>Proxy</li>
+<li>
+<p>Client</p>
+<blockquote>
+<p>The client holds all data related to specific carrier API credentials and configurations</p>
+<p>eg: FedexClient("API_URL", "FEDEX_USER_KEY", "FEDEX_PASSWORD", "FEDEX_ACCOUNT_NUMBER", "FEDEX_METER_NUMBER", "CARRIER_NAME")</p>
+</blockquote>
+</li>
+<li>
+<p>Mapper</p>
+<blockquote>
+<p>The mapper handles the conversion from OpenShip united API Data types to Carrier specific API Data types.</p>
+<p>Note: Here is the core of OpenShip extensibility and customizability. You can extend the default mapper or write your own.</p>
+<p>In most common cases the developer integrating a shipping carrier API just have to write or extend mappers</p>
+</blockquote>
+</li>
+<li>
+<p>Proxy</p>
+<blockquote>
+<p>The proxy takes care of the communication with the specific carrier open API</p>
+</blockquote>
+</li>
+<li>
+<p>Unified Data Types</p>
+<blockquote>
+<p>Defined by cross referencing common data types among multiple carriers, the unified data types constitute a meaningfull shared API interface.</p>
+</blockquote>
+</li>
 </ul>
-<h3 id="entities">Entities</h3>
                 
                   
                 
