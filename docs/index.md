@@ -3,16 +3,16 @@
 ## Mission
 
 Most of the majors shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
-That is quite convenient, however, the integration task can be quite consuming in term of resources (time and effort).
+That is quite convenient; however, the integration task can be entirely consuming in term of resources (time and effort).
 
-OpenShip is an open source library with the mission of making such tasks the easiest possible for developers.
+OpenShip is an open source library with the mission of making such tasks the most comfortable possible for developers.
 
-To fulfill this mission this library focus on proposing a united API in front of specifics carrier's API.
+To fulfill this mission this library focus on proposing a unified API in front of specifics carrier's API.
 
 - Integrate multiple carriers: DHL, FedEx and more with ease
-- Use an intuitive unified API accross multiple cariers
+- Use an intuitive, unified API across multiple carriers
 - Move fast by just reading the carrier API documentation
-- Use your own developer credentials with negociated rates
+- Use your developer credentials with negotiated rates
 - Tested
 
 Openship prevent you from reinvinting the wheel and is easy to use:
