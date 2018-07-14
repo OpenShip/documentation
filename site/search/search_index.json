@@ -42,13 +42,13 @@
         },
         {
             "location": "/architecture/",
-            "text": "Json In ... Json out\n\n\nIncoming flow\n\n\n\n\nOutgoing flow\n\n\n\n\nAbstractions\n\n\n\n\n\n\n\n\nLayers of abstraction\n\n\n\n\n\n\n\n\n\n\nProxy\n\n\n\n\n\n\nClient, Mapper\n\n\n\n\n\n\nGenerated Data Types (from Carriers specifications)\n\n\n\n\n\n\n\n\nDomain\n\n\n\n\n\n\nClient\n\n\n\n\nThe client holds all data related to specific carrier API credentials and configurations\n\n\neg: FedexClient(\"API_URL\", \"FEDEX_USER_KEY\", \"FEDEX_PASSWORD\", \"FEDEX_ACCOUNT_NUMBER\", \"FEDEX_METER_NUMBER\", \"CARRIER_NAME\")\n\n\n\n\n\n\n\n\nMapper\n\n\n\n\nThe mapper handles the conversion from OpenShip united API Data types to Carrier specific API Data types.\n\n\nNote: Here is the core of OpenShip extensibility and customizability. You can extend the default mapper or write your own.\n\n\nIn most common cases the developer integrating a shipping carrier API just have to write or extend mappers\n\n\n\n\n\n\n\n\nProxy\n\n\n\n\nThe proxy takes care of the communication with the specific carrier open API\n\n\n\n\n\n\n\n\nUnified Data Types\n\n\n\n\nDefined by cross referencing common data types among multiple carriers, the unified data types constitute a meaningfull shared API interface.",
+            "text": "JSON In ... JSON out\n\n\nIncoming flow\n\n\n\n\nOutgoing flow\n\n\n\n\nAbstractions\n\n\n\n\n\n\n\n\nLayers of abstraction\n\n\n\n\n\n\n\n\n\n\nProxy\n\n\n\n\n\n\nClient, Mapper\n\n\n\n\n\n\nGenerated Data Types (from Carriers specifications)\n\n\n\n\n\n\n\n\nDomain\n\n\n\n\n\n\nClient\n\n\n\n\nThe client holds all data related to specific carrier API credentials and configurations\n\n\neg: FedexClient(\"API_URL\", \"FEDEX_USER_KEY\", \"FEDEX_PASSWORD\", \"FEDEX_ACCOUNT_NUMBER\", \"FEDEX_METER_NUMBER\", \"CARRIER_NAME\")\n\n\n\n\n\n\n\n\nMapper\n\n\n\n\nThe mapper handles the conversion from OpenShip united API Data types to Carrier specific API Datatypes.\n\n\nNote: Here is the core of OpenShip extensibility and customizability. You can extend the default mapper or write your own.\n\n\nIn most common cases the developer integrating a shipping carrier API has to write or extend mappers\n\n\n\n\n\n\n\n\nProxy\n\n\n\n\nThe proxy takes care of the communication with the specific carrier open API\n\n\n\n\n\n\n\n\nUnified Data Types\n\n\n\n\nDefined by cross-referencing common data types among multiple carriers, the unified data types constitute a meaningful shared API interface.",
             "title": "Architecture"
         },
         {
             "location": "/architecture/#json-in-json-out",
             "text": "",
-            "title": "Json In ... Json out"
+            "title": "JSON In ... JSON out"
         },
         {
             "location": "/architecture/#incoming-flow",
@@ -67,7 +67,7 @@
         },
         {
             "location": "/architecture/#domain",
-            "text": "Client   The client holds all data related to specific carrier API credentials and configurations  eg: FedexClient(\"API_URL\", \"FEDEX_USER_KEY\", \"FEDEX_PASSWORD\", \"FEDEX_ACCOUNT_NUMBER\", \"FEDEX_METER_NUMBER\", \"CARRIER_NAME\")     Mapper   The mapper handles the conversion from OpenShip united API Data types to Carrier specific API Data types.  Note: Here is the core of OpenShip extensibility and customizability. You can extend the default mapper or write your own.  In most common cases the developer integrating a shipping carrier API just have to write or extend mappers     Proxy   The proxy takes care of the communication with the specific carrier open API     Unified Data Types   Defined by cross referencing common data types among multiple carriers, the unified data types constitute a meaningfull shared API interface.",
+            "text": "Client   The client holds all data related to specific carrier API credentials and configurations  eg: FedexClient(\"API_URL\", \"FEDEX_USER_KEY\", \"FEDEX_PASSWORD\", \"FEDEX_ACCOUNT_NUMBER\", \"FEDEX_METER_NUMBER\", \"CARRIER_NAME\")     Mapper   The mapper handles the conversion from OpenShip united API Data types to Carrier specific API Datatypes.  Note: Here is the core of OpenShip extensibility and customizability. You can extend the default mapper or write your own.  In most common cases the developer integrating a shipping carrier API has to write or extend mappers     Proxy   The proxy takes care of the communication with the specific carrier open API     Unified Data Types   Defined by cross-referencing common data types among multiple carriers, the unified data types constitute a meaningful shared API interface.",
             "title": "Domain"
         },
         {
