@@ -2,7 +2,7 @@
 
 ## Client
 
-Config your client
+Configure your client
 
 ```python
 from openship.mappers.fedex import  FedexClient
@@ -19,7 +19,7 @@ fedexClient = FedexClient(
 
 ## Proxy
 
-Use the default proxy
+Use the default proxy.
 
 ```python
 from openship.mappers.fedex import FedexProxy
@@ -29,7 +29,7 @@ fedexProxy = FedexProxy(fedexClient)
 
 ## Quotes (Rate)
 
-Use FedEx mapper and proxy to get quotes
+Use FedEx mapper and proxy to get quotes.
 
 ```python
 from openship.domain.entities import Quote

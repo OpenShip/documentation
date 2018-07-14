@@ -416,13 +416,13 @@ dhlClient = DHLClient(
 </code></pre>
 
 <h2 id="proxy">Proxy</h2>
-<p>Use the default proxy</p>
+<p>Use the default proxy.</p>
 <pre><code class="python">from openship.mappers.dhl import DHLProxy
 
 dhlProxy = DHLProxy(dhlClient)
 </code></pre>
 
-<p>Or create a proxy with a custom mapper</p>
+<p>Or create a proxy with a custom mapper.</p>
 <pre><code class="python">from openship.mappers.dhl.dhl_mapper import DHLMapper
 
 dhlMapper = DHLMapper(dhlClient)
@@ -430,11 +430,11 @@ customProxy = DHLProxy(dhlClient, dhlMapper)
 </code></pre>
 
 <h2 id="quotes">Quotes</h2>
-<p>Use DHL mapper and proxy to get quotes</p>
+<p>Use DHL mapper and proxy to get quotes.</p>
 <pre><code class="python">from openship.domain.entities import Quote
 from gds_helpers import jsonify
 
-# json data
+# JSON data
 
 shipper = {&quot;address&quot;: {&quot;postal_code&quot;:&quot;H3N1S4&quot;, &quot;country_code&quot;:&quot;CA&quot;}}
 recipient = {&quot;address&quot;: {&quot;city&quot;:&quot;Lome&quot;, &quot;country_code&quot;:&quot;TG&quot;}}

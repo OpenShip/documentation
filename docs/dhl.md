@@ -18,7 +18,7 @@ dhlClient = DHLClient(
 
 ## Proxy
 
-Use the default proxy
+Use the default proxy.
 
 ```python
 from openship.mappers.dhl import DHLProxy
@@ -26,7 +26,7 @@ from openship.mappers.dhl import DHLProxy
 dhlProxy = DHLProxy(dhlClient)
 ```
 
-Or create a proxy with a custom mapper
+Or create a proxy with a custom mapper.
 
 ```python
 from openship.mappers.dhl.dhl_mapper import DHLMapper
@@ -37,13 +37,13 @@ customProxy = DHLProxy(dhlClient, dhlMapper)
 
 ## Quotes
 
-Use DHL mapper and proxy to get quotes
+Use DHL mapper and proxy to get quotes.
 
 ```python
 from openship.domain.entities import Quote
 from gds_helpers import jsonify
 
-# json data
+# JSON data
 
 shipper = {"address": {"postal_code":"H3N1S4", "country_code":"CA"}}
 recipient = {"address": {"city":"Lome", "country_code":"TG"}}
