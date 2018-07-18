@@ -52,7 +52,9 @@ response = fedexProxy.get_quotes(request)
 
 # extract domain response from Fedex quote response
 quotes = fedexProxy.mapper.parse_quote_response(response)
+```
 
+```python
 print(jsonify(quotes))
 # -->
 '''
@@ -95,6 +97,48 @@ print(jsonify(quotes))
             "service_name": "INTERNATIONAL_ECONOMY",
             "service_type": "PAYOR_ACCOUNT_SHIPMENT",
             "total_charge": 215.77
+        }
+    ],
+    []
+]
+'''
+```
+
+## Tracking
+
+Use DHL mapper and proxy to get trackings.
+
+```python
+from openship.domain.entities Tracking
+
+payload = Tracking.create(tracking_numbers=["794887075005"])
+
+tracking_req_xml_obj = fedexProxy.mapper.create_tracking_request(payload)
+
+response = fedexProxy.get_trackings(tracking_req_xml_obj)
+
+trackings = fedexProxy.mapper.parse_tracking_response(response)
+```
+
+```python
+print(jsonify(trackings))
+'''
+[
+    [
+        {
+            "carrier": "carrier_name",
+            "events": [
+                {
+                    "code": "OC",
+                    "date": "2016-11-17 03:13:01-06:00",
+                    "description": "Shipment information sent to FedEx",
+                    "location": "CUSTOMER",
+                    "signatory": None,
+                    "time": None
+                }
+            ],
+            "shipment_date": "2016-11-17 00:00:00",
+            "tracking_number": "794887075005"
         }
     ],
     []

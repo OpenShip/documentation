@@ -318,6 +318,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tracking" title="Tracking" class="md-nav__link">
+    Tracking
+  </a>
+  
+</li>
+      
       
       
       
@@ -378,6 +385,13 @@
         <li class="md-nav__item">
   <a href="#quotes-rate" title="Quotes (Rate)" class="md-nav__link">
     Quotes (Rate)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracking" title="Tracking" class="md-nav__link">
+    Tracking
   </a>
   
 </li>
@@ -445,8 +459,9 @@ response = fedexProxy.get_quotes(request)
 
 # extract domain response from Fedex quote response
 quotes = fedexProxy.mapper.parse_quote_response(response)
+</code></pre>
 
-print(jsonify(quotes))
+<pre><code class="python">print(jsonify(quotes))
 # --&gt;
 '''
 [
@@ -488,6 +503,44 @@ print(jsonify(quotes))
             &quot;service_name&quot;: &quot;INTERNATIONAL_ECONOMY&quot;,
             &quot;service_type&quot;: &quot;PAYOR_ACCOUNT_SHIPMENT&quot;,
             &quot;total_charge&quot;: 215.77
+        }
+    ],
+    []
+]
+'''
+</code></pre>
+
+<h2 id="tracking">Tracking</h2>
+<p>Use DHL mapper and proxy to get trackings.</p>
+<pre><code class="python">from openship.domain.entities Tracking
+
+payload = Tracking.create(tracking_numbers=[&quot;794887075005&quot;])
+
+tracking_req_xml_obj = fedexProxy.mapper.create_tracking_request(payload)
+
+response = fedexProxy.get_trackings(tracking_req_xml_obj)
+
+trackings = fedexProxy.mapper.parse_tracking_response(response)
+</code></pre>
+
+<pre><code class="python">print(jsonify(trackings))
+'''
+[
+    [
+        {
+            &quot;carrier&quot;: &quot;carrier_name&quot;,
+            &quot;events&quot;: [
+                {
+                    &quot;code&quot;: &quot;OC&quot;,
+                    &quot;date&quot;: &quot;2016-11-17 03:13:01-06:00&quot;,
+                    &quot;description&quot;: &quot;Shipment information sent to FedEx&quot;,
+                    &quot;location&quot;: &quot;CUSTOMER&quot;,
+                    &quot;signatory&quot;: None,
+                    &quot;time&quot;: None
+                }
+            ],
+            &quot;shipment_date&quot;: &quot;2016-11-17 00:00:00&quot;,
+            &quot;tracking_number&quot;: &quot;794887075005&quot;
         }
     ],
     []

@@ -330,6 +330,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tracking" title="Tracking" class="md-nav__link">
+    Tracking
+  </a>
+  
+</li>
+      
       
       
       
@@ -378,6 +385,13 @@
         <li class="md-nav__item">
   <a href="#quotes" title="Quotes" class="md-nav__link">
     Quotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracking" title="Tracking" class="md-nav__link">
+    Tracking
   </a>
   
 </li>
@@ -451,29 +465,94 @@ response = dhlProxy.get_quotes(request)
 
 #extract domain response from DHL quote response
 quotes = dhlProxy.mapper.parse_quote_response(response)
+</code></pre>
 
-print(jsonify(quotes))
+<pre><code class="python">print(jsonify(quotes))
 # --&gt;
-#[
-#    [
-#        {
-#            &quot;base_charge&quot;: 195.32,
-#            &quot;carrier&quot;: &quot;DHL&quot;,
-#            &quot;discount&quot;: 0,
-#            &quot;duties_and_taxes&quot;: 0,
-#            &quot;extra_charges&quot;: [
-#                {
-#                    &quot;name&quot;: &quot;FUEL SURCHARGE&quot;,
-#                    &quot;value&quot;: 12.7
-#                }
-#            ],
-#            &quot;service_name&quot;: &quot;EXPRESS WORLDWIDE DOC&quot;,
-#            &quot;service_type&quot;: &quot;TD&quot;,
-#            &quot;total_charge&quot;: 208.02
-#        }
-#    ],
-#    []--&gt; Error list
-#]
+'''
+[
+    [
+        {
+            &quot;base_charge&quot;: 195.32,
+            &quot;carrier&quot;: &quot;DHL&quot;,
+            &quot;discount&quot;: 0,
+            &quot;duties_and_taxes&quot;: 0,
+            &quot;extra_charges&quot;: [
+                {
+                    &quot;name&quot;: &quot;FUEL SURCHARGE&quot;,
+                    &quot;value&quot;: 12.7
+                }
+            ],
+            &quot;service_name&quot;: &quot;EXPRESS WORLDWIDE DOC&quot;,
+            &quot;service_type&quot;: &quot;TD&quot;,
+            &quot;total_charge&quot;: 208.02
+        }
+    ],
+    []--&gt; Error list
+]
+'''
+</code></pre>
+
+<h2 id="tracking">Tracking</h2>
+<p>Use DHL mapper and proxy to get trackings.</p>
+<pre><code class="python">from openship.domain.entities Tracking
+
+payload = Tracking.create(tracking_numbers=[&quot;7740842550&quot;, &quot;1815115363&quot;])
+
+tracking_req_xml_obj = dhlProxy.mapper.create_tracking_request(payload)
+
+response = dhlProxy.get_trackings(tracking_req_xml_obj)
+
+trackings = dhlProxy.mapper.parse_tracking_response(response)
+</code></pre>
+
+<pre><code class="python">print(jsonify(trackings))
+# --&gt;
+'''
+[
+    [
+        {
+            &quot;carrier&quot;: &quot;carrier_name&quot;,
+            &quot;events&quot;: [
+                {
+                    &quot;code&quot;: &quot;PU&quot;,
+                    &quot;date&quot;: &quot;2009-08-26&quot;,
+                    &quot;description&quot;: &quot;Shipment picked up&quot;,
+                    &quot;location&quot;: &quot;Singapore - Singapore &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;10:00:00&quot;
+                }
+            ],
+            &quot;shipment_date&quot;: &quot;2009-08-26 10:00:00&quot;,
+            &quot;tracking_number&quot;: &quot;7740842550&quot;
+        },
+        {
+            &quot;carrier&quot;: &quot;carrier_name&quot;,
+            &quot;events&quot;: [
+                {
+                    &quot;code&quot;: &quot;PU&quot;,
+                    &quot;date&quot;: &quot;2009-08-13&quot;,
+                    &quot;description&quot;: &quot;Shipment picked up&quot;,
+                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,
+                    &quot;signatory&quot;: &quot;&quot;,
+                    &quot;time&quot;: &quot;23:58:00&quot;
+                },
+                {
+                    &quot;code&quot;: &quot;RW&quot;,
+                    &quot;date&quot;: &quot;2009-08-14&quot;,
+                    &quot;description&quot;: &quot;&quot;,
+                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,
+                    &quot;signatory&quot;: &quot;21.20&quot;,
+                    &quot;time&quot;: &quot;02:19:50&quot;
+                }
+            ],
+            &quot;shipment_date&quot;: &quot;2009-08-13 23:58:00&quot;,
+            &quot;tracking_number&quot;: &quot;1815115363&quot;
+        }
+    ],
+    []
+]
+'''
 </code></pre>
                 
                   
