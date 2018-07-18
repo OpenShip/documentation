@@ -1,5 +1,7 @@
 # Welcome to OpenShip
 
+[![Build Status](https://travis-ci.org/OpenShip/openship.svg?branch=master)](https://travis-ci.org/OpenShip/openship) [![codecov](https://codecov.io/gh/OpenShip/openship/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenShip/openship)
+
 ## Mission
 
 Most of the majors shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
