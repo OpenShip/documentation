@@ -470,53 +470,54 @@ That is quite convenient; however, the integration task can be entirely consumin
 <li>Tested</li>
 </ul>
 <p>Openship prevent you from reinvinting the wheel and is easy to use:</p>
-<pre><code class="shell">&gt;&gt;&gt; from openship.mappers.dhl import  DHLClient, DHLProxy
+<div class="codehilite"><pre><span></span>&gt;&gt;&gt; from openship.mappers.dhl import  DHLClient, DHLProxy
 &gt;&gt;&gt; from openship.domain.entities Tracking
 &gt;&gt;&gt; from gds_helpers import jsonify
-&gt;&gt;&gt; client = DHLClient(
-    &quot;https://xmlpi-ea.dhl.com/XMLShippingServlet&quot;,
-    &quot;YOUR_DHL_SITE_ID&quot;,
-    &quot;YOUR_DHL_SITE_PASSWORD&quot;,
-    &quot;YOUR_DHL_ACCOUNT_NUMBER&quot;,
-    &quot;CARRIER_NAME&quot;
-  )
-&gt;&gt;&gt; proxy = DHLProxy(client)
-&gt;&gt;&gt; payload = Tracking.create(tracking_numbers=[&quot;8346088391&quot;])
-&gt;&gt;&gt; tracking_req_xml_obj = proxy.mapper.create_tracking_request(payload)
-&gt;&gt;&gt; response = proxy.get_trackings(tracking_req_xml_obj)
-&gt;&gt;&gt; trackings = proxy.mapper.parse_tracking_response(response)
-&gt;&gt;&gt; print(jsonify(trackings))
-'''
-[
-    [
-        {
-            &quot;carrier&quot;: &quot;DHL&quot;,
-            &quot;events&quot;: [
-                {
-                    &quot;code&quot;: &quot;PU&quot;,
-                    &quot;date&quot;: &quot;2009-08-13&quot;,
-                    &quot;description&quot;: &quot;Shipment picked up&quot;,
-                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,
-                    &quot;signatory&quot;: &quot;&quot;,
-                    &quot;time&quot;: &quot;23:58:00&quot;
-                },
-                {
-                    &quot;code&quot;: &quot;RW&quot;,
-                    &quot;date&quot;: &quot;2009-08-14&quot;,
-                    &quot;description&quot;: &quot;&quot;,
-                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,
-                    &quot;signatory&quot;: &quot;21.20&quot;,
-                    &quot;time&quot;: &quot;02:19:50&quot;
-                }
-            ],
-            &quot;shipment_date&quot;: &quot;2009-08-13 23:58:00&quot;,
-            &quot;tracking_number&quot;: &quot;8346088391&quot;
-        }
-    ],
-    []
-]
-'''
-</code></pre>
+&gt;&gt;&gt; <span class="nv">client</span> <span class="o">=</span> DHLClient<span class="o">(</span>
+    <span class="s2">&quot;https://xmlpi-ea.dhl.com/XMLShippingServlet&quot;</span>,
+    <span class="s2">&quot;YOUR_DHL_SITE_ID&quot;</span>,
+    <span class="s2">&quot;YOUR_DHL_SITE_PASSWORD&quot;</span>,
+    <span class="s2">&quot;YOUR_DHL_ACCOUNT_NUMBER&quot;</span>,
+    <span class="s2">&quot;CARRIER_NAME&quot;</span>
+  <span class="o">)</span>
+&gt;&gt;&gt; <span class="nv">proxy</span> <span class="o">=</span> DHLProxy<span class="o">(</span>client<span class="o">)</span>
+&gt;&gt;&gt; <span class="nv">payload</span> <span class="o">=</span> Tracking.create<span class="o">(</span><span class="nv">tracking_numbers</span><span class="o">=[</span><span class="s2">&quot;8346088391&quot;</span><span class="o">])</span>
+&gt;&gt;&gt; <span class="nv">tracking_req_xml_obj</span> <span class="o">=</span> proxy.mapper.create_tracking_request<span class="o">(</span>payload<span class="o">)</span>
+&gt;&gt;&gt; <span class="nv">response</span> <span class="o">=</span> proxy.get_trackings<span class="o">(</span>tracking_req_xml_obj<span class="o">)</span>
+&gt;&gt;&gt; <span class="nv">trackings</span> <span class="o">=</span> proxy.mapper.parse_tracking_response<span class="o">(</span>response<span class="o">)</span>
+&gt;&gt;&gt; print<span class="o">(</span>jsonify<span class="o">(</span>trackings<span class="o">))</span>
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">[</span>
+<span class="s1">    [</span>
+<span class="s1">        {</span>
+<span class="s1">            &quot;carrier&quot;: &quot;DHL&quot;,</span>
+<span class="s1">            &quot;events&quot;: [</span>
+<span class="s1">                {</span>
+<span class="s1">                    &quot;code&quot;: &quot;PU&quot;,</span>
+<span class="s1">                    &quot;date&quot;: &quot;2009-08-13&quot;,</span>
+<span class="s1">                    &quot;description&quot;: &quot;Shipment picked up&quot;,</span>
+<span class="s1">                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,</span>
+<span class="s1">                    &quot;signatory&quot;: &quot;&quot;,</span>
+<span class="s1">                    &quot;time&quot;: &quot;23:58:00&quot;</span>
+<span class="s1">                },</span>
+<span class="s1">                {</span>
+<span class="s1">                    &quot;code&quot;: &quot;RW&quot;,</span>
+<span class="s1">                    &quot;date&quot;: &quot;2009-08-14&quot;,</span>
+<span class="s1">                    &quot;description&quot;: &quot;&quot;,</span>
+<span class="s1">                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,</span>
+<span class="s1">                    &quot;signatory&quot;: &quot;21.20&quot;,</span>
+<span class="s1">                    &quot;time&quot;: &quot;02:19:50&quot;</span>
+<span class="s1">                }</span>
+<span class="s1">            ],</span>
+<span class="s1">            &quot;shipment_date&quot;: &quot;2009-08-13 23:58:00&quot;,</span>
+<span class="s1">            &quot;tracking_number&quot;: &quot;8346088391&quot;</span>
+<span class="s1">        }</span>
+<span class="s1">    ],</span>
+<span class="s1">    []</span>
+<span class="s1">]</span>
+<span class="s1">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <h2 id="navigation">Navigation</h2>
 <ul>
@@ -532,18 +533,21 @@ That is quite convenient; however, the integration task can be entirely consumin
 <h3 id="installing">Installing</h3>
 <p>OpenShip can be installed with <a href="https://pip.pypa.io/">pip</a>:</p>
 <p>For latest dev versions</p>
-<pre><code class="shell">pip install --process-dependency-links -e git://github.com/OpenShip/openship.git#egg=openship
-</code></pre>
+<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git://github.com/OpenShip/openship.git#egg<span class="o">=</span>openship
+</pre></div>
+
 
 <p>Alternatively, you can grab the latest source code from <a href="https://github.com/OpenShip/openship">GitHub</a>:</p>
-<pre><code class="shell">git clone https://github.com/OpenShip/openship.git
-cd openship
+<div class="codehilite"><pre><span></span>git clone https://github.com/OpenShip/openship.git
+<span class="nb">cd</span> openship
 python setup.py install
-</code></pre>
+</pre></div>
+
 
 <p>For released version (change '@version' at your convenience)</p>
-<pre><code class="shell">pip install --process-dependency-links -e git+git://github.com/OpenShip/openship.git@v1.0-beta#egg=openship
-</code></pre>
+<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git+git://github.com/OpenShip/openship.git@v1.0-beta#egg<span class="o">=</span>openship
+</pre></div>
+
 
 <h2 id="license">License</h2>
 <p>This project is licensed under the LGPL License - see the <a href="https://github.com/OpenShip/openship/blob/master/LICENSE">LICENSE.md</a> file for details</p>

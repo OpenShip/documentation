@@ -418,135 +418,140 @@
                 <h1 id="fedex">FedEx</h1>
 <h2 id="client">Client</h2>
 <p>Configure your client</p>
-<pre><code class="python">from openship.mappers.fedex import  FedexClient
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.mappers.fedex</span> <span class="kn">import</span>  <span class="n">FedexClient</span>
 
-fedexClient = FedexClient(
-  &quot;https://wsbeta.fedex.com:443/web-services&quot;,
-  &quot;FEDEX_USER_KEY&quot;,
-  &quot;FEDEX_PASSWORD&quot;,
-  &quot;FEDEX_ACCOUNT_NUMBER&quot;,
-  &quot;FEDEX_METER_NUMBER&quot;,
-  &quot;CARRIER_NAME&quot;              # optional will be FeDex by default
-)
-</code></pre>
+<span class="n">fedexClient</span> <span class="o">=</span> <span class="n">FedexClient</span><span class="p">(</span>
+  <span class="s2">&quot;https://wsbeta.fedex.com:443/web-services&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;FEDEX_USER_KEY&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;FEDEX_PASSWORD&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;FEDEX_ACCOUNT_NUMBER&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;FEDEX_METER_NUMBER&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;CARRIER_NAME&quot;</span>              <span class="c1"># optional will be FeDex by default</span>
+<span class="p">)</span>
+</pre></div>
+
 
 <h2 id="proxy">Proxy</h2>
 <p>Use the default proxy.</p>
-<pre><code class="python">from openship.mappers.fedex import FedexProxy
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.mappers.fedex</span> <span class="kn">import</span> <span class="n">FedexProxy</span>
 
-fedexProxy = FedexProxy(fedexClient)
-</code></pre>
+<span class="n">fedexProxy</span> <span class="o">=</span> <span class="n">FedexProxy</span><span class="p">(</span><span class="n">fedexClient</span><span class="p">)</span>
+</pre></div>
+
 
 <h2 id="quotes-rate">Quotes (Rate)</h2>
 <p>Use FedEx mapper and proxy to get quotes.</p>
-<pre><code class="python">from openship.domain.entities import Quote
-from gds_helpers import jsonify
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.domain.entities</span> <span class="kn">import</span> <span class="n">Quote</span>
+<span class="kn">from</span> <span class="nn">gds_helpers</span> <span class="kn">import</span> <span class="n">jsonify</span>
 
-# JSON data
+<span class="c1"># JSON data</span>
 
-shipper = {&quot;address&quot;: {&quot;postal_code&quot;:&quot;H3N1S4&quot;, &quot;country_code&quot;:&quot;CA&quot;}}
-recipient = {&quot;address&quot;: {&quot;city&quot;:&quot;Lome&quot;, &quot;country_code&quot;:&quot;TG&quot;}}
-shipment_details = {&quot;packages&quot;: [{&quot;id&quot;:&quot;1&quot;, &quot;height&quot;:3, &quot;lenght&quot;:10, &quot;width&quot;:3,&quot;weight&quot;:4.0}]}
+<span class="n">shipper</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;postal_code&quot;</span><span class="p">:</span><span class="s2">&quot;H3N1S4&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span><span class="s2">&quot;CA&quot;</span><span class="p">}}</span>
+<span class="n">recipient</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;Lome&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span><span class="s2">&quot;TG&quot;</span><span class="p">}}</span>
+<span class="n">shipment_details</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;lenght&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;weight&quot;</span><span class="p">:</span><span class="mf">4.0</span><span class="p">}]}</span>
 
-# create domain quote request object from json
-payload = Quote.create(shipper=shipper, recipient=recipient, shipment_details=shipment_details)
+<span class="c1"># create domain quote request object from json</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="n">Quote</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">shipper</span><span class="o">=</span><span class="n">shipper</span><span class="p">,</span> <span class="n">recipient</span><span class="o">=</span><span class="n">recipient</span><span class="p">,</span> <span class="n">shipment_details</span><span class="o">=</span><span class="n">shipment_details</span><span class="p">)</span>
 
-# get Fedex quote request xml object from payload
-request = fedexProxy.mapper.create_quote_request(payload)
+<span class="c1"># get Fedex quote request xml object from payload</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_quote_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 
-# request quotes from Fedex servers using the proxy
-response = fedexProxy.get_quotes(request)
+<span class="c1"># request quotes from Fedex servers using the proxy</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">get_quotes</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 
-# extract domain response from Fedex quote response
-quotes = fedexProxy.mapper.parse_quote_response(response)
-</code></pre>
+<span class="c1"># extract domain response from Fedex quote response</span>
+<span class="n">quotes</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_quote_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
 
-<pre><code class="python">print(jsonify(quotes))
-# --&gt;
-'''
-[
-    [
-        {
-            &quot;base_charge&quot;: 230.49,
-            &quot;carrier&quot;: &quot;Fedex&quot;,
-            &quot;delivery_date&quot;: null,
-            &quot;delivery_time&quot;: null,
-            &quot;discount&quot;: 0.0,
-            &quot;duties_and_taxes&quot;: 0.0,
-            &quot;extra_charges&quot;: [
-                {
-                    &quot;name&quot;: &quot;FUEL&quot;,
-                    &quot;value&quot;: 9.22
-                }
-            ],
-            &quot;pickup_date&quot;: null,
-            &quot;pickup_time&quot;: null,
-            &quot;service_name&quot;: &quot;INTERNATIONAL_PRIORITY&quot;,
-            &quot;service_type&quot;: &quot;PAYOR_ACCOUNT_SHIPMENT&quot;,
-            &quot;total_charge&quot;: 239.71
-        },
-        {
-            &quot;base_charge&quot;: 207.47,
-            &quot;carrier&quot;: &quot;Fedex&quot;,
-            &quot;delivery_date&quot;: null,
-            &quot;delivery_time&quot;: null,
-            &quot;discount&quot;: 0.0,
-            &quot;duties_and_taxes&quot;: 0.0,
-            &quot;extra_charges&quot;: [
-                {
-                    &quot;name&quot;: &quot;FUEL&quot;,
-                    &quot;value&quot;: 8.3
-                }
-            ],
-            &quot;pickup_date&quot;: null,
-            &quot;pickup_time&quot;: null,
-            &quot;service_name&quot;: &quot;INTERNATIONAL_ECONOMY&quot;,
-            &quot;service_type&quot;: &quot;PAYOR_ACCOUNT_SHIPMENT&quot;,
-            &quot;total_charge&quot;: 215.77
-        }
-    ],
-    []
-]
-'''
-</code></pre>
+
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">quotes</span><span class="p">))</span>
+<span class="c1"># --&gt;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">[</span>
+<span class="sd">    [</span>
+<span class="sd">        {</span>
+<span class="sd">            &quot;base_charge&quot;: 230.49,</span>
+<span class="sd">            &quot;carrier&quot;: &quot;Fedex&quot;,</span>
+<span class="sd">            &quot;delivery_date&quot;: null,</span>
+<span class="sd">            &quot;delivery_time&quot;: null,</span>
+<span class="sd">            &quot;discount&quot;: 0.0,</span>
+<span class="sd">            &quot;duties_and_taxes&quot;: 0.0,</span>
+<span class="sd">            &quot;extra_charges&quot;: [</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;name&quot;: &quot;FUEL&quot;,</span>
+<span class="sd">                    &quot;value&quot;: 9.22</span>
+<span class="sd">                }</span>
+<span class="sd">            ],</span>
+<span class="sd">            &quot;pickup_date&quot;: null,</span>
+<span class="sd">            &quot;pickup_time&quot;: null,</span>
+<span class="sd">            &quot;service_name&quot;: &quot;INTERNATIONAL_PRIORITY&quot;,</span>
+<span class="sd">            &quot;service_type&quot;: &quot;PAYOR_ACCOUNT_SHIPMENT&quot;,</span>
+<span class="sd">            &quot;total_charge&quot;: 239.71</span>
+<span class="sd">        },</span>
+<span class="sd">        {</span>
+<span class="sd">            &quot;base_charge&quot;: 207.47,</span>
+<span class="sd">            &quot;carrier&quot;: &quot;Fedex&quot;,</span>
+<span class="sd">            &quot;delivery_date&quot;: null,</span>
+<span class="sd">            &quot;delivery_time&quot;: null,</span>
+<span class="sd">            &quot;discount&quot;: 0.0,</span>
+<span class="sd">            &quot;duties_and_taxes&quot;: 0.0,</span>
+<span class="sd">            &quot;extra_charges&quot;: [</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;name&quot;: &quot;FUEL&quot;,</span>
+<span class="sd">                    &quot;value&quot;: 8.3</span>
+<span class="sd">                }</span>
+<span class="sd">            ],</span>
+<span class="sd">            &quot;pickup_date&quot;: null,</span>
+<span class="sd">            &quot;pickup_time&quot;: null,</span>
+<span class="sd">            &quot;service_name&quot;: &quot;INTERNATIONAL_ECONOMY&quot;,</span>
+<span class="sd">            &quot;service_type&quot;: &quot;PAYOR_ACCOUNT_SHIPMENT&quot;,</span>
+<span class="sd">            &quot;total_charge&quot;: 215.77</span>
+<span class="sd">        }</span>
+<span class="sd">    ],</span>
+<span class="sd">    []</span>
+<span class="sd">]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <h2 id="tracking">Tracking</h2>
 <p>Use DHL mapper and proxy to get trackings.</p>
-<pre><code class="python">from openship.domain.entities Tracking
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.domain.entities</span> <span class="nn">Tracking</span>
 
-payload = Tracking.create(tracking_numbers=[&quot;794887075005&quot;])
+<span class="n">payload</span> <span class="o">=</span> <span class="n">Tracking</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">tracking_numbers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;794887075005&quot;</span><span class="p">])</span>
 
-tracking_req_xml_obj = fedexProxy.mapper.create_tracking_request(payload)
+<span class="n">tracking_req_xml_obj</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_tracking_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 
-response = fedexProxy.get_trackings(tracking_req_xml_obj)
+<span class="n">response</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">get_trackings</span><span class="p">(</span><span class="n">tracking_req_xml_obj</span><span class="p">)</span>
 
-trackings = fedexProxy.mapper.parse_tracking_response(response)
-</code></pre>
+<span class="n">trackings</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_tracking_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
 
-<pre><code class="python">print(jsonify(trackings))
-'''
-[
-    [
-        {
-            &quot;carrier&quot;: &quot;carrier_name&quot;,
-            &quot;events&quot;: [
-                {
-                    &quot;code&quot;: &quot;OC&quot;,
-                    &quot;date&quot;: &quot;2016-11-17 03:13:01-06:00&quot;,
-                    &quot;description&quot;: &quot;Shipment information sent to FedEx&quot;,
-                    &quot;location&quot;: &quot;CUSTOMER&quot;,
-                    &quot;signatory&quot;: None,
-                    &quot;time&quot;: None
-                }
-            ],
-            &quot;shipment_date&quot;: &quot;2016-11-17 00:00:00&quot;,
-            &quot;tracking_number&quot;: &quot;794887075005&quot;
-        }
-    ],
-    []
-]
-'''
-</code></pre>
+
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">trackings</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">[</span>
+<span class="sd">    [</span>
+<span class="sd">        {</span>
+<span class="sd">            &quot;carrier&quot;: &quot;carrier_name&quot;,</span>
+<span class="sd">            &quot;events&quot;: [</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;code&quot;: &quot;OC&quot;,</span>
+<span class="sd">                    &quot;date&quot;: &quot;2016-11-17 03:13:01-06:00&quot;,</span>
+<span class="sd">                    &quot;description&quot;: &quot;Shipment information sent to FedEx&quot;,</span>
+<span class="sd">                    &quot;location&quot;: &quot;CUSTOMER&quot;,</span>
+<span class="sd">                    &quot;signatory&quot;: None,</span>
+<span class="sd">                    &quot;time&quot;: None</span>
+<span class="sd">                }</span>
+<span class="sd">            ],</span>
+<span class="sd">            &quot;shipment_date&quot;: &quot;2016-11-17 00:00:00&quot;,</span>
+<span class="sd">            &quot;tracking_number&quot;: &quot;794887075005&quot;</span>
+<span class="sd">        }</span>
+<span class="sd">    ],</span>
+<span class="sd">    []</span>
+<span class="sd">]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
                 
                   
                 

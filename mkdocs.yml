@@ -20,6 +20,9 @@ google_analytics:
   - 'UA-111378601-2'
   - 'auto'
 
+markdown_extensions:
+  - codehilite
+
 # Repository
 repo_name: 'OpenShip/openship'
 repo_url: 'https://github.com/OpenShip/openship'
