@@ -1,12 +1,6 @@
 ## JSON In ... JSON out
 
-### Incoming flow
-
-![Incoming flow](assets/images/architecture_1.png)
-
-### Outgoing flow
-
-![Outgoing flow](assets/images/architecture_2.png)
+![Sequence Diagram](assets/images/sequence.png)
 
 ## Abstractions
 
@@ -15,6 +9,8 @@ Layers of abstraction |
 Proxy |
 Client, Mapper |
 Generated Data Types (from Carriers specifications) |
+
+![Class Diagram](assets/images/classes.png)
 
 ## Domain
 
