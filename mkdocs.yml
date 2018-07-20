@@ -8,6 +8,7 @@ pages:
     - Architecture: architecture.md
     - FedEx: fedex.md
     - DHL: dhl.md
+    - Reference: reference.md
 
 theme:
   name: 'material'
