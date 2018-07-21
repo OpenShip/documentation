@@ -1,3 +1,1 @@
-<div>
-  <iframe src="/openship/" style="width: 100%; min-height: 500px;"></iframe>
-</div>
+<a href="/openship" target="_blank">API</a>
