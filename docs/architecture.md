@@ -1,6 +1,6 @@
 ## JSON In ... JSON out
 
-![Sequence Diagram](assets/images/sequence.png)
+![Shipping API integration - Sequence Diagram](assets/images/sequence.png)
 
 ## Abstractions
 
@@ -10,7 +10,7 @@ Proxy |
 Client, Mapper |
 Generated Data Types (from Carriers specifications) |
 
-![Class Diagram](assets/images/classes.png)
+![Shipping API integration - Class Diagram](assets/images/classes.png)
 
 ## Domain
 
