@@ -1,0 +1,22 @@
+pysoap package
+==============
+
+Submodules
+----------
+
+pysoap.envelope module
+----------------------
+
+.. automodule:: pysoap.envelope
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: pysoap
+    :members:
+    :undoc-members:
+    :show-inheritance:

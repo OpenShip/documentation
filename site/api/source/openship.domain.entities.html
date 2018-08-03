@@ -1,0 +1,513 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>openship.domain.entities package &#8212; OpenShip  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="openship-domain-entities-package">
+<h1>openship.domain.entities package<a class="headerlink" href="#openship-domain-entities-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-openship.domain.entities.datatypes">
+<span id="openship-domain-entities-datatypes-module"></span><h2>openship.domain.entities.datatypes module<a class="headerlink" href="#module-openship.domain.entities.datatypes" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.Charge">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">Charge</code><span class="sig-paren">(</span><em>name: str = None</em>, <em>value: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.Charge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.TrackingEvent">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">TrackingEvent</code><span class="sig-paren">(</span><em>date: str</em>, <em>description: str</em>, <em>location: str</em>, <em>code: str</em>, <em>time: str = None</em>, <em>signatory: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.TrackingEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.address_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">address_type</code><span class="sig-paren">(</span><em>country_code</em>, <em>state_or_province</em>, <em>country_name</em>, <em>postal_code</em>, <em>city</em>, <em>address_lines</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.address_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.address_type.address_lines">
+<code class="descname">address_lines</code><a class="headerlink" href="#openship.domain.entities.datatypes.address_type.address_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.address_type.city">
+<code class="descname">city</code><a class="headerlink" href="#openship.domain.entities.datatypes.address_type.city" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.address_type.country_code">
+<code class="descname">country_code</code><a class="headerlink" href="#openship.domain.entities.datatypes.address_type.country_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.address_type.country_name">
+<code class="descname">country_name</code><a class="headerlink" href="#openship.domain.entities.datatypes.address_type.country_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.address_type.postal_code">
+<code class="descname">postal_code</code><a class="headerlink" href="#openship.domain.entities.datatypes.address_type.postal_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.address_type.state_or_province">
+<code class="descname">state_or_province</code><a class="headerlink" href="#openship.domain.entities.datatypes.address_type.state_or_province" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.charges_payment_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">charges_payment_type</code><span class="sig-paren">(</span><em>type</em>, <em>account_number</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.charges_payment_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.charges_payment_type.account_number">
+<code class="descname">account_number</code><a class="headerlink" href="#openship.domain.entities.datatypes.charges_payment_type.account_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.charges_payment_type.type">
+<code class="descname">type</code><a class="headerlink" href="#openship.domain.entities.datatypes.charges_payment_type.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.contact_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">contact_type</code><span class="sig-paren">(</span><em>company_name</em>, <em>person_name</em>, <em>phone_number</em>, <em>email_address</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.contact_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.contact_type.company_name">
+<code class="descname">company_name</code><a class="headerlink" href="#openship.domain.entities.datatypes.contact_type.company_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.contact_type.email_address">
+<code class="descname">email_address</code><a class="headerlink" href="#openship.domain.entities.datatypes.contact_type.email_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.contact_type.person_name">
+<code class="descname">person_name</code><a class="headerlink" href="#openship.domain.entities.datatypes.contact_type.person_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.contact_type.phone_number">
+<code class="descname">phone_number</code><a class="headerlink" href="#openship.domain.entities.datatypes.contact_type.phone_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.insurance_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">insurance_type</code><span class="sig-paren">(</span><em>value</em>, <em>currency</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.insurance_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.insurance_type.currency">
+<code class="descname">currency</code><a class="headerlink" href="#openship.domain.entities.datatypes.insurance_type.currency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.insurance_type.value">
+<code class="descname">value</code><a class="headerlink" href="#openship.domain.entities.datatypes.insurance_type.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.package_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">package_type</code><span class="sig-paren">(</span><em>weight</em>, <em>width</em>, <em>height</em>, <em>length</em>, <em>id</em>, <em>packaging_type</em>, <em>description</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.package_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.package_type.description">
+<code class="descname">description</code><a class="headerlink" href="#openship.domain.entities.datatypes.package_type.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.package_type.height">
+<code class="descname">height</code><a class="headerlink" href="#openship.domain.entities.datatypes.package_type.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.package_type.id">
+<code class="descname">id</code><a class="headerlink" href="#openship.domain.entities.datatypes.package_type.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.package_type.length">
+<code class="descname">length</code><a class="headerlink" href="#openship.domain.entities.datatypes.package_type.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.package_type.packaging_type">
+<code class="descname">packaging_type</code><a class="headerlink" href="#openship.domain.entities.datatypes.package_type.packaging_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.package_type.weight">
+<code class="descname">weight</code><a class="headerlink" href="#openship.domain.entities.datatypes.package_type.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.package_type.width">
+<code class="descname">width</code><a class="headerlink" href="#openship.domain.entities.datatypes.package_type.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.party">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">party</code><span class="sig-paren">(</span><em>address</em>, <em>contact</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.party" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.party.address">
+<code class="descname">address</code><a class="headerlink" href="#openship.domain.entities.datatypes.party.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.party.contact">
+<code class="descname">contact</code><a class="headerlink" href="#openship.domain.entities.datatypes.party.contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.quote_details">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">quote_details</code><span class="sig-paren">(</span><em>carrier: str</em>, <em>service_name: str</em>, <em>service_type: str</em>, <em>base_charge: float</em>, <em>duties_and_taxes: float</em>, <em>total_charge: float</em>, <em>delivery_time: str = None</em>, <em>pickup_time: str = None</em>, <em>delivery_date: str = None</em>, <em>pickup_date: str = None</em>, <em>discount: float = None</em>, <em>extra_charges: List[openship.domain.entities.datatypes.Charge] = []</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.quote_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.quote_request">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">quote_request</code><span class="sig-paren">(</span><em>shipper</em>, <em>recipient</em>, <em>shipment_details</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.quote_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.quote_request.recipient">
+<code class="descname">recipient</code><a class="headerlink" href="#openship.domain.entities.datatypes.quote_request.recipient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.quote_request.shipment_details">
+<code class="descname">shipment_details</code><a class="headerlink" href="#openship.domain.entities.datatypes.quote_request.shipment_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.quote_request.shipper">
+<code class="descname">shipper</code><a class="headerlink" href="#openship.domain.entities.datatypes.quote_request.shipper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.shipment_details">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">shipment_details</code><span class="sig-paren">(</span><em>packages</em>, <em>insurance</em>, <em>charges_payment</em>, <em>number_of_packages</em>, <em>packaging_type</em>, <em>is_dutiable</em>, <em>currency</em>, <em>total_weight</em>, <em>weight_unit</em>, <em>dimension_unit</em>, <em>payment_country_code</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.charges_payment">
+<code class="descname">charges_payment</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.charges_payment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.currency">
+<code class="descname">currency</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.currency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.dimension_unit">
+<code class="descname">dimension_unit</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.dimension_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 9</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.insurance">
+<code class="descname">insurance</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.insurance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.is_dutiable">
+<code class="descname">is_dutiable</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.is_dutiable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.number_of_packages">
+<code class="descname">number_of_packages</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.number_of_packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.packages">
+<code class="descname">packages</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.packaging_type">
+<code class="descname">packaging_type</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.packaging_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.payment_country_code">
+<code class="descname">payment_country_code</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.payment_country_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 10</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.total_weight">
+<code class="descname">total_weight</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.total_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 7</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.shipment_details.weight_unit">
+<code class="descname">weight_unit</code><a class="headerlink" href="#openship.domain.entities.datatypes.shipment_details.weight_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 8</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.tracking_details">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">tracking_details</code><span class="sig-paren">(</span><em>carrier: str</em>, <em>tracking_number: str</em>, <em>shipment_date: str = None</em>, <em>events: List[openship.domain.entities.datatypes.TrackingEvent] = []</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.tracking_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.datatypes.tracking_request">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.datatypes.</code><code class="descname">tracking_request</code><span class="sig-paren">(</span><em>tracking_numbers</em>, <em>language_code</em>, <em>level_of_details</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.datatypes.tracking_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.tracking_request.language_code">
+<code class="descname">language_code</code><a class="headerlink" href="#openship.domain.entities.datatypes.tracking_request.language_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.tracking_request.level_of_details">
+<code class="descname">level_of_details</code><a class="headerlink" href="#openship.domain.entities.datatypes.tracking_request.level_of_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="openship.domain.entities.datatypes.tracking_request.tracking_numbers">
+<code class="descname">tracking_numbers</code><a class="headerlink" href="#openship.domain.entities.datatypes.tracking_request.tracking_numbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-openship.domain.entities.definitions">
+<span id="openship-domain-entities-definitions-module"></span><h2>openship.domain.entities.definitions module<a class="headerlink" href="#module-openship.domain.entities.definitions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="openship.domain.entities.definitions.party_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.definitions.</code><code class="descname">party_type</code><a class="headerlink" href="#openship.domain.entities.definitions.party_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#openship.domain.entities.definitions.party_type" title="openship.domain.entities.definitions.party_type"><code class="xref py py-class docutils literal notranslate"><span class="pre">openship.domain.entities.definitions.party_type</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.definitions.quote_request_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.definitions.</code><code class="descname">quote_request_type</code><a class="headerlink" href="#openship.domain.entities.definitions.quote_request_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#openship.domain.entities.definitions.quote_request_type" title="openship.domain.entities.definitions.quote_request_type"><code class="xref py py-class docutils literal notranslate"><span class="pre">openship.domain.entities.definitions.quote_request_type</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.definitions.shipment_details_type">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.definitions.</code><code class="descname">shipment_details_type</code><a class="headerlink" href="#openship.domain.entities.definitions.shipment_details_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#openship.domain.entities.definitions.shipment_details_type" title="openship.domain.entities.definitions.shipment_details_type"><code class="xref py py-class docutils literal notranslate"><span class="pre">openship.domain.entities.definitions.shipment_details_type</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-openship.domain.entities">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-openship.domain.entities" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="openship.domain.entities.Error">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.</code><code class="descname">Error</code><span class="sig-paren">(</span><em>message: str = None</em>, <em>code: str = None</em>, <em>carrier: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#openship.domain.entities.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.Party">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.</code><code class="descname">Party</code><a class="headerlink" href="#openship.domain.entities.Party" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>manage party operations</p>
+<dl class="method">
+<dt id="openship.domain.entities.Party.create">
+<code class="descname">create</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; openship.domain.entities.datatypes.party<a class="headerlink" href="#openship.domain.entities.Party.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>create a party request payload</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.Quote">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.</code><code class="descname">Quote</code><a class="headerlink" href="#openship.domain.entities.Quote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>manage quotes operations</p>
+<dl class="method">
+<dt id="openship.domain.entities.Quote.create">
+<code class="descname">create</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; openship.domain.entities.datatypes.quote_request<a class="headerlink" href="#openship.domain.entities.Quote.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a quote request payload</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="openship.domain.entities.Quote.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; openship.domain.entities.datatypes.quote_details<a class="headerlink" href="#openship.domain.entities.Quote.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>create a quote details data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.ShipmentDetails">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.</code><code class="descname">ShipmentDetails</code><a class="headerlink" href="#openship.domain.entities.ShipmentDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>manage shipment details operations</p>
+<dl class="method">
+<dt id="openship.domain.entities.ShipmentDetails.create">
+<code class="descname">create</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; openship.domain.entities.datatypes.shipment_details<a class="headerlink" href="#openship.domain.entities.ShipmentDetails.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a shipment details request payload</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="openship.domain.entities.Tracking">
+<em class="property">class </em><code class="descclassname">openship.domain.entities.</code><code class="descname">Tracking</code><a class="headerlink" href="#openship.domain.entities.Tracking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>manage tracking operations</p>
+<dl class="method">
+<dt id="openship.domain.entities.Tracking.create">
+<code class="descname">create</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; openship.domain.entities.datatypes.quote_request<a class="headerlink" href="#openship.domain.entities.Tracking.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a tracking request payload</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="openship.domain.entities.Tracking.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; openship.domain.entities.datatypes.tracking_details<a class="headerlink" href="#openship.domain.entities.Tracking.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>create a tracking details data</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">OpenShip</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, DanielK.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="../_sources/source/openship.domain.entities.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

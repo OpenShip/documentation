@@ -1,0 +1,38 @@
+openship.openship.mappers.dhl package
+=====================================
+
+Submodules
+----------
+
+openship.openship.mappers.dhl.dhl\_client module
+------------------------------------------------
+
+.. automodule:: openship.openship.mappers.dhl.dhl_client
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+openship.openship.mappers.dhl.dhl\_mapper module
+------------------------------------------------
+
+.. automodule:: openship.openship.mappers.dhl.dhl_mapper
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+openship.openship.mappers.dhl.dhl\_proxy module
+-----------------------------------------------
+
+.. automodule:: openship.openship.mappers.dhl.dhl_proxy
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: openship.openship.mappers.dhl
+    :members:
+    :undoc-members:
+    :show-inheritance:

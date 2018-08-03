@@ -1,1 +1,1 @@
-<a href="/openship" target="_blank">API</a>
+<a href="/api" target="_blank">API</a>

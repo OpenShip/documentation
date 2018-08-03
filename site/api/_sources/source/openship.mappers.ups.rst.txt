@@ -1,0 +1,38 @@
+openship.mappers.ups package
+============================
+
+Submodules
+----------
+
+openship.mappers.ups.ups\_client module
+---------------------------------------
+
+.. automodule:: openship.mappers.ups.ups_client
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+openship.mappers.ups.ups\_mapper module
+---------------------------------------
+
+.. automodule:: openship.mappers.ups.ups_mapper
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+openship.mappers.ups.ups\_proxy module
+--------------------------------------
+
+.. automodule:: openship.mappers.ups.ups_proxy
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: openship.mappers.ups
+    :members:
+    :undoc-members:
+    :show-inheritance:

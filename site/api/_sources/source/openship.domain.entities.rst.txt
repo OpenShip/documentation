@@ -1,0 +1,30 @@
+openship.domain.entities package
+================================
+
+Submodules
+----------
+
+openship.domain.entities.datatypes module
+-----------------------------------------
+
+.. automodule:: openship.domain.entities.datatypes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+openship.domain.entities.definitions module
+-------------------------------------------
+
+.. automodule:: openship.domain.entities.definitions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: openship.domain.entities
+    :members:
+    :undoc-members:
+    :show-inheritance:

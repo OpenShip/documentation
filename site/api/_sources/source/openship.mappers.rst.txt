@@ -1,0 +1,20 @@
+openship.mappers package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    openship.mappers.caps
+    openship.mappers.dhl
+    openship.mappers.fedex
+    openship.mappers.ups
+
+Module contents
+---------------
+
+.. automodule:: openship.mappers
+    :members:
+    :undoc-members:
+    :show-inheritance:

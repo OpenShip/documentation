@@ -1,0 +1,18 @@
+openship package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    openship.domain
+    openship.mappers
+
+Module contents
+---------------
+
+.. automodule:: openship
+    :members:
+    :undoc-members:
+    :show-inheritance:
