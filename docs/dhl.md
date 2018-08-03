@@ -94,7 +94,7 @@ print(jsonify(quotes))
 Use DHL mapper and proxy to get trackings.
 
 ```python
-from openship.domain.entities Tracking
+from openship.domain.entities import Tracking
 
 payload = Tracking.create(tracking_numbers=["7740842550", "1815115363"])
 
