@@ -21,7 +21,7 @@ Openship prevent you from reinvinting the wheel and is easy to use:
 
 ```shell
 >>> from openship.mappers.dhl import  DHLClient, DHLProxy
->>> from openship.domain.entities Tracking
+>>> from openship.domain.entities import Tracking
 >>> from gds_helpers import jsonify
 >>> client = DHLClient(
     "https://xmlpi-ea.dhl.com/XMLShippingServlet",
