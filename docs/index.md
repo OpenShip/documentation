@@ -4,12 +4,12 @@
 
 ## Mission
 
-Most of the majors shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
-That is quite convenient; however, the integration task can be entirely consuming in term of resources (time and effort).
+Most of the major shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
+That is quite convenient; however, the integration can be very costly regarding time and effort.
 
-OpenShip is an open source library with the mission of making such tasks the most comfortable possible for developers.
+OpenShip is an open source library with the mission of making such tasks as comfortable as possible for developers.
 
-To fulfill this mission this library focus on proposing a unified API in front of specifics carrier's API.
+This library focuses on proposing a unified API, to fulfill the mission.
 
 - Integrate multiple carriers: DHL, FedEx and more with ease
 - Use an intuitive, unified API across multiple carriers
@@ -17,7 +17,7 @@ To fulfill this mission this library focus on proposing a unified API in front o
 - Use your developer credentials with negotiated rates
 - Tested
 
-Openship prevent you from reinvinting the wheel and is easy to use:
+Openship prevents you from reinvinting the wheel and is easy to use:
 
 ```shell
 >>> from openship.mappers.dhl import  DHLClient, DHLProxy

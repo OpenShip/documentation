@@ -12,7 +12,7 @@ dhlClient = DHLClient(
   "YOUR_DHL_SITE_ID",
   "YOUR_DHL_SITE_PASSWORD",
   "YOUR_DHL_ACCOUNT_NUMBER",
-  "CARRIER_NAME"              # optional will be DHL by default
+  "CARRIER_NAME"              # optional, will be DHL by default
 )
 ```
 

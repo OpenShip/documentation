@@ -13,7 +13,7 @@ fedexClient = FedexClient(
   "FEDEX_PASSWORD",
   "FEDEX_ACCOUNT_NUMBER",
   "FEDEX_METER_NUMBER",
-  "CARRIER_NAME"              # optional will be FeDex by default
+  "CARRIER_NAME"              # optional, will be FedEx by default
 )
 ```
 

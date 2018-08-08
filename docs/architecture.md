@@ -4,12 +4,6 @@
 
 ## Abstractions
 
-Layers of abstraction |
---- |
-Proxy |
-Client, Mapper |
-Generated Data Types (from Carriers specifications) |
-
 ![Shipping API integration - Class Diagram](assets/images/classes.png)
 
 ## Domain
@@ -27,7 +21,7 @@ Generated Data Types (from Carriers specifications) |
 > In most common cases the developer integrating a shipping carrier API has to write or extend mappers
 
 * Proxy
-> The proxy takes care of the communication with the specific carrier open API
+> The proxy takes care of the communication with the specific carrier's open API
 
 * Unified Data Types
 > Defined by cross-referencing common data types among multiple carriers, the unified data types constitute a meaningful shared API interface.
