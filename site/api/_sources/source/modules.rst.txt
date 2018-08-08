@@ -1,7 +1,8 @@
-gds_helpers
-===========
+py-caps
+=======
 
 .. toctree::
    :maxdepth: 4
 
-   gds_helpers
+   pycaps
+   setup
