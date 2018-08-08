@@ -15,7 +15,6 @@ theme:
   palette:
     primary: 'purple'
     accent: 'purple'
-  favicon: 'assets/images/favicon.png'
 
 google_analytics:
   - 'UA-111378601-2'
