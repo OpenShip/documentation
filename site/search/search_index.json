@@ -122,7 +122,7 @@
         },
         {
             "location": "/reference/",
-            "text": "Open API in a new tab",
+            "text": "div.md-main__inner {\n    position: relative;\n    overflow: scroll;\n  }\n  iframe.api {\n    position: absolute;\n    top: 25px;\n    left: 5px;\n    right: 5px;\n    bottom: 0;\n    margin: 0;\n    padding: 0;\n    border: none;\n    width: 99%;\n    min-height: 600px;\n    margin-bottom: 5px !important;\n  }\n  @media only screen and (min-width: 76.1875em) {\n    iframe.api {\n      left: 24rem;\n    }\n  }",
             "title": "Reference"
         }
     ]
