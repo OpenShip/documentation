@@ -25,4 +25,4 @@
   }
 </style>
 
-<iframe src="/api" class="api"></iframe>
+<iframe src="/api" class="api" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
