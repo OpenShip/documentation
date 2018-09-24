@@ -1,13 +1,13 @@
-# Welcome to OpenShip
+# Welcome to PurplShip
 
-[![Build Status](https://travis-ci.org/OpenShip/openship.svg?branch=master)](https://travis-ci.org/OpenShip/openship) [![codecov](https://codecov.io/gh/OpenShip/openship/branch/master/graph/badge.svg)](https://codecov.io/gh/OpenShip/openship)
+[![Build Status](https://travis-ci.org/PurplShip/purplship.svg?branch=master)](https://travis-ci.org/PurplShip/purplship) [![codecov](https://codecov.io/gh/PurplShip/purplship/branch/master/graph/badge.svg)](https://codecov.io/gh/PurplShip/purplship)
 
 ## Mission
 
 Most of the major shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
 That is quite convenient; however, the integration can be very costly regarding time and effort.
 
-OpenShip is an open source library with the mission of making such tasks as comfortable as possible for developers.
+PurplShip is an open source library with the mission of making such tasks as comfortable as possible for developers.
 
 This library focuses on proposing a unified API, to fulfill the mission.
 
@@ -20,8 +20,8 @@ This library focuses on proposing a unified API, to fulfill the mission.
 Openship prevents you from reinvinting the wheel and is easy to use:
 
 ```shell
->>> from openship.mappers.dhl import  DHLClient, DHLProxy
->>> from openship.domain.entities import Tracking
+>>> from purplship.mappers.dhl import  DHLClient, DHLProxy
+>>> from purplship.domain.entities import Tracking
 >>> from gds_helpers import jsonify
 >>> client = DHLClient(
     "https://xmlpi-ea.dhl.com/XMLShippingServlet",
@@ -77,36 +77,36 @@ Openship prevents you from reinvinting the wheel and is easy to use:
 
 ### Prerequisites
 
-OpenShip is compatible with Python 3 +
+PurplShip is compatible with Python 3 +
 
 ### Installing
 
-OpenShip can be installed with [pip](https://pip.pypa.io/):
+PurplShip can be installed with [pip](https://pip.pypa.io/):
 
 For latest dev versions
 
 ```shell
-pip install --process-dependency-links -e git://github.com/OpenShip/openship.git#egg=openship
+pip install --process-dependency-links -e git://github.com/PurplShip/purplship.git#egg=purplship
 ```
 
-Alternatively, you can grab the latest source code from [GitHub](https://github.com/OpenShip/openship):
+Alternatively, you can grab the latest source code from [GitHub](https://github.com/PurplShip/purplship):
 
 ```shell
-git clone https://github.com/OpenShip/openship.git
-cd openship
+git clone https://github.com/PurplShip/purplship.git
+cd purplship
 python setup.py install
 ```
 
 For released version (change '@version' at your convenience)
 
 ```shell
-pip install --process-dependency-links -e git+git://github.com/OpenShip/openship.git@v1.0-beta#egg=openship
+pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta#egg=purplship
 ```
 
 ## License
 
-This project is licensed under the LGPL License - see the [LICENSE.md](https://github.com/OpenShip/openship/blob/master/LICENSE) file for details
+This project is licensed under the LGPL License - see the [LICENSE.md](https://github.com/PurplShip/purplship/blob/master/LICENSE) file for details
 
 ## Contributing
 
-We happily welcome contributions, please see [CONTRIBUTING.md](https://github.com/OpenShip/openship/blob/master/CODE_OF_CONDUCT.md) for details.
+We happily welcome contributions, please see [CONTRIBUTING.md](https://github.com/PurplShip/purplship/blob/master/CODE_OF_CONDUCT.md) for details.

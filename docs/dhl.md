@@ -5,7 +5,7 @@
 Configure your client
 
 ```python
-from openship.mappers.dhl import  DHLClient
+from purplship.mappers.dhl import  DHLClient
 
 dhlClient = DHLClient(
   "https://xmlpi-ea.dhl.com/XMLShippingServlet",
@@ -21,7 +21,7 @@ dhlClient = DHLClient(
 Use the default proxy.
 
 ```python
-from openship.mappers.dhl import DHLProxy
+from purplship.mappers.dhl import DHLProxy
 
 dhlProxy = DHLProxy(dhlClient)
 ```
@@ -29,7 +29,7 @@ dhlProxy = DHLProxy(dhlClient)
 Or create a proxy with a custom mapper.
 
 ```python
-from openship.mappers.dhl.dhl_mapper import DHLMapper
+from purplship.mappers.dhl.dhl_mapper import DHLMapper
 
 dhlMapper = DHLMapper(dhlClient)
 customProxy = DHLProxy(dhlClient, dhlMapper)
@@ -40,7 +40,7 @@ customProxy = DHLProxy(dhlClient, dhlMapper)
 Use DHL mapper and proxy to get quotes.
 
 ```python
-from openship.domain.entities import Quote
+from purplship.domain.entities import Quote
 from gds_helpers import jsonify
 
 # JSON data
@@ -94,7 +94,7 @@ print(jsonify(quotes))
 Use DHL mapper and proxy to get trackings.
 
 ```python
-from openship.domain.entities import Tracking
+from purplship.domain.entities import Tracking
 
 payload = Tracking.create(tracking_numbers=["7740842550", "1815115363"])
 

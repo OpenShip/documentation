@@ -1,7 +1,7 @@
-site_name: OpenShip
+site_name: PurplShip
 site_description: 'Shipping carriers API integration library documentation'
 site_author: 'DanielK'
-site_url: 'https://openship.xyz'
+site_url: 'https://purplship.com'
 
 pages:
     - Home: index.md
@@ -24,8 +24,8 @@ markdown_extensions:
   - codehilite
 
 # Repository
-repo_name: 'OpenShip/openship'
-repo_url: 'https://github.com/OpenShip/openship'
+repo_name: 'PurplShip/purplship'
+repo_url: 'https://github.com/PurplShip/purplship'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 DanielK'

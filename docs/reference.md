@@ -4,6 +4,7 @@
   div.md-main__inner {
     position: relative;
     overflow: scroll;
+    min-height: 100vh;
   }
   iframe.api {
     position: absolute;

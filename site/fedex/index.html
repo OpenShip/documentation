@@ -13,7 +13,7 @@
         <meta name="description" content="Shipping carriers API integration library documentation">
       
       
-        <link rel="canonical" href="https://openship.xyz/fedex/">
+        <link rel="canonical" href="https://purplship.com/fedex/">
       
       
         <meta name="author" content="DanielK">
@@ -42,7 +42,7 @@
     
     
       
-        <title>FedEx - OpenShip</title>
+        <title>FedEx - PurplShip</title>
       
     
     
@@ -113,7 +113,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://openship.xyz" title="OpenShip" class="md-header-nav__button md-logo">
+        <a href="https://purplship.com" title="PurplShip" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -127,7 +127,7 @@
           
             
               <span class="md-header-nav__topic">
-                OpenShip
+                PurplShip
               </span>
               <span class="md-header-nav__topic">
                 FedEx
@@ -175,7 +175,7 @@
   
 
 
-  <a href="https://github.com/OpenShip/openship/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -184,7 +184,7 @@
       </div>
     
     <div class="md-source__repository">
-      OpenShip/openship
+      PurplShip/purplship
     </div>
   </a>
 
@@ -214,7 +214,7 @@
         <i class="md-icon"></i>
       
     </span>
-    OpenShip
+    PurplShip
   </label>
   
     <div class="md-nav__source">
@@ -224,7 +224,7 @@
   
 
 
-  <a href="https://github.com/OpenShip/openship/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -233,7 +233,7 @@
       </div>
     
     <div class="md-source__repository">
-      OpenShip/openship
+      PurplShip/purplship
     </div>
   </a>
 
@@ -424,13 +424,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/OpenShip/openship/edit/master/docs/fedex.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/fedex.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="fedex">FedEx</h1>
 <h2 id="client">Client</h2>
 <p>Configure your client</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.mappers.fedex</span> <span class="kn">import</span>  <span class="n">FedexClient</span>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.fedex</span> <span class="kn">import</span>  <span class="n">FedexClient</span>
 
 <span class="n">fedexClient</span> <span class="o">=</span> <span class="n">FedexClient</span><span class="p">(</span>
   <span class="s2">&quot;https://wsbeta.fedex.com:443/web-services&quot;</span><span class="p">,</span>
@@ -445,7 +445,7 @@
 
 <h2 id="proxy">Proxy</h2>
 <p>Use the default proxy.</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.mappers.fedex</span> <span class="kn">import</span> <span class="n">FedexProxy</span>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.fedex</span> <span class="kn">import</span> <span class="n">FedexProxy</span>
 
 <span class="n">fedexProxy</span> <span class="o">=</span> <span class="n">FedexProxy</span><span class="p">(</span><span class="n">fedexClient</span><span class="p">)</span>
 </pre></div>
@@ -453,7 +453,7 @@
 
 <h2 id="quotes-rate">Quotes (Rate)</h2>
 <p>Use FedEx mapper and proxy to get quotes.</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.domain.entities</span> <span class="kn">import</span> <span class="n">Quote</span>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">Quote</span>
 <span class="kn">from</span> <span class="nn">gds_helpers</span> <span class="kn">import</span> <span class="n">jsonify</span>
 
 <span class="c1"># JSON data</span>
@@ -528,7 +528,7 @@
 
 <h2 id="tracking">Tracking</h2>
 <p>Use DHL mapper and proxy to get trackings.</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">openship.domain.entities</span> <span class="kn">import</span> <span class="n">Tracking</span>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">Tracking</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="n">Tracking</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">tracking_numbers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;794887075005&quot;</span><span class="p">])</span>
 

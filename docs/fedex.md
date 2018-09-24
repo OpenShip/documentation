@@ -5,7 +5,7 @@
 Configure your client
 
 ```python
-from openship.mappers.fedex import  FedexClient
+from purplship.mappers.fedex import  FedexClient
 
 fedexClient = FedexClient(
   "https://wsbeta.fedex.com:443/web-services",
@@ -22,7 +22,7 @@ fedexClient = FedexClient(
 Use the default proxy.
 
 ```python
-from openship.mappers.fedex import FedexProxy
+from purplship.mappers.fedex import FedexProxy
 
 fedexProxy = FedexProxy(fedexClient)
 ```
@@ -32,7 +32,7 @@ fedexProxy = FedexProxy(fedexClient)
 Use FedEx mapper and proxy to get quotes.
 
 ```python
-from openship.domain.entities import Quote
+from purplship.domain.entities import Quote
 from gds_helpers import jsonify
 
 # JSON data
@@ -109,7 +109,7 @@ print(jsonify(quotes))
 Use DHL mapper and proxy to get trackings.
 
 ```python
-from openship.domain.entities import Tracking
+from purplship.domain.entities import Tracking
 
 payload = Tracking.create(tracking_numbers=["794887075005"])
 

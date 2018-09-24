@@ -13,7 +13,7 @@
         <meta name="description" content="Shipping carriers API integration library documentation">
       
       
-        <link rel="canonical" href="https://openship.xyz/">
+        <link rel="canonical" href="https://purplship.com/">
       
       
         <meta name="author" content="DanielK">
@@ -42,7 +42,7 @@
     
     
       
-        <title>OpenShip</title>
+        <title>PurplShip</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome-to-openship" tabindex="1" class="md-skip">
+      <a href="#welcome-to-purplship" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -113,7 +113,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://openship.xyz" title="OpenShip" class="md-header-nav__button md-logo">
+        <a href="https://purplship.com" title="PurplShip" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -127,7 +127,7 @@
           
             
               <span class="md-header-nav__topic">
-                OpenShip
+                PurplShip
               </span>
               <span class="md-header-nav__topic">
                 Home
@@ -175,7 +175,7 @@
   
 
 
-  <a href="https://github.com/OpenShip/openship/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -184,7 +184,7 @@
       </div>
     
     <div class="md-source__repository">
-      OpenShip/openship
+      PurplShip/purplship
     </div>
   </a>
 
@@ -214,7 +214,7 @@
         <i class="md-icon"></i>
       
     </span>
-    OpenShip
+    PurplShip
   </label>
   
     <div class="md-nav__source">
@@ -224,7 +224,7 @@
   
 
 
-  <a href="https://github.com/OpenShip/openship/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -233,7 +233,7 @@
       </div>
     
     <div class="md-source__repository">
-      OpenShip/openship
+      PurplShip/purplship
     </div>
   </a>
 
@@ -464,15 +464,15 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/OpenShip/openship/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="welcome-to-openship">Welcome to OpenShip</h1>
-<p><a href="https://travis-ci.org/OpenShip/openship"><img alt="Build Status" src="https://travis-ci.org/OpenShip/openship.svg?branch=master" /></a> <a href="https://codecov.io/gh/OpenShip/openship"><img alt="codecov" src="https://codecov.io/gh/OpenShip/openship/branch/master/graph/badge.svg" /></a></p>
+                <h1 id="welcome-to-purplship">Welcome to PurplShip</h1>
+<p><a href="https://travis-ci.org/PurplShip/purplship"><img alt="Build Status" src="https://travis-ci.org/PurplShip/purplship.svg?branch=master" /></a> <a href="https://codecov.io/gh/PurplShip/purplship"><img alt="codecov" src="https://codecov.io/gh/PurplShip/purplship/branch/master/graph/badge.svg" /></a></p>
 <h2 id="mission">Mission</h2>
 <p>Most of the major shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
 That is quite convenient; however, the integration can be very costly regarding time and effort.</p>
-<p>OpenShip is an open source library with the mission of making such tasks as comfortable as possible for developers.</p>
+<p>PurplShip is an open source library with the mission of making such tasks as comfortable as possible for developers.</p>
 <p>This library focuses on proposing a unified API, to fulfill the mission.</p>
 <ul>
 <li>Integrate multiple carriers: DHL, FedEx and more with ease</li>
@@ -482,8 +482,8 @@ That is quite convenient; however, the integration can be very costly regarding 
 <li>Tested</li>
 </ul>
 <p>Openship prevents you from reinvinting the wheel and is easy to use:</p>
-<div class="codehilite"><pre><span></span>&gt;&gt;&gt; from openship.mappers.dhl import  DHLClient, DHLProxy
-&gt;&gt;&gt; from openship.domain.entities import Tracking
+<div class="codehilite"><pre><span></span>&gt;&gt;&gt; from purplship.mappers.dhl import  DHLClient, DHLProxy
+&gt;&gt;&gt; from purplship.domain.entities import Tracking
 &gt;&gt;&gt; from gds_helpers import jsonify
 &gt;&gt;&gt; <span class="nv">client</span> <span class="o">=</span> DHLClient<span class="o">(</span>
     <span class="s2">&quot;https://xmlpi-ea.dhl.com/XMLShippingServlet&quot;</span>,
@@ -541,30 +541,30 @@ That is quite convenient; however, the integration can be very costly regarding 
 </li>
 </ul>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>OpenShip is compatible with Python 3 +</p>
+<p>PurplShip is compatible with Python 3 +</p>
 <h3 id="installing">Installing</h3>
-<p>OpenShip can be installed with <a href="https://pip.pypa.io/">pip</a>:</p>
+<p>PurplShip can be installed with <a href="https://pip.pypa.io/">pip</a>:</p>
 <p>For latest dev versions</p>
-<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git://github.com/OpenShip/openship.git#egg<span class="o">=</span>openship
+<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git://github.com/PurplShip/purplship.git#egg<span class="o">=</span>purplship
 </pre></div>
 
 
-<p>Alternatively, you can grab the latest source code from <a href="https://github.com/OpenShip/openship">GitHub</a>:</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/OpenShip/openship.git
-<span class="nb">cd</span> openship
+<p>Alternatively, you can grab the latest source code from <a href="https://github.com/PurplShip/purplship">GitHub</a>:</p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/PurplShip/purplship.git
+<span class="nb">cd</span> purplship
 python setup.py install
 </pre></div>
 
 
 <p>For released version (change '@version' at your convenience)</p>
-<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git+git://github.com/OpenShip/openship.git@v1.0-beta#egg<span class="o">=</span>openship
+<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta#egg<span class="o">=</span>purplship
 </pre></div>
 
 
 <h2 id="license">License</h2>
-<p>This project is licensed under the LGPL License - see the <a href="https://github.com/OpenShip/openship/blob/master/LICENSE">LICENSE.md</a> file for details</p>
+<p>This project is licensed under the LGPL License - see the <a href="https://github.com/PurplShip/purplship/blob/master/LICENSE">LICENSE.md</a> file for details</p>
 <h2 id="contributing">Contributing</h2>
-<p>We happily welcome contributions, please see <a href="https://github.com/OpenShip/openship/blob/master/CODE_OF_CONDUCT.md">CONTRIBUTING.md</a> for details.</p>
+<p>We happily welcome contributions, please see <a href="https://github.com/PurplShip/purplship/blob/master/CODE_OF_CONDUCT.md">CONTRIBUTING.md</a> for details.</p>
                 
                   
                 

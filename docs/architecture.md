@@ -14,9 +14,9 @@
 > eg: FedexClient("API_URL", "FEDEX_USER_KEY", "FEDEX_PASSWORD", "FEDEX_ACCOUNT_NUMBER", "FEDEX_METER_NUMBER", "CARRIER_NAME")
 
 * Mapper
-> The mapper handles the conversion from OpenShip united API Data types to Carrier specific API Datatypes.
+> The mapper handles the conversion from PurplShip united API Data types to Carrier specific API Datatypes.
 >
-> Note: Here is the core of OpenShip extensibility and customizability. You can extend the default mapper or write your own.
+> Note: Here is the core of PurplShip extensibility and customizability. You can extend the default mapper or write your own.
 >
 > In most common cases the developer integrating a shipping carrier API has to write or extend mappers
 
