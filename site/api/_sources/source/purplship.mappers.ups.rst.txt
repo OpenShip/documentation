@@ -1,0 +1,38 @@
+purplship.mappers.ups package
+=============================
+
+Submodules
+----------
+
+purplship.mappers.ups.ups\_client module
+----------------------------------------
+
+.. automodule:: purplship.mappers.ups.ups_client
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+purplship.mappers.ups.ups\_mapper module
+----------------------------------------
+
+.. automodule:: purplship.mappers.ups.ups_mapper
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+purplship.mappers.ups.ups\_proxy module
+---------------------------------------
+
+.. automodule:: purplship.mappers.ups.ups_proxy
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: purplship.mappers.ups
+    :members:
+    :undoc-members:
+    :show-inheritance:
