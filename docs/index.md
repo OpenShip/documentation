@@ -11,13 +11,11 @@ PurplShip is an open source library with the mission of making such tasks as com
 
 This library focuses on proposing a unified API, to fulfill the mission.
 
-- Integrate multiple carriers: DHL, FedEx and more with ease
+- Integrate multiple carriers: DHL, FedEx, UPS, Canada Post and more with ease
 - Use an intuitive, unified API across multiple carriers
-- Move fast by just reading the carrier API documentation
 - Use your developer credentials with negotiated rates
-- Tested
 
-Openship prevents you from reinvinting the wheel and is easy to use:
+PurplSHip prevents you from reinvinting the wheel and is easy to use:
 
 ```shell
 >>> from purplship.mappers.dhl import  DHLClient, DHLProxy
@@ -31,9 +29,9 @@ Openship prevents you from reinvinting the wheel and is easy to use:
     "CARRIER_NAME"
   )
 >>> proxy = DHLProxy(client)
->>> payload = Tracking.create(tracking_numbers=["8346088391"])
->>> tracking_req_xml_obj = proxy.mapper.create_tracking_request(payload)
->>> response = proxy.get_trackings(tracking_req_xml_obj)
+>>> tracking_payload = Tracking.create(tracking_numbers=["8346088391"])
+>>> tracking_request = proxy.mapper.create_tracking_request(tracking_payload)
+>>> response = proxy.get_trackings(tracking_request)
 >>> trackings = proxy.mapper.parse_tracking_response(response)
 >>> print(jsonify(trackings))
 '''
@@ -71,9 +69,12 @@ Openship prevents you from reinvinting the wheel and is easy to use:
 ## Navigation
 
 - [Architecture](/architecture)
-- **Mappers**
-    - [DHL](/dhl)
-    - [FeDex](/fedex)
+- [Roadmap](/roadmap)
+- **Features**
+    - [Quote](/quote)
+    - [Tracking](/tracking)
+    - [Shipping](/shipping)
+    - [Pickup](/pickup)
 
 ### Prerequisites
 
@@ -86,7 +87,7 @@ PurplShip can be installed with [pip](https://pip.pypa.io/):
 For latest dev versions
 
 ```shell
-pip install --process-dependency-links -e git://github.com/PurplShip/purplship.git#egg=purplship
+pip install --process-dependency-links -e git://github.com/PurplShip/purplship.git#egg=purplship    
 ```
 
 Alternatively, you can grab the latest source code from [GitHub](https://github.com/PurplShip/purplship):
@@ -100,7 +101,7 @@ python setup.py install
 For released version (change '@version' at your convenience)
 
 ```shell
-pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta#egg=purplship
+pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta.@version#egg=purplship     
 ```
 
 ## License

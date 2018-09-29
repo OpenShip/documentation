@@ -1,5 +1,3 @@
-<!-- <a href="/api" target="_blank">Open API in a new tab</a> -->
-
 <style>
   div.md-main__inner {
     position: relative;
@@ -24,6 +22,13 @@
       left: 24rem;
     }
   }
+  @media screen and (max-width: 600px) {
+    iframe.api {
+      display: none;
+    }
+  }
 </style>
+
+<a href="/api" target="_blank">Open API in a new tab</a>
 
 <iframe src="/api" class="api" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>

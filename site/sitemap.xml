@@ -2,27 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://purplship.com/</loc>
-     <lastmod>2018-09-23</lastmod>
+     <lastmod>2018-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://purplship.com/architecture/</loc>
-     <lastmod>2018-09-23</lastmod>
+     <lastmod>2018-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://purplship.com/fedex/</loc>
-     <lastmod>2018-09-23</lastmod>
+     <loc>https://purplship.com/quote/</loc>
+     <lastmod>2018-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://purplship.com/dhl/</loc>
-     <lastmod>2018-09-23</lastmod>
+     <loc>https://purplship.com/tracking/</loc>
+     <lastmod>2018-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://purplship.com/shipping/</loc>
+     <lastmod>2018-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://purplship.com/pickup/</loc>
+     <lastmod>2018-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://purplship.com/roadmap/</loc>
+     <lastmod>2018-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://purplship.com/reference/</loc>
-     <lastmod>2018-09-23</lastmod>
+     <lastmod>2018-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

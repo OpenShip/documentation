@@ -13,7 +13,7 @@
         <meta name="description" content="Shipping carriers API integration library documentation">
       
       
-        <link rel="canonical" href="https://purplship.com/fedex/">
+        <link rel="canonical" href="https://purplship.com/tracking/">
       
       
         <meta name="author" content="DanielK">
@@ -42,7 +42,7 @@
     
     
       
-        <title>FedEx - PurplShip</title>
+        <title>Tracking - PurplShip</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#fedex" tabindex="1" class="md-skip">
+      <a href="#tracking" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 PurplShip
               </span>
               <span class="md-header-nav__topic">
-                FedEx
+                Tracking
               </span>
             
           
@@ -269,6 +269,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../quote/" title="Quote" class="md-nav__link">
+      Quote
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -279,59 +291,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        FedEx
-      </label>
-    
-    <a href="./" title="FedEx" class="md-nav__link md-nav__link--active">
-      FedEx
+    <a href="./" title="Tracking" class="md-nav__link md-nav__link--active">
+      Tracking
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#client" title="Client" class="md-nav__link">
-    Client
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proxy" title="Proxy" class="md-nav__link">
-    Proxy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quotes-rate" title="Quotes (Rate)" class="md-nav__link">
-    Quotes (Rate)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tracking" title="Tracking" class="md-nav__link">
-    Tracking
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -342,8 +304,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../dhl/" title="DHL" class="md-nav__link">
-      DHL
+    <a href="../shipping/" title="Shipping" class="md-nav__link">
+      Shipping
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../pickup/" title="Pickup" class="md-nav__link">
+      Pickup
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
     </a>
   </li>
 
@@ -377,43 +363,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#client" title="Client" class="md-nav__link">
-    Client
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proxy" title="Proxy" class="md-nav__link">
-    Proxy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quotes-rate" title="Quotes (Rate)" class="md-nav__link">
-    Quotes (Rate)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tracking" title="Tracking" class="md-nav__link">
-    Tracking
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -424,123 +373,33 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/fedex.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/tracking.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="fedex">FedEx</h1>
-<h2 id="client">Client</h2>
-<p>Configure your client</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.fedex</span> <span class="kn">import</span>  <span class="n">FedexClient</span>
-
-<span class="n">fedexClient</span> <span class="o">=</span> <span class="n">FedexClient</span><span class="p">(</span>
-  <span class="s2">&quot;https://wsbeta.fedex.com:443/web-services&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;FEDEX_USER_KEY&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;FEDEX_PASSWORD&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;FEDEX_ACCOUNT_NUMBER&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;FEDEX_METER_NUMBER&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;CARRIER_NAME&quot;</span>              <span class="c1"># optional, will be FedEx by default</span>
-<span class="p">)</span>
-</pre></div>
-
-
-<h2 id="proxy">Proxy</h2>
-<p>Use the default proxy.</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.fedex</span> <span class="kn">import</span> <span class="n">FedexProxy</span>
-
-<span class="n">fedexProxy</span> <span class="o">=</span> <span class="n">FedexProxy</span><span class="p">(</span><span class="n">fedexClient</span><span class="p">)</span>
-</pre></div>
-
-
-<h2 id="quotes-rate">Quotes (Rate)</h2>
-<p>Use FedEx mapper and proxy to get quotes.</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">Quote</span>
-<span class="kn">from</span> <span class="nn">gds_helpers</span> <span class="kn">import</span> <span class="n">jsonify</span>
-
-<span class="c1"># JSON data</span>
-
-<span class="n">shipper</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;postal_code&quot;</span><span class="p">:</span><span class="s2">&quot;H3N1S4&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span><span class="s2">&quot;CA&quot;</span><span class="p">}}</span>
-<span class="n">recipient</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;Lome&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span><span class="s2">&quot;TG&quot;</span><span class="p">}}</span>
-<span class="n">shipment_details</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;lenght&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;weight&quot;</span><span class="p">:</span><span class="mf">4.0</span><span class="p">}]}</span>
-
-<span class="c1"># create domain quote request object from json</span>
-<span class="n">payload</span> <span class="o">=</span> <span class="n">Quote</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">shipper</span><span class="o">=</span><span class="n">shipper</span><span class="p">,</span> <span class="n">recipient</span><span class="o">=</span><span class="n">recipient</span><span class="p">,</span> <span class="n">shipment_details</span><span class="o">=</span><span class="n">shipment_details</span><span class="p">)</span>
-
-<span class="c1"># get Fedex quote request xml object from payload</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_quote_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-
-<span class="c1"># request quotes from Fedex servers using the proxy</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">get_quotes</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-
-<span class="c1"># extract domain response from Fedex quote response</span>
-<span class="n">quotes</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_quote_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">quotes</span><span class="p">))</span>
-<span class="c1"># --&gt;</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">[</span>
-<span class="sd">    [</span>
-<span class="sd">        {</span>
-<span class="sd">            &quot;base_charge&quot;: 230.49,</span>
-<span class="sd">            &quot;carrier&quot;: &quot;Fedex&quot;,</span>
-<span class="sd">            &quot;delivery_date&quot;: null,</span>
-<span class="sd">            &quot;delivery_time&quot;: null,</span>
-<span class="sd">            &quot;discount&quot;: 0.0,</span>
-<span class="sd">            &quot;duties_and_taxes&quot;: 0.0,</span>
-<span class="sd">            &quot;extra_charges&quot;: [</span>
-<span class="sd">                {</span>
-<span class="sd">                    &quot;name&quot;: &quot;FUEL&quot;,</span>
-<span class="sd">                    &quot;value&quot;: 9.22</span>
-<span class="sd">                }</span>
-<span class="sd">            ],</span>
-<span class="sd">            &quot;pickup_date&quot;: null,</span>
-<span class="sd">            &quot;pickup_time&quot;: null,</span>
-<span class="sd">            &quot;service_name&quot;: &quot;INTERNATIONAL_PRIORITY&quot;,</span>
-<span class="sd">            &quot;service_type&quot;: &quot;PAYOR_ACCOUNT_SHIPMENT&quot;,</span>
-<span class="sd">            &quot;total_charge&quot;: 239.71</span>
-<span class="sd">        },</span>
-<span class="sd">        {</span>
-<span class="sd">            &quot;base_charge&quot;: 207.47,</span>
-<span class="sd">            &quot;carrier&quot;: &quot;Fedex&quot;,</span>
-<span class="sd">            &quot;delivery_date&quot;: null,</span>
-<span class="sd">            &quot;delivery_time&quot;: null,</span>
-<span class="sd">            &quot;discount&quot;: 0.0,</span>
-<span class="sd">            &quot;duties_and_taxes&quot;: 0.0,</span>
-<span class="sd">            &quot;extra_charges&quot;: [</span>
-<span class="sd">                {</span>
-<span class="sd">                    &quot;name&quot;: &quot;FUEL&quot;,</span>
-<span class="sd">                    &quot;value&quot;: 8.3</span>
-<span class="sd">                }</span>
-<span class="sd">            ],</span>
-<span class="sd">            &quot;pickup_date&quot;: null,</span>
-<span class="sd">            &quot;pickup_time&quot;: null,</span>
-<span class="sd">            &quot;service_name&quot;: &quot;INTERNATIONAL_ECONOMY&quot;,</span>
-<span class="sd">            &quot;service_type&quot;: &quot;PAYOR_ACCOUNT_SHIPMENT&quot;,</span>
-<span class="sd">            &quot;total_charge&quot;: 215.77</span>
-<span class="sd">        }</span>
-<span class="sd">    ],</span>
-<span class="sd">    []</span>
-<span class="sd">]</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
-
-
-<h2 id="tracking">Tracking</h2>
-<p>Use DHL mapper and proxy to get trackings.</p>
+                <h1 id="tracking">Tracking</h1>
+<p>Use a proxy and it's mapper get trackings.</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">Tracking</span>
 
-<span class="n">payload</span> <span class="o">=</span> <span class="n">Tracking</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">tracking_numbers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;794887075005&quot;</span><span class="p">])</span>
+<span class="c1"># JSON data</span>
+<span class="n">tracking_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;7740842550&quot;</span><span class="p">,</span> <span class="s2">&quot;1815115363&quot;</span><span class="p">]</span>
 
-<span class="n">tracking_req_xml_obj</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_tracking_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+<span class="c1"># create a domain tracking payload entity from the json data</span>
+<span class="c1"># this operation will also validate the data</span>
+<span class="n">tracking_payload</span> <span class="o">=</span> <span class="n">Tracking</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">tracking_numbers</span><span class="o">=</span><span class="n">tracking_numbers</span><span class="p">)</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">get_trackings</span><span class="p">(</span><span class="n">tracking_req_xml_obj</span><span class="p">)</span>
+<span class="c1"># get a carrier tracking request xml object from the tracking payload</span>
+<span class="n">tracking_request</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_tracking_request</span><span class="p">(</span><span class="n">tracking_payload</span><span class="p">)</span>
 
-<span class="n">trackings</span> <span class="o">=</span> <span class="n">fedexProxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_tracking_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="c1"># send a tracking request to the carrier servers using the proxy</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">get_trackings</span><span class="p">(</span><span class="n">tracking_request</span><span class="p">)</span>
+
+<span class="c1"># extract the domain tracking entity from the carrier tracking response</span>
+<span class="n">trackings</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_tracking_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </pre></div>
 
 
 <div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">trackings</span><span class="p">))</span>
+<span class="c1"># --&gt;</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">[</span>
 <span class="sd">    [</span>
@@ -548,16 +407,39 @@
 <span class="sd">            &quot;carrier&quot;: &quot;carrier_name&quot;,</span>
 <span class="sd">            &quot;events&quot;: [</span>
 <span class="sd">                {</span>
-<span class="sd">                    &quot;code&quot;: &quot;OC&quot;,</span>
-<span class="sd">                    &quot;date&quot;: &quot;2016-11-17 03:13:01-06:00&quot;,</span>
-<span class="sd">                    &quot;description&quot;: &quot;Shipment information sent to FedEx&quot;,</span>
-<span class="sd">                    &quot;location&quot;: &quot;CUSTOMER&quot;,</span>
-<span class="sd">                    &quot;signatory&quot;: None,</span>
-<span class="sd">                    &quot;time&quot;: None</span>
+<span class="sd">                    &quot;code&quot;: &quot;PU&quot;,</span>
+<span class="sd">                    &quot;date&quot;: &quot;2009-08-26&quot;,</span>
+<span class="sd">                    &quot;description&quot;: &quot;Shipment picked up&quot;,</span>
+<span class="sd">                    &quot;location&quot;: &quot;Singapore - Singapore &quot;,</span>
+<span class="sd">                    &quot;signatory&quot;: &quot;&quot;,</span>
+<span class="sd">                    &quot;time&quot;: &quot;10:00:00&quot;</span>
 <span class="sd">                }</span>
 <span class="sd">            ],</span>
-<span class="sd">            &quot;shipment_date&quot;: &quot;2016-11-17 00:00:00&quot;,</span>
-<span class="sd">            &quot;tracking_number&quot;: &quot;794887075005&quot;</span>
+<span class="sd">            &quot;shipment_date&quot;: &quot;2009-08-26 10:00:00&quot;,</span>
+<span class="sd">            &quot;tracking_number&quot;: &quot;7740842550&quot;</span>
+<span class="sd">        },</span>
+<span class="sd">        {</span>
+<span class="sd">            &quot;carrier&quot;: &quot;carrier_name&quot;,</span>
+<span class="sd">            &quot;events&quot;: [</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;code&quot;: &quot;PU&quot;,</span>
+<span class="sd">                    &quot;date&quot;: &quot;2009-08-13&quot;,</span>
+<span class="sd">                    &quot;description&quot;: &quot;Shipment picked up&quot;,</span>
+<span class="sd">                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,</span>
+<span class="sd">                    &quot;signatory&quot;: &quot;&quot;,</span>
+<span class="sd">                    &quot;time&quot;: &quot;23:58:00&quot;</span>
+<span class="sd">                },</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;code&quot;: &quot;RW&quot;,</span>
+<span class="sd">                    &quot;date&quot;: &quot;2009-08-14&quot;,</span>
+<span class="sd">                    &quot;description&quot;: &quot;&quot;,</span>
+<span class="sd">                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,</span>
+<span class="sd">                    &quot;signatory&quot;: &quot;21.20&quot;,</span>
+<span class="sd">                    &quot;time&quot;: &quot;02:19:50&quot;</span>
+<span class="sd">                }</span>
+<span class="sd">            ],</span>
+<span class="sd">            &quot;shipment_date&quot;: &quot;2009-08-13 23:58:00&quot;,</span>
+<span class="sd">            &quot;tracking_number&quot;: &quot;1815115363&quot;</span>
 <span class="sd">        }</span>
 <span class="sd">    ],</span>
 <span class="sd">    []</span>
@@ -584,7 +466,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../architecture/" title="Architecture" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../quote/" title="Quote" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -593,19 +475,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Architecture
+                Quote
               </span>
             </div>
           </a>
         
         
-          <a href="../dhl/" title="DHL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../shipping/" title="Shipping" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                DHL
+                Shipping
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

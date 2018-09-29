@@ -13,7 +13,7 @@
         <meta name="description" content="Shipping carriers API integration library documentation">
       
       
-        <link rel="canonical" href="https://purplship.com/reference/">
+        <link rel="canonical" href="https://purplship.com/pickup/">
       
       
         <meta name="author" content="DanielK">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Reference - PurplShip</title>
+        <title>Pickup - PurplShip</title>
       
     
     
@@ -104,6 +104,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#pickup" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -126,7 +130,7 @@
                 PurplShip
               </span>
               <span class="md-header-nav__topic">
-                Reference
+                Pickup
               </span>
             
           
@@ -301,11 +305,49 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../pickup/" title="Pickup" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pickup
+      </label>
+    
+    <a href="./" title="Pickup" class="md-nav__link md-nav__link--active">
       Pickup
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pickup-booking" title="Pickup booking" class="md-nav__link">
+    Pickup booking
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -325,18 +367,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Reference" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../reference/" title="Reference" class="md-nav__link">
       Reference
     </a>
-    
   </li>
 
     
@@ -347,49 +382,110 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pickup-booking" title="Pickup booking" class="md-nav__link">
+    Pickup booking
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/reference.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/pickup.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Reference</h1>
-                
-                <style>
-  div.md-main__inner {
-    position: relative;
-    overflow: scroll;
-    min-height: 100vh;
-  }
-  iframe.api {
-    position: absolute;
-    top: 25px;
-    left: 5px;
-    right: 5px;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    border: none;
-    width: 99%;
-    min-height: 600px;
-    margin-bottom: 5px !important;
-  }
-  @media only screen and (min-width: 76.1875em) {
-    iframe.api {
-      left: 24rem;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    iframe.api {
-      display: none;
-    }
-  }
-</style>
+                <h1 id="pickup">Pickup</h1>
+<h2 id="pickup-booking">Pickup booking</h2>
+<p>Use a proxy and it's mapper to book a pickup.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">Pickup</span>
 
-<p><a href="/api" target="_blank">Open API in a new tab</a></p>
-<iframe src="/api" class="api" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+<span class="c1"># JSON data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-10-19&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pieces&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s2">&quot;weight_unit&quot;</span><span class="p">:</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ready_time&quot;</span><span class="p">:</span> <span class="s2">&quot;10:20:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;closing_time&quot;</span><span class="p">:</span> <span class="s2">&quot;09:20:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Montreal&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;H8Z2Z3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Subhayu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;phone_number&quot;</span><span class="p">:</span> <span class="s2">&quot;4801313131&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;region_code&quot;</span><span class="p">:</span> <span class="s2">&quot;QC&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;test@mail.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;instruction&quot;</span><span class="p">:</span> <span class="s2">&quot;behind the front desk&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;address_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;234 rue Hubert&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;RequestorContact&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;PersonName&quot;</span><span class="p">:</span> <span class="s2">&quot;Rikhil&quot;</span><span class="p">,</span> <span class="s2">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;23162&quot;</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># create a domain pickup payload entity from the json data</span>
+<span class="c1"># this operation will also validate the data</span>
+<span class="n">pickup_payload</span> <span class="o">=</span> <span class="n">Pickup</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># get a carrier pickup request xml object from the pickup payload</span>
+<span class="n">pickup_request</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_pickup_request</span><span class="p">(</span><span class="n">pickup_payload</span><span class="p">)</span>
+
+<span class="c1"># send a pickup request to the carrier servers using the proxy</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">request_pickup</span><span class="p">(</span><span class="n">pickup_request</span><span class="p">)</span>
+
+<span class="c1"># extract the domain pickup entity from the carrier pickup response</span>
+<span class="n">pickup_response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_pickup_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">pickup_response</span><span class="p">))</span>
+<span class="c1"># --&gt;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">[</span>
+<span class="sd">    {</span>
+<span class="sd">        &#39;carrier&#39;: &#39;carrier_name&#39;,</span>
+<span class="sd">        &#39;confirmation_number&#39;: &#39;3674&#39;,</span>
+<span class="sd">        &#39;pickup_charge&#39;: None,</span>
+<span class="sd">        &#39;pickup_date&#39;: &#39;2013-10-09&#39;,</span>
+<span class="sd">        &#39;ref_times&#39;: [</span>
+<span class="sd">            {</span>
+<span class="sd">                &#39;name&#39;: &#39;ReadyByTime&#39;, &#39;value&#39;: &#39;10:30&#39;</span>
+<span class="sd">            },</span>
+<span class="sd">            {</span>
+<span class="sd">                &#39;name&#39;: &#39;CallInTime&#39;, &#39;value&#39;: &#39;08:30&#39;</span>
+<span class="sd">            }</span>
+<span class="sd">        ]</span>
+<span class="sd">    },</span>
+<span class="sd">    []</span>
+<span class="sd">]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
                 
                   
                 
@@ -410,7 +506,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../roadmap/" title="Roadmap" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../shipping/" title="Shipping" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -419,11 +515,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Roadmap
+                Shipping
               </span>
             </div>
           </a>
         
+        
+          <a href="../roadmap/" title="Roadmap" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Roadmap
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>

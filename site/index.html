@@ -350,8 +350,8 @@
 
 
   <li class="md-nav__item">
-    <a href="fedex/" title="FedEx" class="md-nav__link">
-      FedEx
+    <a href="quote/" title="Quote" class="md-nav__link">
+      Quote
     </a>
   </li>
 
@@ -362,8 +362,44 @@
 
 
   <li class="md-nav__item">
-    <a href="dhl/" title="DHL" class="md-nav__link">
-      DHL
+    <a href="tracking/" title="Tracking" class="md-nav__link">
+      Tracking
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="shipping/" title="Shipping" class="md-nav__link">
+      Shipping
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="pickup/" title="Pickup" class="md-nav__link">
+      Pickup
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
     </a>
   </li>
 
@@ -475,13 +511,11 @@ That is quite convenient; however, the integration can be very costly regarding 
 <p>PurplShip is an open source library with the mission of making such tasks as comfortable as possible for developers.</p>
 <p>This library focuses on proposing a unified API, to fulfill the mission.</p>
 <ul>
-<li>Integrate multiple carriers: DHL, FedEx and more with ease</li>
+<li>Integrate multiple carriers: DHL, FedEx, UPS, Canada Post and more with ease</li>
 <li>Use an intuitive, unified API across multiple carriers</li>
-<li>Move fast by just reading the carrier API documentation</li>
 <li>Use your developer credentials with negotiated rates</li>
-<li>Tested</li>
 </ul>
-<p>Openship prevents you from reinvinting the wheel and is easy to use:</p>
+<p>PurplSHip prevents you from reinvinting the wheel and is easy to use:</p>
 <div class="codehilite"><pre><span></span>&gt;&gt;&gt; from purplship.mappers.dhl import  DHLClient, DHLProxy
 &gt;&gt;&gt; from purplship.domain.entities import Tracking
 &gt;&gt;&gt; from gds_helpers import jsonify
@@ -493,9 +527,9 @@ That is quite convenient; however, the integration can be very costly regarding 
     <span class="s2">&quot;CARRIER_NAME&quot;</span>
   <span class="o">)</span>
 &gt;&gt;&gt; <span class="nv">proxy</span> <span class="o">=</span> DHLProxy<span class="o">(</span>client<span class="o">)</span>
-&gt;&gt;&gt; <span class="nv">payload</span> <span class="o">=</span> Tracking.create<span class="o">(</span><span class="nv">tracking_numbers</span><span class="o">=[</span><span class="s2">&quot;8346088391&quot;</span><span class="o">])</span>
-&gt;&gt;&gt; <span class="nv">tracking_req_xml_obj</span> <span class="o">=</span> proxy.mapper.create_tracking_request<span class="o">(</span>payload<span class="o">)</span>
-&gt;&gt;&gt; <span class="nv">response</span> <span class="o">=</span> proxy.get_trackings<span class="o">(</span>tracking_req_xml_obj<span class="o">)</span>
+&gt;&gt;&gt; <span class="nv">tracking_payload</span> <span class="o">=</span> Tracking.create<span class="o">(</span><span class="nv">tracking_numbers</span><span class="o">=[</span><span class="s2">&quot;8346088391&quot;</span><span class="o">])</span>
+&gt;&gt;&gt; <span class="nv">tracking_request</span> <span class="o">=</span> proxy.mapper.create_tracking_request<span class="o">(</span>tracking_payload<span class="o">)</span>
+&gt;&gt;&gt; <span class="nv">response</span> <span class="o">=</span> proxy.get_trackings<span class="o">(</span>tracking_request<span class="o">)</span>
 &gt;&gt;&gt; <span class="nv">trackings</span> <span class="o">=</span> proxy.mapper.parse_tracking_response<span class="o">(</span>response<span class="o">)</span>
 &gt;&gt;&gt; print<span class="o">(</span>jsonify<span class="o">(</span>trackings<span class="o">))</span>
 <span class="s1">&#39;&#39;&#39;</span>
@@ -534,9 +568,12 @@ That is quite convenient; however, the integration can be very costly regarding 
 <h2 id="navigation">Navigation</h2>
 <ul>
 <li><a href="./architecture">Architecture</a></li>
-<li><strong>Mappers</strong><ul>
-<li><a href="./dhl">DHL</a></li>
-<li><a href="./fedex">FeDex</a></li>
+<li><a href="./roadmap">Roadmap</a></li>
+<li><strong>Features</strong><ul>
+<li><a href="./quote">Quote</a></li>
+<li><a href="./tracking">Tracking</a></li>
+<li><a href="./shipping">Shipping</a></li>
+<li><a href="./pickup">Pickup</a></li>
 </ul>
 </li>
 </ul>
@@ -545,7 +582,7 @@ That is quite convenient; however, the integration can be very costly regarding 
 <h3 id="installing">Installing</h3>
 <p>PurplShip can be installed with <a href="https://pip.pypa.io/">pip</a>:</p>
 <p>For latest dev versions</p>
-<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git://github.com/PurplShip/purplship.git#egg<span class="o">=</span>purplship
+<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git://github.com/PurplShip/purplship.git#egg<span class="o">=</span>purplship    
 </pre></div>
 
 
@@ -557,7 +594,7 @@ python setup.py install
 
 
 <p>For released version (change '@version' at your convenience)</p>
-<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta#egg<span class="o">=</span>purplship
+<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta.@version#egg<span class="o">=</span>purplship     
 </pre></div>
 
 
