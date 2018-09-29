@@ -1,6 +1,6 @@
 # Tracking
 
-Use a proxy and it's mapper get trackings.
+Use a proxy, and it's mapper get trackings.
 
 ```python
 from purplship.domain.entities import Tracking

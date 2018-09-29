@@ -1,6 +1,6 @@
 # Shipping
 
-Use a proxy and it's mapper to create a shipment.
+Use a proxy and, it's mapper to create a shipment.
 
 ```python
 from purplship.domain.entities import Shipment

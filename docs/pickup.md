@@ -2,7 +2,7 @@
 
 ## Pickup booking
 
-Use a proxy and it's mapper to book a pickup.
+Use a proxy, and it's mapper to book a pickup.
 
 ```python
 from purplship.domain.entities import Pickup

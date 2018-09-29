@@ -46,11 +46,11 @@ def create_quote_request(self, payload: quote_request) -> Generic[KnownTrackingR
     return create_unknown_tracking_request(payload)
 ```
 
-- Write quickstarter for contributors
+- Write quick starter for contributors
 > Add dev-requirements.txt for pip install
 
 - Publish PurplShip on pypi
-> Solve the possibility to publish purplship and keep dependencies packages on github so that
+> Solve the possibility to publish purplship and keep dependencies packages on GitHub so that
 >
 > ```shell
 >    pip install --process-dependencies purplship
@@ -58,7 +58,7 @@ def create_quote_request(self, payload: quote_request) -> Generic[KnownTrackingR
 >
 > installs purplship with dependencies like pydhl, pyups... from Github
 
-- Set up project documentation for multi version support
+- Set up project documentation for multi-version support
 > Prepare the documentation website for the possibility of loading different released version after breaking changes
 
 - Implement Gateway API level
@@ -155,7 +155,7 @@ print(jsonify(quotes))
 - Write documentation
 > - Document carrier clients properties
 > - Getting started with a single carrier
-> - Getting started with multiple carrier
+> - Getting started with multiple carriers
 
 - Examples: Use case
 > - Tracking notification Slack app

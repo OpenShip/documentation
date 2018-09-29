@@ -1,6 +1,6 @@
 # Quotes (Rate)
 
-Use a proxy and it's mapper to get a carrier quote.
+Use a proxy, and it's mapper to get a carrier quote.
 
 ```python
 from purplship.domain.entities import Quote

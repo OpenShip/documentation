@@ -11,7 +11,21 @@
 * Client
 > The client holds all data related to specific carrier API credentials and configurations
 >
-> eg: FedexClient("API_URL", "FEDEX_USER_KEY", "FEDEX_PASSWORD", "FEDEX_ACCOUNT_NUMBER", "FEDEX_METER_NUMBER", "CARRIER_NAME")
+> eg: FedexClient(
+>
+> "API_URL",
+>
+> "FEDEX_USER_KEY",
+>
+> "FEDEX_PASSWORD",
+>
+> "FEDEX_ACCOUNT_NUMBER",
+>
+> "FEDEX_METER_NUMBER",
+>
+> "CARRIER_NAME"
+>
+>)
 
 * Mapper
 > The mapper handles the conversion from PurplShip united API Data types to Carrier specific API Datatypes.
@@ -24,4 +38,6 @@
 > The proxy takes care of the communication with the specific carrier's open API
 
 * Unified Data Types
-> Defined by cross-referencing common data types among multiple carriers, the unified data types constitute a meaningful shared API interface.
+> Defined by cross-referencing common data types among multiple carriers, the unified data types constitute an intuitive shared API interface.
+
+Explore the library [reference](/reference) to know more about the type definitions.
