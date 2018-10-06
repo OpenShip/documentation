@@ -6,11 +6,13 @@ site_url: 'https://purplship.com'
 pages:
     - Home: index.md
     - Architecture: architecture.md
-    - Quote: quote.md
-    - Tracking: tracking.md
-    - Shipping: shipping.md
-    - Pickup: pickup.md
+    - Features:
+      - Quote: quote.md
+      - Tracking: tracking.md
+      - Shipping: shipping.md
+      - Pickup: pickup.md
     - Roadmap: roadmap.md
+    - FAQ: faq.md
     - Reference: reference.md
 
 theme:

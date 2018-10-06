@@ -318,16 +318,35 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../quote/" title="Quote" class="md-nav__link">
       Quote
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -336,10 +355,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -348,16 +367,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
     <a href="../pickup/" title="Pickup" class="md-nav__link">
       Pickup
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -369,6 +393,18 @@
   <li class="md-nav__item">
     <a href="../roadmap/" title="Roadmap" class="md-nav__link">
       Roadmap
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
     </a>
   </li>
 
@@ -451,32 +487,37 @@
 <p><img alt="Shipping API integration - Class Diagram" src="../assets/images/classes.png" /></p>
 <h2 id="domain">Domain</h2>
 <ul>
-<li>
-<p>Client</p>
-<blockquote>
+<li>Client<blockquote>
 <p>The client holds all data related to specific carrier API credentials and configurations</p>
-<p>eg: FedexClient(</p>
-<p>"API_URL",</p>
-<p>"FEDEX_USER_KEY",</p>
-<p>"FEDEX_PASSWORD",</p>
-<p>"FEDEX_ACCOUNT_NUMBER",</p>
-<p>"FEDEX_METER_NUMBER",</p>
-<p>"CARRIER_NAME"</p>
-<p>)</p>
 </blockquote>
 </li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">UPSClient</span><span class="p">(</span>
+  <span class="n">server_url</span><span class="o">=</span><span class="s2">&quot;https://wwwcie.ups.com/webservices&quot;</span><span class="p">,</span>
+  <span class="n">username</span><span class="o">=</span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+  <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+  <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;56GJE&quot;</span><span class="p">,</span>
+  <span class="n">access_license_number</span><span class="o">=</span><span class="s2">&quot;FG09H9G8H09GH8G0&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<ul>
 <li>
 <p>Mapper</p>
 <blockquote>
 <p>The mapper handles the conversion from PurplShip united API Data types to Carrier specific API Datatypes.</p>
 <p>Note: Here is the core of PurplShip extensibility and customizability. You can extend the default mapper or write your own.</p>
-<p>In most common cases the developer integrating a shipping carrier API has to write or extend mappers</p>
+<p>In most common cases the developer integrating a shipping carrier API has to write or extend mappers
+<a href="https://martinfowler.com/eaaCatalog/dataMapper.html">Data mapper Pattern</a>
+<img alt="PuplShip Mapper sample" src="../assets/images/mapper.png" /></p>
 </blockquote>
 </li>
 <li>
 <p>Proxy</p>
 <blockquote>
-<p>The proxy takes care of the communication with the specific carrier's open API</p>
+<p>The proxy takes care of the communication with the specific carrier's open API
+<a href="https://en.wikipedia.org/wiki/Proxy_pattern">Proxy Pattern</a></p>
 </blockquote>
 </li>
 <li>

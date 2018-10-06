@@ -12,10 +12,10 @@
 
 | Carrier       | Quote          | Tracking      | Shipping       | Pickup        | Address Validation  |
 | ------------- |:--------------:|:-------------:|:--------------:|:-------------:|:-------------------:|
-| FedEx         | I (90%)        | I (90%)       | N              | N             | N                   |
+| FedEx         | I (90%)        | I (90%)       | I (30%)        | I (30%)       | N                   |
 | DHL           | I (90%)        | I (90%)       | I (90%)        | I (30%)       | N                   |
-| UPS           | I (90%)        | I (90%)       | N              | N             | N                   |
-| Canada Post   | I (90%)        | I (90%)       | N              | N             | N                   |
+| UPS           | I (90%)        | I (90%)       | I (30%)        | I (30%)       | N                   |
+| Canada Post   | I (90%)        | I (90%)       | I (30%)        | I (30%)       | N                   |
 | USPS          | N              | N             | N              | N             | N                   |
 | TNT           | N              | N             | N              | N             | N                   |
 

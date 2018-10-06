@@ -94,14 +94,13 @@ Alternatively, you can grab the latest source code from [GitHub](https://github.
 
 ```shell
 git clone https://github.com/PurplShip/purplship.git
-cd purplship
-python setup.py install
+pip install --process-dependency-links -e purplship   
 ```
 
-For released version (change '@version' at your convenience)
+For released version (specify a purplship==version if needed)
 
 ```shell
-pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta.@version#egg=purplship     
+pip install -f https://git.io/fxTZ6 purplship   
 ```
 
 ## License

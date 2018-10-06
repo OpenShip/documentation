@@ -349,16 +349,35 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="quote/" title="Quote" class="md-nav__link">
       Quote
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -367,10 +386,10 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -379,16 +398,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
     <a href="pickup/" title="Pickup" class="md-nav__link">
       Pickup
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -400,6 +424,18 @@
   <li class="md-nav__item">
     <a href="roadmap/" title="Roadmap" class="md-nav__link">
       Roadmap
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="faq/" title="FAQ" class="md-nav__link">
+      FAQ
     </a>
   </li>
 
@@ -588,13 +624,12 @@ That is quite convenient; however, the integration can be very costly regarding 
 
 <p>Alternatively, you can grab the latest source code from <a href="https://github.com/PurplShip/purplship">GitHub</a>:</p>
 <div class="codehilite"><pre><span></span>git clone https://github.com/PurplShip/purplship.git
-<span class="nb">cd</span> purplship
-python setup.py install
+pip install --process-dependency-links -e purplship   
 </pre></div>
 
 
-<p>For released version (change '@version' at your convenience)</p>
-<div class="codehilite"><pre><span></span>pip install --process-dependency-links -e git+git://github.com/PurplShip/purplship.git@v1.0-beta.@version#egg<span class="o">=</span>purplship     
+<p>For released version (specify a purplship==version if needed)</p>
+<div class="codehilite"><pre><span></span>pip install -f https://git.io/fxTZ6 purplship   
 </pre></div>
 
 
