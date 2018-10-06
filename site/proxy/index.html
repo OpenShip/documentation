@@ -13,7 +13,7 @@
         <meta name="description" content="Shipping carriers API integration library documentation">
       
       
-        <link rel="canonical" href="https://purplship.com/architecture/">
+        <link rel="canonical" href="https://purplship.com/proxy/">
       
       
         <meta name="author" content="DanielK">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Architecture - PurplShip</title>
+        <title>Proxy - PurplShip</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#json-in-json-out" tabindex="1" class="md-skip">
+      <a href="#dhl" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 PurplShip
               </span>
               <span class="md-header-nav__topic">
-                Architecture
+                Proxy
               </span>
             
           
@@ -257,59 +257,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Architecture
-      </label>
-    
-    <a href="./" title="Architecture" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../architecture/" title="Architecture" class="md-nav__link">
       Architecture
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#json-in-json-out" title="JSON In ... JSON out" class="md-nav__link">
-    JSON In ... JSON out
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#abstractions" title="Abstractions" class="md-nav__link">
-    Abstractions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain" title="Domain" class="md-nav__link">
-    Domain
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -317,10 +269,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Features
@@ -336,11 +290,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../proxy/" title="Proxy" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Proxy
+      </label>
+    
+    <a href="./" title="Proxy" class="md-nav__link md-nav__link--active">
       Proxy
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy" title="Proxy" class="md-nav__link">
+    Proxy
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -447,27 +446,22 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#json-in-json-out" title="JSON In ... JSON out" class="md-nav__link">
-    JSON In ... JSON out
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#abstractions" title="Abstractions" class="md-nav__link">
-    Abstractions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain" title="Domain" class="md-nav__link">
-    Domain
+  <a href="#proxy" title="Proxy" class="md-nav__link">
+    Proxy
   </a>
   
 </li>
@@ -488,58 +482,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/architecture.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/proxy.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Architecture</h1>
-                
-                <h2 id="json-in-json-out">JSON In ... JSON out</h2>
-<p><img alt="Shipping API integration - Sequence Diagram" src="../assets/images/sequence.png" /></p>
-<h2 id="abstractions">Abstractions</h2>
-<p><img alt="Shipping API integration - Class Diagram" src="../assets/images/classes.png" /></p>
-<h2 id="domain">Domain</h2>
-<ul>
-<li>Client<blockquote>
-<p>The client holds all data related to specific carrier API credentials and configurations</p>
-</blockquote>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="n">UPSClient</span><span class="p">(</span>
-  <span class="n">server_url</span><span class="o">=</span><span class="s2">&quot;https://wwwcie.ups.com/webservices&quot;</span><span class="p">,</span>
-  <span class="n">username</span><span class="o">=</span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
-  <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
-  <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;56GJE&quot;</span><span class="p">,</span>
-  <span class="n">access_license_number</span><span class="o">=</span><span class="s2">&quot;FG09H9G8H09GH8G0&quot;</span>
+                <h1 id="dhl">DHL</h1>
+<h2 id="client">Client</h2>
+<p>Configure your carrier client using your credential</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.dhl</span> <span class="kn">import</span>  <span class="n">DHLClient</span>
+
+<span class="n">dhlClient</span> <span class="o">=</span> <span class="n">DHLClient</span><span class="p">(</span>
+  <span class="s2">&quot;https://xmlpi-ea.dhl.com/XMLShippingServlet&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;YOUR_DHL_SITE_ID&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;YOUR_DHL_SITE_PASSWORD&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;YOUR_DHL_ACCOUNT_NUMBER&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;CARRIER_NAME&quot;</span>              <span class="c1"># optional, will be DHL by default</span>
 <span class="p">)</span>
 </pre></div>
 
 
-<ul>
-<li>
-<p>Mapper</p>
-<blockquote>
-<p>The mapper handles the conversion from PurplShip united API Data types to Carrier specific API Datatypes.</p>
-<p>Note: Here is the core of PurplShip extensibility and customizability. You can extend the default mapper or write your own.</p>
-<p>In most common cases the developer integrating a shipping carrier API has to write or extend mappers
-<a href="https://martinfowler.com/eaaCatalog/dataMapper.html">Data mapper Pattern</a>
-<img alt="PuplShip Mapper sample" src="../assets/images/mapper.png" /></p>
-</blockquote>
-</li>
-<li>
-<p>Proxy</p>
-<blockquote>
-<p>The proxy takes care of the communication with the specific carrier's open API
-<a href="https://en.wikipedia.org/wiki/Proxy_pattern">Proxy Pattern</a></p>
-</blockquote>
-</li>
-<li>
-<p>Unified Data Types</p>
-<blockquote>
-<p>Defined by cross-referencing common data types among multiple carriers, the unified data types constitute an intuitive shared API interface.</p>
-</blockquote>
-</li>
-</ul>
-<p>Explore the library <a href="../reference">reference</a> to know more about the type definitions.</p>
+<h2 id="proxy">Proxy</h2>
+<p>Use the default proxy by providing your client</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.dhl</span> <span class="kn">import</span> <span class="n">DHLProxy</span>
+
+<span class="n">dhlProxy</span> <span class="o">=</span> <span class="n">DHLProxy</span><span class="p">(</span><span class="n">dhlClient</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Or create a proxy with a custom mapper (If you extend or implement your own compatible Mapper).</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.dhl.dhl_mapper</span> <span class="kn">import</span> <span class="n">DHLMapper</span>
+
+<span class="n">dhlMapper</span> <span class="o">=</span> <span class="n">DHLMapper</span><span class="p">(</span><span class="n">dhlClient</span><span class="p">)</span>
+<span class="n">customProxy</span> <span class="o">=</span> <span class="n">DHLProxy</span><span class="p">(</span><span class="n">dhlClient</span><span class="p">,</span> <span class="n">dhlMapper</span><span class="p">)</span>
+</pre></div>
                 
                   
                 
@@ -560,7 +534,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../architecture/" title="Architecture" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -569,19 +543,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Architecture
               </span>
             </div>
           </a>
         
         
-          <a href="../proxy/" title="Proxy" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../quote/" title="Quote" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Proxy
+                Quote
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
