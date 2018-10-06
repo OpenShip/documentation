@@ -19,5 +19,5 @@ offered by PurplShip.
 
 ## Is PurplShip easy to use?
 
-Yes. PurplShip hides the complexity with dealing with SOAP and XML in favour of a higher level API
+Yes. PurplShip hides the complexity of dealing with SOAP and XML in favour of a higher level API
 expressed in simple code.

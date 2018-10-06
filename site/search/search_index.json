@@ -157,7 +157,7 @@
         },
         {
             "location": "/faq/",
-            "text": "FAQ\n\n\nWhat is PurplShip solving?\n\n\nPurplShip offers an open source solution to integrate one or multiple shipping carriers API with ease.\n\n\nWho is PurplShip for?\n\n\nPurplShip is available as a library exposing tools to get the communication with\nshipping carriers directly from your codebase. Additionaly, the clean JSON in -> JSON out\narchitecture makes it easy to package it as a self contain REST API.\n\n\nWhat is the benefit of using PurplShip?\n\n\nPurplShip uses the power of open source to offer a strong base to tackle and reduce shipping API\nintegration challenges. Shipping carriers often have docs difficult to follow with omitted vital\ninformation, changing constantly. All these pain are relieved by the strong well-tested base\noffered by PurplShip.\n\n\nIs PurplShip easy to use?\n\n\nYes. PurplShip hides the complexity with dealing with SOAP and XML in favour of a higher level API\nexpressed in simple code.",
+            "text": "FAQ\n\n\nWhat is PurplShip solving?\n\n\nPurplShip offers an open source solution to integrate one or multiple shipping carriers API with ease.\n\n\nWho is PurplShip for?\n\n\nPurplShip is available as a library exposing tools to get the communication with\nshipping carriers directly from your codebase. Additionaly, the clean JSON in -> JSON out\narchitecture makes it easy to package it as a self contain REST API.\n\n\nWhat is the benefit of using PurplShip?\n\n\nPurplShip uses the power of open source to offer a strong base to tackle and reduce shipping API\nintegration challenges. Shipping carriers often have docs difficult to follow with omitted vital\ninformation, changing constantly. All these pain are relieved by the strong well-tested base\noffered by PurplShip.\n\n\nIs PurplShip easy to use?\n\n\nYes. PurplShip hides the complexity of dealing with SOAP and XML in favour of a higher level API\nexpressed in simple code.",
             "title": "FAQ"
         },
         {
@@ -182,7 +182,7 @@
         },
         {
             "location": "/faq/#is-purplship-easy-to-use",
-            "text": "Yes. PurplShip hides the complexity with dealing with SOAP and XML in favour of a higher level API\nexpressed in simple code.",
+            "text": "Yes. PurplShip hides the complexity of dealing with SOAP and XML in favour of a higher level API\nexpressed in simple code.",
             "title": "Is PurplShip easy to use?"
         },
         {
