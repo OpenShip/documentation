@@ -40,7 +40,7 @@ from purplship.domain.entities import quote_request
 from pydhl.tracking_request_known import KnownTrackingRequest
 from pydhl.tracking_request_unknown import UnknownTrackingRequest
 
-def create_quote_request(self, payload: quote_request) -> Generic[KnownTrackingRequest, UnknownTrackingRequest]:
+def create_quote_request(self, payload: quote_request) -> Union[KnownTrackingRequest, UnknownTrackingRequest]:
     if is_freight_rate():
         return create_known_tracking_request(payload)
     return create_unknown_tracking_request(payload)
