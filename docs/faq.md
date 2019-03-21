@@ -14,7 +14,7 @@ architecture makes it easy to package it as a self contain REST API.
 
 PurplShip uses the power of open source to offer a strong base to tackle and reduce shipping API
 integration challenges. Shipping carriers often have docs difficult to follow with omitted vital
-information, changing constantly. All these pain are relieved by the strong well-tested base
+information, changing constantly. All these pain are relieved by the strong well-tested foundation
 offered by PurplShip.
 
 ## Is PurplShip easy to use?

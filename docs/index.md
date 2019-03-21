@@ -2,38 +2,38 @@
 
 [![Build Status](https://travis-ci.org/PurplShip/purplship.svg?branch=master)](https://travis-ci.org/PurplShip/purplship) [![codecov](https://codecov.io/gh/PurplShip/purplship/branch/master/graph/badge.svg)](https://codecov.io/gh/PurplShip/purplship)
 
-## Mission
+## Overview
 
-Most of the major shipping carriers offer the possibility to create in-house integrated solutions using their APIs.
-That is quite convenient; however, the integration can be very costly regarding time and effort.
-
-PurplShip is an open source library with the mission of making such tasks as comfortable as possible for developers.
-
-This library focuses on proposing a unified API, to fulfill the mission.
+PurplShip is an open source library which makes shipping carrier API integration
+easy.
+PurplShip proposes an intuitive unified API, to make multi-carrier integration seamless.
 
 - Integrate multiple carriers: DHL, FedEx, UPS, Canada Post and more with ease
 - Use an intuitive, unified API across multiple carriers
 - Use your developer credentials with negotiated rates
 
-PurplSHip prevents you from reinvinting the wheel and is easy to use:
+PurplShip helps not having to reinvent the wheel and is easy to use:
 
-```shell
->>> from purplship.mappers.dhl import  DHLClient, DHLProxy
->>> from purplship.domain.entities import Tracking
->>> from gds_helpers import jsonify
->>> client = DHLClient(
-    "https://xmlpi-ea.dhl.com/XMLShippingServlet",
-    "YOUR_DHL_SITE_ID",
-    "YOUR_DHL_SITE_PASSWORD",
-    "YOUR_DHL_ACCOUNT_NUMBER",
-    "CARRIER_NAME"
-  )
->>> proxy = DHLProxy(client)
->>> tracking_payload = Tracking.create(tracking_numbers=["8346088391"])
->>> tracking_request = proxy.mapper.create_tracking_request(tracking_payload)
->>> response = proxy.get_trackings(tracking_request)
->>> trackings = proxy.mapper.parse_tracking_response(response)
->>> print(jsonify(trackings))
+```python
+import purplship
+
+proxy = purplship.gateway['dhl'].create({
+    "server_url": "https://xmlpi-ea.dhl.com/XMLShippingServlet",
+    "site_id": "YOUR_DHL_SITE_ID",
+    "password": "YOUR_DHL_SITE_PASSWORD",
+    "account_number": "YOUR_DHL_ACCOUNT_NUMBER"
+})
+
+tracking_response = purplship.rating.fetch(
+        tracking_numbers=["8346088391"]
+    ).from_(proxy)
+
+tracking = tracking_response.parse()
+
+from gds_helpers import to_dict
+
+print(to_dict(tracking))
+
 '''
 [
     [
@@ -66,16 +66,6 @@ PurplSHip prevents you from reinvinting the wheel and is easy to use:
 '''
 ```
 
-## Navigation
-
-- [Architecture](/architecture)
-- [Roadmap](/roadmap)
-- **Features**
-    - [Quote](/quote)
-    - [Tracking](/tracking)
-    - [Shipping](/shipping)
-    - [Pickup](/pickup)
-
 ### Prerequisites
 
 PurplShip is compatible with Python 3 +
@@ -84,28 +74,22 @@ PurplShip is compatible with Python 3 +
 
 PurplShip can be installed with [pip](https://pip.pypa.io/):
 
-For latest dev versions
+Released version (specify a purplship==version if needed)
 
-```shell
-pip install --process-dependency-links -e git://github.com/PurplShip/purplship.git#egg=purplship    
+```bash
+pip install -f https://git.io/purplship purplship
 ```
 
-Alternatively, you can grab the latest source code from [GitHub](https://github.com/PurplShip/purplship):
+From [Source](https://github.com/PurplShip/purplship):
 
 ```shell
 git clone https://github.com/PurplShip/purplship.git
-pip install --process-dependency-links -e purplship   
-```
-
-For released version (specify a purplship==version if needed)
-
-```shell
-pip install -f https://git.io/fxTZ6 purplship   
+pip install --process-dependency-links -e purplship
 ```
 
 ## License
 
-This project is licensed under the LGPL License - see the [LICENSE.md](https://github.com/PurplShip/purplship/blob/master/LICENSE) file for details
+This project is licensed under the LGPL v3 License - see the [LICENSE.md](https://github.com/PurplShip/purplship/blob/master/LICENSE) file for details
 
 ## Contributing
 

@@ -1,0 +1,1095 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>purplship.mappers.ups package &#8212; PurplShip 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="purplship-mappers-ups-package">
+<h1>purplship.mappers.ups package<a class="headerlink" href="#purplship-mappers-ups-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.html">purplship.mappers.ups.ups_mapper package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.partials.html">purplship.mappers.ups.ups_mapper.partials package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.partials.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.partials.html#module-purplship.mappers.ups.ups_mapper.partials.interface">purplship.mappers.ups.ups_mapper.partials.interface module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.partials.html#module-purplship.mappers.ups.ups_mapper.partials.rate">purplship.mappers.ups.ups_mapper.partials.rate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.partials.html#module-purplship.mappers.ups.ups_mapper.partials.shipment">purplship.mappers.ups.ups_mapper.partials.shipment module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.partials.html#module-purplship.mappers.ups.ups_mapper.partials.track">purplship.mappers.ups.ups_mapper.partials.track module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.partials.html#module-purplship.mappers.ups.ups_mapper.partials">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="purplship.mappers.ups.ups_mapper.html#module-purplship.mappers.ups.ups_mapper">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-purplship.mappers.ups.ups_client">
+<span id="purplship-mappers-ups-ups-client-module"></span><h2>purplship.mappers.ups.ups_client module<a class="headerlink" href="#module-purplship.mappers.ups.ups_client" title="Permalink to this headline">¶</a></h2>
+<p>PurplShip UPS client settings.</p>
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_client.UPSClient">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_client.</code><code class="descname">UPSClient</code><span class="sig-paren">(</span><em>username: str</em>, <em>password: str</em>, <em>access_license_number: str</em>, <em>carrier_name: str = 'UPS'</em>, <em>server_url: str = 'https://onlinetools.ups.com/webservices'</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.mappers.ups.ups_client.UPSClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="purplship.domain.html#purplship.domain.client.Client" title="purplship.domain.client.Client"><code class="xref py py-class docutils literal notranslate"><span class="pre">purplship.domain.client.Client</span></code></a></p>
+<p>UPS connection settings.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-purplship.mappers.ups.ups_proxy">
+<span id="purplship-mappers-ups-ups-proxy-module"></span><h2>purplship.mappers.ups.ups_proxy module<a class="headerlink" href="#module-purplship.mappers.ups.ups_proxy" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_proxy.UPSProxy">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_proxy.</code><code class="descname">UPSProxy</code><span class="sig-paren">(</span><em>client: purplship.mappers.ups.ups_client.UPSClient</em>, <em>mapper: purplship.mappers.ups.ups_mapper.UPSMapper = None</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.mappers.ups.ups_proxy.UPSProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="purplship.domain.html#purplship.domain.proxy.Proxy" title="purplship.domain.proxy.Proxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">purplship.domain.proxy.Proxy</span></code></a></p>
+<dl class="method">
+<dt id="purplship.mappers.ups.ups_proxy.UPSProxy.cancel_pickup">
+<code class="descname">cancel_pickup</code><span class="sig-paren">(</span><em>FreightCancelPickupRequest_: pyups.freight_pickup.FreightCancelPickupRequest</em><span class="sig-paren">)</span> &#x2192; lxml.etree.ElementBase<a class="headerlink" href="#purplship.mappers.ups.ups_proxy.UPSProxy.cancel_pickup" title="Permalink to this definition">¶</a></dt>
+<dd><p>export xmlObj as xml string and request pickup cancellation from carrier</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="purplship.mappers.ups.ups_proxy.UPSProxy.create_shipment">
+<code class="descname">create_shipment</code><span class="sig-paren">(</span><em>ShipRequest_: Union[pyups.freight_ship.FreightShipRequest, pyups.package_ship.ShipmentRequest]</em><span class="sig-paren">)</span> &#x2192; lxml.etree.ElementBase<a class="headerlink" href="#purplship.mappers.ups.ups_proxy.UPSProxy.create_shipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>export xmlObj as xml string and request shipment creation from carrier</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="purplship.mappers.ups.ups_proxy.UPSProxy.get_quotes">
+<code class="descname">get_quotes</code><span class="sig-paren">(</span><em>RateRequest_: Union[pyups.package_rate.RateRequest, pyups.freight_rate.FreightRateRequest]</em><span class="sig-paren">)</span> &#x2192; lxml.etree.ElementBase<a class="headerlink" href="#purplship.mappers.ups.ups_proxy.UPSProxy.get_quotes" title="Permalink to this definition">¶</a></dt>
+<dd><p>export xmlObj as xml string and request quote from carrier</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="purplship.mappers.ups.ups_proxy.UPSProxy.get_trackings">
+<code class="descname">get_trackings</code><span class="sig-paren">(</span><em>TrackRequests_: pyups.package_track.TrackRequest</em><span class="sig-paren">)</span> &#x2192; lxml.etree.ElementBase<a class="headerlink" href="#purplship.mappers.ups.ups_proxy.UPSProxy.get_trackings" title="Permalink to this definition">¶</a></dt>
+<dd><p>get_trackings make parrallel request for each TrackRequest</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="purplship.mappers.ups.ups_proxy.UPSProxy.request_pickup">
+<code class="descname">request_pickup</code><span class="sig-paren">(</span><em>FreightPickupRequest_: pyups.freight_pickup.FreightPickupRequest</em><span class="sig-paren">)</span> &#x2192; lxml.etree.ElementBase<a class="headerlink" href="#purplship.mappers.ups.ups_proxy.UPSProxy.request_pickup" title="Permalink to this definition">¶</a></dt>
+<dd><p>export xmlObj as xml string and request pickup from carrier</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-purplship.mappers.ups.ups_units">
+<span id="purplship-mappers-ups-ups-units-module"></span><h2>purplship.mappers.ups.ups_units module<a class="headerlink" href="#module-purplship.mappers.ups.ups_units" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.PackagingType">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">PackagingType</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Flag</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.BOX">
+<code class="descname">BOX</code><em class="property"> = 'BOX'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.BOX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Bag">
+<code class="descname">Bag</code><em class="property"> = 'BAG'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Bag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Bale">
+<code class="descname">Bale</code><em class="property"> = 'BAL'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Bale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Barrel">
+<code class="descname">Barrel</code><em class="property"> = 'BAR'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Barrel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Basket">
+<code class="descname">Basket</code><em class="property"> = 'BSK'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Basket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Bin">
+<code class="descname">Bin</code><em class="property"> = 'BIN'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Bin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Box">
+<code class="descname">Box</code><em class="property"> = 'BOX'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Bunch">
+<code class="descname">Bunch</code><em class="property"> = 'BUN'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Bunch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Bundle">
+<code class="descname">Bundle</code><em class="property"> = 'BDL'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Bundle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Cabinet">
+<code class="descname">Cabinet</code><em class="property"> = 'CAB'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Cabinet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Can">
+<code class="descname">Can</code><em class="property"> = 'CAN'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Can" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Carboy">
+<code class="descname">Carboy</code><em class="property"> = 'CBY'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Carboy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Carrier">
+<code class="descname">Carrier</code><em class="property"> = 'CAR'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Carrier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Carton">
+<code class="descname">Carton</code><em class="property"> = 'CTN'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Carton" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Case">
+<code class="descname">Case</code><em class="property"> = 'CAS'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Case" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Cask">
+<code class="descname">Cask</code><em class="property"> = 'CSK'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Cask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Container">
+<code class="descname">Container</code><em class="property"> = 'CON'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Container" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Crate">
+<code class="descname">Crate</code><em class="property"> = 'CRT'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Crate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Cylinder">
+<code class="descname">Cylinder</code><em class="property"> = 'CYL'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Cylinder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Drum">
+<code class="descname">Drum</code><em class="property"> = 'DRM'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Drum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Loose">
+<code class="descname">Loose</code><em class="property"> = 'LOO'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Loose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Other">
+<code class="descname">Other</code><em class="property"> = 'OTH'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Other" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.PAL">
+<code class="descname">PAL</code><em class="property"> = 'PLT'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.PAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.PC">
+<code class="descname">PC</code><em class="property"> = 'PCS'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.PC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Package">
+<code class="descname">Package</code><em class="property"> = 'PKG'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Pail">
+<code class="descname">Pail</code><em class="property"> = 'PAL'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Pail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Pallet">
+<code class="descname">Pallet</code><em class="property"> = 'PLT'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Pallet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Pieces">
+<code class="descname">Pieces</code><em class="property"> = 'PCS'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Pieces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Pipe_Line">
+<code class="descname">Pipe_Line</code><em class="property"> = 'PLN'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Pipe_Line" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Rack">
+<code class="descname">Rack</code><em class="property"> = 'RCK'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Rack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Reel">
+<code class="descname">Reel</code><em class="property"> = 'REL'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Reel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Roll">
+<code class="descname">Roll</code><em class="property"> = 'ROL'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Roll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.SM">
+<code class="descname">SM</code><em class="property"> = 'WRP'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.SM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Skid">
+<code class="descname">Skid</code><em class="property"> = 'SKD'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Skid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Spool">
+<code class="descname">Spool</code><em class="property"> = 'SPL'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Spool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Tank">
+<code class="descname">Tank</code><em class="property"> = 'TNK'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Tank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Tube">
+<code class="descname">Tube</code><em class="property"> = 'TBE'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Tube" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Unit">
+<code class="descname">Unit</code><em class="property"> = 'UNT'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Unit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Van_Pack">
+<code class="descname">Van_Pack</code><em class="property"> = 'VPK'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Van_Pack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.PackagingType.Wrapped">
+<code class="descname">Wrapped</code><em class="property"> = 'WRP'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.PackagingType.Wrapped" title="Permalink to this definition">¶</a></dt>
+<dd><p>unified Packaging type mapping</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.RatingOption">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">RatingOption</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingOption.FRSShipmentIndicator">
+<code class="descname">FRSShipmentIndicator</code><em class="property"> = 'FRSShipmentIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingOption.FRSShipmentIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingOption.NegotiatedRatesIndicator">
+<code class="descname">NegotiatedRatesIndicator</code><em class="property"> = 'NegotiatedRatesIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingOption.NegotiatedRatesIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingOption.RateChartIndicator">
+<code class="descname">RateChartIndicator</code><em class="property"> = 'RateChartIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingOption.RateChartIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingOption.UserLevelDiscountIndicator">
+<code class="descname">UserLevelDiscountIndicator</code><em class="property"> = 'UserLevelDiscountIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingOption.UserLevelDiscountIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">RatingPackagingType</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Flag</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.BOX">
+<code class="descname">BOX</code><em class="property"> = '21'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.BOX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Box_10KG">
+<code class="descname">Box_10KG</code><em class="property"> = '25'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Box_10KG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Box_25KG">
+<code class="descname">Box_25KG</code><em class="property"> = '24'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Box_25KG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Express_Box">
+<code class="descname">Express_Box</code><em class="property"> = '21'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Large_Express_Box">
+<code class="descname">Large_Express_Box</code><em class="property"> = '2c'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Large_Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd><p>unified Packaging type mapping</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Medium_Express_Box">
+<code class="descname">Medium_Express_Box</code><em class="property"> = '2b'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Medium_Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.PAL">
+<code class="descname">PAL</code><em class="property"> = '30'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.PAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.PC">
+<code class="descname">PC</code><em class="property"> = '02'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.PC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Package">
+<code class="descname">Package</code><em class="property"> = '02'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Pak">
+<code class="descname">Pak</code><em class="property"> = '04'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Pak" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Pallet">
+<code class="descname">Pallet</code><em class="property"> = '30'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Pallet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.SM">
+<code class="descname">SM</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.SM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Small_Express_Box">
+<code class="descname">Small_Express_Box</code><em class="property"> = '2a'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Small_Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.Tube">
+<code class="descname">Tube</code><em class="property"> = '03'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.Tube" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.UNKNOWN">
+<code class="descname">UNKNOWN</code><em class="property"> = '00'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingPackagingType.UPS_Letter">
+<code class="descname">UPS_Letter</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingPackagingType.UPS_Letter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">RatingServiceCode</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_2nd_Day_Air">
+<code class="descname">UPS_2nd_Day_Air</code><em class="property"> = '02'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_2nd_Day_Air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_2nd_Day_Air_A_M">
+<code class="descname">UPS_2nd_Day_Air_A_M</code><em class="property"> = '59'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_2nd_Day_Air_A_M" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_3_Day_Select">
+<code class="descname">UPS_3_Day_Select</code><em class="property"> = '12'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_3_Day_Select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Access_Point_Economy">
+<code class="descname">UPS_Access_Point_Economy</code><em class="property"> = '70'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Access_Point_Economy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Expedited">
+<code class="descname">UPS_Expedited</code><em class="property"> = '02'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Expedited" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Expedited_EU">
+<code class="descname">UPS_Expedited_EU</code><em class="property"> = '08'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Expedited_EU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express">
+<code class="descname">UPS_Express</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_EU">
+<code class="descname">UPS_Express_EU</code><em class="property"> = '07'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_EU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Early">
+<code class="descname">UPS_Express_Early</code><em class="property"> = '54'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Early" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Early_CA">
+<code class="descname">UPS_Express_Early_CA</code><em class="property"> = '14'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Early_CA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Plus">
+<code class="descname">UPS_Express_Plus</code><em class="property"> = '54'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Plus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Saver">
+<code class="descname">UPS_Express_Saver</code><em class="property"> = '65'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Saver_CA">
+<code class="descname">UPS_Express_Saver_CA</code><em class="property"> = '13'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Express_Saver_CA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Freight_LTL">
+<code class="descname">UPS_Freight_LTL</code><em class="property"> = '308'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Freight_LTL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Freight_LTL_Guaranteed">
+<code class="descname">UPS_Freight_LTL_Guaranteed</code><em class="property"> = '309'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Freight_LTL_Guaranteed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Freight_LTL_Guaranteed_A_M">
+<code class="descname">UPS_Freight_LTL_Guaranteed_A_M</code><em class="property"> = '334'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Freight_LTL_Guaranteed_A_M" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Ground">
+<code class="descname">UPS_Ground</code><em class="property"> = '03'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Ground" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Next_Day_Air">
+<code class="descname">UPS_Next_Day_Air</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Next_Day_Air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Next_Day_Air_Early">
+<code class="descname">UPS_Next_Day_Air_Early</code><em class="property"> = '14'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Next_Day_Air_Early" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Next_Day_Air_Saver">
+<code class="descname">UPS_Next_Day_Air_Saver</code><em class="property"> = '13'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Next_Day_Air_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Standard">
+<code class="descname">UPS_Standard</code><em class="property"> = '11'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Standard_LTL">
+<code class="descname">UPS_Standard_LTL</code><em class="property"> = '349'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Standard_LTL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Dedicated_Courrier">
+<code class="descname">UPS_Today_Dedicated_Courrier</code><em class="property"> = '83'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Dedicated_Courrier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Express">
+<code class="descname">UPS_Today_Express</code><em class="property"> = '85'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Express" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Express_Saver">
+<code class="descname">UPS_Today_Express_Saver</code><em class="property"> = '86'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Express_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Standard">
+<code class="descname">UPS_Today_Standard</code><em class="property"> = '82'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Today_Standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Expedited">
+<code class="descname">UPS_Worldwide_Expedited</code><em class="property"> = '08'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Expedited" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Express">
+<code class="descname">UPS_Worldwide_Express</code><em class="property"> = '07'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Express" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Express_Freight">
+<code class="descname">UPS_Worldwide_Express_Freight</code><em class="property"> = '96'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Express_Freight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Express_Plus">
+<code class="descname">UPS_Worldwide_Express_Plus</code><em class="property"> = '54'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Express_Plus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Saver">
+<code class="descname">UPS_Worldwide_Saver</code><em class="property"> = '65'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.RatingServiceCode.UPS_Worldwide_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">ServiceOption</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.AccessPointCOD">
+<code class="descname">AccessPointCOD</code><em class="property"> = 'AccessPointCOD'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.AccessPointCOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.COD">
+<code class="descname">COD</code><em class="property"> = 'COD'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.COD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.CertificateOfOriginIndicator">
+<code class="descname">CertificateOfOriginIndicator</code><em class="property"> = 'CertificateOfOriginIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.CertificateOfOriginIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.CommercialInvoiceRemovalIndicator">
+<code class="descname">CommercialInvoiceRemovalIndicator</code><em class="property"> = 'CommercialInvoiceRemovalIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.CommercialInvoiceRemovalIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.DeliverToAddresseeOnlyIndicator">
+<code class="descname">DeliverToAddresseeOnlyIndicator</code><em class="property"> = 'DeliverToAddresseeOnlyIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.DeliverToAddresseeOnlyIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.DeliveryConfirmation">
+<code class="descname">DeliveryConfirmation</code><em class="property"> = 'DeliveryConfirmation'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.DeliveryConfirmation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.DeliveryOptions">
+<code class="descname">DeliveryOptions</code><em class="property"> = 'DeliveryOptions'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.DeliveryOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.DirectDeliveryOnlyIndicator">
+<code class="descname">DirectDeliveryOnlyIndicator</code><em class="property"> = 'DirectDeliveryOnlyIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.DirectDeliveryOnlyIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.EPRAIndicator">
+<code class="descname">EPRAIndicator</code><em class="property"> = 'EPRAIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.EPRAIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.ImportControl">
+<code class="descname">ImportControl</code><em class="property"> = 'ImportControl'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.ImportControl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.PickupOptions">
+<code class="descname">PickupOptions</code><em class="property"> = 'PickupOptions'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.PickupOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.RestrictedArticles">
+<code class="descname">RestrictedArticles</code><em class="property"> = 'RestrictedArticles'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.RestrictedArticles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.ReturnOfDocumentIndicator">
+<code class="descname">ReturnOfDocumentIndicator</code><em class="property"> = 'ReturnOfDocumentIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.ReturnOfDocumentIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.ReturnService">
+<code class="descname">ReturnService</code><em class="property"> = 'ReturnService'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.ReturnService" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.SDLShipmentIndicator">
+<code class="descname">SDLShipmentIndicator</code><em class="property"> = 'SDLShipmentIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.SDLShipmentIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.SaturdayDeliveryIndicator">
+<code class="descname">SaturdayDeliveryIndicator</code><em class="property"> = 'SaturdayDeliveryIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.SaturdayDeliveryIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.ShipperExportDeclarationIndicator">
+<code class="descname">ShipperExportDeclarationIndicator</code><em class="property"> = 'ShipperExportDeclarationIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.ShipperExportDeclarationIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ServiceOption.UPScarbonneutralIndicator">
+<code class="descname">UPScarbonneutralIndicator</code><em class="property"> = 'UPScarbonneutralIndicator'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ServiceOption.UPScarbonneutralIndicator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">ShippingPackagingType</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Flag</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.BOX">
+<code class="descname">BOX</code><em class="property"> = '21'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.BOX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.BPM">
+<code class="descname">BPM</code><em class="property"> = '58'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.BPM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.BPM_Flat">
+<code class="descname">BPM_Flat</code><em class="property"> = '66'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.BPM_Flat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.BPM_Parcel">
+<code class="descname">BPM_Parcel</code><em class="property"> = '64'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.BPM_Parcel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Customer_Supplied_Package">
+<code class="descname">Customer_Supplied_Package</code><em class="property"> = '02'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Customer_Supplied_Package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.First_Class">
+<code class="descname">First_Class</code><em class="property"> = '59'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.First_Class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Flats">
+<code class="descname">Flats</code><em class="property"> = '56'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Flats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Irregulars">
+<code class="descname">Irregulars</code><em class="property"> = '62'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Irregulars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Large_Express_Box">
+<code class="descname">Large_Express_Box</code><em class="property"> = '2c'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Large_Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Machineables">
+<code class="descname">Machineables</code><em class="property"> = '61'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Machineables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Media_Mail">
+<code class="descname">Media_Mail</code><em class="property"> = '65'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Media_Mail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Medium_Express_Box">
+<code class="descname">Medium_Express_Box</code><em class="property"> = '2b'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Medium_Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.PAK">
+<code class="descname">PAK</code><em class="property"> = '04'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.PAK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.PAL">
+<code class="descname">PAL</code><em class="property"> = '30'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.PAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.PC">
+<code class="descname">PC</code><em class="property"> = '04'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.PC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Pallet">
+<code class="descname">Pallet</code><em class="property"> = '30'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Pallet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Parcel_Post">
+<code class="descname">Parcel_Post</code><em class="property"> = '63'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Parcel_Post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Parcels">
+<code class="descname">Parcels</code><em class="property"> = '57'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Parcels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Priority">
+<code class="descname">Priority</code><em class="property"> = '60'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Priority" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.SM">
+<code class="descname">SM</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.SM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Small_Express_Box">
+<code class="descname">Small_Express_Box</code><em class="property"> = '2a'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Small_Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Standard_Flat">
+<code class="descname">Standard_Flat</code><em class="property"> = '67'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Standard_Flat" title="Permalink to this definition">¶</a></dt>
+<dd><p>unified Packaging type mapping</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.Tube">
+<code class="descname">Tube</code><em class="property"> = '03'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.Tube" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_10KG_Box">
+<code class="descname">UPS_10KG_Box</code><em class="property"> = '25'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_10KG_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_25KG_Box">
+<code class="descname">UPS_25KG_Box</code><em class="property"> = '24'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_25KG_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_Express_Box">
+<code class="descname">UPS_Express_Box</code><em class="property"> = '21'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_Express_Box" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_Letter">
+<code class="descname">UPS_Letter</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingPackagingType.UPS_Letter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">ShippingServiceCode</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_2nd_Day_Air">
+<code class="descname">UPS_2nd_Day_Air</code><em class="property"> = '02'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_2nd_Day_Air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_2nd_Day_Air_A_M">
+<code class="descname">UPS_2nd_Day_Air_A_M</code><em class="property"> = '59'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_2nd_Day_Air_A_M" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_3_Day_Select">
+<code class="descname">UPS_3_Day_Select</code><em class="property"> = '12'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_3_Day_Select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Access_Point_Economy">
+<code class="descname">UPS_Access_Point_Economy</code><em class="property"> = '70'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Access_Point_Economy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Economy_Mail_Innovations">
+<code class="descname">UPS_Economy_Mail_Innovations</code><em class="property"> = 'M6'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Economy_Mail_Innovations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Expedited">
+<code class="descname">UPS_Expedited</code><em class="property"> = '02'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Expedited" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Expedited_EU">
+<code class="descname">UPS_Expedited_EU</code><em class="property"> = '08'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Expedited_EU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Expedited_Mail_Innovations">
+<code class="descname">UPS_Expedited_Mail_Innovations</code><em class="property"> = 'M4'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Expedited_Mail_Innovations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express">
+<code class="descname">UPS_Express</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_EU">
+<code class="descname">UPS_Express_EU</code><em class="property"> = '07'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_EU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Early">
+<code class="descname">UPS_Express_Early</code><em class="property"> = '54'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Early" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Early_CA">
+<code class="descname">UPS_Express_Early_CA</code><em class="property"> = '14'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Early_CA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Plus">
+<code class="descname">UPS_Express_Plus</code><em class="property"> = '54'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Plus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Saver">
+<code class="descname">UPS_Express_Saver</code><em class="property"> = '65'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Saver_CA">
+<code class="descname">UPS_Express_Saver_CA</code><em class="property"> = '13'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Express_Saver_CA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_First_Class_Mail">
+<code class="descname">UPS_First_Class_Mail</code><em class="property"> = 'M2'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_First_Class_Mail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Ground">
+<code class="descname">UPS_Ground</code><em class="property"> = '03'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Ground" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Next_Day_Air">
+<code class="descname">UPS_Next_Day_Air</code><em class="property"> = '01'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Next_Day_Air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Next_Day_Air_Early">
+<code class="descname">UPS_Next_Day_Air_Early</code><em class="property"> = '14'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Next_Day_Air_Early" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Next_Day_Air_Saver">
+<code class="descname">UPS_Next_Day_Air_Saver</code><em class="property"> = '13'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Next_Day_Air_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Priority_Mail">
+<code class="descname">UPS_Priority_Mail</code><em class="property"> = 'M3'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Priority_Mail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Priority_Mail_Innovations">
+<code class="descname">UPS_Priority_Mail_Innovations</code><em class="property"> = 'M5'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Priority_Mail_Innovations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Standard">
+<code class="descname">UPS_Standard</code><em class="property"> = '11'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Dedicated_Courier">
+<code class="descname">UPS_Today_Dedicated_Courier</code><em class="property"> = '83'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Dedicated_Courier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Express">
+<code class="descname">UPS_Today_Express</code><em class="property"> = '85'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Express" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Express_Saver">
+<code class="descname">UPS_Today_Express_Saver</code><em class="property"> = '86'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Express_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Standard">
+<code class="descname">UPS_Today_Standard</code><em class="property"> = '82'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Today_Standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Expedited">
+<code class="descname">UPS_Worldwide_Expedited</code><em class="property"> = '08'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Expedited" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Express">
+<code class="descname">UPS_Worldwide_Express</code><em class="property"> = '07'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Express" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Express_Freight">
+<code class="descname">UPS_Worldwide_Express_Freight</code><em class="property"> = '96'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Express_Freight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Express_Plus">
+<code class="descname">UPS_Worldwide_Express_Plus</code><em class="property"> = '54'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Express_Plus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Saver">
+<code class="descname">UPS_Worldwide_Saver</code><em class="property"> = '65'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.ShippingServiceCode.UPS_Worldwide_Saver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.mappers.ups.ups_units.WeightUnit">
+<em class="property">class </em><code class="descclassname">purplship.mappers.ups.ups_units.</code><code class="descname">WeightUnit</code><a class="headerlink" href="#purplship.mappers.ups.ups_units.WeightUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.WeightUnit.KG">
+<code class="descname">KG</code><em class="property"> = 'KGS'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.WeightUnit.KG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.ups.ups_units.WeightUnit.LB">
+<code class="descname">LB</code><em class="property"> = 'LBS'</em><a class="headerlink" href="#purplship.mappers.ups.ups_units.WeightUnit.LB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-purplship.mappers.ups">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-purplship.mappers.ups" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PurplShip</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, @DanH91.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/purplship.mappers.ups.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

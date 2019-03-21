@@ -1,7 +1,0 @@
-openship
-========
-
-.. toctree::
-   :maxdepth: 4
-
-   openship

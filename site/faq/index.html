@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -10,10 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Shipping carriers API integration library documentation">
+        <meta name="description" content="Multi-carrier Shipping API integration library">
       
       
-        <link rel="canonical" href="https://purplship.com/faq/">
+        <link rel="canonical" href="https://purplship.com/open-source/faq/">
       
       
         <meta name="author" content="DanielK">
@@ -37,8 +37,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+      <link rel="shortcut icon" href="../docs/img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -57,16 +57,45 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-111378601-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -113,7 +142,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://purplship.com" title="PurplShip" class="md-header-nav__button md-logo">
+        <a href="https://purplship.com/open-source" title="PurplShip" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -125,22 +154,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                PurplShip
-              </span>
-              <span class="md-header-nav__topic">
-                FAQ
-              </span>
-            
+            <span class="md-header-nav__topic">
+              PurplShip
+            </span>
+            <span class="md-header-nav__topic">
+              FAQ
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -163,7 +189,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -174,20 +199,18 @@
 
   
 
-
-  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      PurplShip/purplship
+<a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    PurplShip/purplship
+  </div>
+</a>
           </div>
         </div>
       
@@ -209,11 +232,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <span class="md-nav__button md-logo">
+    <a href="https://purplship.com/open-source" title="PurplShip" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </span>
+    </a>
     PurplShip
   </label>
   
@@ -223,20 +246,18 @@
 
   
 
-
-  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      PurplShip/purplship
+<a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    PurplShip/purplship
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -258,10 +279,82 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Basic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../architecture/" title="Architecture" class="md-nav__link">
-      Architecture
+    <a href="../basic/gateway/" title="Gateway" class="md-nav__link">
+      Gateway
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/rating/" title="Rating" class="md-nav__link">
+      Rating
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/tracking/" title="Tracking" class="md-nav__link">
+      Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/shipping/" title="Shipping" class="md-nav__link">
+      Shipping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/pickup/" title="Pickup" class="md-nav__link">
+      Pickup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -275,11 +368,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Features
+      Carriers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Features
+        Carriers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -290,8 +383,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../proxy/" title="Proxy" class="md-nav__link">
-      Proxy
+    <a href="../carriers/aups/" title="Australia Post" class="md-nav__link">
+      Australia Post
     </a>
   </li>
 
@@ -302,8 +395,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../quote/" title="Quote" class="md-nav__link">
-      Quote
+    <a href="../carriers/caps/" title="Canada Post" class="md-nav__link">
+      Canada Post
     </a>
   </li>
 
@@ -314,8 +407,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../tracking/" title="Tracking" class="md-nav__link">
-      Tracking
+    <a href="../carriers/dhl/" title="DHL" class="md-nav__link">
+      DHL
     </a>
   </li>
 
@@ -326,8 +419,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../shipping/" title="Shipping" class="md-nav__link">
-      Shipping
+    <a href="../carriers/fedex/" title="FedEx" class="md-nav__link">
+      FedEx
     </a>
   </li>
 
@@ -338,14 +431,158 @@
 
 
   <li class="md-nav__item">
-    <a href="../pickup/" title="Pickup" class="md-nav__link">
-      Pickup
+    <a href="../carriers/sendle/" title="Sendle" class="md-nav__link">
+      Sendle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../carriers/ups/" title="UPS" class="md-nav__link">
+      UPS
     </a>
   </li>
 
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/extra/" title="Extra" class="md-nav__link">
+      Extra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/default/" title="Default" class="md-nav__link">
+      Default
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/options/" title="Shipping Options" class="md-nav__link">
+      Shipping Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/freight/" title="Freight" class="md-nav__link">
+      Freight
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/health/" title="Healthcare" class="md-nav__link">
+      Healthcare
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/architecture/" title="Architecture" class="md-nav__link">
+      Architecture
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../usage/" title="Use case" class="md-nav__link">
+      Use case
+    </a>
   </li>
 
     
@@ -438,8 +675,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../reference/" title="Reference" class="md-nav__link">
-      Reference
+    <a href="../api/" title="API" class="md-nav__link">
+      API
     </a>
   </li>
 
@@ -521,7 +758,7 @@ architecture makes it easy to package it as a self contain REST API.</p>
 <h2 id="what-is-the-benefit-of-using-purplship">What is the benefit of using PurplShip?</h2>
 <p>PurplShip uses the power of open source to offer a strong base to tackle and reduce shipping API
 integration challenges. Shipping carriers often have docs difficult to follow with omitted vital
-information, changing constantly. All these pain are relieved by the strong well-tested base
+information, changing constantly. All these pain are relieved by the strong well-tested foundation
 offered by PurplShip.</p>
 <h2 id="is-purplship-easy-to-use">Is PurplShip easy to use?</h2>
 <p>Yes. PurplShip hides the complexity of dealing with SOAP and XML in favour of a higher level API
@@ -561,13 +798,13 @@ expressed in simple code.</p>
           </a>
         
         
-          <a href="../reference/" title="Reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../api/" title="API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Reference
+                API
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -593,22 +830,15 @@ expressed in simple code.</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.a59e2a89.js"></script>
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-    
-    
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-111378601-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>

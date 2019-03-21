@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -10,10 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Shipping carriers API integration library documentation">
+        <meta name="description" content="Multi-carrier Shipping API integration library">
       
       
-        <link rel="canonical" href="https://purplship.com/roadmap/">
+        <link rel="canonical" href="https://purplship.com/open-source/roadmap/">
       
       
         <meta name="author" content="DanielK">
@@ -37,8 +37,8 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+      <link rel="shortcut icon" href="../docs/img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -57,16 +57,45 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-111378601-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -113,7 +142,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://purplship.com" title="PurplShip" class="md-header-nav__button md-logo">
+        <a href="https://purplship.com/open-source" title="PurplShip" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -125,22 +154,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                PurplShip
-              </span>
-              <span class="md-header-nav__topic">
-                Roadmap
-              </span>
-            
+            <span class="md-header-nav__topic">
+              PurplShip
+            </span>
+            <span class="md-header-nav__topic">
+              Roadmap
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -163,7 +189,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -174,20 +199,18 @@
 
   
 
-
-  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      PurplShip/purplship
+<a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    PurplShip/purplship
+  </div>
+</a>
           </div>
         </div>
       
@@ -209,11 +232,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <span class="md-nav__button md-logo">
+    <a href="https://purplship.com/open-source" title="PurplShip" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </span>
+    </a>
     PurplShip
   </label>
   
@@ -223,20 +246,18 @@
 
   
 
-
-  <a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      PurplShip/purplship
+<a href="https://github.com/PurplShip/purplship/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    PurplShip/purplship
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -258,10 +279,82 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Basic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../architecture/" title="Architecture" class="md-nav__link">
-      Architecture
+    <a href="../basic/gateway/" title="Gateway" class="md-nav__link">
+      Gateway
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/rating/" title="Rating" class="md-nav__link">
+      Rating
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/tracking/" title="Tracking" class="md-nav__link">
+      Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/shipping/" title="Shipping" class="md-nav__link">
+      Shipping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/pickup/" title="Pickup" class="md-nav__link">
+      Pickup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -275,11 +368,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Features
+      Carriers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Features
+        Carriers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -290,8 +383,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../proxy/" title="Proxy" class="md-nav__link">
-      Proxy
+    <a href="../carriers/aups/" title="Australia Post" class="md-nav__link">
+      Australia Post
     </a>
   </li>
 
@@ -302,8 +395,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../quote/" title="Quote" class="md-nav__link">
-      Quote
+    <a href="../carriers/caps/" title="Canada Post" class="md-nav__link">
+      Canada Post
     </a>
   </li>
 
@@ -314,8 +407,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../tracking/" title="Tracking" class="md-nav__link">
-      Tracking
+    <a href="../carriers/dhl/" title="DHL" class="md-nav__link">
+      DHL
     </a>
   </li>
 
@@ -326,8 +419,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../shipping/" title="Shipping" class="md-nav__link">
-      Shipping
+    <a href="../carriers/fedex/" title="FedEx" class="md-nav__link">
+      FedEx
     </a>
   </li>
 
@@ -338,14 +431,158 @@
 
 
   <li class="md-nav__item">
-    <a href="../pickup/" title="Pickup" class="md-nav__link">
-      Pickup
+    <a href="../carriers/sendle/" title="Sendle" class="md-nav__link">
+      Sendle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../carriers/ups/" title="UPS" class="md-nav__link">
+      UPS
     </a>
   </li>
 
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/extra/" title="Extra" class="md-nav__link">
+      Extra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/default/" title="Default" class="md-nav__link">
+      Default
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/options/" title="Shipping Options" class="md-nav__link">
+      Shipping Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/freight/" title="Freight" class="md-nav__link">
+      Freight
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/health/" title="Healthcare" class="md-nav__link">
+      Healthcare
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/architecture/" title="Architecture" class="md-nav__link">
+      Architecture
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../usage/" title="Use case" class="md-nav__link">
+      Use case
+    </a>
   </li>
 
     
@@ -382,36 +619,78 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mappers-integration" title="Mappers integration" class="md-nav__link">
-    Mappers integration
+  <a href="#milestones" title="Milestones" class="md-nav__link">
+    Milestones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carriers-integration" title="Carriers Integration" class="md-nav__link">
+    Carriers Integration
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#progress" title="Progress" class="md-nav__link">
-    Progress
+  <a href="#aramex" title="Aramex" class="md-nav__link">
+    Aramex
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#legend" title="Legend" class="md-nav__link">
-    Legend
+  <a href="#australia-post" title="Australia Post" class="md-nav__link">
+    Australia Post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canada-post" title="Canada Post" class="md-nav__link">
+    Canada Post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedex" title="FedEx" class="md-nav__link">
+    FedEx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purolator" title="Purolator" class="md-nav__link">
+    Purolator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendle" title="Sendle" class="md-nav__link">
+    Sendle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ups" title="UPS" class="md-nav__link">
+    UPS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usps" title="USPS" class="md-nav__link">
+    USPS
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tasks" title="Tasks" class="md-nav__link">
-    Tasks
-  </a>
   
 </li>
       
@@ -444,8 +723,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../reference/" title="Reference" class="md-nav__link">
-      Reference
+    <a href="../api/" title="API" class="md-nav__link">
+      API
     </a>
   </li>
 
@@ -471,36 +750,78 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mappers-integration" title="Mappers integration" class="md-nav__link">
-    Mappers integration
+  <a href="#milestones" title="Milestones" class="md-nav__link">
+    Milestones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carriers-integration" title="Carriers Integration" class="md-nav__link">
+    Carriers Integration
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#progress" title="Progress" class="md-nav__link">
-    Progress
+  <a href="#aramex" title="Aramex" class="md-nav__link">
+    Aramex
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#legend" title="Legend" class="md-nav__link">
-    Legend
+  <a href="#australia-post" title="Australia Post" class="md-nav__link">
+    Australia Post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canada-post" title="Canada Post" class="md-nav__link">
+    Canada Post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedex" title="FedEx" class="md-nav__link">
+    FedEx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purolator" title="Purolator" class="md-nav__link">
+    Purolator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendle" title="Sendle" class="md-nav__link">
+    Sendle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ups" title="UPS" class="md-nav__link">
+    UPS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usps" title="USPS" class="md-nav__link">
+    USPS
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tasks" title="Tasks" class="md-nav__link">
-    Tasks
-  </a>
   
 </li>
       
@@ -524,239 +845,76 @@
                 
                 
                 <h1 id="roadmap">Roadmap</h1>
-<h2 id="mappers-integration">Mappers integration</h2>
-<h3 id="progress">Progress</h3>
-<blockquote>
-<p>NOTE: PurplShip is not limited to the carriers listed here. The abstraction provided by PurplShip
-is validated by the integration of these carrier APIs.</p>
-<p>Therefore if the carrier API you did like to integrate is not listed here, the PurplShip abstraction
-can still get you quickly started.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>Carrier</th>
-<th align="center">Quote</th>
-<th align="center">Tracking</th>
-<th align="center">Shipping</th>
-<th align="center">Pickup</th>
-<th align="center">Address Validation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FedEx</td>
-<td align="center">I (90%)</td>
-<td align="center">I (90%)</td>
-<td align="center">I (30%)</td>
-<td align="center">I (30%)</td>
-<td align="center">N</td>
-</tr>
-<tr>
-<td>DHL</td>
-<td align="center">I (90%)</td>
-<td align="center">I (90%)</td>
-<td align="center">I (90%)</td>
-<td align="center">I (30%)</td>
-<td align="center">N</td>
-</tr>
-<tr>
-<td>UPS</td>
-<td align="center">I (90%)</td>
-<td align="center">I (90%)</td>
-<td align="center">I (30%)</td>
-<td align="center">I (30%)</td>
-<td align="center">N</td>
-</tr>
-<tr>
-<td>Canada Post</td>
-<td align="center">I (90%)</td>
-<td align="center">I (90%)</td>
-<td align="center">I (30%)</td>
-<td align="center">I (30%)</td>
-<td align="center">N</td>
-</tr>
-<tr>
-<td>USPS</td>
-<td align="center">N</td>
-<td align="center">N</td>
-<td align="center">N</td>
-<td align="center">N</td>
-<td align="center">N</td>
-</tr>
-<tr>
-<td>TNT</td>
-<td align="center">N</td>
-<td align="center">N</td>
-<td align="center">N</td>
-<td align="center">N</td>
-<td align="center">N</td>
-</tr>
-</tbody>
-</table>
-<h3 id="legend">Legend</h3>
+<h2 id="milestones">Milestones</h2>
 <ul>
-<li>I : Implemented</li>
-<li>N : Not Implemented</li>
+<li>
+<p>Design the distinction between Freight and package</p>
+</li>
+<li>
+<p>Unify label format</p>
+</li>
+<li>
+<p>Unify date formats</p>
+</li>
+<li>
+<p>Unify share shipping options</p>
+</li>
+<li>
+<p>Documentation versioning retstructuring</p>
+</li>
 </ul>
-<h2 id="tasks">Tasks</h2>
-<ul>
-<li>Decouple mapper interface implementation from carrier specific request</li>
-</ul>
-<blockquote>
-<p>extracting carrier entity instantiation from mapper methods will offer a clean way to integrate
-different 'sub' requests</p>
-<p>eg:
-Under DHL tracking request a KnownTrackingRequest or UnknownTrackingRequest can be instantiated
-if we know the tracking numbers or are retrieving shipment from references and shipment details</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">quote_request</span>
-<span class="kn">from</span> <span class="nn">pydhl.tracking_request_known</span> <span class="kn">import</span> <span class="n">KnownTrackingRequest</span>
-<span class="kn">from</span> <span class="nn">pydhl.tracking_request_unknown</span> <span class="kn">import</span> <span class="n">UnknownTrackingRequest</span>
-
-<span class="k">def</span> <span class="nf">create_quote_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">:</span> <span class="n">quote_request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">KnownTrackingRequest</span><span class="p">,</span> <span class="n">UnknownTrackingRequest</span><span class="p">]:</span>
-    <span class="k">if</span> <span class="n">is_freight_rate</span><span class="p">():</span>
-        <span class="k">return</span> <span class="n">create_known_tracking_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">create_unknown_tracking_request</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+<h2 id="carriers-integration">Carriers Integration</h2>
+<h3 id="aramex">Aramex</h3>
+<div class="codehilite"><pre><span></span>- Rating
+- Tracking
+- Shipping
+- Pickup
 </pre></div>
 
 
-<ul>
-<li>
-<p>Write quick starter for contributors</p>
-<blockquote>
-<p>Add dev-requirements.txt for pip install</p>
-</blockquote>
-</li>
-<li>
-<p>Publish PurplShip on pypi</p>
-<blockquote>
-<p>Solve the possibility to publish purplship and keep dependencies packages on GitHub so that</p>
-<p><code>shell
-   pip install --process-dependencies purplship</code></p>
-<p>installs purplship with dependencies like pydhl, pyups... from Github</p>
-</blockquote>
-</li>
-<li>
-<p>Set up project documentation for multi-version support</p>
-<blockquote>
-<p>Prepare the documentation website for the possibility of loading different released version after breaking changes</p>
-</blockquote>
-</li>
-<li>
-<p>Implement Gateway API level</p>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">Quote</span>
-<span class="kn">from</span> <span class="nn">purplship.gateway</span> <span class="kn">import</span> <span class="n">Gateway</span>        <span class="c1"># This is not implemented yet</span>
-
-<span class="kn">from</span> <span class="nn">purplship.mappers.dhl</span> <span class="kn">import</span> <span class="n">DHLProxy</span><span class="p">,</span> <span class="n">DHLClient</span>
-<span class="kn">from</span> <span class="nn">purplship.mappers.fedex</span> <span class="kn">import</span> <span class="n">FedexProxy</span><span class="p">,</span> <span class="n">FedexClient</span>
-
-<span class="n">gateway</span> <span class="o">=</span> <span class="n">Gateway</span><span class="p">()</span> <span class="c1"># This is not implemented yet</span>
-
-<span class="n">dhlProxy</span> <span class="o">=</span> <span class="n">DHLProxy</span><span class="p">(</span><span class="n">DHLClient</span><span class="p">(</span>
-  <span class="s2">&quot;server_url&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;YOUR_DHL_SITE_ID&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;YOUR_DHL_SITE_PASSWORD&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;YOUR_DHL_ACCOUNT_NUMBER&quot;</span>
-<span class="p">))</span>
-
-<span class="n">fedexProxy</span> <span class="o">=</span> <span class="n">FedexProxy</span><span class="p">(</span><span class="n">FedexClient</span><span class="p">(</span>
-  <span class="s2">&quot;server_url&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;YOUR_DHL_SITE_ID&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;YOUR_DHL_SITE_PASSWORD&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;YOUR_DHL_ACCOUNT_NUMBER&quot;</span>
-<span class="p">))</span>
-
-<span class="c1"># This is not implemented yet</span>
-<span class="n">gateway</span><span class="o">.</span><span class="n">register_proxy</span><span class="p">(</span><span class="n">dhlProxy</span><span class="p">)</span>
-<span class="n">gateway</span><span class="o">.</span><span class="n">register_proxy</span><span class="p">(</span><span class="n">fedexProxy</span><span class="p">)</span>
-
-<span class="n">shipper</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;postal_code&quot;</span><span class="p">:</span><span class="s2">&quot;H3N1S4&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span><span class="s2">&quot;CA&quot;</span><span class="p">}}</span>
-<span class="n">recipient</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;Lome&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span><span class="s2">&quot;TG&quot;</span><span class="p">}}</span>
-<span class="n">shipment_details</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;lenght&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;weight&quot;</span><span class="p">:</span><span class="mf">4.0</span><span class="p">}]}</span>
-
-<span class="n">quote_payload</span> <span class="o">=</span> <span class="n">Quote</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">shipper</span><span class="o">=</span><span class="n">shipper</span><span class="p">,</span> <span class="n">recipient</span><span class="o">=</span><span class="n">recipient</span><span class="p">,</span> <span class="n">shipment_details</span><span class="o">=</span><span class="n">shipment_details</span><span class="p">)</span>
-
-<span class="n">quotes</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">get_quotes</span><span class="p">(</span><span class="n">quoteR</span><span class="p">)</span> <span class="c1"># This is not implemented yet</span>
+<h3 id="australia-post">Australia Post</h3>
+<div class="codehilite"><pre><span></span>- Shipping
+- Pickup
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">gds_helpers</span> <span class="kn">import</span> <span class="n">jsonify</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">quotes</span><span class="p">))</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">[</span>
-<span class="sd">    [</span>
-<span class="sd">        {</span>
-<span class="sd">            &#39;base_charge&#39;: 195.32,</span>
-<span class="sd">            &#39;carrier&#39;: &#39;DHL&#39;,</span>
-<span class="sd">            &#39;currency&#39;: &#39;CAD&#39;,</span>
-<span class="sd">            &#39;delivery_date&#39;: &#39;2018-06-26 11:59:00&#39;,</span>
-<span class="sd">            &#39;discount&#39;: 0,</span>
-<span class="sd">            &#39;duties_and_taxes&#39;: 0,</span>
-<span class="sd">            &#39;extra_charges&#39;: [</span>
-<span class="sd">                {</span>
-<span class="sd">                    &#39;name&#39;: &#39;FUEL SURCHARGE&#39;,</span>
-<span class="sd">                    &#39;amount&#39;: 12.7,</span>
-<span class="sd">                    &#39;currency&#39;: None</span>
-<span class="sd">                }</span>
-<span class="sd">            ],</span>
-<span class="sd">            &#39;pickup_date&#39;: &#39;2018-06-21&#39;,</span>
-<span class="sd">            &#39;pickup_time&#39;: &#39;PT17H30M&#39;,</span>
-<span class="sd">            &#39;service_name&#39;: &#39;EXPRESS WORLDWIDE DOC&#39;,</span>
-<span class="sd">            &#39;service_type&#39;: &#39;TD&#39;,</span>
-<span class="sd">            &#39;total_charge&#39;: 208.02</span>
-<span class="sd">        },</span>
-<span class="sd">        {</span>
-<span class="sd">            &#39;base_charge&#39;: 207.47,</span>
-<span class="sd">            &#39;carrier&#39;: &#39;FedEx&#39;,</span>
-<span class="sd">            &#39;currency&#39;: &#39;USD&#39;,</span>
-<span class="sd">            &#39;delivery_date&#39;: None,</span>
-<span class="sd">            &#39;discount&#39;: 0.0,</span>
-<span class="sd">            &#39;duties_and_taxes&#39;: 0.0,</span>
-<span class="sd">            &#39;extra_charges&#39;: [</span>
-<span class="sd">                {</span>
-<span class="sd">                    &#39;name&#39;: &#39;FUEL&#39;,</span>
-<span class="sd">                    &#39;amount&#39;: 8.3,</span>
-<span class="sd">                    &#39;currency&#39;: None</span>
-<span class="sd">                }</span>
-<span class="sd">            ],</span>
-<span class="sd">            &#39;pickup_date&#39;: None,</span>
-<span class="sd">            &#39;pickup_time&#39;: None,</span>
-<span class="sd">            &#39;service_name&#39;: &#39;INTERNATIONAL_ECONOMY&#39;,</span>
-<span class="sd">            &#39;service_type&#39;: &#39;PAYOR_ACCOUNT_SHIPMENT&#39;,</span>
-<span class="sd">            &#39;total_charge&#39;: 215.77</span>
-<span class="sd">        }</span>
-<span class="sd">    ],</span>
-<span class="sd">    []</span>
-<span class="sd">]</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<h3 id="canada-post">Canada Post</h3>
+<div class="codehilite"><pre><span></span>- Pickup
 </pre></div>
 
 
-<ul>
-<li>
-<p>Write documentation</p>
-<blockquote>
-<ul>
-<li>Document carrier clients properties</li>
-<li>Getting started with a single carrier</li>
-<li>Getting started with multiple carriers</li>
-</ul>
-</blockquote>
-</li>
-<li>
-<p>Examples: Use case</p>
-<blockquote>
-<ul>
-<li>Tracking notification Slack app</li>
-<li>Lightweight shipping REST API</li>
-</ul>
-</blockquote>
-</li>
-</ul>
+<h3 id="fedex">FedEx</h3>
+<div class="codehilite"><pre><span></span>- Pickup
+- Freight
+</pre></div>
+
+
+<h3 id="purolator">Purolator</h3>
+<div class="codehilite"><pre><span></span>- Rating
+- Tracking
+- Shipping
+- Pickup
+</pre></div>
+
+
+<h3 id="sendle">Sendle</h3>
+<div class="codehilite"><pre><span></span>- Shipping
+- Pickup
+</pre></div>
+
+
+<h3 id="ups">UPS</h3>
+<div class="codehilite"><pre><span></span>- Pickup
+- Freight
+</pre></div>
+
+
+<h3 id="usps">USPS</h3>
+<div class="codehilite"><pre><span></span>- Rating
+- Tracking
+- Shipping
+- Pickup
+</pre></div>
                 
                   
                 
@@ -777,7 +935,7 @@ if we know the tracking numbers or are retrieving shipment from references and s
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../pickup/" title="Pickup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../usage/" title="Use case" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -786,7 +944,7 @@ if we know the tracking numbers or are retrieving shipment from references and s
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Pickup
+                Use case
               </span>
             </div>
           </a>
@@ -824,22 +982,15 @@ if we know the tracking numbers or are retrieving shipment from references and s
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.a59e2a89.js"></script>
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-    
-    
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-111378601-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>

@@ -1,0 +1,5 @@
+-f https://git.io/purplship
+mkdocs==1.0.4
+mkdocs-material==4.0.2
+purplship==1.0.0
+Sphinx==1.8.5

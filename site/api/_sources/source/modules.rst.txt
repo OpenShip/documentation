@@ -1,8 +1,0 @@
-py-caps
-=======
-
-.. toctree::
-   :maxdepth: 4
-
-   pycaps
-   setup

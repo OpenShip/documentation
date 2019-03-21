@@ -1,26 +1,42 @@
 site_name: PurplShip
-site_description: 'Shipping carriers API integration library documentation'
+site_description: 'Multi-carrier Shipping API integration library'
 site_author: 'DanielK'
-site_url: 'https://purplship.com'
+site_url: 'https://purplship.com/open-source'
 
-pages:
+nav:
     - Home: index.md
-    - Architecture: architecture.md
-    - Features:
-      - Proxy: proxy.md
-      - Quote: quote.md
-      - Tracking: tracking.md
-      - Shipping: shipping.md
-      - Pickup: pickup.md
+    - Basic:
+      - Gateway: basic/gateway.md
+      - Rating: basic/rating.md
+      - Tracking: basic/tracking.md
+      - Shipping: basic/shipping.md
+      - Pickup: basic/pickup.md
+    - Carriers:
+      - Australia Post: carriers/aups.md
+      - Canada Post: carriers/caps.md
+      - DHL: carriers/dhl.md
+      - FedEx: carriers/fedex.md
+      - Sendle: carriers/sendle.md
+      - UPS: carriers/ups.md
+    - Advanced:
+      - Extra: advanced/extra.md
+      - Default: advanced/default.md
+      - Shipping Options: advanced/options.md
+      - Freight: advanced/freight.md
+      - Healthcare: advanced/health.md
+    - Contributing: 
+      - Architecture: contributing/architecture.md
+    - Use case: usage.md
     - Roadmap: roadmap.md
     - FAQ: faq.md
-    - Reference: reference.md
+    - API: api.md
 
 theme:
   name: 'material'
   palette:
     primary: 'purple'
     accent: 'purple'
+  favicon: docs/img/favicon.ico
 
 google_analytics:
   - 'UA-111378601-2'
@@ -28,6 +44,23 @@ google_analytics:
 
 markdown_extensions:
   - codehilite
+  - admonition
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 # Repository
 repo_name: 'PurplShip/purplship'
