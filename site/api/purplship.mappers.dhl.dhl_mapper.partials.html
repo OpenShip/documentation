@@ -56,7 +56,7 @@
 
 <dl class="method">
 <dt id="purplship.mappers.dhl.dhl_mapper.partials.interface.DHLCapabilities.create_dct_request">
-<code class="descname">create_dct_request</code><span class="sig-paren">(</span><em>payload: purplship.domain.Types.models.ShipmentRequest</em><span class="sig-paren">)</span> &#x2192; pydhl.DCT_req_global.DCTRequest<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.interface.DHLCapabilities.create_dct_request" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create_dct_request</code><span class="sig-paren">(</span><em>payload: purplship.domain.Types.models.RateRequest</em><span class="sig-paren">)</span> &#x2192; pydhl.DCT_req_global.DCTRequest<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.interface.DHLCapabilities.create_dct_request" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -108,7 +108,7 @@
 <p>DHL mapper base class</p>
 <dl class="method">
 <dt id="purplship.mappers.dhl.dhl_mapper.partials.interface.DHLMapperBase.init_request">
-<code class="descname">init_request</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydhl.datatypes_global_v61.Request<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.interface.DHLMapperBase.init_request" title="Permalink to this definition">¶</a></dt>
+<code class="descname">init_request</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span> &#x2192; pydhl.datatypes_global_v61.Request<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.interface.DHLMapperBase.init_request" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -141,11 +141,6 @@
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="purplship.mappers.dhl.dhl_mapper.partials.pickup.DHLMapperPartial.create_tracking_pins">
-<code class="descname">create_tracking_pins</code><span class="sig-paren">(</span><em>payload: purplship.domain.Types.models.TrackingRequest</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.pickup.DHLMapperPartial.create_tracking_pins" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="purplship.mappers.dhl.dhl_mapper.partials.pickup.DHLMapperPartial.parse_book_puresponse">
 <code class="descname">parse_book_puresponse</code><span class="sig-paren">(</span><em>response</em><span class="sig-paren">)</span> &#x2192; Tuple[purplship.domain.Types.models.PickupDetails, List[purplship.domain.Types.models.Error]]<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.pickup.DHLMapperPartial.parse_book_puresponse" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -166,7 +161,7 @@
 <dd><p>Bases: <a class="reference internal" href="#purplship.mappers.dhl.dhl_mapper.partials.interface.DHLMapperBase" title="purplship.mappers.dhl.dhl_mapper.partials.interface.DHLMapperBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">purplship.mappers.dhl.dhl_mapper.partials.interface.DHLMapperBase</span></code></a></p>
 <dl class="method">
 <dt id="purplship.mappers.dhl.dhl_mapper.partials.rate.DHLMapperPartial.create_dct_request">
-<code class="descname">create_dct_request</code><span class="sig-paren">(</span><em>payload: purplship.domain.Types.models.ShipmentRequest</em><span class="sig-paren">)</span> &#x2192; pydhl.DCT_req_global.DCTRequest<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.rate.DHLMapperPartial.create_dct_request" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create_dct_request</code><span class="sig-paren">(</span><em>payload: purplship.domain.Types.models.RateRequest</em><span class="sig-paren">)</span> &#x2192; pydhl.DCT_req_global.DCTRequest<a class="headerlink" href="#purplship.mappers.dhl.dhl_mapper.partials.rate.DHLMapperPartial.create_dct_request" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

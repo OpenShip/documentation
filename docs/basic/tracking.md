@@ -3,27 +3,27 @@
 Use a proxy, and it's mapper get trackings.
 
 ```python
-from purplship.domain.entities import Tracking
+from purplship.domain.Types import TrackingRequest
 
 # JSON data
 tracking_numbers = ["7740842550", "1815115363"]
 
 # create a domain tracking payload entity from the json data
 # this operation will also validate the data
-tracking_payload = Tracking.create(tracking_numbers=tracking_numbers)
+tracking_payload = TrackingRequest(tracking_numbers=tracking_numbers)
 
 # get a carrier tracking request xml object from the tracking payload
 tracking_request = proxy.mapper.create_tracking_request(tracking_payload)
 
 # send a tracking request to the carrier servers using the proxy
-response = proxy.get_trackings(tracking_request)
+response = proxy.get_tracking(tracking_request)
 
 # extract the domain tracking entity from the carrier tracking response
-trackings = proxy.mapper.parse_tracking_response(response)
+tracking = proxy.mapper.parse_tracking_response(response)
 ```
 
 ```python
-print(jsonify(trackings))
+print(jsonify(tracking))
 # -->
 '''
 [
@@ -71,3 +71,13 @@ print(jsonify(trackings))
 ]
 '''
 ```
+
+# Datatypes
+
+## TrackingRequest
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**tracking_numbers** | **list[str]** | List of tracking numbers | 
+**language_code** | **str** | Language code (supported by certain carriers) | [optional] 
+**extra** | **dict(str, str)** | extra field for special details supported by a specific carriers | [optional] 

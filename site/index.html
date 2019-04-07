@@ -37,7 +37,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="docs/img/favicon.ico">
+      <link rel="shortcut icon" href="/img/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
@@ -322,6 +322,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#table-of-content" title="Table of content" class="md-nav__link">
+    Table of content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#license" title="License" class="md-nav__link">
     License
   </a>
@@ -371,18 +378,6 @@
 
 
   <li class="md-nav__item">
-    <a href="basic/gateway/" title="Gateway" class="md-nav__link">
-      Gateway
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="basic/rating/" title="Rating" class="md-nav__link">
       Rating
     </a>
@@ -421,6 +416,18 @@
   <li class="md-nav__item">
     <a href="basic/pickup/" title="Pickup" class="md-nav__link">
       Pickup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="basic/fluent-api/" title="Fluent-API" class="md-nav__link">
+      Fluent-API
     </a>
   </li>
 
@@ -521,6 +528,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="carriers/usps/" title="USPS" class="md-nav__link">
+      USPS
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -544,6 +563,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="advanced/carrier/" title="Single Carrier" class="md-nav__link">
+      Single Carrier
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="advanced/multi-carrier/" title="Multi-Carrier" class="md-nav__link">
+      Multi-Carrier
+    </a>
+  </li>
+
         
           
           
@@ -742,6 +785,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#table-of-content" title="Table of content" class="md-nav__link">
+    Table of content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#license" title="License" class="md-nav__link">
     License
   </a>
@@ -775,66 +825,87 @@
                 
                 
                 <h1 id="welcome-to-purplship">Welcome to PurplShip</h1>
-<p><a href="https://travis-ci.org/PurplShip/purplship"><img alt="Build Status" src="https://travis-ci.org/PurplShip/purplship.svg?branch=master" /></a> <a href="https://codecov.io/gh/PurplShip/purplship"><img alt="codecov" src="https://codecov.io/gh/PurplShip/purplship/branch/master/graph/badge.svg" /></a></p>
+<p><a href="https://travis-ci.org/PurplShip/purplship"><img alt="Build Status" src="https://travis-ci.org/PurplShip/purplship.svg?branch=master" /></a> <a href="https://codecov.io/gh/PurplShip/purplship"><img alt="codecov" src="https://codecov.io/gh/PurplShip/purplship/branch/master/graph/badge.svg" /></a> <a href="https://www.gnu.org/licenses/lgpl-3.0"><img alt="License: LGPL v3" src="https://img.shields.io/badge/License-LGPL%20v3-blue.svg" /></a></p>
 <h2 id="overview">Overview</h2>
-<p>PurplShip is an open source library which makes shipping carrier API integration
+<p>PurplShip is an open source library that makes shipping carrier API integration
 easy.
 PurplShip proposes an intuitive unified API, to make multi-carrier integration seamless.</p>
 <ul>
 <li>Integrate multiple carriers: DHL, FedEx, UPS, Canada Post and more with ease</li>
 <li>Use an intuitive, unified API across multiple carriers</li>
-<li>Use your developer credentials with negotiated rates</li>
+<li>Use your developer credentials and your negotiated rates</li>
 </ul>
-<p>PurplShip helps not having to reinvent the wheel and is easy to use:</p>
+<p>PurplShip helps quickly getting started with shipping services as it is easy to use:</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">purplship</span>
 
-<span class="n">proxy</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">gateway</span><span class="p">[</span><span class="s1">&#39;dhl&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
-    <span class="s2">&quot;server_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://xmlpi-ea.dhl.com/XMLShippingServlet&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;site_id&quot;</span><span class="p">:</span> <span class="s2">&quot;YOUR_DHL_SITE_ID&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;YOUR_DHL_SITE_PASSWORD&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;YOUR_DHL_ACCOUNT_NUMBER&quot;</span>
+<span class="n">dhl</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">gateway</span><span class="p">[</span><span class="s1">&#39;dhl&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+    <span class="s2">&quot;site_id&quot;</span><span class="p">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
 <span class="p">})</span>
 
-<span class="n">tracking_response</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span>
-        <span class="n">tracking_numbers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;8346088391&quot;</span><span class="p">]</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">proxy</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">fetch</span><span class="p">({</span>
+    <span class="s2">&quot;shipper&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;H3N1S4&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;recipient&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Lome&quot;</span><span class="p">,</span> <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;TG&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;shipment&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">4.0</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">})</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">dhl</span><span class="p">)</span>
 
-<span class="n">tracking</span> <span class="o">=</span> <span class="n">tracking_response</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+<span class="n">rates</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
 
 <span class="kn">from</span> <span class="nn">gds_helpers</span> <span class="kn">import</span> <span class="n">to_dict</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">to_dict</span><span class="p">(</span><span class="n">tracking</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">to_dict</span><span class="p">(</span><span class="n">rates</span><span class="p">))</span>
+</pre></div>
 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">[</span>
-<span class="sd">    [</span>
-<span class="sd">        {</span>
-<span class="sd">            &quot;carrier&quot;: &quot;DHL&quot;,</span>
-<span class="sd">            &quot;events&quot;: [</span>
-<span class="sd">                {</span>
-<span class="sd">                    &quot;code&quot;: &quot;PU&quot;,</span>
-<span class="sd">                    &quot;date&quot;: &quot;2009-08-13&quot;,</span>
-<span class="sd">                    &quot;description&quot;: &quot;Shipment picked up&quot;,</span>
-<span class="sd">                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,</span>
-<span class="sd">                    &quot;signatory&quot;: &quot;&quot;,</span>
-<span class="sd">                    &quot;time&quot;: &quot;23:58:00&quot;</span>
-<span class="sd">                },</span>
-<span class="sd">                {</span>
-<span class="sd">                    &quot;code&quot;: &quot;RW&quot;,</span>
-<span class="sd">                    &quot;date&quot;: &quot;2009-08-14&quot;,</span>
-<span class="sd">                    &quot;description&quot;: &quot;&quot;,</span>
-<span class="sd">                    &quot;location&quot;: &quot;Hong Kong - Hong Kong &quot;,</span>
-<span class="sd">                    &quot;signatory&quot;: &quot;21.20&quot;,</span>
-<span class="sd">                    &quot;time&quot;: &quot;02:19:50&quot;</span>
-<span class="sd">                }</span>
-<span class="sd">            ],</span>
-<span class="sd">            &quot;shipment_date&quot;: &quot;2009-08-13 23:58:00&quot;,</span>
-<span class="sd">            &quot;tracking_number&quot;: &quot;8346088391&quot;</span>
-<span class="sd">        }</span>
-<span class="sd">    ],</span>
-<span class="sd">    []</span>
-<span class="sd">]</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
+    <span class="p">[],</span> <span class="err">//Errors</span>
+    <span class="p">[</span>   <span class="err">//Rates</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;base_charge&quot;</span><span class="p">:</span> <span class="mf">62.66</span><span class="p">,</span>
+            <span class="nt">&quot;carrier&quot;</span><span class="p">:</span> <span class="s2">&quot;DHL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CAD&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;delivery_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-10-25 10:30:00&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;discount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;duties_and_taxes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;extra_charges&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span>
+                    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CAD&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;10:30 PREMIUM&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mf">5.12</span><span class="p">,</span>
+                    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CAD&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FUEL SURCHARGE&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;service_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EXPRESS 10:30 DOC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;service_type&quot;</span><span class="p">:</span> <span class="s2">&quot;TD&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;total_charge&quot;</span><span class="p">:</span> <span class="mf">75.78</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;base_charge&quot;</span><span class="p">:</span> <span class="mf">62.66</span><span class="p">,</span>
+            <span class="nt">&quot;carrier&quot;</span><span class="p">:</span> <span class="s2">&quot;DHL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CAD&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;delivery_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-10-25 11:59:00&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;discount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;duties_and_taxes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;extra_charges&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mf">4.54</span><span class="p">,</span>
+                    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CAD&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FUEL SURCHARGE&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;service_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EXPRESS WORLDWIDE DOC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;service_type&quot;</span><span class="p">:</span> <span class="s2">&quot;TD&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;total_charge&quot;</span><span class="p">:</span> <span class="mf">67.2</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">]</span>
 </pre></div>
 
 <h3 id="prerequisites">Prerequisites</h3>
@@ -850,6 +921,43 @@ PurplShip proposes an intuitive unified API, to make multi-carrier integration s
 pip install --process-dependency-links -e purplship
 </pre></div>
 
+<h2 id="table-of-content">Table of content</h2>
+<ul>
+<li>Basic<ul>
+<li><a href="basic/rating">Rating</a></li>
+<li><a href="basic/tracking">Tracking</a></li>
+<li><a href="basic/shipping">Shipping</a></li>
+<li><a href="basic/pickup">Pickup</a></li>
+<li><a href="basic/fluent-api">Fluent API</a></li>
+</ul>
+</li>
+<li>Carriers<ul>
+<li><a href="carriers/aups">Australia Post</a></li>
+<li><a href="carriers/caps">Canada Post</a></li>
+<li><a href="carriers/dhl">DHL</a></li>
+<li><a href="carriers/fedex">FedEx</a></li>
+<li><a href="carriers/sendle">Sendle</a></li>
+<li><a href="carriers/ups">UPS</a></li>
+</ul>
+</li>
+<li>Advanced<ul>
+<li><a href="advanced/carrier">Single Carrier</a></li>
+<li><a href="advanced/multi-carrier">Multi Carrier</a></li>
+<li><a href="advanced/extra">Extra</a></li>
+<li><a href="advanced/default">Default</a></li>
+<li><a href="advanced/options">Shipping Options</a></li>
+<li><a href="advanced/freight">Freight</a></li>
+<li><a href="advanced/health">Healthcare</a></li>
+</ul>
+</li>
+<li>Contributing<ul>
+<li><a href="contributing/architecture">Architecture</a></li>
+</ul>
+</li>
+<li><a href="usage">Use case</a></li>
+<li><a href="roadmap">Roadmap</a></li>
+<li><a href="faq">FAQ</a></li>
+</ul>
 <h2 id="license">License</h2>
 <p>This project is licensed under the LGPL v3 License - see the <a href="https://github.com/PurplShip/purplship/blob/master/LICENSE">LICENSE.md</a> file for details</p>
 <h2 id="contributing">Contributing</h2>
@@ -875,13 +983,13 @@ pip install --process-dependency-links -e purplship
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="basic/gateway/" title="Gateway" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="basic/rating/" title="Rating" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Gateway
+                Rating
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

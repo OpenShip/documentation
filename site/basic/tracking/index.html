@@ -37,7 +37,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../docs/img/favicon.ico">
+      <link rel="shortcut icon" href="/img/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
@@ -301,18 +301,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../gateway/" title="Gateway" class="md-nav__link">
-      Gateway
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../rating/" title="Rating" class="md-nav__link">
       Rating
     </a>
@@ -360,6 +348,18 @@
   <li class="md-nav__item">
     <a href="../pickup/" title="Pickup" class="md-nav__link">
       Pickup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fluent-api/" title="Fluent-API" class="md-nav__link">
+      Fluent-API
     </a>
   </li>
 
@@ -460,6 +460,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../carriers/usps/" title="USPS" class="md-nav__link">
+      USPS
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -483,6 +495,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/carrier/" title="Single Carrier" class="md-nav__link">
+      Single Carrier
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/multi-carrier/" title="Multi-Carrier" class="md-nav__link">
+      Multi-Carrier
+    </a>
+  </li>
+
         
           
           
@@ -665,26 +701,26 @@
                 
                 <h1 id="tracking">Tracking</h1>
 <p>Use a proxy, and it's mapper get trackings.</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.entities</span> <span class="kn">import</span> <span class="n">Tracking</span>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.Types</span> <span class="kn">import</span> <span class="n">TrackingRequest</span>
 
 <span class="c1"># JSON data</span>
 <span class="n">tracking_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;7740842550&quot;</span><span class="p">,</span> <span class="s2">&quot;1815115363&quot;</span><span class="p">]</span>
 
 <span class="c1"># create a domain tracking payload entity from the json data</span>
 <span class="c1"># this operation will also validate the data</span>
-<span class="n">tracking_payload</span> <span class="o">=</span> <span class="n">Tracking</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">tracking_numbers</span><span class="o">=</span><span class="n">tracking_numbers</span><span class="p">)</span>
+<span class="n">tracking_payload</span> <span class="o">=</span> <span class="n">TrackingRequest</span><span class="p">(</span><span class="n">tracking_numbers</span><span class="o">=</span><span class="n">tracking_numbers</span><span class="p">)</span>
 
 <span class="c1"># get a carrier tracking request xml object from the tracking payload</span>
 <span class="n">tracking_request</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_tracking_request</span><span class="p">(</span><span class="n">tracking_payload</span><span class="p">)</span>
 
 <span class="c1"># send a tracking request to the carrier servers using the proxy</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">get_trackings</span><span class="p">(</span><span class="n">tracking_request</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">get_tracking</span><span class="p">(</span><span class="n">tracking_request</span><span class="p">)</span>
 
 <span class="c1"># extract the domain tracking entity from the carrier tracking response</span>
-<span class="n">trackings</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_tracking_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="n">tracking</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_tracking_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">trackings</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span><span class="n">tracking</span><span class="p">))</span>
 <span class="c1"># --&gt;</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">[</span>
@@ -732,6 +768,39 @@
 <span class="sd">]</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
+
+<h1 id="datatypes">Datatypes</h1>
+<h2 id="trackingrequest">TrackingRequest</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>tracking_numbers</strong></td>
+<td><strong>list[str]</strong></td>
+<td>List of tracking numbers</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>language_code</strong></td>
+<td><strong>str</strong></td>
+<td>Language code (supported by certain carriers)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>extra</strong></td>
+<td><strong>dict(str, str)</strong></td>
+<td>extra field for special details supported by a specific carriers</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 

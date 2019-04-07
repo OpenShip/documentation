@@ -97,8 +97,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="purplship.mappers.dhl.dhl_proxy.DHLProxy.get_trackings">
-<code class="descname">get_trackings</code><span class="sig-paren">(</span><em>KnownTrackingRequest_: pydhl.tracking_request_known.KnownTrackingRequest</em><span class="sig-paren">)</span> &#x2192; lxml.etree.ElementBase<a class="headerlink" href="#purplship.mappers.dhl.dhl_proxy.DHLProxy.get_trackings" title="Permalink to this definition">¶</a></dt>
+<dt id="purplship.mappers.dhl.dhl_proxy.DHLProxy.get_tracking">
+<code class="descname">get_tracking</code><span class="sig-paren">(</span><em>KnownTrackingRequest_: pydhl.tracking_request_known.KnownTrackingRequest</em><span class="sig-paren">)</span> &#x2192; lxml.etree.ElementBase<a class="headerlink" href="#purplship.mappers.dhl.dhl_proxy.DHLProxy.get_tracking" title="Permalink to this definition">¶</a></dt>
 <dd><p>export xmlObj as xml string and request tracking from carrier</p>
 </dd></dl>
 
@@ -119,6 +119,1183 @@
 </div>
 <div class="section" id="module-purplship.mappers.dhl.dhl_units">
 <span id="purplship-mappers-dhl-dhl-units-module"></span><h2>purplship.mappers.dhl.dhl_units module<a class="headerlink" href="#module-purplship.mappers.dhl.dhl_units" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion">
+<em class="property">class </em><code class="descclassname">purplship.mappers.dhl.dhl_units.</code><code class="descname">CountryRegion</code><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AD">
+<code class="descname">AD</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AE">
+<code class="descname">AE</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AF">
+<code class="descname">AF</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AG">
+<code class="descname">AG</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AI">
+<code class="descname">AI</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AL">
+<code class="descname">AL</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AM">
+<code class="descname">AM</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AN">
+<code class="descname">AN</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AO">
+<code class="descname">AO</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AR">
+<code class="descname">AR</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AS">
+<code class="descname">AS</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AT">
+<code class="descname">AT</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AU">
+<code class="descname">AU</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AW">
+<code class="descname">AW</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.AZ">
+<code class="descname">AZ</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.AZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BA">
+<code class="descname">BA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BB">
+<code class="descname">BB</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BD">
+<code class="descname">BD</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BE">
+<code class="descname">BE</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BF">
+<code class="descname">BF</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BG">
+<code class="descname">BG</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BH">
+<code class="descname">BH</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BI">
+<code class="descname">BI</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BJ">
+<code class="descname">BJ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BM">
+<code class="descname">BM</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BN">
+<code class="descname">BN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BO">
+<code class="descname">BO</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BR">
+<code class="descname">BR</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BS">
+<code class="descname">BS</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BT">
+<code class="descname">BT</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BW">
+<code class="descname">BW</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BY">
+<code class="descname">BY</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.BZ">
+<code class="descname">BZ</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.BZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CA">
+<code class="descname">CA</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CD">
+<code class="descname">CD</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CF">
+<code class="descname">CF</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CG">
+<code class="descname">CG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CH">
+<code class="descname">CH</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CI">
+<code class="descname">CI</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CK">
+<code class="descname">CK</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CL">
+<code class="descname">CL</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CM">
+<code class="descname">CM</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CN">
+<code class="descname">CN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CO">
+<code class="descname">CO</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CR">
+<code class="descname">CR</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CU">
+<code class="descname">CU</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CV">
+<code class="descname">CV</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CY">
+<code class="descname">CY</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.CZ">
+<code class="descname">CZ</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.CZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.DE">
+<code class="descname">DE</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.DE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.DJ">
+<code class="descname">DJ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.DJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.DK">
+<code class="descname">DK</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.DK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.DM">
+<code class="descname">DM</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.DM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.DO">
+<code class="descname">DO</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.DO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.DZ">
+<code class="descname">DZ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.DZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.EC">
+<code class="descname">EC</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.EC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.EE">
+<code class="descname">EE</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.EE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.EG">
+<code class="descname">EG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.EG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ER">
+<code class="descname">ER</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ES">
+<code class="descname">ES</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ET">
+<code class="descname">ET</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.FI">
+<code class="descname">FI</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.FI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.FJ">
+<code class="descname">FJ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.FJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.FK">
+<code class="descname">FK</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.FK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.FM">
+<code class="descname">FM</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.FM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.FO">
+<code class="descname">FO</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.FO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.FR">
+<code class="descname">FR</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.FR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GA">
+<code class="descname">GA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GB">
+<code class="descname">GB</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GD">
+<code class="descname">GD</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GE">
+<code class="descname">GE</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GF">
+<code class="descname">GF</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GG">
+<code class="descname">GG</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GH">
+<code class="descname">GH</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GI">
+<code class="descname">GI</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GL">
+<code class="descname">GL</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GM">
+<code class="descname">GM</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GN">
+<code class="descname">GN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GP">
+<code class="descname">GP</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GQ">
+<code class="descname">GQ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GR">
+<code class="descname">GR</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GT">
+<code class="descname">GT</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GU">
+<code class="descname">GU</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GW">
+<code class="descname">GW</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.GY">
+<code class="descname">GY</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.GY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.HK">
+<code class="descname">HK</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.HK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.HN">
+<code class="descname">HN</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.HN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.HR">
+<code class="descname">HR</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.HR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.HT">
+<code class="descname">HT</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.HT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.HU">
+<code class="descname">HU</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.HU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IC">
+<code class="descname">IC</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ID">
+<code class="descname">ID</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IE">
+<code class="descname">IE</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IL">
+<code class="descname">IL</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IN">
+<code class="descname">IN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IQ">
+<code class="descname">IQ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IR">
+<code class="descname">IR</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IS">
+<code class="descname">IS</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.IT">
+<code class="descname">IT</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.IT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.JE">
+<code class="descname">JE</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.JE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.JM">
+<code class="descname">JM</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.JM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.JO">
+<code class="descname">JO</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.JO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.JP">
+<code class="descname">JP</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.JP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KE">
+<code class="descname">KE</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KG">
+<code class="descname">KG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KH">
+<code class="descname">KH</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KI">
+<code class="descname">KI</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KM">
+<code class="descname">KM</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KN">
+<code class="descname">KN</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KP">
+<code class="descname">KP</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KR">
+<code class="descname">KR</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KV">
+<code class="descname">KV</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KW">
+<code class="descname">KW</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KY">
+<code class="descname">KY</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.KZ">
+<code class="descname">KZ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.KZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LA">
+<code class="descname">LA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LB">
+<code class="descname">LB</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LC">
+<code class="descname">LC</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LI">
+<code class="descname">LI</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LK">
+<code class="descname">LK</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LR">
+<code class="descname">LR</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LS">
+<code class="descname">LS</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LT">
+<code class="descname">LT</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LU">
+<code class="descname">LU</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LV">
+<code class="descname">LV</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.LY">
+<code class="descname">LY</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.LY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MA">
+<code class="descname">MA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MC">
+<code class="descname">MC</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MD">
+<code class="descname">MD</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ME">
+<code class="descname">ME</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MG">
+<code class="descname">MG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MH">
+<code class="descname">MH</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MK">
+<code class="descname">MK</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ML">
+<code class="descname">ML</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ML" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MM">
+<code class="descname">MM</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MN">
+<code class="descname">MN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MO">
+<code class="descname">MO</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MP">
+<code class="descname">MP</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MQ">
+<code class="descname">MQ</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MR">
+<code class="descname">MR</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MS">
+<code class="descname">MS</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MT">
+<code class="descname">MT</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MU">
+<code class="descname">MU</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MV">
+<code class="descname">MV</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MW">
+<code class="descname">MW</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MX">
+<code class="descname">MX</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MY">
+<code class="descname">MY</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.MZ">
+<code class="descname">MZ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.MZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NA">
+<code class="descname">NA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NC">
+<code class="descname">NC</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NE">
+<code class="descname">NE</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NG">
+<code class="descname">NG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NI">
+<code class="descname">NI</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NL">
+<code class="descname">NL</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NO">
+<code class="descname">NO</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NP">
+<code class="descname">NP</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NR">
+<code class="descname">NR</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NU">
+<code class="descname">NU</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.NZ">
+<code class="descname">NZ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.NZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.OM">
+<code class="descname">OM</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.OM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PA">
+<code class="descname">PA</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PE">
+<code class="descname">PE</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PF">
+<code class="descname">PF</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PG">
+<code class="descname">PG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PH">
+<code class="descname">PH</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PK">
+<code class="descname">PK</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PL">
+<code class="descname">PL</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PR">
+<code class="descname">PR</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PT">
+<code class="descname">PT</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PW">
+<code class="descname">PW</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.PY">
+<code class="descname">PY</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.PY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.QA">
+<code class="descname">QA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.QA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.RE">
+<code class="descname">RE</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.RE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.RO">
+<code class="descname">RO</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.RO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.RS">
+<code class="descname">RS</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.RS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.RU">
+<code class="descname">RU</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.RU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.RW">
+<code class="descname">RW</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.RW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SA">
+<code class="descname">SA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SB">
+<code class="descname">SB</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SC">
+<code class="descname">SC</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SD">
+<code class="descname">SD</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SE">
+<code class="descname">SE</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SG">
+<code class="descname">SG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SH">
+<code class="descname">SH</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SI">
+<code class="descname">SI</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SK">
+<code class="descname">SK</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SL">
+<code class="descname">SL</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SM">
+<code class="descname">SM</code><em class="property"> = 'EU'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SN">
+<code class="descname">SN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SO">
+<code class="descname">SO</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SR">
+<code class="descname">SR</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SS">
+<code class="descname">SS</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ST">
+<code class="descname">ST</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SV">
+<code class="descname">SV</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SY">
+<code class="descname">SY</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.SZ">
+<code class="descname">SZ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.SZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TC">
+<code class="descname">TC</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TD">
+<code class="descname">TD</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TG">
+<code class="descname">TG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TH">
+<code class="descname">TH</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TJ">
+<code class="descname">TJ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TL">
+<code class="descname">TL</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TN">
+<code class="descname">TN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TO">
+<code class="descname">TO</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TR">
+<code class="descname">TR</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TT">
+<code class="descname">TT</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TV">
+<code class="descname">TV</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TW">
+<code class="descname">TW</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.TZ">
+<code class="descname">TZ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.TZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.UA">
+<code class="descname">UA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.UA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.UG">
+<code class="descname">UG</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.UG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.US">
+<code class="descname">US</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.US" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.UY">
+<code class="descname">UY</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.UY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.UZ">
+<code class="descname">UZ</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.UZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.VA">
+<code class="descname">VA</code><em class="property"> = ''</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.VA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.VC">
+<code class="descname">VC</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.VC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.VE">
+<code class="descname">VE</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.VE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.VG">
+<code class="descname">VG</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.VG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.VI">
+<code class="descname">VI</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.VI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.VN">
+<code class="descname">VN</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.VN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.VU">
+<code class="descname">VU</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.VU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.WS">
+<code class="descname">WS</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.WS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.XB">
+<code class="descname">XB</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.XB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.XC">
+<code class="descname">XC</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.XC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.XE">
+<code class="descname">XE</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.XE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.XM">
+<code class="descname">XM</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.XM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.XN">
+<code class="descname">XN</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.XN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.XS">
+<code class="descname">XS</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.XS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.XY">
+<code class="descname">XY</code><em class="property"> = 'AM'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.XY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.YE">
+<code class="descname">YE</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.YE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.YT">
+<code class="descname">YT</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.YT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ZA">
+<code class="descname">ZA</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ZA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ZM">
+<code class="descname">ZM</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ZM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.mappers.dhl.dhl_units.CountryRegion.ZW">
+<code class="descname">ZW</code><em class="property"> = 'AP'</em><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.CountryRegion.ZW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="purplship.mappers.dhl.dhl_units.DCTPackageType">
 <em class="property">class </em><code class="descclassname">purplship.mappers.dhl.dhl_units.</code><code class="descname">DCTPackageType</code><a class="headerlink" href="#purplship.mappers.dhl.dhl_units.DCTPackageType" title="Permalink to this definition">¶</a></dt>

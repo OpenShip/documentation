@@ -37,6 +37,38 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="module-purplship.domain.Types.errors">
+<span id="purplship-domain-types-errors-module"></span><h2>purplship.domain.Types.errors module<a class="headerlink" href="#module-purplship.domain.Types.errors" title="Permalink to this headline">¶</a></h2>
+<p>PurplShip Custom Errors(Exception) definition modules</p>
+<dl class="exception">
+<dt id="purplship.domain.Types.errors.Error">
+<em class="property">exception </em><code class="descclassname">purplship.domain.Types.errors.</code><code class="descname">Error</code><a class="headerlink" href="#purplship.domain.Types.errors.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Base class for other exceptions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="purplship.domain.Types.errors.MethodNotSupportedError">
+<em class="property">exception </em><code class="descclassname">purplship.domain.Types.errors.</code><code class="descname">MethodNotSupportedError</code><span class="sig-paren">(</span><em>method: str</em>, <em>base: str</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.errors.MethodNotSupportedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#purplship.domain.Types.errors.Error" title="purplship.domain.Types.errors.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">purplship.domain.Types.errors.Error</span></code></a></p>
+<p>Raised when a method from a base type is not implemented.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="purplship.domain.Types.errors.MultiItemShipmentSupportError">
+<em class="property">exception </em><code class="descclassname">purplship.domain.Types.errors.</code><code class="descname">MultiItemShipmentSupportError</code><span class="sig-paren">(</span><em>carrier_name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.errors.MultiItemShipmentSupportError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#purplship.domain.Types.errors.Error" title="purplship.domain.Types.errors.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">purplship.domain.Types.errors.Error</span></code></a></p>
+<p>Raised when a shipment is requested with multiple item.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="purplship.domain.Types.errors.OriginNotServicedError">
+<em class="property">exception </em><code class="descclassname">purplship.domain.Types.errors.</code><code class="descname">OriginNotServicedError</code><span class="sig-paren">(</span><em>origin: str</em>, <em>carrier: str</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.errors.OriginNotServicedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#purplship.domain.Types.errors.Error" title="purplship.domain.Types.errors.Error"><code class="xref py py-class docutils literal notranslate"><span class="pre">purplship.domain.Types.errors.Error</span></code></a></p>
+<p>Raised when an origin is not supported by a shipping provider.</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-purplship.domain.Types.models">
 <span id="purplship-domain-types-models-module"></span><h2>purplship.domain.Types.models module<a class="headerlink" href="#module-purplship.domain.Types.models" title="Permalink to this headline">¶</a></h2>
 <p>PurplShip Unified datatypes module.</p>
@@ -113,7 +145,7 @@
 
 <dl class="class">
 <dt id="purplship.domain.Types.models.Error">
-<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">Error</code><span class="sig-paren">(</span><em>message: str = None</em>, <em>code: str = None</em>, <em>carrier: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.Error" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">Error</code><span class="sig-paren">(</span><em>message: str = None</em>, <em>code: str = None</em>, <em>carrier: str = None</em>, <em>details: dict = None</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.Error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>PurplShip Error type.</p>
 <dl class="attribute">
@@ -124,6 +156,11 @@
 <dl class="attribute">
 <dt id="purplship.domain.Types.models.Error.code">
 <code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.Error.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.models.Error.details">
+<code class="descname">details</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.Error.details" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -231,7 +268,7 @@
 
 <dl class="class">
 <dt id="purplship.domain.Types.models.Party">
-<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">Party</code><span class="sig-paren">(</span><em>postal_code: str = None</em>, <em>city: str = None</em>, <em>type: str = None</em>, <em>tax_id: str = None</em>, <em>account_number: str = None</em>, <em>person_name: str = None</em>, <em>company_name: str = None</em>, <em>country_name: str = None</em>, <em>country_code: str = None</em>, <em>email_address: str = None</em>, <em>phone_number: str = None</em>, <em>state: str = None</em>, <em>state_code: str = None</em>, <em>suburb: str = None</em>, <em>address_lines: List[str] = []</em>, <em>extra: Dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.Party" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">Party</code><span class="sig-paren">(</span><em>postal_code: str = None</em>, <em>city: str = None</em>, <em>type: str = None</em>, <em>tax_id: str = None</em>, <em>account_number: str = None</em>, <em>person_name: str = None</em>, <em>company_name: str = None</em>, <em>country_code: str = None</em>, <em>email_address: str = None</em>, <em>phone_number: str = None</em>, <em>state: str = None</em>, <em>state_code: str = None</em>, <em>suburb: str = None</em>, <em>address_lines: List[str] = []</em>, <em>extra: Dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.Party" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>shipping party type.</p>
 <dl class="attribute">
@@ -252,11 +289,6 @@
 <dl class="attribute">
 <dt id="purplship.domain.Types.models.Party.country_code">
 <code class="descname">country_code</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.Party.country_code" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="purplship.domain.Types.models.Party.country_name">
-<code class="descname">country_name</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.Party.country_name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -347,7 +379,7 @@
 
 <dl class="class">
 <dt id="purplship.domain.Types.models.PickupRequest">
-<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">PickupRequest</code><span class="sig-paren">(</span><em>date: str</em>, <em>account_number: str</em>, <em>weight: float = None</em>, <em>weight_unit: str = None</em>, <em>pieces: float = None</em>, <em>ready_time: str = None</em>, <em>closing_time: str = None</em>, <em>instruction: str = None</em>, <em>package_location: str = None</em>, <em>city: str = None</em>, <em>postal_code: str = None</em>, <em>person_name: str = None</em>, <em>company_name: str = None</em>, <em>phone_number: str = None</em>, <em>email_address: str = None</em>, <em>is_business: bool = True</em>, <em>state: str = None</em>, <em>state_code: str = None</em>, <em>country_name: str = None</em>, <em>country_code: str = None</em>, <em>confirmation_number: str = None</em>, <em>address_lines: List[str] = []</em>, <em>extra: Dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.PickupRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">PickupRequest</code><span class="sig-paren">(</span><em>date: str</em>, <em>account_number: str</em>, <em>weight: float = None</em>, <em>weight_unit: str = None</em>, <em>pieces: float = None</em>, <em>ready_time: str = None</em>, <em>closing_time: str = None</em>, <em>instruction: str = None</em>, <em>package_location: str = None</em>, <em>city: str = None</em>, <em>postal_code: str = None</em>, <em>person_name: str = None</em>, <em>company_name: str = None</em>, <em>phone_number: str = None</em>, <em>email_address: str = None</em>, <em>is_business: bool = True</em>, <em>state: str = None</em>, <em>state_code: str = None</em>, <em>country_code: str = None</em>, <em>confirmation_number: str = None</em>, <em>address_lines: List[str] = []</em>, <em>extra: Dict = {}</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.PickupRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>pickup request type.</p>
 <dl class="attribute">
@@ -375,11 +407,6 @@
 <code class="descname">country_code</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.PickupRequest.country_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>required for pickup modification</p>
 </dd></dl>
-
-<dl class="attribute">
-<dt id="purplship.domain.Types.models.PickupRequest.country_name">
-<code class="descname">country_name</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.PickupRequest.country_name" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="attribute">
 <dt id="purplship.domain.Types.models.PickupRequest.email_address">
@@ -451,7 +478,7 @@
 
 <dl class="class">
 <dt id="purplship.domain.Types.models.QuoteDetails">
-<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">QuoteDetails</code><span class="sig-paren">(</span><em>carrier: str</em>, <em>service_name: str</em>, <em>service_type: str</em>, <em>base_charge: float</em>, <em>duties_and_taxes: float</em>, <em>total_charge: float</em>, <em>currency: str</em>, <em>delivery_date: str = None</em>, <em>discount: float = None</em>, <em>extra_charges: List[purplship.domain.Types.models.ChargeDetails] = []</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.QuoteDetails" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">QuoteDetails</code><span class="sig-paren">(</span><em>carrier: str</em>, <em>service_name: str</em>, <em>service_type: str</em>, <em>currency: str</em>, <em>discount: float = 0.0</em>, <em>base_charge: float = 0.0</em>, <em>delivery_date: str = None</em>, <em>total_charge: float = 0.0</em>, <em>duties_and_taxes: float = 0.0</em>, <em>extra_charges: List[purplship.domain.Types.models.ChargeDetails] = []</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.QuoteDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>PurplShip quote details type.</p>
 <dl class="attribute">
@@ -459,16 +486,11 @@
 <code class="descname">delivery_date</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.QuoteDetails.delivery_date" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="purplship.domain.Types.models.QuoteDetails.discount">
-<code class="descname">discount</code><em class="property"> = None</em><a class="headerlink" href="#purplship.domain.Types.models.QuoteDetails.discount" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="purplship.domain.Types.models.RateRequest">
-<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">RateRequest</code><span class="sig-paren">(</span><em>shipper=None</em>, <em>recipient=None</em>, <em>shipment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.RateRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">RateRequest</code><span class="sig-paren">(</span><em>shipper</em>, <em>recipient</em>, <em>shipment</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.RateRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#purplship.domain.Types.models.ShipmentRequest" title="purplship.domain.Types.models.ShipmentRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">purplship.domain.Types.models.ShipmentRequest</span></code></a></p>
 </dd></dl>
 
@@ -580,7 +602,7 @@
 
 <dl class="class">
 <dt id="purplship.domain.Types.models.ShipmentRequest">
-<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">ShipmentRequest</code><span class="sig-paren">(</span><em>shipper=None</em>, <em>recipient=None</em>, <em>shipment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.ShipmentRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">purplship.domain.Types.models.</code><code class="descname">ShipmentRequest</code><span class="sig-paren">(</span><em>shipper</em>, <em>recipient</em>, <em>shipment</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.Types.models.ShipmentRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>shipment request type.</p>
 </dd></dl>
@@ -1819,6 +1841,1183 @@
 <dl class="attribute">
 <dt id="purplship.domain.Types.units.Country.ZW">
 <code class="descname">ZW</code><em class="property"> = 'ZIMBABWE'</em><a class="headerlink" href="#purplship.domain.Types.units.Country.ZW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="purplship.domain.Types.units.CountryCurrency">
+<em class="property">class </em><code class="descclassname">purplship.domain.Types.units.</code><code class="descname">CountryCurrency</code><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AD">
+<code class="descname">AD</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AE">
+<code class="descname">AE</code><em class="property"> = 'AED'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AF">
+<code class="descname">AF</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AG">
+<code class="descname">AG</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AI">
+<code class="descname">AI</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AL">
+<code class="descname">AL</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AM">
+<code class="descname">AM</code><em class="property"> = 'AMD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AN">
+<code class="descname">AN</code><em class="property"> = 'ANG'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AO">
+<code class="descname">AO</code><em class="property"> = 'AOA'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AR">
+<code class="descname">AR</code><em class="property"> = 'ARS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AS">
+<code class="descname">AS</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AT">
+<code class="descname">AT</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AU">
+<code class="descname">AU</code><em class="property"> = 'AUD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AW">
+<code class="descname">AW</code><em class="property"> = 'AWG'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.AZ">
+<code class="descname">AZ</code><em class="property"> = 'AZN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.AZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BA">
+<code class="descname">BA</code><em class="property"> = 'BAM'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BB">
+<code class="descname">BB</code><em class="property"> = 'BBD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BD">
+<code class="descname">BD</code><em class="property"> = 'BDT'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BE">
+<code class="descname">BE</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BF">
+<code class="descname">BF</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BG">
+<code class="descname">BG</code><em class="property"> = 'BGN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BH">
+<code class="descname">BH</code><em class="property"> = 'BHD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BI">
+<code class="descname">BI</code><em class="property"> = 'BIF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BJ">
+<code class="descname">BJ</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BM">
+<code class="descname">BM</code><em class="property"> = 'BMD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BN">
+<code class="descname">BN</code><em class="property"> = 'BND'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BO">
+<code class="descname">BO</code><em class="property"> = 'BOB'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BR">
+<code class="descname">BR</code><em class="property"> = 'BRL'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BS">
+<code class="descname">BS</code><em class="property"> = 'BSD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BT">
+<code class="descname">BT</code><em class="property"> = 'BTN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BW">
+<code class="descname">BW</code><em class="property"> = 'BWP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BY">
+<code class="descname">BY</code><em class="property"> = 'BYN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.BZ">
+<code class="descname">BZ</code><em class="property"> = 'BZD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.BZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CA">
+<code class="descname">CA</code><em class="property"> = 'CAD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CD">
+<code class="descname">CD</code><em class="property"> = 'CDF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CF">
+<code class="descname">CF</code><em class="property"> = 'XAF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CG">
+<code class="descname">CG</code><em class="property"> = 'XAF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CH">
+<code class="descname">CH</code><em class="property"> = 'CHF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CI">
+<code class="descname">CI</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CK">
+<code class="descname">CK</code><em class="property"> = 'NZD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CL">
+<code class="descname">CL</code><em class="property"> = 'CLP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CM">
+<code class="descname">CM</code><em class="property"> = 'XAF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CN">
+<code class="descname">CN</code><em class="property"> = 'CNY'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CO">
+<code class="descname">CO</code><em class="property"> = 'COP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CR">
+<code class="descname">CR</code><em class="property"> = 'CRC'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CU">
+<code class="descname">CU</code><em class="property"> = 'CUC'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CV">
+<code class="descname">CV</code><em class="property"> = 'CVE'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CY">
+<code class="descname">CY</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.CZ">
+<code class="descname">CZ</code><em class="property"> = 'CZK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.CZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.DE">
+<code class="descname">DE</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.DE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.DJ">
+<code class="descname">DJ</code><em class="property"> = 'DJF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.DJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.DK">
+<code class="descname">DK</code><em class="property"> = 'DKK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.DK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.DM">
+<code class="descname">DM</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.DM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.DO">
+<code class="descname">DO</code><em class="property"> = 'DOP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.DO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.DZ">
+<code class="descname">DZ</code><em class="property"> = 'DZD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.DZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.EC">
+<code class="descname">EC</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.EC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.EE">
+<code class="descname">EE</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.EE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.EG">
+<code class="descname">EG</code><em class="property"> = 'EGP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.EG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ER">
+<code class="descname">ER</code><em class="property"> = 'ERN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ES">
+<code class="descname">ES</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ET">
+<code class="descname">ET</code><em class="property"> = 'ETB'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.FI">
+<code class="descname">FI</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.FI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.FJ">
+<code class="descname">FJ</code><em class="property"> = 'FJD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.FJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.FK">
+<code class="descname">FK</code><em class="property"> = 'GBP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.FK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.FM">
+<code class="descname">FM</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.FM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.FO">
+<code class="descname">FO</code><em class="property"> = 'DKK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.FO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.FR">
+<code class="descname">FR</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.FR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GA">
+<code class="descname">GA</code><em class="property"> = 'XAF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GB">
+<code class="descname">GB</code><em class="property"> = 'GBP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GD">
+<code class="descname">GD</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GE">
+<code class="descname">GE</code><em class="property"> = 'GEL'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GF">
+<code class="descname">GF</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GG">
+<code class="descname">GG</code><em class="property"> = 'GBP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GH">
+<code class="descname">GH</code><em class="property"> = 'GHS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GI">
+<code class="descname">GI</code><em class="property"> = 'GBP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GL">
+<code class="descname">GL</code><em class="property"> = 'DKK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GM">
+<code class="descname">GM</code><em class="property"> = 'GMD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GN">
+<code class="descname">GN</code><em class="property"> = 'GNF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GP">
+<code class="descname">GP</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GQ">
+<code class="descname">GQ</code><em class="property"> = 'XAF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GR">
+<code class="descname">GR</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GT">
+<code class="descname">GT</code><em class="property"> = 'GTQ'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GU">
+<code class="descname">GU</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GW">
+<code class="descname">GW</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.GY">
+<code class="descname">GY</code><em class="property"> = 'GYD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.GY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.HK">
+<code class="descname">HK</code><em class="property"> = 'HKD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.HK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.HN">
+<code class="descname">HN</code><em class="property"> = 'HNL'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.HN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.HR">
+<code class="descname">HR</code><em class="property"> = 'HRK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.HR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.HT">
+<code class="descname">HT</code><em class="property"> = 'HTG'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.HT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.HU">
+<code class="descname">HU</code><em class="property"> = 'HUF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.HU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IC">
+<code class="descname">IC</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ID">
+<code class="descname">ID</code><em class="property"> = 'IDR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IE">
+<code class="descname">IE</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IL">
+<code class="descname">IL</code><em class="property"> = 'ILS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IN">
+<code class="descname">IN</code><em class="property"> = 'INR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IQ">
+<code class="descname">IQ</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IR">
+<code class="descname">IR</code><em class="property"> = 'IRR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IS">
+<code class="descname">IS</code><em class="property"> = 'ISK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.IT">
+<code class="descname">IT</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.IT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.JE">
+<code class="descname">JE</code><em class="property"> = 'GBP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.JE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.JM">
+<code class="descname">JM</code><em class="property"> = 'JMD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.JM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.JO">
+<code class="descname">JO</code><em class="property"> = 'JOD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.JO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.JP">
+<code class="descname">JP</code><em class="property"> = 'JPY'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.JP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KE">
+<code class="descname">KE</code><em class="property"> = 'KES'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KG">
+<code class="descname">KG</code><em class="property"> = 'KGS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KH">
+<code class="descname">KH</code><em class="property"> = 'KHR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KI">
+<code class="descname">KI</code><em class="property"> = 'AUD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KM">
+<code class="descname">KM</code><em class="property"> = 'KMF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KN">
+<code class="descname">KN</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KP">
+<code class="descname">KP</code><em class="property"> = 'KPW'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KR">
+<code class="descname">KR</code><em class="property"> = 'KRW'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KV">
+<code class="descname">KV</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KW">
+<code class="descname">KW</code><em class="property"> = 'KWD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KY">
+<code class="descname">KY</code><em class="property"> = 'KYD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.KZ">
+<code class="descname">KZ</code><em class="property"> = 'KZT'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.KZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LA">
+<code class="descname">LA</code><em class="property"> = 'LAK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LB">
+<code class="descname">LB</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LC">
+<code class="descname">LC</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LI">
+<code class="descname">LI</code><em class="property"> = 'CHF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LK">
+<code class="descname">LK</code><em class="property"> = 'LKR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LR">
+<code class="descname">LR</code><em class="property"> = 'LRD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LS">
+<code class="descname">LS</code><em class="property"> = 'LSL'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LT">
+<code class="descname">LT</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LU">
+<code class="descname">LU</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LV">
+<code class="descname">LV</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.LY">
+<code class="descname">LY</code><em class="property"> = 'LYD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.LY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MA">
+<code class="descname">MA</code><em class="property"> = 'MAD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MC">
+<code class="descname">MC</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MD">
+<code class="descname">MD</code><em class="property"> = 'MDL'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ME">
+<code class="descname">ME</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MG">
+<code class="descname">MG</code><em class="property"> = 'MGA'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MH">
+<code class="descname">MH</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MK">
+<code class="descname">MK</code><em class="property"> = 'MKD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ML">
+<code class="descname">ML</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ML" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MM">
+<code class="descname">MM</code><em class="property"> = 'MMK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MN">
+<code class="descname">MN</code><em class="property"> = 'MNT'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MO">
+<code class="descname">MO</code><em class="property"> = 'MOP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MP">
+<code class="descname">MP</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MQ">
+<code class="descname">MQ</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MR">
+<code class="descname">MR</code><em class="property"> = 'MRO'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MS">
+<code class="descname">MS</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MT">
+<code class="descname">MT</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MU">
+<code class="descname">MU</code><em class="property"> = 'MUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MV">
+<code class="descname">MV</code><em class="property"> = 'MVR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MW">
+<code class="descname">MW</code><em class="property"> = 'MWK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MX">
+<code class="descname">MX</code><em class="property"> = 'MXN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MY">
+<code class="descname">MY</code><em class="property"> = 'MYR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.MZ">
+<code class="descname">MZ</code><em class="property"> = 'MZN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.MZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NA">
+<code class="descname">NA</code><em class="property"> = 'NAD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NC">
+<code class="descname">NC</code><em class="property"> = 'XPF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NE">
+<code class="descname">NE</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NG">
+<code class="descname">NG</code><em class="property"> = 'NGN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NI">
+<code class="descname">NI</code><em class="property"> = 'NIO'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NL">
+<code class="descname">NL</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NO">
+<code class="descname">NO</code><em class="property"> = 'NOK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NP">
+<code class="descname">NP</code><em class="property"> = 'NPR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NR">
+<code class="descname">NR</code><em class="property"> = 'AUD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NU">
+<code class="descname">NU</code><em class="property"> = 'NZD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.NZ">
+<code class="descname">NZ</code><em class="property"> = 'NZD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.NZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.OM">
+<code class="descname">OM</code><em class="property"> = 'OMR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.OM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PA">
+<code class="descname">PA</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PE">
+<code class="descname">PE</code><em class="property"> = 'PEN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PF">
+<code class="descname">PF</code><em class="property"> = 'XPF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PG">
+<code class="descname">PG</code><em class="property"> = 'PGK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PH">
+<code class="descname">PH</code><em class="property"> = 'PHP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PK">
+<code class="descname">PK</code><em class="property"> = 'PKR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PL">
+<code class="descname">PL</code><em class="property"> = 'PLN'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PR">
+<code class="descname">PR</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PT">
+<code class="descname">PT</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PW">
+<code class="descname">PW</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.PY">
+<code class="descname">PY</code><em class="property"> = 'PYG'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.PY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.QA">
+<code class="descname">QA</code><em class="property"> = 'QAR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.QA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.RE">
+<code class="descname">RE</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.RE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.RO">
+<code class="descname">RO</code><em class="property"> = 'RON'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.RO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.RS">
+<code class="descname">RS</code><em class="property"> = 'RSD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.RS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.RU">
+<code class="descname">RU</code><em class="property"> = 'RUB'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.RU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.RW">
+<code class="descname">RW</code><em class="property"> = 'RWF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.RW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SA">
+<code class="descname">SA</code><em class="property"> = 'SAR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SB">
+<code class="descname">SB</code><em class="property"> = 'SBD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SC">
+<code class="descname">SC</code><em class="property"> = 'SCR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SD">
+<code class="descname">SD</code><em class="property"> = 'SDG'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SE">
+<code class="descname">SE</code><em class="property"> = 'SEK'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SG">
+<code class="descname">SG</code><em class="property"> = 'SGD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SH">
+<code class="descname">SH</code><em class="property"> = 'SHP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SI">
+<code class="descname">SI</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SK">
+<code class="descname">SK</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SL">
+<code class="descname">SL</code><em class="property"> = 'SLL'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SM">
+<code class="descname">SM</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SN">
+<code class="descname">SN</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SO">
+<code class="descname">SO</code><em class="property"> = 'SOS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SR">
+<code class="descname">SR</code><em class="property"> = 'SRD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SS">
+<code class="descname">SS</code><em class="property"> = 'SSP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ST">
+<code class="descname">ST</code><em class="property"> = 'STD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SV">
+<code class="descname">SV</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SY">
+<code class="descname">SY</code><em class="property"> = 'SYP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.SZ">
+<code class="descname">SZ</code><em class="property"> = 'SZL'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.SZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TC">
+<code class="descname">TC</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TD">
+<code class="descname">TD</code><em class="property"> = 'XAF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TG">
+<code class="descname">TG</code><em class="property"> = 'XOF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TH">
+<code class="descname">TH</code><em class="property"> = 'THB'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TJ">
+<code class="descname">TJ</code><em class="property"> = 'TJS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TL">
+<code class="descname">TL</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TN">
+<code class="descname">TN</code><em class="property"> = 'TND'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TO">
+<code class="descname">TO</code><em class="property"> = 'TOP'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TR">
+<code class="descname">TR</code><em class="property"> = 'TRY'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TT">
+<code class="descname">TT</code><em class="property"> = 'TTD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TV">
+<code class="descname">TV</code><em class="property"> = 'AUD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TW">
+<code class="descname">TW</code><em class="property"> = 'TWD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.TZ">
+<code class="descname">TZ</code><em class="property"> = 'TZS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.TZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.UA">
+<code class="descname">UA</code><em class="property"> = 'UAH'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.UA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.UG">
+<code class="descname">UG</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.UG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.US">
+<code class="descname">US</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.US" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.UY">
+<code class="descname">UY</code><em class="property"> = 'UYU'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.UY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.UZ">
+<code class="descname">UZ</code><em class="property"> = 'UZS'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.UZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.VA">
+<code class="descname">VA</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.VA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.VC">
+<code class="descname">VC</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.VC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.VE">
+<code class="descname">VE</code><em class="property"> = 'VEF'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.VE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.VG">
+<code class="descname">VG</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.VG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.VI">
+<code class="descname">VI</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.VI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.VN">
+<code class="descname">VN</code><em class="property"> = 'VND'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.VN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.VU">
+<code class="descname">VU</code><em class="property"> = 'VUV'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.VU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.WS">
+<code class="descname">WS</code><em class="property"> = 'WST'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.WS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.XB">
+<code class="descname">XB</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.XB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.XC">
+<code class="descname">XC</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.XC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.XE">
+<code class="descname">XE</code><em class="property"> = 'ANG'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.XE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.XM">
+<code class="descname">XM</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.XM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.XN">
+<code class="descname">XN</code><em class="property"> = 'XCD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.XN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.XS">
+<code class="descname">XS</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.XS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.XY">
+<code class="descname">XY</code><em class="property"> = 'ANG'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.XY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.YE">
+<code class="descname">YE</code><em class="property"> = 'YER'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.YE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.YT">
+<code class="descname">YT</code><em class="property"> = 'EUR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.YT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ZA">
+<code class="descname">ZA</code><em class="property"> = 'ZAR'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ZA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ZM">
+<code class="descname">ZM</code><em class="property"> = 'ZMW'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ZM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="purplship.domain.Types.units.CountryCurrency.ZW">
+<code class="descname">ZW</code><em class="property"> = 'USD'</em><a class="headerlink" href="#purplship.domain.Types.units.CountryCurrency.ZW" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

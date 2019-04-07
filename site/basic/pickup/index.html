@@ -37,7 +37,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../docs/img/favicon.ico">
+      <link rel="shortcut icon" href="/img/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
@@ -301,18 +301,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../gateway/" title="Gateway" class="md-nav__link">
-      Gateway
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../rating/" title="Rating" class="md-nav__link">
       Rating
     </a>
@@ -380,19 +368,6 @@
     Pickup booking
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pickup-request-and-update-request-payload" title="Pickup request and update request payload" class="md-nav__link">
-    Pickup request and update request payload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -409,6 +384,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#datatypes" title="Datatypes" class="md-nav__link">
+    Datatypes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pickuprequest-for-booking-and-updte" title="PickupRequest (For Booking and Updte)" class="md-nav__link">
+    PickupRequest (For Booking and Updte)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pickup-cancellation-request" title="Pickup cancellation request" class="md-nav__link">
+    Pickup cancellation request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -417,6 +419,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fluent-api/" title="Fluent-API" class="md-nav__link">
+      Fluent-API
+    </a>
   </li>
 
         
@@ -516,6 +530,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../carriers/usps/" title="USPS" class="md-nav__link">
+      USPS
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -539,6 +565,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/carrier/" title="Single Carrier" class="md-nav__link">
+      Single Carrier
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/multi-carrier/" title="Multi-Carrier" class="md-nav__link">
+      Multi-Carrier
+    </a>
+  </li>
+
         
           
           
@@ -714,19 +764,6 @@
     Pickup booking
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pickup-request-and-update-request-payload" title="Pickup request and update request payload" class="md-nav__link">
-    Pickup request and update request payload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -740,6 +777,33 @@
   <a href="#pickup-cancellation" title="Pickup cancellation" class="md-nav__link">
     Pickup cancellation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datatypes" title="Datatypes" class="md-nav__link">
+    Datatypes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pickuprequest-for-booking-and-updte" title="PickupRequest (For Booking and Updte)" class="md-nav__link">
+    PickupRequest (For Booking and Updte)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pickup-cancellation-request" title="Pickup cancellation request" class="md-nav__link">
+    Pickup cancellation request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -764,36 +828,41 @@
                 
                 <h1 id="pickup">Pickup</h1>
 <h2 id="pickup-booking">Pickup booking</h2>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">purplship</span>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.Types</span> <span class="kn">import</span> <span class="n">PickupRequest</span>
 
-<span class="n">dhl</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">gateway</span><span class="p">[</span><span class="s1">&#39;dhl&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">({</span><span class="o">...</span><span class="p">})</span>
-
-<span class="n">pickup_booking</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">book</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
-    <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-10-19&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pieces&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-    <span class="s2">&quot;weight_unit&quot;</span><span class="p">:</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ready_time&quot;</span><span class="p">:</span> <span class="s2">&quot;10:20:00&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;closing_time&quot;</span><span class="p">:</span> <span class="s2">&quot;09:20:00&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Montreal&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;H8Z2Z3&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Subhayu&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;phone_number&quot;</span><span class="p">:</span> <span class="s2">&quot;4801313131&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;region_code&quot;</span><span class="p">:</span> <span class="s2">&quot;QC&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CA&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;test@mail.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;instruction&quot;</span><span class="p">:</span> <span class="s2">&quot;behind the front desk&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;address_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;234 rue Hubert&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="n">pickup_booking</span> <span class="o">=</span> <span class="n">PickupRequest</span><span class="p">(</span>
+    <span class="n">date</span><span class="o">=</span><span class="s2">&quot;2013-10-19&quot;</span><span class="p">,</span>
+    <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+    <span class="n">pieces</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">weight</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">weight_unit</span><span class="o">=</span><span class="s2">&quot;LB&quot;</span><span class="p">,</span>
+    <span class="n">ready_time</span><span class="o">=</span><span class="s2">&quot;10:20:00&quot;</span><span class="p">,</span>
+    <span class="n">closing_time</span><span class="o">=</span><span class="s2">&quot;09:20:00&quot;</span><span class="p">,</span>
+    <span class="n">city</span><span class="o">=</span><span class="s2">&quot;Montreal&quot;</span><span class="p">,</span>
+    <span class="n">postal_code</span><span class="o">=</span><span class="s2">&quot;H8Z2Z3&quot;</span><span class="p">,</span>
+    <span class="n">person_name</span><span class="o">=</span><span class="s2">&quot;Subhayu&quot;</span><span class="p">,</span>
+    <span class="n">phone_number</span><span class="o">=</span><span class="s2">&quot;4801313131&quot;</span><span class="p">,</span>
+    <span class="n">region_code</span><span class="o">=</span><span class="s2">&quot;QC&quot;</span><span class="p">,</span>
+    <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;CA&quot;</span><span class="p">,</span>
+    <span class="n">email_address</span><span class="o">=</span><span class="s2">&quot;test@mail.com&quot;</span><span class="p">,</span>
+    <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;behind the front desk&quot;</span><span class="p">,</span>
+    <span class="n">address_lines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;234 rue Hubert&quot;</span><span class="p">],</span>
+    <span class="n">extra</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;RequestorContact&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;PersonName&quot;</span><span class="p">:</span> <span class="s2">&quot;Rikhil&quot;</span><span class="p">,</span> <span class="s2">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;23162&quot;</span> <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">})</span><span class="o">.</span><span class="n">with_</span><span class="p">(</span><span class="n">dhl</span><span class="p">)</span>
+<span class="p">)</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">pickup_booking</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+<span class="c1"># create a carrier specific pickup request object from the rate payload</span>
+<span class="n">carrier_pickup_booking</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">create_pickup_request</span><span class="p">(</span><span class="n">pickup_booking</span><span class="p">)</span>
+
+<span class="c1"># send a pickup booking request to the carrier servers using the proxy</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">create_pickup_request</span><span class="p">(</span><span class="n">carrier_pickup_booking</span><span class="p">)</span>
+
+<span class="c1"># extract the domain pickup details from the carrier pickup response</span>
+<span class="n">pickup_details</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">parse_quote_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">gds_helpers</span> <span class="kn">import</span> <span class="n">to_dict</span>
-<span class="k">print</span><span class="p">(</span><span class="n">to_dict</span><span class="p">(</span><span class="n">response</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">to_dict</span><span class="p">(</span><span class="n">pickup_details</span><span class="p">))</span>
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="p">[</span>
@@ -814,50 +883,209 @@
 <span class="p">]</span>
 </pre></div>
 
-<h3 id="pickup-request-and-update-request-payload">Pickup request and update request payload</h3>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="nt">&quot;weight_unit&quot;</span><span class="p">:</span> <span class="s2">&quot;KG&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;pieces&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="nt">&quot;ready_time&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;closing_time&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;instruction&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;package_location&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;state_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;country_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;company_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;phone_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;is_business&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;confirmation_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;address_lines&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;address 1&quot;</span>
-        <span class="s2">&quot;address 2&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;extra_field&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
 <h2 id="pickup-update">Pickup update</h2>
-<div class="codehilite"><pre><span></span><span class="n">pickup_update</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
-    <span class="o">...</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">dhl</span><span class="p">)</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">modify_pickup_request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 
 <h2 id="pickup-cancellation">Pickup cancellation</h2>
-<div class="codehilite"><pre><span></span><span class="n">pickup_update</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">cancel</span><span class="p">(</span>
-    <span class="o">...</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">dhl</span><span class="p">)</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="n">create_pickup_cancellation_request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
+
+<h2 id="datatypes">Datatypes</h2>
+<h3 id="pickuprequest-for-booking-and-updte">PickupRequest (For Booking and Updte)</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>date</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup date</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>account_number</strong></td>
+<td><strong>str</strong></td>
+<td>Shipper account number</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>weight</strong></td>
+<td><strong>float</strong></td>
+<td>Shipment total weight</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>weight_unit</strong></td>
+<td><strong>str</strong></td>
+<td>General package weight unit.         Supported Units: "LB" (Pound), "KG" (Kilogram)  default: "KG"</td>
+<td>[optional] [default to 'KG']</td>
+</tr>
+<tr>
+<td><strong>pieces</strong></td>
+<td><strong>float</strong></td>
+<td>Number of shipment pieces</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>ready_time</strong></td>
+<td><strong>str</strong></td>
+<td>Shipment ready time for pickup.     Format: '00:00', 'TT:MM'</td>
+<td>[optional</td>
+</tr>
+<tr>
+<td><strong>closing_time</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup location closing time.     Format: '00:00', 'TT:MM'</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>instruction</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup instruction</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>package_location</strong></td>
+<td><strong>str</strong></td>
+<td>Shipment items location.     Ex: Back of the entrance door</td>
+<td>[optional</td>
+</tr>
+<tr>
+<td><strong>city</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup address city</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>postal_code</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup address postal code</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>state</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup address state or province name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>state_code</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup address state or province code</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>country_name</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup address country name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>country_code</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup address country code</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>person_name</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup attention name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>company_name</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup company name (if company)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>phone_number</strong></td>
+<td><strong>str</strong></td>
+<td>Phone number</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>email_address</strong></td>
+<td><strong>str</strong></td>
+<td>Email address</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>is_business</strong></td>
+<td><strong>bool</strong></td>
+<td>Flag to specify if pickup address is a business</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>confirmation_number</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup confirmation number (only required for a pickup update)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>address_lines</strong></td>
+<td><strong>list[str]</strong></td>
+<td>Address lines</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>extra</strong></td>
+<td><strong>dict(str, str)</strong></td>
+<td>extra field for special details supported by a specific carriers</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pickup-cancellation-request">Pickup cancellation request</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pickup_date</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup date</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>confirmation_number</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup date</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>person_name</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup date</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>country_code</strong></td>
+<td><strong>str</strong></td>
+<td>Pickup date</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>extra</strong></td>
+<td><strong>dict(str, str)</strong></td>
+<td>extra field for special details supported by a specific carriers</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -893,13 +1121,13 @@
           </a>
         
         
-          <a href="../../carriers/aups/" title="Australia Post" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../fluent-api/" title="Fluent-API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Australia Post
+                Fluent-API
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

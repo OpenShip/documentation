@@ -1,0 +1,1510 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>pyaups package &#8212; PurplShip 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="pyaups-package">
+<h1>pyaups package<a class="headerlink" href="#pyaups-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyaups.domestic_letter_postage">
+<span id="pyaups-domestic-letter-postage-module"></span><h2>pyaups.domestic_letter_postage module<a class="headerlink" href="#module-pyaups.domestic_letter_postage" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post Domestic letter postage Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.Option">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">Option</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>name: Optional[str] = None</em>, <em>suboptions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.Option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.Option.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.Option.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.Option.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.Option.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.Options">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">Options</code><span class="sig-paren">(</span><em>option=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.Options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.Service">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>name: Optional[str] = None</em>, <em>price: Union[float</em>, <em>str</em>, <em>None] = None</em>, <em>max_extra_cover: Optional[int] = None</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.Service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.Service.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.Service.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.Service.max_extra_cover">
+<code class="descname">max_extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.Service.max_extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.Service.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.Service.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.Service.price">
+<code class="descname">price</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.Service.price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.ServiceRequest">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">ServiceRequest</code><span class="sig-paren">(</span><em>length: Optional[float], width: Optional[float], thickness: Optional[float], weight: Optional[float]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.ServiceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.ServiceResponse">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">ServiceResponse</code><span class="sig-paren">(</span><em>services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.ServiceResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.Services">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">Services</code><span class="sig-paren">(</span><em>service=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.Services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.SubOption">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">SubOption</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>name: Optional[str] = None</em>, <em>max_extra_cover: Optional[int] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.SubOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.SubOption.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.SubOption.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.SubOption.max_extra_cover">
+<code class="descname">max_extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.SubOption.max_extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_letter_postage.SubOption.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_letter_postage.SubOption.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_letter_postage.SubOptions">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_letter_postage.</code><code class="descname">SubOptions</code><span class="sig-paren">(</span><em>option=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_letter_postage.SubOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups.domestic_parcel_postage">
+<span id="pyaups-domestic-parcel-postage-module"></span><h2>pyaups.domestic_parcel_postage module<a class="headerlink" href="#module-pyaups.domestic_parcel_postage" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post Domestic parcel postage Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.Cost">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">Cost</code><span class="sig-paren">(</span><em>cost: str = None</em>, <em>item: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.Cost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Cost.cost">
+<code class="descname">cost</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Cost.cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Cost.item">
+<code class="descname">item</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Cost.item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.Option">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">Option</code><span class="sig-paren">(</span><em>code: str = None</em>, <em>name: str = None</em>, <em>suboptions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.Option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Option.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Option.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Option.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Option.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.Options">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">Options</code><span class="sig-paren">(</span><em>option=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.Options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.PostageRequest">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">PostageRequest</code><span class="sig-paren">(</span><em>from_postcode: str</em>, <em>to_postcode: str</em>, <em>length: float</em>, <em>width: float</em>, <em>height: float</em>, <em>weight: float</em>, <em>service_code: str</em>, <em>option_code: str = None</em>, <em>suboption_code: str = None</em>, <em>extra_cover: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.PostageRequest.extra_cover">
+<code class="descname">extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageRequest.extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.PostageRequest.option_code">
+<code class="descname">option_code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageRequest.option_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.PostageRequest.suboption_code">
+<code class="descname">suboption_code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageRequest.suboption_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.PostageResponse">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">PostageResponse</code><span class="sig-paren">(</span><em>postage_result=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.PostageResult">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">PostageResult</code><span class="sig-paren">(</span><em>service: str = None</em>, <em>total_cost: str = None</em>, <em>costs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.PostageResult.service">
+<code class="descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageResult.service" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.PostageResult.total_cost">
+<code class="descname">total_cost</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.PostageResult.total_cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.Service">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>code: str = None</em>, <em>name: str = None</em>, <em>price: Union[float</em>, <em>str] = None</em>, <em>max_extra_cover: int = None</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.Service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Service.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Service.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Service.max_extra_cover">
+<code class="descname">max_extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Service.max_extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Service.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Service.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.Service.price">
+<code class="descname">price</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.Service.price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.ServiceRequest">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">ServiceRequest</code><span class="sig-paren">(</span><em>from_postcode: str</em>, <em>to_postcode: str</em>, <em>length: float</em>, <em>width: float</em>, <em>height: float</em>, <em>weight: float</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.ServiceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.ServiceResponse">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">ServiceResponse</code><span class="sig-paren">(</span><em>services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.ServiceResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.Services">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">Services</code><span class="sig-paren">(</span><em>service=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.Services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.SubOption">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">SubOption</code><span class="sig-paren">(</span><em>code: str = None</em>, <em>name: str = None</em>, <em>max_extra_cover: int = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.SubOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.SubOption.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.SubOption.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.SubOption.max_extra_cover">
+<code class="descname">max_extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.SubOption.max_extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.domestic_parcel_postage.SubOption.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.domestic_parcel_postage.SubOption.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.domestic_parcel_postage.SubOptions">
+<em class="property">class </em><code class="descclassname">pyaups.domestic_parcel_postage.</code><code class="descname">SubOptions</code><span class="sig-paren">(</span><em>option=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.domestic_parcel_postage.SubOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups.error">
+<span id="pyaups-error-module"></span><h2>pyaups.error module<a class="headerlink" href="#module-pyaups.error" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post Errors Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.error.APIError">
+<em class="property">class </em><code class="descclassname">pyaups.error.</code><code class="descname">APIError</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>message: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.error.APIError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.error.APIError.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.error.APIError.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.error.APIError.message">
+<code class="descname">message</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.error.APIError.message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.error.ErrorResponse">
+<em class="property">class </em><code class="descclassname">pyaups.error.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>status: Optional[str] = None</em>, <em>errors=[]</em>, <em>error=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.error.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.error.ErrorResponse.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.error.ErrorResponse.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.error.PostageError">
+<em class="property">class </em><code class="descclassname">pyaups.error.</code><code class="descname">PostageError</code><span class="sig-paren">(</span><em>errorMessage: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.error.PostageError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.error.PostageError.errorMessage">
+<code class="descname">errorMessage</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.error.PostageError.errorMessage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups.international_letter_postage">
+<span id="pyaups-international-letter-postage-module"></span><h2>pyaups.international_letter_postage module<a class="headerlink" href="#module-pyaups.international_letter_postage" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post International letter postage Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.international_letter_postage.Cost">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">Cost</code><span class="sig-paren">(</span><em>cost: Optional[str] = None</em>, <em>item: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.Cost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Cost.cost">
+<code class="descname">cost</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Cost.cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Cost.item">
+<code class="descname">item</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Cost.item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.Costs">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">Costs</code><span class="sig-paren">(</span><em>cost=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.Costs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.Option">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">Option</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>name: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.Option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Option.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Option.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Option.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Option.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.Options">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">Options</code><span class="sig-paren">(</span><em>option=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.Options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.PostageRequest">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">PostageRequest</code><span class="sig-paren">(</span><em>country_code: str</em>, <em>service_code: str</em>, <em>weight: Optional[float] = None</em>, <em>option_code: Optional[str] = None</em>, <em>suboption_code: Optional[str] = None</em>, <em>extra_cover: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.PostageRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.PostageRequest.extra_cover">
+<code class="descname">extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.PostageRequest.extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.PostageRequest.option_code">
+<code class="descname">option_code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.PostageRequest.option_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.PostageRequest.suboption_code">
+<code class="descname">suboption_code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.PostageRequest.suboption_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.PostageRequest.weight">
+<code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.PostageRequest.weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.PostageResponse">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">PostageResponse</code><span class="sig-paren">(</span><em>postage_result=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.PostageResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.PostageResult">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">PostageResult</code><span class="sig-paren">(</span><em>service: Optional[str] = None</em>, <em>total_cost: Optional[str] = None</em>, <em>costs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.PostageResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.PostageResult.service">
+<code class="descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.PostageResult.service" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.PostageResult.total_cost">
+<code class="descname">total_cost</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.PostageResult.total_cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.Service">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>name: Optional[str] = None</em>, <em>price: Union[float</em>, <em>str</em>, <em>None] = None</em>, <em>max_extra_cover: Optional[int] = None</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.Service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Service.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Service.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Service.max_extra_cover">
+<code class="descname">max_extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Service.max_extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Service.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Service.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.Service.price">
+<code class="descname">price</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.Service.price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.ServiceRequest">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">ServiceRequest</code><span class="sig-paren">(</span><em>country_code: str</em>, <em>weight: Optional[float] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.ServiceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_letter_postage.ServiceRequest.weight">
+<code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_letter_postage.ServiceRequest.weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.ServiceResponse">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">ServiceResponse</code><span class="sig-paren">(</span><em>services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.ServiceResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_letter_postage.Services">
+<em class="property">class </em><code class="descclassname">pyaups.international_letter_postage.</code><code class="descname">Services</code><span class="sig-paren">(</span><em>service=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_letter_postage.Services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups.international_parcel_postage">
+<span id="pyaups-international-parcel-postage-module"></span><h2>pyaups.international_parcel_postage module<a class="headerlink" href="#module-pyaups.international_parcel_postage" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post International parcel postage Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.Cost">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">Cost</code><span class="sig-paren">(</span><em>cost: Optional[str] = None</em>, <em>item: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.Cost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Cost.cost">
+<code class="descname">cost</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Cost.cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Cost.item">
+<code class="descname">item</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Cost.item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.Costs">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">Costs</code><span class="sig-paren">(</span><em>cost=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.Costs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.Option">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">Option</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>name: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.Option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Option.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Option.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Option.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Option.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.Options">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">Options</code><span class="sig-paren">(</span><em>option=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.Options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.PostageRequest">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">PostageRequest</code><span class="sig-paren">(</span><em>country_code: str</em>, <em>service_code: str</em>, <em>weight: Optional[float] = None</em>, <em>option_code: Optional[str] = None</em>, <em>suboption_code: Optional[str] = None</em>, <em>extra_cover: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.PostageRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.PostageRequest.extra_cover">
+<code class="descname">extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.PostageRequest.extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.PostageRequest.option_code">
+<code class="descname">option_code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.PostageRequest.option_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.PostageRequest.suboption_code">
+<code class="descname">suboption_code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.PostageRequest.suboption_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.PostageRequest.weight">
+<code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.PostageRequest.weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.PostageResponse">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">PostageResponse</code><span class="sig-paren">(</span><em>postage_result=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.PostageResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.PostageResult">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">PostageResult</code><span class="sig-paren">(</span><em>service: Optional[str] = None</em>, <em>total_cost: Optional[str] = None</em>, <em>costs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.PostageResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.PostageResult.service">
+<code class="descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.PostageResult.service" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.PostageResult.total_cost">
+<code class="descname">total_cost</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.PostageResult.total_cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.Service">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>code: Optional[str] = None</em>, <em>name: Optional[str] = None</em>, <em>price: Union[float</em>, <em>str</em>, <em>None] = None</em>, <em>max_extra_cover: Optional[int] = None</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.Service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Service.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Service.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Service.max_extra_cover">
+<code class="descname">max_extra_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Service.max_extra_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Service.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Service.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.international_parcel_postage.Service.price">
+<code class="descname">price</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.international_parcel_postage.Service.price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.ServiceRequest">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">ServiceRequest</code><span class="sig-paren">(</span><em>country_code: str</em>, <em>weight: float</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.ServiceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.ServiceResponse">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">ServiceResponse</code><span class="sig-paren">(</span><em>services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.ServiceResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.international_parcel_postage.Services">
+<em class="property">class </em><code class="descclassname">pyaups.international_parcel_postage.</code><code class="descname">Services</code><span class="sig-paren">(</span><em>service=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.international_parcel_postage.Services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups.shipping_price_request">
+<span id="pyaups-shipping-price-request-module"></span><h2>pyaups.shipping_price_request module<a class="headerlink" href="#module-pyaups.shipping_price_request" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post Price Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.shipping_price_request.DangerousGood">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">DangerousGood</code><span class="sig-paren">(</span><em>un_number: str = None</em>, <em>technical_name: str = None</em>, <em>net_weight: str = None</em>, <em>class_division: str = None</em>, <em>subsidiary_risk: str = None</em>, <em>packing_group_designator: str = None</em>, <em>outer_packaging_type: str = None</em>, <em>outer_packaging_quantity: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.class_division">
+<code class="descname">class_division</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.class_division" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.net_weight">
+<code class="descname">net_weight</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.net_weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.outer_packaging_quantity">
+<code class="descname">outer_packaging_quantity</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.outer_packaging_quantity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.outer_packaging_type">
+<code class="descname">outer_packaging_type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.outer_packaging_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.packing_group_designator">
+<code class="descname">packing_group_designator</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.packing_group_designator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.subsidiary_risk">
+<code class="descname">subsidiary_risk</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.subsidiary_risk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.technical_name">
+<code class="descname">technical_name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.technical_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.DangerousGood.un_number">
+<code class="descname">un_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.DangerousGood.un_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_request.From">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">From</code><span class="sig-paren">(</span><em>name: str = None</em>, <em>type: str = None</em>, <em>lines: List[str] = []</em>, <em>suburb: str = None</em>, <em>state: str = None</em>, <em>postcode: str = None</em>, <em>country: str = None</em>, <em>phone: str = None</em>, <em>email: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.From" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.country">
+<code class="descname">country</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.country" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.email">
+<code class="descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.phone">
+<code class="descname">phone</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.phone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.postcode">
+<code class="descname">postcode</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.postcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.state">
+<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.suburb">
+<code class="descname">suburb</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.suburb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.From.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.From.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_request.Item">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">Item</code><span class="sig-paren">(</span><em>item_reference: str = None</em>, <em>product_id: str = None</em>, <em>item_description: str = None</em>, <em>length: float = None</em>, <em>width: float = None</em>, <em>height: float = None</em>, <em>cubic_volume: float = None</em>, <em>weight: float = None</em>, <em>contains_dangerous_goods: bool = None</em>, <em>transportable_by_air: bool = None</em>, <em>dangerous_goods_declaration: str = None</em>, <em>authority_to_leave: bool = None</em>, <em>reason_for_return: str = None</em>, <em>allow_partial_delivery: bool = None</em>, <em>packaging_type: str = None</em>, <em>atl_number: str = None</em>, <em>features: dict = None</em>, <em>tracking_details=None</em>, <em>commercial_value: bool = None</em>, <em>export_declaration_number: str = None</em>, <em>import_reference_number: str = None</em>, <em>classification_type: str = None</em>, <em>description_of_other: str = None</em>, <em>international_parcel_sender_name: str = None</em>, <em>non_delivery_action: str = None</em>, <em>certificate_number: str = None</em>, <em>licence_number: str = None</em>, <em>invoice_number: str = None</em>, <em>comments: str = None</em>, <em>item_contents=[]</em>, <em>tariff_concession: str = None</em>, <em>free_trade_applicable: bool = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.Item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.allow_partial_delivery">
+<code class="descname">allow_partial_delivery</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.allow_partial_delivery" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.atl_number">
+<code class="descname">atl_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.atl_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.authority_to_leave">
+<code class="descname">authority_to_leave</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.authority_to_leave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.certificate_number">
+<code class="descname">certificate_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.certificate_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.classification_type">
+<code class="descname">classification_type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.classification_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.comments">
+<code class="descname">comments</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.comments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.commercial_value">
+<code class="descname">commercial_value</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.commercial_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.contains_dangerous_goods">
+<code class="descname">contains_dangerous_goods</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.contains_dangerous_goods" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.cubic_volume">
+<code class="descname">cubic_volume</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.cubic_volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.dangerous_goods_declaration">
+<code class="descname">dangerous_goods_declaration</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.dangerous_goods_declaration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.description_of_other">
+<code class="descname">description_of_other</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.description_of_other" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.export_declaration_number">
+<code class="descname">export_declaration_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.export_declaration_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.features">
+<code class="descname">features</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.free_trade_applicable">
+<code class="descname">free_trade_applicable</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.free_trade_applicable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.height">
+<code class="descname">height</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.import_reference_number">
+<code class="descname">import_reference_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.import_reference_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.international_parcel_sender_name">
+<code class="descname">international_parcel_sender_name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.international_parcel_sender_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.invoice_number">
+<code class="descname">invoice_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.invoice_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.item_description">
+<code class="descname">item_description</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.item_description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.item_reference">
+<code class="descname">item_reference</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.item_reference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.length">
+<code class="descname">length</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.licence_number">
+<code class="descname">licence_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.licence_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.non_delivery_action">
+<code class="descname">non_delivery_action</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.non_delivery_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.packaging_type">
+<code class="descname">packaging_type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.packaging_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.product_id">
+<code class="descname">product_id</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.product_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.reason_for_return">
+<code class="descname">reason_for_return</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.reason_for_return" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.tariff_concession">
+<code class="descname">tariff_concession</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.tariff_concession" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.transportable_by_air">
+<code class="descname">transportable_by_air</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.transportable_by_air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.weight">
+<code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Item.width">
+<code class="descname">width</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Item.width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_request.ItemContent">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">ItemContent</code><span class="sig-paren">(</span><em>description: str = None</em>, <em>quantity: str = None</em>, <em>weight: float = None</em>, <em>value: float = None</em>, <em>tariff_code: str = None</em>, <em>country_of_origin: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.ItemContent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.ItemContent.country_of_origin">
+<code class="descname">country_of_origin</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.ItemContent.country_of_origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.ItemContent.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.ItemContent.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.ItemContent.quantity">
+<code class="descname">quantity</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.ItemContent.quantity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.ItemContent.tariff_code">
+<code class="descname">tariff_code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.ItemContent.tariff_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.ItemContent.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.ItemContent.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.ItemContent.weight">
+<code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.ItemContent.weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_request.Shipment">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">Shipment</code><span class="sig-paren">(</span><em>shipment_reference: str = None</em>, <em>sender_references: List[str] = []</em>, <em>goods_descriptions: List[str] = []</em>, <em>despatch_date: str = None</em>, <em>consolidate: bool = None</em>, <em>email_tracking_enabled: bool = None</em>, <em>from_=None</em>, <em>to=None</em>, <em>dangerous_goods=None</em>, <em>movement_type: str = None</em>, <em>features: dict = None</em>, <em>authorisation_number: str = None</em>, <em>items=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.Shipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Shipment.authorisation_number">
+<code class="descname">authorisation_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Shipment.authorisation_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Shipment.consolidate">
+<code class="descname">consolidate</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Shipment.consolidate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Shipment.despatch_date">
+<code class="descname">despatch_date</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Shipment.despatch_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Shipment.email_tracking_enabled">
+<code class="descname">email_tracking_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Shipment.email_tracking_enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Shipment.features">
+<code class="descname">features</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Shipment.features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Shipment.movement_type">
+<code class="descname">movement_type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Shipment.movement_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.Shipment.shipment_reference">
+<code class="descname">shipment_reference</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.Shipment.shipment_reference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_request.ShippingPriceRequest">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">ShippingPriceRequest</code><span class="sig-paren">(</span><em>shipments=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.ShippingPriceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_request.To">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">To</code><span class="sig-paren">(</span><em>name: str = None</em>, <em>apcn: str = None</em>, <em>business_name: str = None</em>, <em>type: str = None</em>, <em>lines: List[str] = []</em>, <em>suburb: str = None</em>, <em>state: str = None</em>, <em>postcode: str = None</em>, <em>country: str = None</em>, <em>phone: str = None</em>, <em>email: str = None</em>, <em>delivery_instructions: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.To" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.apcn">
+<code class="descname">apcn</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.apcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.business_name">
+<code class="descname">business_name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.business_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.country">
+<code class="descname">country</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.country" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.delivery_instructions">
+<code class="descname">delivery_instructions</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.delivery_instructions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.email">
+<code class="descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.phone">
+<code class="descname">phone</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.phone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.postcode">
+<code class="descname">postcode</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.postcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.state">
+<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.suburb">
+<code class="descname">suburb</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.suburb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.To.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.To.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_request.TrackingDetails">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_request.</code><code class="descname">TrackingDetails</code><span class="sig-paren">(</span><em>article_id: str = None</em>, <em>barcode_id: str = None</em>, <em>consignment_id: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_request.TrackingDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.TrackingDetails.article_id">
+<code class="descname">article_id</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.TrackingDetails.article_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.TrackingDetails.barcode_id">
+<code class="descname">barcode_id</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.TrackingDetails.barcode_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_request.TrackingDetails.consignment_id">
+<code class="descname">consignment_id</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_request.TrackingDetails.consignment_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups.shipping_price_response">
+<span id="pyaups-shipping-price-response-module"></span><h2>pyaups.shipping_price_response module<a class="headerlink" href="#module-pyaups.shipping_price_response" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post Price Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.shipping_price_response.Error">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">Error</code><span class="sig-paren">(</span><em>code: str = None</em>, <em>name: str = None</em>, <em>message: str = None</em>, <em>field: str = None</em>, <em>context: dict = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Error.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Error.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Error.context">
+<code class="descname">context</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Error.context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Error.field">
+<code class="descname">field</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Error.field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Error.message">
+<code class="descname">message</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Error.message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Error.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Error.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_response.Errors">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">Errors</code><span class="sig-paren">(</span><em>errors=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.Errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_response.From">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">From</code><span class="sig-paren">(</span><em>type_: str = None</em>, <em>lines: str = None</em>, <em>suburb: str = None</em>, <em>postcode: str = None</em>, <em>state: str = None</em>, <em>name: str = None</em>, <em>email: str = None</em>, <em>phone: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.From" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.email">
+<code class="descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.lines">
+<code class="descname">lines</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.phone">
+<code class="descname">phone</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.phone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.postcode">
+<code class="descname">postcode</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.postcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.state">
+<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.suburb">
+<code class="descname">suburb</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.suburb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.From.type_">
+<code class="descname">type_</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.From.type_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_response.Item">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">Item</code><span class="sig-paren">(</span><em>height: float = None</em>, <em>length: float = None</em>, <em>width: float = None</em>, <em>weight: float = None</em>, <em>packaging_type: str = None</em>, <em>atl_number: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.Item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Item.atl_number">
+<code class="descname">atl_number</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Item.atl_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Item.height">
+<code class="descname">height</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Item.height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Item.length">
+<code class="descname">length</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Item.length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Item.packaging_type">
+<code class="descname">packaging_type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Item.packaging_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Item.weight">
+<code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Item.weight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Item.width">
+<code class="descname">width</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Item.width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_response.Shipment">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">Shipment</code><span class="sig-paren">(</span><em>shipment_id: str = None</em>, <em>shipment_reference: str = None</em>, <em>shipment_creation_date: str = None</em>, <em>email_tracking_enabled: str = None</em>, <em>from_: pyaups.shipping_price_response.From = None</em>, <em>to: pyaups.shipping_price_response.To = None</em>, <em>items=[]</em>, <em>shipment_summary=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.Shipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Shipment.email_tracking_enabled">
+<code class="descname">email_tracking_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Shipment.email_tracking_enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Shipment.from_">
+<code class="descname">from_</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Shipment.from_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Shipment.shipment_creation_date">
+<code class="descname">shipment_creation_date</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Shipment.shipment_creation_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Shipment.shipment_id">
+<code class="descname">shipment_id</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Shipment.shipment_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Shipment.shipment_reference">
+<code class="descname">shipment_reference</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Shipment.shipment_reference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.Shipment.to">
+<code class="descname">to</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.Shipment.to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_response.ShipmentSummary">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">ShipmentSummary</code><span class="sig-paren">(</span><em>total_cost: float = None</em>, <em>total_cost_ex_gst: float = None</em>, <em>total_gst: float = None</em>, <em>status: str = None</em>, <em>number_of_items: int = None</em>, <em>tracking_summary: List[str] = None</em>, <em>freight_charge: float = None</em>, <em>discount: float = None</em>, <em>transit_cover: float = None</em>, <em>security_surcharge: float = None</em>, <em>fuel_surcharge: float = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.discount">
+<code class="descname">discount</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.discount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.freight_charge">
+<code class="descname">freight_charge</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.freight_charge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.fuel_surcharge">
+<code class="descname">fuel_surcharge</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.fuel_surcharge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.number_of_items">
+<code class="descname">number_of_items</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.number_of_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.security_surcharge">
+<code class="descname">security_surcharge</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.security_surcharge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.total_cost">
+<code class="descname">total_cost</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.total_cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.total_cost_ex_gst">
+<code class="descname">total_cost_ex_gst</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.total_cost_ex_gst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.total_gst">
+<code class="descname">total_gst</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.total_gst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.tracking_summary">
+<code class="descname">tracking_summary</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.tracking_summary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.ShipmentSummary.transit_cover">
+<code class="descname">transit_cover</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.ShipmentSummary.transit_cover" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_response.ShippingPriceResponse">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">ShippingPriceResponse</code><span class="sig-paren">(</span><em>shipments=[]</em>, <em>errors=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.ShippingPriceResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.shipping_price_response.To">
+<em class="property">class </em><code class="descclassname">pyaups.shipping_price_response.</code><code class="descname">To</code><span class="sig-paren">(</span><em>type_: str = None</em>, <em>lines: str = None</em>, <em>suburb: str = None</em>, <em>postcode: str = None</em>, <em>state: str = None</em>, <em>name: str = None</em>, <em>apcn: str = None</em>, <em>business_name: str = None</em>, <em>email: str = None</em>, <em>phone: str = None</em>, <em>delivery_instructions: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.shipping_price_response.To" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.apcn">
+<code class="descname">apcn</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.apcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.business_name">
+<code class="descname">business_name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.business_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.delivery_instructions">
+<code class="descname">delivery_instructions</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.delivery_instructions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.email">
+<code class="descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.lines">
+<code class="descname">lines</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.phone">
+<code class="descname">phone</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.phone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.postcode">
+<code class="descname">postcode</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.postcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.state">
+<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.suburb">
+<code class="descname">suburb</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.suburb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.shipping_price_response.To.type_">
+<code class="descname">type_</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.shipping_price_response.To.type_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups.track_item">
+<span id="pyaups-track-item-module"></span><h2>pyaups.track_item module<a class="headerlink" href="#module-pyaups.track_item" title="Permalink to this headline">¶</a></h2>
+<p>Australia Post Tracking Datatype definition module.</p>
+<dl class="class">
+<dt id="pyaups.track_item.Consignment">
+<em class="property">class </em><code class="descclassname">pyaups.track_item.</code><code class="descname">Consignment</code><span class="sig-paren">(</span><em>events=[]</em>, <em>status: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.track_item.Consignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.track_item.Consignment.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.Consignment.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.track_item.Error">
+<em class="property">class </em><code class="descclassname">pyaups.track_item.</code><code class="descname">Error</code><span class="sig-paren">(</span><em>code: str = None</em>, <em>name: str = None</em>, <em>message: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.track_item.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.track_item.Error.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.Error.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.Error.message">
+<code class="descname">message</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.Error.message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.Error.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.Error.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.track_item.Event">
+<em class="property">class </em><code class="descclassname">pyaups.track_item.</code><code class="descname">Event</code><span class="sig-paren">(</span><em>location: str = None</em>, <em>description: str = None</em>, <em>date: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.track_item.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.track_item.Event.date">
+<code class="descname">date</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.Event.date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.Event.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.Event.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.Event.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.Event.location" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.track_item.TrackableItem">
+<em class="property">class </em><code class="descclassname">pyaups.track_item.</code><code class="descname">TrackableItem</code><span class="sig-paren">(</span><em>article_id: str = None</em>, <em>product_type: str = None</em>, <em>status: str = None</em>, <em>events=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.track_item.TrackableItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.track_item.TrackableItem.article_id">
+<code class="descname">article_id</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.TrackableItem.article_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.TrackableItem.product_type">
+<code class="descname">product_type</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.TrackableItem.product_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.TrackableItem.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.TrackableItem.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.track_item.TrackingError">
+<em class="property">class </em><code class="descclassname">pyaups.track_item.</code><code class="descname">TrackingError</code><span class="sig-paren">(</span><em>code: str = None</em>, <em>name: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.track_item.TrackingError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.track_item.TrackingError.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.TrackingError.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.TrackingError.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.TrackingError.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.track_item.TrackingResponse">
+<em class="property">class </em><code class="descclassname">pyaups.track_item.</code><code class="descname">TrackingResponse</code><span class="sig-paren">(</span><em>tracking_results=[]</em>, <em>errors=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.track_item.TrackingResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pyaups.track_item.TrackingResult">
+<em class="property">class </em><code class="descclassname">pyaups.track_item.</code><code class="descname">TrackingResult</code><span class="sig-paren">(</span><em>status: str = None</em>, <em>tracking_id: str = None</em>, <em>consignment=None</em>, <em>errors=[]</em>, <em>trackable_items=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyaups.track_item.TrackingResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="pyaups.track_item.TrackingResult.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.TrackingResult.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyaups.track_item.TrackingResult.tracking_id">
+<code class="descname">tracking_id</code><em class="property"> = None</em><a class="headerlink" href="#pyaups.track_item.TrackingResult.tracking_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyaups">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyaups" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PurplShip</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, @DanH91.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pyaups.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

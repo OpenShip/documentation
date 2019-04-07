@@ -6,7 +6,9 @@ Subpackages
 
 .. toctree::
 
+    purplship.mappers.aups.aups_logistic_mapper
     purplship.mappers.aups.aups_mapper
+    purplship.mappers.aups.aups_postage_mapper
 
 Submodules
 ----------

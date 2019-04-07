@@ -40,6 +40,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="purplship.domain.Types.html">purplship.domain.Types package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="purplship.domain.Types.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="purplship.domain.Types.html#module-purplship.domain.Types.errors">purplship.domain.Types.errors module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="purplship.domain.Types.html#module-purplship.domain.Types.models">purplship.domain.Types.models module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="purplship.domain.Types.html#module-purplship.domain.Types.units">purplship.domain.Types.units module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="purplship.domain.Types.html#module-purplship.domain.Types">Module contents</a></li>
@@ -53,10 +54,11 @@
 </div>
 <div class="section" id="module-purplship.domain.client">
 <span id="purplship-domain-client-module"></span><h2>purplship.domain.client module<a class="headerlink" href="#module-purplship.domain.client" title="Permalink to this headline">¶</a></h2>
+<p>PurplShip Client base class definition</p>
 <dl class="class">
 <dt id="purplship.domain.client.Client">
-<em class="property">class </em><code class="descclassname">purplship.domain.client.</code><code class="descname">Client</code><a class="headerlink" href="#purplship.domain.client.Client" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<em class="property">class </em><code class="descclassname">purplship.domain.client.</code><code class="descname">Client</code><span class="sig-paren">(</span><em>server_url: str</em>, <em>carrier_name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.client.Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Unitied API carrier Client (Interface)
 …</p>
 <dl class="docutils">
@@ -110,17 +112,17 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="staticmethod">
 <dt id="purplship.domain.interface.pickup.book">
-<em class="property">static </em><code class="descname">book</code><span class="sig-paren">(</span><em>**args</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.pickup.book" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">book</code><span class="sig-paren">(</span><em>args: Union[purplship.domain.Types.models.PickupRequest, dict]</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.pickup.book" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="staticmethod">
 <dt id="purplship.domain.interface.pickup.cancel">
-<em class="property">static </em><code class="descname">cancel</code><span class="sig-paren">(</span><em>**args</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.pickup.cancel" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">cancel</code><span class="sig-paren">(</span><em>args: Union[purplship.domain.Types.models.PickupCancellationRequest, dict]</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.pickup.cancel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="staticmethod">
 <dt id="purplship.domain.interface.pickup.update">
-<em class="property">static </em><code class="descname">update</code><span class="sig-paren">(</span><em>**args</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.pickup.update" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">update</code><span class="sig-paren">(</span><em>args: Union[purplship.domain.Types.models.PickupRequest, dict]</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.pickup.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -131,7 +133,7 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="staticmethod">
 <dt id="purplship.domain.interface.rating.fetch">
-<em class="property">static </em><code class="descname">fetch</code><span class="sig-paren">(</span><em>**args</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.rating.fetch" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">fetch</code><span class="sig-paren">(</span><em>args: Union[purplship.domain.Types.models.RateRequest, dict]</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.rating.fetch" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -142,7 +144,7 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="staticmethod">
 <dt id="purplship.domain.interface.shipment.create">
-<em class="property">static </em><code class="descname">create</code><span class="sig-paren">(</span><em>**args</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.shipment.create" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">create</code><span class="sig-paren">(</span><em>args: Union[purplship.domain.Types.models.ShipmentRequest, dict]</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.interface.shipment.create" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -153,7 +155,7 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="staticmethod">
 <dt id="purplship.domain.interface.tracking.fetch">
-<em class="property">static </em><code class="descname">fetch</code><span class="sig-paren">(</span><em>**args</em><span class="sig-paren">)</span> &#x2192; purplship.domain.interface.IRequestFrom<a class="headerlink" href="#purplship.domain.interface.tracking.fetch" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">fetch</code><span class="sig-paren">(</span><em>args: Union[purplship.domain.Types.models.TrackingRequest, dict]</em><span class="sig-paren">)</span> &#x2192; purplship.domain.interface.IRequestFrom<a class="headerlink" href="#purplship.domain.interface.tracking.fetch" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -161,6 +163,7 @@
 </div>
 <div class="section" id="module-purplship.domain.mapper">
 <span id="purplship-domain-mapper-module"></span><h2>purplship.domain.mapper module<a class="headerlink" href="#module-purplship.domain.mapper" title="Permalink to this headline">¶</a></h2>
+<p>PurplShip Mapper base class definition module.</p>
 <dl class="class">
 <dt id="purplship.domain.mapper.Mapper">
 <em class="property">class </em><code class="descclassname">purplship.domain.mapper.</code><code class="descname">Mapper</code><a class="headerlink" href="#purplship.domain.mapper.Mapper" title="Permalink to this definition">¶</a></dt>
@@ -242,6 +245,7 @@
 </div>
 <div class="section" id="module-purplship.domain.proxy">
 <span id="purplship-domain-proxy-module"></span><h2>purplship.domain.proxy module<a class="headerlink" href="#module-purplship.domain.proxy" title="Permalink to this headline">¶</a></h2>
+<p>PurplShip Proxy base class definition module.</p>
 <dl class="class">
 <dt id="purplship.domain.proxy.Proxy">
 <em class="property">class </em><code class="descclassname">purplship.domain.proxy.</code><code class="descname">Proxy</code><span class="sig-paren">(</span><em>client: purplship.domain.client.Client</em>, <em>mapper: purplship.domain.mapper.Mapper</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.proxy.Proxy" title="Permalink to this definition">¶</a></dt>
@@ -273,8 +277,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="purplship.domain.proxy.Proxy.get_trackings">
-<code class="descname">get_trackings</code><span class="sig-paren">(</span><em>xmlObj</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.proxy.Proxy.get_trackings" title="Permalink to this definition">¶</a></dt>
+<dt id="purplship.domain.proxy.Proxy.get_tracking">
+<code class="descname">get_tracking</code><span class="sig-paren">(</span><em>xmlObj</em><span class="sig-paren">)</span><a class="headerlink" href="#purplship.domain.proxy.Proxy.get_tracking" title="Permalink to this definition">¶</a></dt>
 <dd><p>export xmlObj as xml string and request tracking from carrier</p>
 </dd></dl>
 

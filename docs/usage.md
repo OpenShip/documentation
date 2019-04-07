@@ -2,6 +2,6 @@
 
 ## E-commerce
 
-## WMS, SAP, ERP...
+## WMS, ERP...
 
 ## Others

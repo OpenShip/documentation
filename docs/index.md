@@ -1,69 +1,91 @@
 # Welcome to PurplShip
 
-[![Build Status](https://travis-ci.org/PurplShip/purplship.svg?branch=master)](https://travis-ci.org/PurplShip/purplship) [![codecov](https://codecov.io/gh/PurplShip/purplship/branch/master/graph/badge.svg)](https://codecov.io/gh/PurplShip/purplship)
+[![Build Status](https://travis-ci.org/PurplShip/purplship.svg?branch=master)](https://travis-ci.org/PurplShip/purplship) [![codecov](https://codecov.io/gh/PurplShip/purplship/branch/master/graph/badge.svg)](https://codecov.io/gh/PurplShip/purplship) [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 ## Overview
 
-PurplShip is an open source library which makes shipping carrier API integration
+PurplShip is an open source library that makes shipping carrier API integration
 easy.
 PurplShip proposes an intuitive unified API, to make multi-carrier integration seamless.
 
 - Integrate multiple carriers: DHL, FedEx, UPS, Canada Post and more with ease
 - Use an intuitive, unified API across multiple carriers
-- Use your developer credentials with negotiated rates
+- Use your developer credentials and your negotiated rates
 
-PurplShip helps not having to reinvent the wheel and is easy to use:
+PurplShip helps quickly getting started with shipping services as it is easy to use:
 
 ```python
 import purplship
 
-proxy = purplship.gateway['dhl'].create({
-    "server_url": "https://xmlpi-ea.dhl.com/XMLShippingServlet",
-    "site_id": "YOUR_DHL_SITE_ID",
-    "password": "YOUR_DHL_SITE_PASSWORD",
-    "account_number": "YOUR_DHL_ACCOUNT_NUMBER"
+dhl = purplship.gateway['dhl'].create({
+    "site_id": "username",
+    "password": "password"
 })
 
-tracking_response = purplship.rating.fetch(
-        tracking_numbers=["8346088391"]
-    ).from_(proxy)
+response = purplship.rating.fetch({
+    "shipper": {"postal_code": "H3N1S4", "country_code": "CA"},
+    "recipient": {"city": "Lome", "country_code": "TG"},
+    "shipment": {
+        "items": [
+            {"height": 3, "length": 10, "width": 3, "weight": 4.0}
+        ]
+    }
+}).from_(dhl)
 
-tracking = tracking_response.parse()
+rates = response.parse()
 
 from gds_helpers import to_dict
 
-print(to_dict(tracking))
+print(to_dict(rates))
+```
 
-'''
+```json
 [
-    [
+    [], //Errors
+    [   //Rates
         {
+            "base_charge": 62.66,
             "carrier": "DHL",
-            "events": [
+            "currency": "CAD",
+            "delivery_date": "2018-10-25 10:30:00",
+            "discount": 0,
+            "duties_and_taxes": 0,
+            "extra_charges": [
                 {
-                    "code": "PU",
-                    "date": "2009-08-13",
-                    "description": "Shipment picked up",
-                    "location": "Hong Kong - Hong Kong ",
-                    "signatory": "",
-                    "time": "23:58:00"
+                    "amount": 8.0,
+                    "currency": "CAD",
+                    "name": "10:30 PREMIUM"
                 },
                 {
-                    "code": "RW",
-                    "date": "2009-08-14",
-                    "description": "",
-                    "location": "Hong Kong - Hong Kong ",
-                    "signatory": "21.20",
-                    "time": "02:19:50"
+                    "amount": 5.12,
+                    "currency": "CAD",
+                    "name": "FUEL SURCHARGE"
                 }
             ],
-            "shipment_date": "2009-08-13 23:58:00",
-            "tracking_number": "8346088391"
+            "service_name": "EXPRESS 10:30 DOC",
+            "service_type": "TD",
+            "total_charge": 75.78
+        },
+        {
+            "base_charge": 62.66,
+            "carrier": "DHL",
+            "currency": "CAD",
+            "delivery_date": "2018-10-25 11:59:00",
+            "discount": 0,
+            "duties_and_taxes": 0,
+            "extra_charges": [
+                {
+                    "amount": 4.54,
+                    "currency": "CAD",
+                    "name": "FUEL SURCHARGE"
+                }
+            ],
+            "service_name": "EXPRESS WORLDWIDE DOC",
+            "service_type": "TD",
+            "total_charge": 67.2
         }
-    ],
-    []
+    ]
 ]
-'''
 ```
 
 ### Prerequisites
@@ -86,6 +108,35 @@ From [Source](https://github.com/PurplShip/purplship):
 git clone https://github.com/PurplShip/purplship.git
 pip install --process-dependency-links -e purplship
 ```
+
+## Table of content
+
+- Basic
+    - [Rating](basic/rating)
+    - [Tracking](basic/tracking)
+    - [Shipping](basic/shipping)
+    - [Pickup](basic/pickup)
+    - [Fluent API](basic/fluent-api)
+- Carriers
+    - [Australia Post](carriers/aups)
+    - [Canada Post](carriers/caps)
+    - [DHL](carriers/dhl)
+    - [FedEx](carriers/fedex)
+    - [Sendle](carriers/sendle)
+    - [UPS](carriers/ups)
+- Advanced
+    - [Single Carrier](advanced/carrier)
+    - [Multi Carrier](advanced/multi-carrier)
+    - [Extra](advanced/extra)
+    - [Default](advanced/default)
+    - [Shipping Options](advanced/options)
+    - [Freight](advanced/freight)
+    - [Healthcare](advanced/health)
+- Contributing
+    - [Architecture](contributing/architecture)
+- [Use case](usage)
+- [Roadmap](roadmap)
+- [FAQ](faq)
 
 ## License
 

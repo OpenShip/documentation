@@ -98,7 +98,20 @@
 <dl class="method">
 <dt id="purplship.mappers.caps.caps_mapper.partials.rate.CanadaPostMapperPartial.create_mailing_scenario">
 <code class="descname">create_mailing_scenario</code><span class="sig-paren">(</span><em>payload: purplship.domain.Types.models.ShipmentRequest</em><span class="sig-paren">)</span> &#x2192; pycaps.rating.mailing_scenario<a class="headerlink" href="#purplship.mappers.caps.caps_mapper.partials.rate.CanadaPostMapperPartial.create_mailing_scenario" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Create the appropriate Canada Post rate request depending on the destination</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>payload</strong> – PurplShip unified API rate request data</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a domestic or international Canada post compatible request</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">an OriginNotServicedError when origin country is not serviced by the carrier</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="purplship.mappers.caps.caps_mapper.partials.rate.CanadaPostMapperPartial.parse_price_quotes">

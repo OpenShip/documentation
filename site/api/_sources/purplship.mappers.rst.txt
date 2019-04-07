@@ -10,7 +10,21 @@ Subpackages
     purplship.mappers.caps
     purplship.mappers.dhl
     purplship.mappers.fedex
+    purplship.mappers.sendle
     purplship.mappers.ups
+    purplship.mappers.usps
+
+Submodules
+----------
+
+purplship.mappers.gateway module
+--------------------------------
+
+.. automodule:: purplship.mappers.gateway
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------
