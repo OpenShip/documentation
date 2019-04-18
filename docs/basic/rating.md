@@ -20,7 +20,7 @@ recipient = Party(
     city="Lome",
     country_code="TG"
 )
-shipment_details = Shipment(
+shipment = Shipment(
     items=[
         Item(id="1", height=3, lenght=10, width=3, weight=4.0)
     ]
@@ -31,7 +31,7 @@ shipment_details = Shipment(
 rate_request = RateRequest(
     shipper=shipper,
     recipient=recipient,
-    shipment_details=shipment_details
+    shipment=shipment
 )
 
 # create a carrier specific quote request object from the rate payload

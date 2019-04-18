@@ -1,5 +1,7 @@
 # PurplShip Fluent API
 
+The fluent API is a higher level interface that offers a minimal [Domain Specific Language](https://martinfowler.com/bliki/FluentInterface.html) for shipping services integration expressed as code.
+
 ```python
 # Import PurplShip
 import purplship
