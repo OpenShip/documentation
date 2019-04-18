@@ -75,7 +75,7 @@ response = proxy.create_pickup_cancellation_request(...)
 
 ## Datatypes
 
-### PickupRequest (For Booking and Updte)
+### PickupRequest (For Booking and Update)
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

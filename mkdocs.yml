@@ -6,6 +6,7 @@ site_url: 'https://purplship.com/open-source'
 nav:
     - Home: index.md
     - Basic:
+      - Proxy: basic/proxy.md
       - Rating: basic/rating.md
       - Tracking: basic/tracking.md
       - Shipping: basic/shipping.md

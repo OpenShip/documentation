@@ -13,7 +13,7 @@
         <meta name="description" content="Multi-carrier Shipping API integration library">
       
       
-        <link rel="canonical" href="https://purplship.com/open-source/advanced/multi-carrier/">
+        <link rel="canonical" href="https://purplship.com/open-source/basic/proxy/">
       
       
         <meta name="author" content="DanielK">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Multi-Carrier - PurplShip</title>
+        <title>Proxy - PurplShip</title>
       
     
     
@@ -133,7 +133,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#multi-carrier-integration-best-practices" tabindex="1" class="md-skip">
+      <a href="#purplship-proxy" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -158,7 +158,7 @@
               PurplShip
             </span>
             <span class="md-header-nav__topic">
-              Multi-Carrier
+              Proxy
             </span>
           
         </div>
@@ -278,10 +278,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Basic
@@ -297,11 +299,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../basic/proxy/" title="Proxy" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Proxy
+      </label>
+    
+    <a href="./" title="Proxy" class="md-nav__link md-nav__link--active">
       Proxy
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instantiating-a-proxy" title="Instantiating a proxy" class="md-nav__link">
+    Instantiating a proxy
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -311,7 +351,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/rating/" title="Rating" class="md-nav__link">
+    <a href="../rating/" title="Rating" class="md-nav__link">
       Rating
     </a>
   </li>
@@ -323,7 +363,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/tracking/" title="Tracking" class="md-nav__link">
+    <a href="../tracking/" title="Tracking" class="md-nav__link">
       Tracking
     </a>
   </li>
@@ -335,7 +375,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/shipping/" title="Shipping" class="md-nav__link">
+    <a href="../shipping/" title="Shipping" class="md-nav__link">
       Shipping
     </a>
   </li>
@@ -347,7 +387,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/pickup/" title="Pickup" class="md-nav__link">
+    <a href="../pickup/" title="Pickup" class="md-nav__link">
       Pickup
     </a>
   </li>
@@ -359,7 +399,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/fluent-api/" title="Fluent-API" class="md-nav__link">
+    <a href="../fluent-api/" title="Fluent-API" class="md-nav__link">
       Fluent-API
     </a>
   </li>
@@ -482,12 +522,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Advanced
@@ -505,7 +543,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../carrier/" title="Single Carrier" class="md-nav__link">
+    <a href="../../advanced/carrier/" title="Single Carrier" class="md-nav__link">
       Single Carrier
     </a>
   </li>
@@ -515,20 +553,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Multi-Carrier" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../advanced/multi-carrier/" title="Multi-Carrier" class="md-nav__link">
       Multi-Carrier
     </a>
-    
   </li>
 
         
@@ -538,7 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../extra/" title="Extra" class="md-nav__link">
+    <a href="../../advanced/extra/" title="Extra" class="md-nav__link">
       Extra
     </a>
   </li>
@@ -550,7 +579,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../default/" title="Default" class="md-nav__link">
+    <a href="../../advanced/default/" title="Default" class="md-nav__link">
       Default
     </a>
   </li>
@@ -562,7 +591,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../options/" title="Shipping Options" class="md-nav__link">
+    <a href="../../advanced/options/" title="Shipping Options" class="md-nav__link">
       Shipping Options
     </a>
   </li>
@@ -574,7 +603,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../freight/" title="Freight" class="md-nav__link">
+    <a href="../../advanced/freight/" title="Freight" class="md-nav__link">
       Freight
     </a>
   </li>
@@ -586,7 +615,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../health/" title="Healthcare" class="md-nav__link">
+    <a href="../../advanced/health/" title="Healthcare" class="md-nav__link">
       Healthcare
     </a>
   </li>
@@ -698,6 +727,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instantiating-a-proxy" title="Instantiating a proxy" class="md-nav__link">
+    Instantiating a proxy
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -708,10 +753,46 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/advanced/multi-carrier.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/PurplShip/purplship/edit/master/docs/basic/proxy.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="multi-carrier-integration-best-practices">Multi-carrier integration (Best practices)</h1>
+                <h1 id="purplship-proxy">PurplShip 'Proxy'</h1>
+<p>The proxy serve as the gateway responsible for forwarding requests to the right logistic providers service endpoint.
+A proxy is therefore specific to a provider</p>
+<h2 id="instantiating-a-proxy">Instantiating a proxy</h2>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Proxy</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.mappers.fedex</span> <span class="kn">import</span> <span class="n">FedexProxy</span><span class="p">,</span> <span class="n">FedexClient</span>
+
+<span class="n">fedex_proxy</span> <span class="o">=</span> <span class="n">FedexProxy</span><span class="p">(</span>
+    <span class="n">FedexClient</span><span class="p">(</span>
+        <span class="n">user_key</span><span class="o">=</span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+        <span class="n">meter_number</span><span class="o">=</span><span class="s2">&quot;1324913439840&quot;</span><span class="p">,</span>
+        <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;103948734&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div></div>
+<input name="__tabs_1" type="radio" id="__tab_1_1" />
+<label for="__tab_1_1">Gateway</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">purplship</span>
+
+<span class="n">fedex_gateway</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">gateway</span><span class="p">[</span><span class="s2">&quot;fedex&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;user_key&quot;</span><span class="p">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;meter_number&quot;</span><span class="p">:</span> <span class="s2">&quot;1324913439840&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;103948734&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Proxy vs Gateway</p>
+<p>the <code class="codehilite">carrier_gateway</code> is exactly the same as a <code class="codehilite">carrier_gateway</code> they are interchangeable. the gateway is used in the context of the <a href="/basic/fluent-api">fluent API</a> whereas the proxy is used in the context of a native purplship implementation.</p>
+</div>
+<p>Find more about the <a href="https://doc.purplship.com/api/purplship.domain.html?highlight=prox#module-purplship.domain.proxy" target="_blank">Proxy interface API</a></p>
                 
                   
                 
@@ -732,7 +813,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../carrier/" title="Single Carrier" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -741,19 +822,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Single Carrier
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../extra/" title="Extra" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../rating/" title="Rating" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Extra
+                Rating
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

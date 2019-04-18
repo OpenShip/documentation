@@ -2,13 +2,9 @@
 
 ## Milestones
 
-- Design the distinction between Freight and package
-
 - Unify label format
 
-- Unify date formats
-
-- Unify share shipping options
+- Unify shared shipping options
 
 - Documentation versioning retstructuring
 
@@ -33,7 +29,6 @@
 ### FedEx
 
     - Pickup
-    - Freight
 
 ### Purolator
 
@@ -50,11 +45,8 @@
 ### UPS
 
     - Pickup
-    - Freight
 
 ### USPS
 
-    - Rating
-    - Tracking
-    - Shipping
+    - Shipping (Label)
     - Pickup

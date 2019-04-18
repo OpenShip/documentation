@@ -112,6 +112,7 @@ pip install --process-dependency-links -e purplship
 ## Table of content
 
 - Basic
+    - [Proxy](basic/proxy)
     - [Rating](basic/rating)
     - [Tracking](basic/tracking)
     - [Shipping](basic/shipping)
