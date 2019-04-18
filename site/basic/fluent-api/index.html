@@ -818,9 +818,10 @@
 </pre></div></div>
 <input name="__tabs_1" type="radio" id="__tab_1_1" />
 <label for="__tab_1_1">Typed</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pusplship.mappers.sendle</span> <span class="kn">import</span> <span class="n">SendleClient</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.gateway</span> <span class="kn">import</span> <span class="n">Providers</span>
+<span class="kn">from</span> <span class="nn">pusplship.mappers.sendle</span> <span class="kn">import</span> <span class="n">SendleClient</span>
 
-<span class="n">carrier_gateway</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">gateway</span><span class="p">[</span><span class="s1">&#39;sendle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="n">carrier_gateway</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">gateway</span><span class="p">[</span><span class="n">Providers</span><span class="o">.</span><span class="n">sendle</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
     <span class="n">SendleClient</span><span class="p">(</span>
         <span class="n">sendle_id</span><span class="o">=</span><span class="s2">&quot;user@id&quot;</span><span class="p">,</span>
         <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;l56berylkghekrb527l5bk7575&quot;</span>
@@ -836,9 +837,7 @@
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
 <label for="__tab_2_0">JSON</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">purplship</span>
-
-<span class="n">rates</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">rates</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span>
     <span class="p">{</span>
         <span class="s2">&quot;shipper&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
@@ -1040,10 +1039,234 @@
 <p class="admonition-title">Note</p>
 <p><code class="codehilite">purplship.tracking.fetch(...).from_(carrier_gateway).parse()</code></p>
 </div>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">JSON</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">purplship</span><span class="o">.</span><span class="n">tracking</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;tracking_numbers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;language_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div></div>
+<input name="__tabs_3" type="radio" id="__tab_3_1" />
+<label for="__tab_3_1">Typed</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.Types</span> <span class="kn">import</span> <span class="n">TrackingRequest</span>
+
+<span class="n">purplship</span><span class="o">.</span><span class="n">tracking</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span>
+    <span class="n">TrackingRequest</span><span class="p">(</span>
+        <span class="n">tracking_numbers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">],</span>
+        <span class="n">language_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">extra</span><span class="o">=</span> <span class="p">{}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div></div>
+</div>
 <h2 id="shipping">Shipping</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="codehilite">purplship.shipping.create(...).with_(carrier_gateway).parse()</code></p>
+</div>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">JSON</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">rates</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;shipper&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tax_id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;company_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;phone_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;state_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;suburb&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;address_lines&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;recipient&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tax_id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;company_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;phone_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;state_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;suburb&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;address_lines&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;shipment&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;insured_amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;total_items&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;packaging_type&quot;</span><span class="p">:</span> <span class="s2">&quot;BOX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_document&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;total_weight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;weight_unit&quot;</span><span class="p">:</span> <span class="s2">&quot;KG&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dimension_unit&quot;</span><span class="p">:</span> <span class="s2">&quot;CM&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;paid_by&quot;</span><span class="p">:</span> <span class="s2">&quot;SENDER&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;payment_country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;payment_account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;services&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;payment_type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;duty_paid_by&quot;</span><span class="p">:</span> <span class="s2">&quot;SENDER&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;duty_payment_account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;declared_value&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;customs&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;references&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;invoice&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;doc_images&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;ship_date&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div></div>
+<input name="__tabs_4" type="radio" id="__tab_4_1" />
+<label for="__tab_4_1">Typed</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pusplship.domain.Types</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Item</span><span class="p">,</span>
+    <span class="n">Party</span><span class="p">,</span>
+    <span class="n">Customs</span><span class="p">,</span>
+    <span class="n">Shipment</span><span class="p">,</span>
+    <span class="n">Label</span><span class="p">,</span>
+    <span class="n">Doc</span><span class="p">,</span>
+    <span class="n">Invoice</span><span class="p">,</span>
+    <span class="n">Option</span><span class="p">,</span>
+    <span class="n">ShipmentRequest</span>
+<span class="p">)</span>
+
+<span class="n">rates</span> <span class="o">=</span> <span class="n">purplship</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span>
+    <span class="n">ShipmentRequest</span><span class="p">(</span>
+        <span class="n">shipper</span><span class="o">=</span><span class="n">Party</span><span class="p">(</span>
+            <span class="n">city</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">tax_id</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">person_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">company_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">country_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">phone_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">email_address</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">state_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">suburb</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">postal_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">address_lines</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+        <span class="p">),</span>
+        <span class="n">recipient</span><span class="o">=</span><span class="n">Party</span><span class="p">(</span>
+            <span class="n">city</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">tax_id</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">person_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">company_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">country_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">phone_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">email_address</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">state_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">suburb</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">postal_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">address_lines</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+        <span class="p">),</span>
+        <span class="n">shipment</span><span class="o">=</span><span class="n">Shipment</span><span class="p">(</span>
+            <span class="n">items</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">Item</span><span class="p">(</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">weight</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                    <span class="n">width</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                    <span class="n">height</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                    <span class="n">length</span><span class="o">=</span><span class="mf">10.00</span><span class="p">,</span>
+                    <span class="n">packaging_type</span><span class="o">=</span><span class="s2">&quot;BOX&quot;</span><span class="p">,</span>
+                    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">value_amount</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                    <span class="n">value_currency</span><span class="o">=</span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+                    <span class="n">origin_country</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+                <span class="p">)</span>
+            <span class="p">],</span>
+            <span class="n">insured_amount</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">total_items</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">packaging_type</span><span class="o">=</span><span class="s2">&quot;BOX&quot;</span><span class="p">,</span>
+            <span class="n">is_document</span><span class="o">=</span><span class="n">true</span><span class="p">,</span>
+            <span class="n">currency</span><span class="o">=</span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+            <span class="n">total_weight</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">weight_unit</span><span class="o">=</span><span class="s2">&quot;KG&quot;</span><span class="p">,</span>
+            <span class="n">dimension_unit</span><span class="o">=</span><span class="s2">&quot;CM&quot;</span><span class="p">,</span>
+            <span class="n">paid_by</span><span class="o">=</span><span class="s2">&quot;SENDER&quot;</span><span class="p">,</span>
+            <span class="n">payment_country_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">payment_account_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">services</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">options</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">Option</span><span class="p">(</span>
+                    <span class="n">code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">value</span><span class="o">=</span><span class="p">{},</span>
+                    <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+                <span class="p">)</span>
+            <span class="p">],</span>
+            <span class="n">date</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">payment_type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">duty_paid_by</span><span class="o">=</span><span class="s2">&quot;SENDER&quot;</span><span class="p">,</span>
+            <span class="n">duty_payment_account</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">declared_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">customs</span><span class="o">=</span><span class="n">Customs</span><span class="p">(</span>
+                <span class="n">description</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">terms_of_trade</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">no_eei</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">aes</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">items</span><span class="o">=</span><span class="p">[],</span>
+                <span class="n">commercial_invoice</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span>
+                <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+            <span class="p">),</span>
+            <span class="n">references</span><span class="o">=</span><span class="p">[],</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">Label</span><span class="p">(</span>
+                <span class="n">format</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">image</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+            <span class="p">),</span>
+            <span class="n">invoice</span><span class="o">=</span><span class="n">Invoice</span><span class="p">(</span>
+                <span class="n">date</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="n">copies</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+            <span class="p">),</span>
+            <span class="n">doc_images</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">Doc</span><span class="p">(</span>
+                    <span class="n">format</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+                <span class="p">)</span>
+            <span class="p">],</span>
+            <span class="n">ship_date</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div></div>
 </div>
 <h2 id="pickup">Pickup</h2>
 <ul>
@@ -1053,6 +1276,63 @@
 <p class="admonition-title">Note</p>
 <p><code class="codehilite">purplship.pickup.book(...).with_(carrier_gateway).parse()</code></p>
 </div>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">JSON</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">book</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;weight_unit&quot;</span><span class="p">:</span> <span class="s2">&quot;KG&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pieces&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;ready_time&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;closing_time&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;instruction&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;package_location&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;state_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;company_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_business&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;address_lines&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div></div>
+<input name="__tabs_5" type="radio" id="__tab_5_1" />
+<label for="__tab_5_1">Typed</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.Types</span> <span class="kn">import</span> <span class="n">PickupRequest</span>
+
+<span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">book</span><span class="p">(</span>
+    <span class="n">PickupRequest</span><span class="p">(</span>
+        <span class="n">date</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">pieces</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">weight</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">weight_unit</span><span class="o">=</span><span class="s2">&quot;LB&quot;</span><span class="p">,</span>
+        <span class="n">ready_time</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">closing_time</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">city</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">postal_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">person_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">phone_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">region_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">email_address</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">address_lines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">],</span>
+        <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div></div>
+</div>
 <ul>
 <li>Update</li>
 </ul>
@@ -1060,12 +1340,99 @@
 <p class="admonition-title">Note</p>
 <p><code class="codehilite">purplship.pickup.update(...).from_(carrier_gateway).parse()</code></p>
 </div>
+<div class="superfences-tabs">
+<input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
+<label for="__tab_6_0">JSON</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;account_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;weight_unit&quot;</span><span class="p">:</span> <span class="s2">&quot;KG&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pieces&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;ready_time&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;closing_time&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;instruction&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;package_location&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;state_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;company_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_business&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;confirmation_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address_lines&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div></div>
+<input name="__tabs_6" type="radio" id="__tab_6_1" />
+<label for="__tab_6_1">Typed</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.Types</span> <span class="kn">import</span> <span class="n">PickupUpdateRequest</span>
+
+<span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="n">PickupUpdateRequest</span><span class="p">(</span>
+        <span class="n">date</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">account_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">pieces</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">weight</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">weight_unit</span><span class="o">=</span><span class="s2">&quot;LB&quot;</span><span class="p">,</span>
+        <span class="n">ready_time</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">closing_time</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">city</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">postal_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">person_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">phone_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">region_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">email_address</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">address_lines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">],</span>
+        <span class="n">confirmation_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div></div>
+</div>
 <ul>
 <li>Cancel</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="codehilite">purplship.pickup.cancel(...).from_(carrier_gateway).parse()</code></p>
+</div>
+<div class="superfences-tabs">
+<input name="__tabs_7" type="radio" id="__tab_7_0" checked="checked" />
+<label for="__tab_7_0">JSON</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;pickup_date&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="s2">&quot;confirmation_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="s2">&quot;person_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="s2">&quot;country_code&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="s2">&quot;extra&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div></div>
+<input name="__tabs_7" type="radio" id="__tab_7_1" />
+<label for="__tab_7_1">Typed</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">purplship.domain.Types</span> <span class="kn">import</span> <span class="n">PickupCancellationRequest</span>
+
+<span class="n">purplship</span><span class="o">.</span><span class="n">pickup</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="n">PickupCancellationRequest</span><span class="p">(</span>
+        <span class="n">pickup_date</span><span class="o">=</span><span class="s2">&quot;string&quot;</span>
+        <span class="n">confirmation_number</span><span class="o">=</span><span class="s2">&quot;string&quot;</span>
+        <span class="n">person_name</span><span class="o">=</span><span class="s2">&quot;string&quot;</span>
+        <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;string&quot;</span>
+        <span class="n">extra</span><span class="o">=</span><span class="p">{}</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div></div>
 </div>
                 
                   
