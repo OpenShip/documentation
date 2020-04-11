@@ -4,22 +4,23 @@ site_author: PurplShip
 site_description: >-
   Multi-carrier integration platform
 
-
-# Repository
-repo_name: purplship/purplship-server
-repo_url: https://github.com/purplship/purplship-server
-
 # Copyright
 copyright: Copyright &copy; 2020 PurplShip Team
 
 nav:
+  - Home:
+      - https://purplship.com
+  - Blog:
+      - Publications: index.md
   - Docs:
-    - Introducing: index.md
+      - https://docs.purplship.com
 
 theme:
   name: material
   custom_dir: overrides
   language: en
+  features:
+    - tabs
   font:
     text: Roboto
     code: Roboto Mono

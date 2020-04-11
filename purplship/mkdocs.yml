@@ -4,9 +4,6 @@ site_author: PurplShip
 site_description: >-
   Multi-carrier integration platform
 
-# Repository
-repo_name: purplship/purplship-server
-repo_url: https://github.com/purplship/purplship-server
 
 # Copyright
 copyright: Copyright &copy; 2020 PurplShip Team
