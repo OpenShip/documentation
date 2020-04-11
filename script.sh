@@ -1,29 +1,37 @@
 #!/usr/bin/env bash
 
-py_dir() {
-    python -c "import $1 as _; print(list(_.__path__)[0])"
+# Python virtual environment helpers
+
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+BASE_DIR="${PWD##*/}"
+ENV_DIR=".venv"
+
+activate_env() {
+  echo "Activate $BASE_DIR"
+  deactivate || true
+  # shellcheck source=src/script.sh
+  source "${ROOT:?}/$ENV_DIR/$BASE_DIR/bin/activate"
 }
 
-uninstall_all() {
-    pip freeze | xargs pip uninstall -y
+create_env() {
+    echo "create $BASE_DIR Python3 env"
+    deactivate || true
+    rm -rf "${ROOT:?}/$ENV_DIR" || true
+    mkdir -p "${ROOT:?}/$ENV_DIR"
+    python3 -m venv "${ROOT:?}/$ENV_DIR/$BASE_DIR" &&
+    activate_env &&
+    pip install --upgrade pip
 }
 
-build_doc() {
-    mkdocs build
-    build_sphinx_doc
+init() {
+    create_env &&
+    pip install -r requirements.txt &&
+    pip install -r requirements.dev.txt
 }
 
-gen_sphinx_doc() {
-    sphinx-apidoc $(py_dir purplship) -o ./sphinx
-    sphinx-apidoc $(py_dir pyaups) -o ./sphinx
-    sphinx-apidoc $(py_dir pycaps) -o ./sphinx
-    sphinx-apidoc $(py_dir pydhl) -o ./sphinx
-    sphinx-apidoc $(py_dir pyfedex) -o ./sphinx
-    sphinx-apidoc $(py_dir pysendle) -o ./sphinx
-    sphinx-apidoc $(py_dir pyups) -o ./sphinx
-    sphinx-apidoc $(py_dir pyusps) -o ./sphinx
-}
 
-build_sphinx_doc() {
-    sphinx-build ./sphinx ./site/api
-}
+alias env:new=create_env
+alias env:on=activate_env
+alias env:reset=init
+
+env:on || true

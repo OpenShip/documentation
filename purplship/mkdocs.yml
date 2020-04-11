@@ -1,0 +1,50 @@
+site_name: PurplShip
+site_url: https://purplship.com
+site_author: PurplShip
+site_description: >-
+  Multi-carrier integration platform
+
+# Repository
+repo_name: purplship/purplship-server
+repo_url: https://github.com/purplship/purplship-server
+
+# Copyright
+copyright: Copyright &copy; 2020 PurplShip Team
+
+nav:
+  - Home: index.md
+  - Blog:
+    - https://blog.purplship.com
+  - Docs:
+    - https://docs.purplship.com
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  features:
+    - tabs
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+
+plugins: []
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/purplship
+
+extra_css:
+  - stylesheets/extra.css
