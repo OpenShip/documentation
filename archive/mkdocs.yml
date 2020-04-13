@@ -1,0 +1,74 @@
+site_name: PurplShip
+site_description: 'Multi-carrier Shipping API integration library'
+site_author: 'DanielK'
+site_url: 'https://purplship.com/open-source'
+
+nav:
+    - Home: index.md
+    - Basic:
+      - Proxy: basic/proxy.md
+      - Rating: basic/rating.md
+      - Tracking: basic/tracking.md
+      - Shipping: basic/shipping.md
+      - Pickup: basic/pickup.md
+      - Fluent-API: basic/fluent-api.md
+    - Carriers:
+      - Australia Post: carriers/aups.md
+      - Canada Post: carriers/caps.md
+      - DHL: carriers/dhl.md
+      - FedEx: carriers/fedex.md
+      - Sendle: carriers/sendle.md
+      - UPS: carriers/ups.md
+      - USPS: carriers/usps.md
+    - Advanced:
+      - Single Carrier: advanced/carrier.md
+      - Multi-Carrier: advanced/multi-carrier.md
+      - Extra: advanced/extra.md
+      - Default: advanced/default.md
+      - Shipping Options: advanced/options.md
+      - Freight: advanced/freight.md
+      - Healthcare: advanced/health.md
+    - Contributing: 
+      - Architecture: contributing/architecture.md
+    - Use case: usage.md
+    - Roadmap: roadmap.md
+    - FAQ: faq.md
+    - API: api.md
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'purple'
+    accent: 'purple'
+  favicon: /img/favicon.png
+
+google_analytics:
+  - 'UA-111378601-2'
+  - 'auto'
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Repository
+repo_name: 'PurplShip/purplship'
+repo_url: 'https://github.com/PurplShip/purplship'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 DanielK'

@@ -13,8 +13,9 @@ repo_url: https://github.com/purplship/purplship-server
 copyright: Copyright &copy; 2020 PurplShip Team
 
 nav:
-  - Docs:
-    - Introducing: index.md
+  - version 2020.4.0:
+    - Docs: index.md
+  - version 2019.4.0: https://archive.purplship.com
 
 theme:
   name: material
