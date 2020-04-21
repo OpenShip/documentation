@@ -14,7 +14,9 @@ copyright: Copyright &copy; 2020 PurplShip Team
 
 nav:
   - version 2020.4.0:
-    - Docs: index.md
+    - Introduction: index.md
+#    - Shipping integration 101: 101.md
+#    - Advanced Integration: lib.md
   - version 2019.4.0: https://archive.purplship.com
 
 theme:
