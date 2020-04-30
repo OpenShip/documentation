@@ -34,9 +34,22 @@ markdown_extensions:
   - codehilite:
       guess_lang: false
   - toc:
-      permalink: true
+      permalink: Link
   - footnotes
   - meta
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.betterem:
+      smart_enable: all
 
 extra:
   social:
