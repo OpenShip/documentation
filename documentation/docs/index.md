@@ -20,7 +20,7 @@ PurplShip has two components:
 > A private cloud REST API (service) for a deployment on premise to private or on private cloud platforms.
 
 
-# Getting Started
+## Getting Started
 
 For an introduction to shipping services integration, please take a look at [Shipping integration 101](/101).
 

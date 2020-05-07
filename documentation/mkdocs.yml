@@ -13,10 +13,14 @@ repo_url: https://github.com/purplship/purplship-server
 copyright: Copyright &copy; 2020 PurplShip Team
 
 nav:
-  - version 2020.4.0:
+  - version 2020.4.1:
     - Introduction: index.md
-#    - Shipping integration 101: 101.md
-#    - Advanced Integration: lib.md
+    - Shipping Integration 101: 101.md
+    - Library:
+      - Overview: lib.overview.md
+      - Fluent-API: lib.fluent.md
+      - Models: lib.models.md
+      - Carriers: lib.carriers.md
   - version 2019.4.0: https://archive.purplship.com
 
 theme:
@@ -34,7 +38,7 @@ markdown_extensions:
   - codehilite:
       guess_lang: false
   - toc:
-      permalink: Link
+      permalink: true
   - footnotes
   - meta
   - pymdownx.critic
