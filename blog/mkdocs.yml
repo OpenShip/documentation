@@ -43,3 +43,7 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+
+google_analytics:
+  - UA-127651907-1
+  - auto
