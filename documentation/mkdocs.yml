@@ -2,7 +2,7 @@ site_name: PurplShip
 site_url: https://purplship.com
 site_author: PurplShip
 site_description: >-
-  Multi-carrier integration platform
+  Multi-carrier Shipping API
 
 
 # Repository
@@ -30,8 +30,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/logo.png
-  favicon: assets/favicon.png
+  logo: assets/favicon-inverted.svg
+  favicon: assets/favicon.svg
 
 markdown_extensions:
   - admonition
