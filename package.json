@@ -1,0 +1,13 @@
+{
+  "name": "purplship-docs",
+  "version": "1.0.0",
+  "description": "purplship multi-carrier shipping API documentation",
+  "main": "index.js",
+  "repository": "https://github.com/PurplShip/purplship-docs.git",
+  "author": "Dan Kobina <danielkobina@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "docsify-cli": "^4.4.1"
+  }
+}
