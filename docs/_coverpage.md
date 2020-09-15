@@ -1,7 +1,7 @@
 
-![logo](_media/logo.svg)
+<img src="_media/icon.png" alt="logo" width="120"/>
 
-# version <small>2020.9.0</small>
+# purplship <small>2020.9.0</small>
 
 > The Modern Shipping API.
 
