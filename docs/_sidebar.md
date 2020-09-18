@@ -5,5 +5,3 @@
 - [API Guide](guide.md)
 
 - [Self-Hosted](self-hosted.md)
-
-- [Reference](reference.md)
