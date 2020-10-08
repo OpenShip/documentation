@@ -1,4 +1,4 @@
-## Configuration
+# Configuration
 
 The Purplship server instance is configurable using the environment variables. Purplship server is build with [`djangoproject`](https://www.djangoproject.com/) and most of [`deployment settings`](https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/) are relevant to configure this project to few contextual naming differences.
 

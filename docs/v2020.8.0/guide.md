@@ -1,3 +1,5 @@
+# API Reference
+
 The Purplship API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
 You can use the Purplship API with carriers sandbox servers by setting the `test` flag to `True` when you configure your carrier connection. The **carrier id** you specify in the request determines whether the request is live mode or test mode.
@@ -8,11 +10,10 @@ The Purplship API differs for every instances as we release new versions and tai
 
 ## Clients
 
-The Purplship team currently actively maintains the following client libraries
+The Purplship team currently actively maintains two clients libraries
 
 - [purplship-php-client](https://github.com/PurplShip/purplship-php-client)
 - [purplship-python-client](https://github.com/PurplShip/purplship-python-client)
-- [purplship-typescript-client](https://github.com/PurplShip/purplship-typescript-client)
 
 For any other programming language use our API [OpenAPI specification](https://github.com/PurplShip/purplship-server/tree/main/OpenAPI) to generate a client from the [swagger online editor](https://editor.swagger.io/)
 
@@ -30,12 +31,6 @@ pip install purplship-python
 
 ```shell
 composer require purplship/purplship-php
-```
-
-#### **Typescript**
-
-```shell
-yarn add @purplship/purplship
 ```
 
 <!-- tabs:end -->
@@ -67,14 +62,6 @@ purplship.api_key = '<api_key>'
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
 ```
 
 <!-- tabs:end -->
@@ -135,15 +122,6 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->addresses->list();
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.addresses.list();
-```
-
 <!-- tabs:end -->
 
 - ### Create an address
@@ -186,24 +164,6 @@ $purplship->addresses->create([
 ]);
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.addresses.create({
-    "address_line1": "5205 rue riviera",
-    "person_name": "Jane Doe",
-    "phone_number": "1 438 222-2222",
-    "city": "Montreal",
-    "country_code": "CA",
-    "postal_code": "H8Z2Z3",
-    "residential": True,
-    "state_code": "QC"
-});
-```
-
 <!-- tabs:end -->
 
 - ### Retrieve an address
@@ -226,15 +186,6 @@ purplship.Addresses.retrieve('<addr_id>')
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->addresses->retrieve('<addr_id>');
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.addresses.retrieve('<addr_id>');
 ```
 
 <!-- tabs:end -->
@@ -267,18 +218,6 @@ $purplship->addresses->update(
 );
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.addresses.update(
-    '<addr_id>',
-    { "phone_number": "1 438 222-2222" }
-);
-```
-
 <!-- tabs:end -->
 
 ---
@@ -288,6 +227,7 @@ purplship.addresses.update(
 |       | Endpoints                       |
 :-------|:------------------------------- |
 `GET`   | /v1/carriers                    |
+`GET`   | /v1/carriers/{carrier_id_or_pk} |
 
 You can retrieve one or many carriers configuration stored on your Purplship account.
 
@@ -311,13 +251,28 @@ purplship.Carriers.list()
 $purplship->carriers->list();
 ```
 
-#### **Typescript**
+<!-- tabs:end -->
+
+- ### Retrieve a configured carrier
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Carriers.retrieve('<carr_id>')
+```
+
+#### **PHP**
 
 ```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-purplship.carriers.list();
+$purplship->carriers->retrieve('<carr_id>');
 ```
 
 <!-- tabs:end -->
@@ -358,15 +313,6 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->addresses->list();
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.addresses.list();
-```
-
 <!-- tabs:end -->
 
 - ### Store a Custom info
@@ -391,15 +337,6 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->customs->create([ "terms_of_trade" => "DDU" ]);
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.customs.create({ "terms_of_trade": "DDU" });
-```
-
 <!-- tabs:end -->
 
 - ### Retrieve a Customs info
@@ -422,15 +359,6 @@ purplship.Customs.retrieve('<cust_id>')
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->customs->retrieve('<cust_id>');
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.customs.retrieve('<cust_id>');
 ```
 
 <!-- tabs:end -->
@@ -460,18 +388,6 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->customs->update(
     '<cust_id>',
     [ "terms_of_trade" => "DDP" ]
-);
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.customs.update(
-    '<cust_id>',
-    { "terms_of_trade": "DDP"}
 );
 ```
 
@@ -513,15 +429,6 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->parcels->list();
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.parcels.list();
-```
-
 <!-- tabs:end -->
 
 - ### Create a parcel
@@ -560,22 +467,6 @@ $purplship->parcels->create([
 ]);
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.parcels.create({
-    "weight": 1,
-    "width": 20,
-    "height": 10,
-    "length": 29,
-    "weight_unit": "KG",
-    "dimension_unit": "CM"
-});
-```
-
 <!-- tabs:end -->
 
 - ### Retrieve a parcel
@@ -589,7 +480,7 @@ import purplship
 purplship.host = 'https://<server_address>/v1'
 purplship.api_key = '<api_key>'
 
-purplship.Parcels.retrieve('<parcl_id>')
+purplship.Parcels.retrieve('<addr_id>')
 ```
 
 #### **PHP**
@@ -597,16 +488,7 @@ purplship.Parcels.retrieve('<parcl_id>')
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->parcels->retrieve('<parcl_id>');
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.parcels.retrieve('<parcl_id>');
+$purplship->parcels->retrieve('<addr_id>');
 ```
 
 <!-- tabs:end -->
@@ -623,7 +505,7 @@ purplship.host = 'https://<server_address>/v1'
 purplship.api_key = '<api_key>'
 
 purplship.Parcels.update(
-    '<parcl_id>',
+    '<addr_id>',
     {
         "weight": 1,
         "weight_unit": "LB"
@@ -637,26 +519,11 @@ purplship.Parcels.update(
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->parcels->update(
-    '<parcl_id>',
+    '<addr_id>',
     [
         "weight" => 1.5,
         "weight_unit" => "LB"
     ]
-);
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.parcels.update(
-    '<parcl_id>',
-    {
-        "weight": 1,
-        "weight_unit": "LB"
-    }
 );
 ```
 
@@ -709,7 +576,8 @@ purplship.Rates.fetch({
             "weight": 1,
             "package_preset": "canadapost_corrugated_small_box"
         }
-    ]
+    ],
+    "carrier_ids": []
 })
 ```
 
@@ -746,46 +614,9 @@ $purplship->rates->fetch([
             "weight" => 1,
             "package_preset" => "canadapost_corrugated_small_box"
         ]
-    )
+    ),
+    "carrier_ids" => array()
 ]);
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.rates.fetch({
-    "recipient": {
-        "address_line1": "125 Church St",
-        "person_name": "John Doe",
-        "company_name": "A corp.",
-        "phone_number": "514-000-0000",
-        "city": "Moncton",
-        "country_code": "CA",
-        "postal_code": "E1C4Z8",
-        "residential": false,
-        "state_code": "NB"
-    },
-    "shipper": {
-        "address_line1": "5840 Oak St",
-        "person_name": "Jane Doe",
-        "company_name": "B corp.",
-        "phone_number": "514-000-0000",
-        "city": "Vancouver",
-        "country_code": "CA",
-        "postal_code": "V6M2V9",
-        "residential": false,
-        "state_code": "BC"
-    },
-    "parcels": [
-        {
-            "weight": 1,
-            "package_preset": "canadapost_corrugated_small_box"
-        }
-    ]
-});
 ```
 
 <!-- tabs:end -->
@@ -824,15 +655,6 @@ purplship.Shipments.list()
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->shipments->list();
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.shipments.list();
 ```
 
 <!-- tabs:end -->
@@ -882,7 +704,8 @@ purplship.Shipments.create({
         "weight_unit": "KG",
         "dimension_unit": "CM"
     }
-  ]
+  ],
+  "carrier_ids":[],
 })
 ```
 
@@ -925,52 +748,9 @@ $purplship->shipments->create([
         "weight_unit" => "KG",
         "dimension_unit" => "CM"
     ]
-  )
+  ),
+  "carrier_ids" => array(),
 ]);
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.shipments.create({
-  "recipient":{
-    "address_line1": "125 Church St",
-    "person_name": "John Doe",
-    "company_name": "A corp.",
-    "phone_number": "514-000-0000",
-    "city": "Moncton",
-    "country_code": "CA",
-    "postal_code": "E1C4Z8",
-    "residential": False,
-    "state_code": "NB"
-  },
-  "shipper":{
-    "address_line1": "5840 Oak St",
-    "person_name": "Jane Doe",
-    "company_name": "B corp.",
-    "phone_number": "514-000-0000",
-    "city": "Vancouver",
-    "country_code": "CA",
-    "postal_code": "V6M2V9",
-    "residential": False,
-    "state_code": "BC"
-  },
-  "parcels":[
-    {
-        "weight": 0.2,
-        "width": 10,
-        "height": 10,
-        "length": 1,
-        "packaging_type": "pak",
-        "is_document": False,
-        "weight_unit": "KG",
-        "dimension_unit": "CM"
-    }
-  ]
-});
 ```
 
 <!-- tabs:end -->
@@ -995,15 +775,6 @@ purplship.Shipments.retrieve('<shpmt_id>')
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->shipments->retrieve('<shpmt_id>');
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.shipments.retrieve('<shpmt_id>');
 ```
 
 <!-- tabs:end -->
@@ -1053,20 +824,6 @@ $purplship->shipments->options('<shpmt_id>', [
 ]);
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.shipments.options('<shpmt_id>', {
-    "insurance": {
-        "amount": 54
-    },
-    "currency": "CAD"
-});
-```
-
 <!-- tabs:end -->
 
 - ### Buy a shipment label
@@ -1098,20 +855,6 @@ $purplship->shipments->purchase('<shpmt_id>', [
         "paid_by" => "sender"
     ]
 ]);
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.shipments.purchase('<shpmt_id>', {
-    "selected_rate_id":"rat_d6957df533c14cbfa99e99b568ff45ae",
-    "payment": {
-        "paid_by": "sender"
-    }
-});
 ```
 
 <!-- tabs:end -->
@@ -1160,15 +903,6 @@ purplship.Shipments.track('<carrier_id>', '<tracking_number>')
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->shipments->track('<carrier_id>', '<tracking_number>');
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.shipments.track('<carrier_id>', '<tracking_number>');
 ```
 
 <!-- tabs:end -->
@@ -1369,98 +1103,6 @@ $purplship->shipping->buyLabel([
 ]);
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.shipments.buyLabel({
-  "selected_rate_id":"rat_d6957df533c14cbfa99e99b568ff45ae",
-  "recipient":{
-    "address_line1":"125 Church St",
-    "person_name":"John Doe",
-    "company_name":"A corp.",
-    "phone_number":"514-000-0000",
-    "city":"Moncton",
-    "country_code":"CA",
-    "postal_code":"E1C4Z8",
-    "residential": false,
-    "state_code":"NB"
-  },
-  "shipper":{
-    "address_line1":"5840 Oak St",
-    "person_name":"Jane Doe",
-    "company_name":"B corp.",
-    "phone_number":"514-000-0000",
-    "city":"Vancouver",
-    "country_code":"CA",
-    "postal_code":"V6M2V9",
-    "residential": false,
-    "state_code":"BC"
-  },
-  "parcels":[
-    {
-      "weight":1,
-      "package_preset":"canadapost_corrugated_small_box"
-    }
-  ],
-  "carrier_ids":[],
-  "rates":[
-    {
-      "baseCharge":27.36,
-      "carrierId":"canadapost",
-      "carrierName":"canadapost",
-      "carrierRef":"car_317d118f6b2b4fd7875f6934df7e8b08",
-      "currency":"CAD",
-      "discount":-0.78,
-      "dutiesAndTaxes":3.99,
-      "extraCharges":[
-        {
-          "amount":1.27,
-          "currency":"CAD",
-          "name":"Fuel surcharge"
-        },
-        {
-          "amount":-2.05,
-          "currency":"CAD",
-          "name":"SMB Savings"
-        }
-      ],
-      "id":"rat_d6957df533c14cbfa99e99b568ff45ae",
-      "service":"canadapost_regular_parcel",
-      "totalCharge":30.57,
-      "transitDays":9
-    },
-    {
-      "baseCharge":29.64,
-      "carrierId":"canadapost",
-      "carrierName":"canadapost",
-      "carrierRef":"car_317d118f6b2b4fd7875f6934df7e8b08",
-      "currency":"CAD",
-      "discount":-0.82,
-      "dutiesAndTaxes":4.32,
-      "extraCharges":[
-        {
-          "amount":1.37,
-          "currency":"CAD",
-          "name":"Fuel surcharge"
-        },
-        {
-          "amount":-2.19,
-          "currency":"CAD",
-          "name":"SMB Savings"
-        }
-      ],
-      "id":"rat_68933df6c66d4ba4b29944afd0725c1e",
-      "service":"canadapost_expedited_parcel",
-      "totalCharge":33.14,
-      "transitDays":7
-    }
-  ]
-});
-```
-
 <!-- tabs:end -->
 
 > **IMPORTANT** \
@@ -1503,15 +1145,6 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->tracking->fetch('carrier_name', 'tracking_number', True);
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.tracking.fetch('carrier_name', 'tracking_numner', true);
-```
-
 <!-- tabs:end -->
 
 ---
@@ -1549,15 +1182,6 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->utils->references();
 ```
 
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.utils.references();
-```
-
 <!-- tabs:end -->
 
 - ### Print base64 shipping label
@@ -1588,18 +1212,6 @@ $purplship->utils->printLabel([
     "name" => "expected-filename",
     "label" => "JVBERi0xLjQKJfbk (Truncated base64) =="
 ]);
-```
-
-#### **Typescript**
-
-```php
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://instance.purplship.api/v1');
-
-purplship.tracking.printLabel({
-    "name": "expected-filename",
-    "label": "JVBERi0xLjQKJfbk (Truncated base64) =="
-});
 ```
 
 <!-- tabs:end -->
