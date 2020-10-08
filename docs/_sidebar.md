@@ -1,7 +1,10 @@
 <!-- docs/_sidebar.md -->
 
-- [Introduction](/)
+- Getting Started
+  - [Quick start](getting-started.md)
 
-- [API Guide](guide.md)
+- API Guide
+  - [API Reference](guide.md)
 
-- [Self-Hosted](self-hosted.md)
+- Deployment
+  - [Self-Hosted](self-hosted.md)
