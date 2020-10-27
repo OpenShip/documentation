@@ -59,14 +59,14 @@ docker-compose up
 
 - Opening `http://0.0.0.0:5002` in a browser should land you at purplship REST OpenAPI documentation page.
 
-![api-ref](_media/images/api-ref.png)
+![api-ref](../_media/images/api-ref.png)
 
 - Access the administration page to configure your carriers by clicking on the `settings icon`
 
 > ##### Log in the first time
-> ![login](_media/images/login.png)
+> ![login](../_media/images/login.png)
 
-![login](_media/images/admin.png)
+![login](../_media/images/admin.png)
 
 > ##### Administartion
 > From the Administration page, you can:
@@ -79,7 +79,7 @@ Press the Add button under PROVIDERS > [CARRIER] Settings to add a carrier confi
 
 *For this tutorial, we will add a Canada Post configuration*
 
-![login](_media/images/configure-a-carrier.png)
+![login](../_media/images/configure-a-carrier.png)
 
 !> **Note that these credential are for testing purpose and used only to access Canda Post sandbox server.**
 
@@ -87,11 +87,11 @@ Press the Add button under PROVIDERS > [CARRIER] Settings to add a carrier confi
 
 - Press the Add button under AUTH TOKEN > Tokens to add a token attached to a user.
 
-![login](_media/images/add-token.png)
+![login](../_media/images/add-token.png)
 
 - After saving, you should get a valid token
 
-![login](_media/images/retrieve-token.png)
+![login](../_media/images/retrieve-token.png)
 
 ## PROXY API
 
@@ -451,4 +451,4 @@ curl --request POST \
 }'
 ```
 
-> ![login](_media/images/label.png)
+> ![login](../_media/images/label.png)

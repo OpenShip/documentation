@@ -1,9 +1,9 @@
 
 <img src="_media/icon.png" alt="logo" width="120"/>
 
-# purplship <small>2020.9.0</small>
+# purplship <small>2020.10</small>
 
-> The Modern Shipping API.
+> The Online Commerce Shipping Infrastructure.
 
 - Multi-carrier shipping API
 - Open Source On-prem or Private cloud shipping API
