@@ -1,3 +1,5 @@
+# Introduction
+
 ## What is Purplship?
 
 Purplship is a multi-carrier service integration platform. The idea is to simplify the process of integrating your logistics carrier services into your application using a modern and simplified API. Most of the major carriers make their services available using web services. \
