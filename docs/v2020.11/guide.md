@@ -336,6 +336,7 @@ purplship.carriers.list();
 `POST`   | /v1/customs_info      |
 `GET`    | /v1/customs_info/{id} |
 `PATCH`  | /v1/customs_info/{id} |
+`DELETE` | /v1/customs_info/{id} |
 
 This is an object representing your Purplship shipping customs info. \
 You can create, update and retrieve one or many customs presets stored on your Purplship account.
@@ -479,6 +480,39 @@ purplship.customs.update(
     { "terms_of_trade": "DDP"},
     '<cust_id>'
 );
+```
+
+<!-- tabs:end -->
+
+- ### Discard a Customs info
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Customs.discard('<cust_id>')
+```
+
+#### **PHP**
+
+```php
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
+
+$purplship->customs->discard('<cust_id>');
+```
+
+#### **Typescript**
+
+```javascript
+import Purplship from '@purplship/purplship';
+const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
+
+purplship.customs.discard('<cust_id>');
 ```
 
 <!-- tabs:end -->
@@ -1138,6 +1172,7 @@ purplship.rates.fetch({
 `POST`   | /v1/shipment_pickups/{carrier_name}/cancel          |
 `GET`    | /v1/tracking_status                                 |
 `GET`    | /v1/tracking_status/{carrier_name}/{tracking_number}|
+`POST`   | /v1/shipments/{id}/customs                          |
 
 - ### Retrieve shipments
 
@@ -1365,7 +1400,7 @@ import purplship
 purplship.host = 'https://<server_address>/v1'
 purplship.api_key = '<api_key>'
 
-purplship.Shipments.options('<shp_id>', {
+purplship.Shipments.set_options('<shp_id>', {
     "insurance": 54,
     "currency": "CAD"
 })
@@ -1376,7 +1411,7 @@ purplship.Shipments.options('<shp_id>', {
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->shipments->options('<shp_id>', [
+$purplship->shipments->setOptions('<shp_id>', [
     "insurance" => 54,
     "currency" => "CAD"
 ]);
@@ -1388,7 +1423,7 @@ $purplship->shipments->options('<shp_id>', [
 import Purplship from '@purplship/purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
-purplship.shipments.options('<shp_id>', {
+purplship.shipments.setOptions('<shp_id>', {
     "insurance": 54,
     "currency": "CAD"
 });
@@ -1834,6 +1869,53 @@ import Purplship from '@purplship/purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.track('<carrier_name>', '<tracking_number>');
+```
+
+<!-- tabs:end -->
+
+- ### Add a custom declaration to an existing shipment
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Shipments.add_customs(
+  {
+    "incoterm": "FCA",
+    "content_type": "documents"
+  },
+  '<shp_id>'
+)
+```
+
+#### **PHP**
+
+```php
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
+$request = new \Purplship\Model\CustomsData([
+    "incoterm" => "FCA",
+    "content_type" => "documents"
+]);
+
+$purplship->shipments->addCustoms($request, '<shp_id>');
+```
+
+#### **Typescript**
+
+```javascript
+import Purplship from '@purplship/purplship';
+const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
+const request = {
+    "incoterm": "FCA",
+    "content_type": "documents"
+};
+
+purplship.shipments.addCustoms(request, '<shp_id>');
 ```
 
 <!-- tabs:end -->

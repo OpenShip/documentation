@@ -1,13 +1,12 @@
 
 <img src="_media/icon.png" alt="logo" width="120"/>
 
-# purplship <small>2020.10</small>
+# purplship <small>2020.11</small>
 
-> The Online Commerce Shipping Infrastructure.
+> Shipping infrastructure for businesses.
 
 - Multi-carrier shipping API
 - Open Source On-prem or Private cloud shipping API
-- Single integration for a network of carriers
 
 [Get Started](#introduction)
 

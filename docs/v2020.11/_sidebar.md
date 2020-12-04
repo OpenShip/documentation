@@ -9,4 +9,5 @@
   - [API Reference](/v2020.11/guide.md)
 
 - Deployment
-  - [Self-Hosted](/v2020.11/self-hosted.md)
+  - [Configuration](/v2020.11/configuration.md)
+  - [Docker](/v2020.11/docker.md)
