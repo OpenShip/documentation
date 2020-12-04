@@ -178,7 +178,7 @@ purplship.Addresses.create({
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->addresses->create(new \Purplship\Model\Address([
+$purplship->addresses->create([
     "address_line1" => "5205 rue riviera",
     "person_name" => "Jane Doe",
     "phone_number" => "1 438 222-2222",
@@ -187,7 +187,7 @@ $purplship->addresses->create(new \Purplship\Model\Address([
     "postal_code" => "H8Z2Z3",
     "residential" => True,
     "state_code" => "QC"
-]));
+]);
 ```
 
 #### **Typescript**
@@ -266,7 +266,7 @@ purplship.Addresses.update(
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->addresses->update(
-    new \Purplship\Model\AddressData([ "phone_number" => "1 438 222-2222" ]),
+    [ "phone_number" => "1 438 222-2222" ],
     '<addr_id>'
 );
 ```
@@ -393,9 +393,9 @@ purplship.Customs.create({ "terms_of_trade": "DDU" })
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->customs->create(new \Purplship\Model\CustomsData([
+$purplship->customs->create([
   "terms_of_trade" => "DDU"
-]));
+]);
 ```
 
 #### **Typescript**
@@ -465,7 +465,7 @@ purplship.Customs.update(
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->customs->update(
-    new \Purplship\Model\CustomsData([ "terms_of_trade" => "DDP" ]),
+    [ "terms_of_trade" => "DDP" ],
     '<cust_id>',
 );
 ```
@@ -590,14 +590,14 @@ purplship.Parcels.create({
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->parcels->create(new \Purplship\Model\ParcelData([
+$purplship->parcels->create([
     "weight" => 1,
     "width" => 20,
     "height" => 10,
     "length" => 29,
     "weight_unit" => "KG",
     "dimension_unit" => "CM"
-]));
+]);
 ```
 
 #### **Typescript**
@@ -677,10 +677,10 @@ purplship.Parcels.update(
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->parcels->update(
-    new \Purplship\Model\ParcelData([
+    [
         "weight" => 1.5,
         "weight_unit" => "LB"
-    ]),
+    ],
     '<parcl_id>'
 );
 ```
@@ -761,7 +761,7 @@ purplship.Pickups.schedule({
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$request = new \Purplship\Model\PickupRequest([
+$request = [
   "pickup_date" => "2020-10-25",
   "address" => [
     "address_line1" => "125 Church St",
@@ -791,7 +791,7 @@ $request = new \Purplship\Model\PickupRequest([
   "closing_time" => "17:00",
   "instruction" => "Should not be folded",
   "package_location" => "At the main entrance hall"
-]);
+];
 
 $purplship->pickups->schedule($request, 'carrier_name');
 ```
@@ -886,7 +886,7 @@ purplship.Pickups.update({
 
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-$request = new \Purplship\Model\PickupUpdateRequest([
+$request = [
   "pickup_date" => "2020-10-23",
   "confirmation_number" => "27241",
   "address" => [
@@ -917,7 +917,7 @@ $request = new \Purplship\Model\PickupUpdateRequest([
   "closing_time" => "17:00",
   "instruction" => "Should not be folded",
   "package_location" => "At the main entrance hall"
-]);
+];
 
 $purplship->pickups->udpate($request, 'carrier_name');
 ```
@@ -987,7 +987,7 @@ purplship.Pickups.cancel(
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->pickups->cancel(
-  new \Purplship\Model\PickupCancelRequest([ "confirmation_number" => "00110215" ]),
+  [ "confirmation_number" => "00110215" ],
   'carrier_name'
 );
 ```
@@ -1068,7 +1068,7 @@ purplship.Rates.fetch({
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->rates->fetch(new \Purplship\Model\RateRequest([
+$purplship->rates->fetch([
     "shipper" => [
         "address_line1" => "5840 Oak St",
         "person_name" => "Jane Doe",
@@ -1103,7 +1103,7 @@ $purplship->rates->fetch(new \Purplship\Model\RateRequest([
           "dimension_unit" => "CM"
         ]
     )
-]));
+]);
 ```
 
 #### **Typescript**
@@ -1261,7 +1261,7 @@ purplship.Shipments.create({
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->shipments->create(new \Purplship\Model\ShipmentData([
+$purplship->shipments->create([
   "recipient" => [
     "address_line1" => "125 Church St",
     "person_name" => "John Doe",
@@ -1296,7 +1296,7 @@ $purplship->shipments->create(new \Purplship\Model\ShipmentData([
         "dimension_unit" => "CM"
     ]
   )
-]));
+]);
 ```
 
 #### **Typescript**
@@ -1400,10 +1400,10 @@ import purplship
 purplship.host = 'https://<server_address>/v1'
 purplship.api_key = '<api_key>'
 
-purplship.Shipments.set_options('<shp_id>', {
+purplship.Shipments.set_options({
     "insurance": 54,
     "currency": "CAD"
-})
+}, '<shp_id>')
 ```
 
 #### **PHP**
@@ -1411,10 +1411,10 @@ purplship.Shipments.set_options('<shp_id>', {
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->shipments->setOptions('<shp_id>', [
+$purplship->shipments->setOptions([
     "insurance" => 54,
     "currency" => "CAD"
-]);
+], '<shp_id>');
 ```
 
 #### **Typescript**
@@ -1423,10 +1423,10 @@ $purplship->shipments->setOptions('<shp_id>', [
 import Purplship from '@purplship/purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
-purplship.shipments.setOptions('<shp_id>', {
+purplship.shipments.setOptions({
     "insurance": 54,
     "currency": "CAD"
-});
+}, '<shp_id>');
 ```
 
 <!-- tabs:end -->
@@ -1456,12 +1456,12 @@ purplship.Shipments.purchase({
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
 $purplship->shipments->purchase(
-  new \Purplship\Model\ShipmentPurchaseData([
+  [
     "selected_rate_id" => "<rat_id>",
     "payment" => [
         "paid_by" => "sender"
     ]
-  ]),
+  ],
   '<shp_id>'
 );
 ```
@@ -1622,7 +1622,7 @@ purplship.Shipments.schedule_pickup({
 
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-$request = new \Purplship\Model\PickupData([
+$request = [
   "pickup_date" => "2020-10-25",
   "ready_time" => "13:00",
   "closing_time" => "17:00",
@@ -1645,7 +1645,7 @@ $request = new \Purplship\Model\PickupData([
     "tracking_number",
     "tracking_number"
   )
-]);
+];
 
 $purplship->shipments->schedulePickup($request, 'carrier_name');
 ```
@@ -1745,13 +1745,13 @@ purplship.Shipments.update_pickup(
 
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-$request = new \Purplship\Model\PickupUpdateData([
+$request = [
   "ready_time" => "14:00",
   "package_location" => "At the main entrance hall next to the distributor",
   "address" => [
     "person_name" => "Janet Jackson"
   ]
-]);
+];
 
 $purplship->shipments->updatePickup($request, '<pck_id>');
 ```
@@ -1897,10 +1897,10 @@ purplship.Shipments.add_customs(
 
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-$request = new \Purplship\Model\CustomsData([
+$request = [
     "incoterm" => "FCA",
     "content_type" => "documents"
-]);
+];
 
 $purplship->shipments->addCustoms($request, '<shp_id>');
 ```
@@ -2033,7 +2033,7 @@ purplship.Shipping.buy_label({
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->shipping->buyLabel(new \Purplship\Model\ShippingRequest([
+$purplship->shipping->buyLabel([
   "selected_rate_id" => "<rat_id>",
   "recipient" => [
     "address_line1" => "125 Church St",
@@ -2116,7 +2116,7 @@ $purplship->shipping->buyLabel(new \Purplship\Model\ShippingRequest([
       "transitDays" => 7
     ]
   )
-]));
+]);
 ```
 
 #### **Typescript**
@@ -2244,9 +2244,9 @@ purplship.Shipments.void_label(
 
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-$request = new \Purplship\Model\ShipmentCancelRequest([
+$request = [
   "shipment_identifier" => "123456789012345678"
-]);
+];
 $purplship->shipments->voidLabel($request, 'carrier_name');
 ```
 
@@ -2375,10 +2375,10 @@ purplship.Utils.print_label({
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->utils->printLabel(new \Purplship\Model\LabelPrintingRequest([
+$purplship->utils->printLabel([
     "name" => "expected-filename",
     "label" => "JVBERi0xLjQKJfbk (Truncated base64) =="
-]));
+]);
 ```
 
 #### **Typescript**
