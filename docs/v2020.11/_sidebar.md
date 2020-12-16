@@ -6,7 +6,7 @@
   - [Quick start](/v2020.11/getting-started.md)
 
 - API Guide
-  - [API Reference](/v2020.11/guide.md)
+  - [Reference](/v2020.11/guide.md)
 
 - Deployment
   - [Configuration](/v2020.11/configuration.md)

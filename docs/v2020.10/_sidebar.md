@@ -6,7 +6,7 @@
   - [Quick start](/v2020.10/getting-started.md)
 
 - API Guide
-  - [API Reference](/v2020.10/guide.md)
+  - [Reference](/v2020.10/guide.md)
 
 - Deployment
   - [Self-Hosted](/v2020.10/self-hosted.md)
