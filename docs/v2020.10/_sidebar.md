@@ -10,3 +10,5 @@
 
 - Deployment
   - [Self-Hosted](/v2020.10/self-hosted.md)
+
+- [Tutorials](/tutorials/index.md)

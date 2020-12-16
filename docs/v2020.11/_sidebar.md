@@ -11,3 +11,5 @@
 - Deployment
   - [Configuration](/v2020.11/configuration.md)
   - [Docker](/v2020.11/docker.md)
+
+- [Tutorials](/tutorials/index.md)
