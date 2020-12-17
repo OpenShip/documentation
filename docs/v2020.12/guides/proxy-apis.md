@@ -1,313 +1,6 @@
+# Proxy APIs <!-- {docsify-ignore} -->
+
 The proxy is set of raw APIs used to send direct requests to shipping carriers webservices.
-
-## Pickups [proxy]
-
-|       | Endpoints                               |
-:-------|:--------------------------------------- |
-`PATCH` | /v1/proxy/pickups/{carrier_name}        |
-`POST`  | /v1/proxy/pickups/{carrier_name}        |
-`POST`  | /v1/proxy/pickups/{carrier_name}/cancel |
-
-<details>
-<summary>Parcels API Usage</summary>
-
-- ### Schedule a pickup
-
-<!-- tabs:start -->
-
-#### **Python**
-
-```python
-import purplship
-purplship.host = 'https://<server_address>/v1'
-purplship.api_key = '<api_key>'
-
-purplship.Pickups.schedule({
-  "pickup_date": "2020-10-25",
-  "address": {
-    "address_line1": "125 Church St",
-    "person_name": "John Doe",
-    "company_name": "A corp.",
-    "phone_number": "514-000-0000",
-    "city": "Moncton",
-    "country_code": "CA",
-    "postal_code": "E1C4Z8",
-    "residential": False,
-    "state_code": "NB",
-    "email": "john@a.com"
-  },
-  "parcels": [
-    {
-      "weight": 0.5,
-      "width": 10,
-      "height": 10,
-      "length": 1,
-      "packaging_type": "envelope",
-      "is_document": True,
-      "weight_unit": "KG",
-      "dimension_unit": "CM"
-    }
-  ],
-  "ready_time": "13:00",
-  "closing_time": "17:00",
-  "instruction": "Should not be folded",
-  "package_location": "At the main entrance hall"
-}, 'carrier_name')
-```
-
-#### **PHP**
-
-```php
-$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-
-$request = [
-  "pickup_date" => "2020-10-25",
-  "address" => [
-    "address_line1" => "125 Church St",
-    "person_name" => "John Doe",
-    "company_name" => "A corp.",
-    "phone_number" => "514-000-0000",
-    "city" => "Moncton",
-    "country_code" => "CA",
-    "postal_code" => "E1C4Z8",
-    "residential" => False,
-    "state_code" => "NB",
-    "email" => "john@a.com"
-  ],
-  "parcels" => array(
-    [
-      "weight" => 0.5,
-      "width" => 10,
-      "height" => 10,
-      "length" => 1,
-      "packaging_type" => "envelope",
-      "is_document" => True,
-      "weight_unit" => "KG",
-      "dimension_unit" => "CM"
-    ]
-  ),
-  "ready_time" => "13:00",
-  "closing_time" => "17:00",
-  "instruction" => "Should not be folded",
-  "package_location" => "At the main entrance hall"
-];
-
-$purplship->pickups->schedule($request, 'carrier_name');
-```
-
-#### **Typescript**
-
-```javascript
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
-
-purplship.pickups.schedule({
-  "pickup_date": "2020-10-25",
-  "address": {
-    "address_line1": "125 Church St",
-    "person_name": "John Doe",
-    "company_name": "A corp.",
-    "phone_number": "514-000-0000",
-    "city": "Moncton",
-    "country_code": "CA",
-    "postal_code": "E1C4Z8",
-    "residential": false,
-    "state_code": "NB",
-    "email": "john@a.com"
-  },
-  "parcels": [
-    {
-      "weight": 0.5,
-      "width": 10,
-      "height": 10,
-      "length": 1,
-      "packaging_type": "envelope",
-      "is_document": true,
-      "weight_unit": "KG",
-      "dimension_unit": "CM"
-    }
-  ],
-  "ready_time": "13:00",
-  "closing_time": "17:00",
-  "instruction": "Should not be folded",
-  "package_location": "At the main entrance hall"
-}, 'carrier_name');
-```
-
-<!-- tabs:end -->
-
-- ### Update a scheduled pickup
-
-<!-- tabs:start -->
-
-#### **Python**
-
-```python
-import purplship
-purplship.host = 'https://<server_address>/v1'
-purplship.api_key = '<api_key>'
-
-purplship.Pickups.update({
-  "pickup_date": "2020-10-23",
-  "confirmation_number": "27241",
-  "address": {
-    "address_line1": "125 Church St",
-    "person_name": "John Doe",
-    "company_name": "A corp.",
-    "phone_number": "514-000-0000",
-    "city": "Moncton",
-    "country_code": "CA",
-    "postal_code": "E1C4Z8",
-    "residential": False,
-    "state_code": "NB",
-    "email": "john@a.com"
-  },
-  "parcels": [
-    {
-      "weight": 0.2,
-      "width": 10,
-      "height": 10,
-      "length": 1,
-      "packaging_type": "envelope",
-      "is_document": True,
-      "weight_unit": "KG",
-      "dimension_unit": "CM"
-    }
-  ],
-  "ready_time": "14:30",
-  "closing_time": "17:00",
-  "instruction": "Should not be folded",
-  "package_location": "At the main entrance hall"
-}, 'carrier_name')
-```
-
-#### **PHP**
-
-```php
-$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-$request = [
-  "pickup_date" => "2020-10-23",
-  "confirmation_number" => "27241",
-  "address" => [
-    "address_line1" => "125 Church St",
-    "person_name" => "John Doe",
-    "company_name" => "A corp.",
-    "phone_number" => "514-000-0000",
-    "city" => "Moncton",
-    "country_code" => "CA",
-    "postal_code" => "E1C4Z8",
-    "residential" => False,
-    "state_code" => "NB",
-    "email" => "john@a.com"
-  ],
-  "parcels" => array(
-    [
-      "weight" => 0.2,
-      "width" => 10,
-      "height" => 10,
-      "length" => 1,
-      "packaging_type" => "envelope",
-      "is_document" => True,
-      "weight_unit" => "KG",
-      "dimension_unit" => "CM"
-    ]
-  ),
-  "ready_time" => "14:30",
-  "closing_time" => "17:00",
-  "instruction" => "Should not be folded",
-  "package_location" => "At the main entrance hall"
-];
-
-$purplship->pickups->udpate($request, 'carrier_name');
-```
-
-#### **Typescript**
-
-```javascript
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
-
-purplship.pickups.update({
-  "pickup_date": "2020-10-23",
-  "confirmation_number": "27241",
-  "address": {
-    "address_line1": "125 Church St",
-    "person_name": "John Doe",
-    "company_name": "A corp.",
-    "phone_number": "514-000-0000",
-    "city": "Moncton",
-    "country_code": "CA",
-    "postal_code": "E1C4Z8",
-    "residential": false,
-    "state_code": "NB",
-    "email": "john@a.com"
-  },
-  "parcels": [
-    {
-      "weight": 0.2,
-      "width": 10,
-      "height": 10,
-      "length": 1,
-      "packaging_type": "envelope",
-      "is_document": true,
-      "weight_unit": "KG",
-      "dimension_unit": "CM"
-    }
-  ],
-  "ready_time": "14:30",
-  "closing_time": "17:00",
-  "instruction": "Should not be folded",
-  "package_location": "At the main entrance hall"
-}, 'carrier_name');
-```
-
-<!-- tabs:end -->
-
-- ### Cancel a pickup
-
-<!-- tabs:start -->
-
-#### **Python**
-
-```python
-import purplship
-purplship.host = 'https://<server_address>/v1'
-purplship.api_key = '<api_key>'
-
-purplship.Pickups.cancel(
-  { "confirmation_number": "00110215" },
-  'carrier_name'
-)
-```
-
-#### **PHP**
-
-```php
-$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
-
-$purplship->pickups->cancel(
-  [ "confirmation_number" => "00110215" ],
-  'carrier_name'
-);
-```
-
-#### **Typescript**
-
-```javascript
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
-
-purplship.pickups.cancel(
-  { "confirmation_number": "00110215" },
-  'carrier_name'
-);
-```
-
-<!-- tabs:end -->
-
-</details>
-
----
 
 ## Rates [proxy]
 
@@ -452,6 +145,52 @@ purplship.rates.fetch({
     }
   ]
 });
+```
+
+<!-- tabs:end -->
+
+</details>
+
+---
+
+## Tracking [proxy]
+
+|       | Endpoints                                           |
+:-------|:--------------------------------------------------- |
+`POST`  | /v1/proxy/tracking/{carrier_name}/{tracking_number} |
+
+The Purplship tracking service is a stateless proxy that forwards tracking requests to shipping carriers.
+
+<details>
+<summary>Tracking API Usage</summary>
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Tracking.fetch('carrier_name', 'tracking_numner', test=True)
+```
+
+#### **PHP**
+
+```php
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
+
+$purplship->tracking->fetch('carrier_name', 'tracking_number', True);
+```
+
+#### **Typescript**
+
+```javascript
+import Purplship from '@purplship/purplship';
+const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
+
+purplship.tracking.fetch('carrier_name', 'tracking_numner', true);
 ```
 
 <!-- tabs:end -->
@@ -809,16 +548,18 @@ purplship.shipments.voidLabel(request, 'carrier_name');
 
 ---
 
-## Tracking [proxy]
+## Pickups [proxy]
 
-|       | Endpoints                                           |
-:-------|:--------------------------------------------------- |
-`POST`  | /v1/proxy/tracking/{carrier_name}/{tracking_number} |
-
-The Purplship tracking service is a stateless proxy that forwards tracking requests to shipping carriers.
+|       | Endpoints                               |
+:-------|:--------------------------------------- |
+`PATCH` | /v1/proxy/pickups/{carrier_name}        |
+`POST`  | /v1/proxy/pickups/{carrier_name}        |
+`POST`  | /v1/proxy/pickups/{carrier_name}/cancel |
 
 <details>
-<summary>Tracking API Usage</summary>
+<summary>Parcels API Usage</summary>
+
+- ### Schedule a pickup
 
 <!-- tabs:start -->
 
@@ -829,7 +570,37 @@ import purplship
 purplship.host = 'https://<server_address>/v1'
 purplship.api_key = '<api_key>'
 
-purplship.Tracking.fetch('carrier_name', 'tracking_numner', test=True)
+purplship.Pickups.schedule({
+  "pickup_date": "2020-10-25",
+  "address": {
+    "address_line1": "125 Church St",
+    "person_name": "John Doe",
+    "company_name": "A corp.",
+    "phone_number": "514-000-0000",
+    "city": "Moncton",
+    "country_code": "CA",
+    "postal_code": "E1C4Z8",
+    "residential": False,
+    "state_code": "NB",
+    "email": "john@a.com"
+  },
+  "parcels": [
+    {
+      "weight": 0.5,
+      "width": 10,
+      "height": 10,
+      "length": 1,
+      "packaging_type": "envelope",
+      "is_document": True,
+      "weight_unit": "KG",
+      "dimension_unit": "CM"
+    }
+  ],
+  "ready_time": "13:00",
+  "closing_time": "17:00",
+  "instruction": "Should not be folded",
+  "package_location": "At the main entrance hall"
+}, 'carrier_name')
 ```
 
 #### **PHP**
@@ -837,7 +608,39 @@ purplship.Tracking.fetch('carrier_name', 'tracking_numner', test=True)
 ```php
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 
-$purplship->tracking->fetch('carrier_name', 'tracking_number', True);
+$request = [
+  "pickup_date" => "2020-10-25",
+  "address" => [
+    "address_line1" => "125 Church St",
+    "person_name" => "John Doe",
+    "company_name" => "A corp.",
+    "phone_number" => "514-000-0000",
+    "city" => "Moncton",
+    "country_code" => "CA",
+    "postal_code" => "E1C4Z8",
+    "residential" => False,
+    "state_code" => "NB",
+    "email" => "john@a.com"
+  ],
+  "parcels" => array(
+    [
+      "weight" => 0.5,
+      "width" => 10,
+      "height" => 10,
+      "length" => 1,
+      "packaging_type" => "envelope",
+      "is_document" => True,
+      "weight_unit" => "KG",
+      "dimension_unit" => "CM"
+    ]
+  ),
+  "ready_time" => "13:00",
+  "closing_time" => "17:00",
+  "instruction" => "Should not be folded",
+  "package_location" => "At the main entrance hall"
+];
+
+$purplship->pickups->schedule($request, 'carrier_name');
 ```
 
 #### **Typescript**
@@ -846,7 +649,206 @@ $purplship->tracking->fetch('carrier_name', 'tracking_number', True);
 import Purplship from '@purplship/purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
-purplship.tracking.fetch('carrier_name', 'tracking_numner', true);
+purplship.pickups.schedule({
+  "pickup_date": "2020-10-25",
+  "address": {
+    "address_line1": "125 Church St",
+    "person_name": "John Doe",
+    "company_name": "A corp.",
+    "phone_number": "514-000-0000",
+    "city": "Moncton",
+    "country_code": "CA",
+    "postal_code": "E1C4Z8",
+    "residential": false,
+    "state_code": "NB",
+    "email": "john@a.com"
+  },
+  "parcels": [
+    {
+      "weight": 0.5,
+      "width": 10,
+      "height": 10,
+      "length": 1,
+      "packaging_type": "envelope",
+      "is_document": true,
+      "weight_unit": "KG",
+      "dimension_unit": "CM"
+    }
+  ],
+  "ready_time": "13:00",
+  "closing_time": "17:00",
+  "instruction": "Should not be folded",
+  "package_location": "At the main entrance hall"
+}, 'carrier_name');
+```
+
+<!-- tabs:end -->
+
+- ### Update a scheduled pickup
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Pickups.update({
+  "pickup_date": "2020-10-23",
+  "confirmation_number": "27241",
+  "address": {
+    "address_line1": "125 Church St",
+    "person_name": "John Doe",
+    "company_name": "A corp.",
+    "phone_number": "514-000-0000",
+    "city": "Moncton",
+    "country_code": "CA",
+    "postal_code": "E1C4Z8",
+    "residential": False,
+    "state_code": "NB",
+    "email": "john@a.com"
+  },
+  "parcels": [
+    {
+      "weight": 0.2,
+      "width": 10,
+      "height": 10,
+      "length": 1,
+      "packaging_type": "envelope",
+      "is_document": True,
+      "weight_unit": "KG",
+      "dimension_unit": "CM"
+    }
+  ],
+  "ready_time": "14:30",
+  "closing_time": "17:00",
+  "instruction": "Should not be folded",
+  "package_location": "At the main entrance hall"
+}, 'carrier_name')
+```
+
+#### **PHP**
+
+```php
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
+$request = [
+  "pickup_date" => "2020-10-23",
+  "confirmation_number" => "27241",
+  "address" => [
+    "address_line1" => "125 Church St",
+    "person_name" => "John Doe",
+    "company_name" => "A corp.",
+    "phone_number" => "514-000-0000",
+    "city" => "Moncton",
+    "country_code" => "CA",
+    "postal_code" => "E1C4Z8",
+    "residential" => False,
+    "state_code" => "NB",
+    "email" => "john@a.com"
+  ],
+  "parcels" => array(
+    [
+      "weight" => 0.2,
+      "width" => 10,
+      "height" => 10,
+      "length" => 1,
+      "packaging_type" => "envelope",
+      "is_document" => True,
+      "weight_unit" => "KG",
+      "dimension_unit" => "CM"
+    ]
+  ),
+  "ready_time" => "14:30",
+  "closing_time" => "17:00",
+  "instruction" => "Should not be folded",
+  "package_location" => "At the main entrance hall"
+];
+
+$purplship->pickups->udpate($request, 'carrier_name');
+```
+
+#### **Typescript**
+
+```javascript
+import Purplship from '@purplship/purplship';
+const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
+
+purplship.pickups.update({
+  "pickup_date": "2020-10-23",
+  "confirmation_number": "27241",
+  "address": {
+    "address_line1": "125 Church St",
+    "person_name": "John Doe",
+    "company_name": "A corp.",
+    "phone_number": "514-000-0000",
+    "city": "Moncton",
+    "country_code": "CA",
+    "postal_code": "E1C4Z8",
+    "residential": false,
+    "state_code": "NB",
+    "email": "john@a.com"
+  },
+  "parcels": [
+    {
+      "weight": 0.2,
+      "width": 10,
+      "height": 10,
+      "length": 1,
+      "packaging_type": "envelope",
+      "is_document": true,
+      "weight_unit": "KG",
+      "dimension_unit": "CM"
+    }
+  ],
+  "ready_time": "14:30",
+  "closing_time": "17:00",
+  "instruction": "Should not be folded",
+  "package_location": "At the main entrance hall"
+}, 'carrier_name');
+```
+
+<!-- tabs:end -->
+
+- ### Cancel a pickup
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Pickups.cancel(
+  { "confirmation_number": "00110215" },
+  'carrier_name'
+)
+```
+
+#### **PHP**
+
+```php
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
+
+$purplship->pickups->cancel(
+  [ "confirmation_number" => "00110215" ],
+  'carrier_name'
+);
+```
+
+#### **Typescript**
+
+```javascript
+import Purplship from '@purplship/purplship';
+const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
+
+purplship.pickups.cancel(
+  { "confirmation_number": "00110215" },
+  'carrier_name'
+);
 ```
 
 <!-- tabs:end -->

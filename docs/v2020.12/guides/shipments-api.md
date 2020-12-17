@@ -1149,52 +1149,6 @@ purplship.parcels.update(
 
 ---
 
-## Carriers
-
-|       | Endpoints                       |
-:-------|:------------------------------- |
-`GET`   | /v1/carriers                    |
-
-You can retrieve one or many carriers configuration stored on your Purplship account.
-
-<details>
-<summary>Carriers API Usage</summary>
-
-- ### Retrieve configured carriers
-
-<!-- tabs:start -->
-
-#### **Python**
-
-```python
-import purplship
-purplship.host = 'https://<server_address>/v1'
-purplship.api_key = '<api_key>'
-
-purplship.Carriers.list()
-```
-
-#### **PHP**
-
-```php
-$purplship->carriers->list();
-```
-
-#### **Typescript**
-
-```javascript
-import Purplship from '@purplship/purplship';
-const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
-
-purplship.carriers.list();
-```
-
-<!-- tabs:end -->
-
-</details>
-
----
-
 ## Customs Info
 
 |        | Endpoints             |
@@ -1383,6 +1337,52 @@ import Purplship from '@purplship/purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.customs.discard('<cust_id>');
+```
+
+<!-- tabs:end -->
+
+</details>
+
+---
+
+## Carriers
+
+|       | Endpoints                       |
+:-------|:------------------------------- |
+`GET`   | /v1/carriers                    |
+
+You can retrieve one or many carriers configuration stored on your Purplship account.
+
+<details>
+<summary>Carriers API Usage</summary>
+
+- ### Retrieve configured carriers
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Carriers.list()
+```
+
+#### **PHP**
+
+```php
+$purplship->carriers->list();
+```
+
+#### **Typescript**
+
+```javascript
+import Purplship from '@purplship/purplship';
+const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
+
+purplship.carriers.list();
 ```
 
 <!-- tabs:end -->
