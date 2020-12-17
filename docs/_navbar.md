@@ -1,5 +1,4 @@
 
-* [Home](/)
 * [Blog](https://blog.purplship.com)
 * [Tutorials](/tutorials/index.md?id=tutorials)
 * Versions
