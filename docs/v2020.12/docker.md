@@ -1,7 +1,26 @@
-The minimal requirements to deploy Purplship in production is:
+The minimal requirements to deploy Purplship is:
 
-- A database (fully tested with Postgress)
-- A webserver (fully tested with Nginx)
+- A `database` (fully tested with Postgress)
+- A `webserver` (fully tested with Nginx)
+
+## Quick preview
+
+<details>
+<summary>Start a postgres SQL Database Instance</summary>
+
+```shell
+docker run -d --name db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres postgres
+```
+
+And start the purplship-server docker container
+
+</details>
+
+```shell
+docker run --name purplship --link=db:db -p5002:5002 purplship/purplship-server:[version]
+```
+
+## Using docker-compose
 
 A minimal `docker-compose.yml` file will look like this
 

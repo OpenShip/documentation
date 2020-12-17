@@ -1,6 +1,7 @@
 
-* [Home](https://purplship.com)
+* [Product](https://purplship.com)
 * [Blog](https://blog.purplship.com)
+* [Tutorials](/tutorials/index.md?id=tutorials)
 * Versions
   * [latest](/)
   * [v2020.11](/v2020.11/)
