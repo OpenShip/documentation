@@ -1,3 +1,4 @@
+# Shipments API <!-- {docsify-ignore} -->
 
 ## Shipments
 
@@ -47,7 +48,7 @@ $purplship->shipments->list();
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.list();
@@ -150,7 +151,7 @@ $purplship->shipments->create([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.create({
@@ -218,7 +219,7 @@ $purplship->shipments->retrieve('<shp_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.retrieve('<shp_id>');
@@ -268,7 +269,7 @@ $purplship->shipments->setOptions([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.setOptions({
@@ -317,7 +318,7 @@ $purplship->shipments->purchase(
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.purchase({
@@ -355,7 +356,7 @@ $purplship->shipments->rates('<shp_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.rates('<shp_id>');
@@ -388,7 +389,7 @@ $purplship->shipments->cancel('<shp_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.cancel('<shp_id>');
@@ -421,7 +422,7 @@ $purplship->shipments->pickups();
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.pickups();
@@ -501,7 +502,7 @@ $purplship->shipments->schedulePickup($request, 'carrier_name');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 const request = {
   "pickup_date": "2020-10-25",
@@ -558,7 +559,7 @@ $purplship->shipments->retrievePickup('<pck_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.retrievePickup('<pck_id>');
@@ -607,7 +608,7 @@ $purplship->shipments->updatePickup($request, '<pck_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 const request = {
   "ready_time": "14:00",
@@ -647,7 +648,7 @@ $purplship->shipments->cancelPickup('<pck_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.cancelPickup('<pck_id>');
@@ -680,7 +681,7 @@ $purplship->shipments->trackingStatuses();
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.tracking_statuses();
@@ -713,7 +714,7 @@ $purplship->shipments->track('<carrier_name>', '<tracking_number>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.track('<carrier_name>', '<tracking_number>');
@@ -756,7 +757,7 @@ $purplship->shipments->addCustoms($request, '<shp_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 const request = {
     "incoterm": "FCA",
@@ -812,7 +813,7 @@ $purplship->addresses->list();
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.addresses.list();
@@ -863,7 +864,7 @@ $purplship->addresses->create([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.addresses.create({
@@ -905,7 +906,7 @@ $purplship->addresses->retrieve('<addr_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.addresses.retrieve('<addr_id>');
@@ -944,7 +945,7 @@ $purplship->addresses->update(
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.addresses.update(
@@ -967,6 +968,7 @@ purplship.addresses.update(
 `POST`  | /v1/parcels      |
 `GET`   | /v1/parcels/{id} |
 `PATCH` | /v1/parcels/{id} |
+`DELETE`| /v1/parcels/{id} |
 
 This is an object representing your Purplship parcel. \
 You can create, update and retrieve one or many parcels stored on your Purplship account.
@@ -999,7 +1001,7 @@ $purplship->parcels->list();
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.parcels.list();
@@ -1046,7 +1048,7 @@ $purplship->parcels->create([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.parcels.create({
@@ -1086,7 +1088,7 @@ $purplship->parcels->retrieve('<parcl_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.parcels.retrieve('<parcl_id>');
@@ -1131,7 +1133,7 @@ $purplship->parcels->update(
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.parcels.update(
@@ -1144,6 +1146,40 @@ purplship.parcels.update(
 ```
 
 <!-- tabs:end -->
+
+- ### Discard a parcel
+
+<!-- tabs:start -->
+
+#### **Python**
+
+```python
+import purplship
+purplship.host = 'https://<server_address>/v1'
+purplship.api_key = '<api_key>'
+
+purplship.Parcels.discard('<parcl_id>')
+```
+
+#### **PHP**
+
+```php
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
+
+$purplship->parcels->discard('<parcl_id>');
+```
+
+#### **Typescript**
+
+```javascript
+import Purplship from 'purplship';
+const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
+
+purplship.parcels.discard('<parcl_id>');
+```
+
+<!-- tabs:end -->
+
 
 </details>
 
@@ -1190,7 +1226,7 @@ $purplship->addresses->list();
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.addresses.list();
@@ -1225,7 +1261,7 @@ $purplship->customs->create([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.customs.create({ "terms_of_trade": "DDU" });
@@ -1258,7 +1294,7 @@ $purplship->customs->retrieve('<cust_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.customs.retrieve('<cust_id>');
@@ -1297,7 +1333,7 @@ $purplship->customs->update(
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.customs.update(
@@ -1333,7 +1369,7 @@ $purplship->customs->discard('<cust_id>');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.customs.discard('<cust_id>');
@@ -1373,13 +1409,15 @@ purplship.Carriers.list()
 #### **PHP**
 
 ```php
+$purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
+
 $purplship->carriers->list();
 ```
 
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.carriers.list();

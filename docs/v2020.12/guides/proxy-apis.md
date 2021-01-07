@@ -106,7 +106,7 @@ $purplship->rates->fetch([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.rates.fetch({
@@ -187,7 +187,7 @@ $purplship->tracking->fetch('carrier_name', 'tracking_number', True);
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.tracking.fetch('carrier_name', 'tracking_numner', true);
@@ -402,7 +402,7 @@ $purplship->shipping->buyLabel([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.shipments.buyLabel({
@@ -533,7 +533,7 @@ $purplship->shipments->voidLabel($request, 'carrier_name');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 const request = {
   "shipment_identifier": "123456789012345678"
@@ -646,7 +646,7 @@ $purplship->pickups->schedule($request, 'carrier_name');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.pickups.schedule({
@@ -772,7 +772,7 @@ $purplship->pickups->udpate($request, 'carrier_name');
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.pickups.update({
@@ -842,7 +842,7 @@ $purplship->pickups->cancel(
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.pickups.cancel(

@@ -437,6 +437,7 @@ curl --request POST \
   --header 'Content-Type: application/json' \
   --data '{
   "selected_rate_id": "<rat_id>",
+  "label_type": "PDF",
   "payment": {
       "paid_by": "sender"
   }
@@ -448,6 +449,7 @@ curl --request POST \
 ```javascript
 const data = JSON.stringify({
   "selected_rate_id": "<selected_rate_id>",
+  "label_type": "PDF",
   "payment": {
       "paid_by": "sender"
   }
@@ -480,6 +482,7 @@ purplship.api_key = '<api_key>'
 
 purplship.Shipments.purchase({
   "selected_rate_id": "<selected_rate_id>",
+  "label_type": "PDF",
   "payment": {
       "paid_by": "sender"
   }
@@ -494,6 +497,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->purchase(
   [
     "selected_rate_id" => "<selected_rate_id>",
+    "label_type" => "PDF",
     "payment" => [
         "paid_by" => "sender"
     ]
@@ -515,6 +519,7 @@ When successful, the API will respond with a Shipment object serialized in JSON:
     "carrier_name": "canadapost",
     "carrier_id": "canadapost",
     "label": "JVBERi0xLjQKJfbk (Truncated base64) ==",
+    "label_type": "PDF",
     "tracking_number": "123456789012",
     "shipment_identifier": "123456789012",
     "selected_rate": {
