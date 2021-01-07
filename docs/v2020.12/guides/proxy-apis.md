@@ -103,7 +103,7 @@ $purplship->rates->fetch([
 ]);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -184,7 +184,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->tracking->fetch('carrier_name', 'tracking_number', True);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -399,7 +399,7 @@ $purplship->shipping->buyLabel([
 ]);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -530,7 +530,7 @@ $request = [
 $purplship->shipments->voidLabel($request, 'carrier_name');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -643,7 +643,7 @@ $request = [
 $purplship->pickups->schedule($request, 'carrier_name');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -769,7 +769,7 @@ $request = [
 $purplship->pickups->udpate($request, 'carrier_name');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -839,7 +839,7 @@ $purplship->pickups->cancel(
 );
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';

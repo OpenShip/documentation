@@ -45,7 +45,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->list();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -148,7 +148,7 @@ $purplship->shipments->create([
 ]);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -216,7 +216,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->retrieve('<shp_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -266,7 +266,7 @@ $purplship->shipments->setOptions([
 ], '<shp_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -315,7 +315,7 @@ $purplship->shipments->purchase(
 );
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -353,7 +353,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->rates('<shp_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -386,7 +386,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->cancel('<shp_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -419,7 +419,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->pickups();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -499,7 +499,7 @@ $request = [
 $purplship->shipments->schedulePickup($request, 'carrier_name');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -556,7 +556,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->retrievePickup('<pck_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -605,7 +605,7 @@ $request = [
 $purplship->shipments->updatePickup($request, '<pck_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -645,7 +645,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->cancelPickup('<pck_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -678,7 +678,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->trackingStatuses();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -711,7 +711,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->shipments->track('<carrier_name>', '<tracking_number>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -754,7 +754,7 @@ $request = [
 $purplship->shipments->addCustoms($request, '<shp_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -810,7 +810,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->addresses->list();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -861,7 +861,7 @@ $purplship->addresses->create([
 ]);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -903,7 +903,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->addresses->retrieve('<addr_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -942,7 +942,7 @@ $purplship->addresses->update(
 );
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -998,7 +998,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->parcels->list();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1045,7 +1045,7 @@ $purplship->parcels->create([
 ]);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1085,7 +1085,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->parcels->retrieve('<parcl_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1130,7 +1130,7 @@ $purplship->parcels->update(
 );
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1169,7 +1169,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->parcels->discard('<parcl_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1223,7 +1223,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->addresses->list();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1258,7 +1258,7 @@ $purplship->customs->create([
 ]);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1291,7 +1291,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->customs->retrieve('<cust_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1330,7 +1330,7 @@ $purplship->customs->update(
 );
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1366,7 +1366,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->customs->discard('<cust_id>');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -1414,7 +1414,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->carriers->list();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
