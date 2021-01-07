@@ -1,3 +1,5 @@
+# Reference <!-- {docsify-ignore} -->
+
 The Purplship API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, \
 returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
@@ -15,7 +17,7 @@ The Purplship team currently actively maintains the following client libraries
 
 - [purplship-php-client](https://github.com/PurplShip/purplship-php-client)
 - [purplship-python-client](https://github.com/PurplShip/purplship-python-client)
-- [purplship-typescript-client](https://github.com/PurplShip/purplship-typescript-client)
+- [purplship-node](https://github.com/PurplShip/purplship-node)
 
 For any other programming language use our API [OpenAPI specification](https://github.com/PurplShip/purplship-server/tree/main/OpenAPI) to generate a client from the [swagger online editor](https://editor.swagger.io/)
 
@@ -38,7 +40,7 @@ composer require purplship/purplship-php
 #### **Typescript**
 
 ```shell
-yarn add @purplship/purplship
+yarn add purplship
 ```
 
 <!-- tabs:end -->
@@ -75,7 +77,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 ```

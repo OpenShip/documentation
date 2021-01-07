@@ -1,3 +1,5 @@
+# Miscallenous <!-- {docsify-ignore} -->
+
 ## Utils
 
 |       | Endpoints      |
@@ -34,7 +36,7 @@ $purplship->utils->references();
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.utils.references();
@@ -75,7 +77,7 @@ $purplship->utils->printLabel([
 #### **Typescript**
 
 ```javascript
-import Purplship from '@purplship/purplship';
+import Purplship from 'purplship';
 const purplship = new Purplship('API_KEY', 'https://<server_address>/v1');
 
 purplship.tracking.prinLabel({
