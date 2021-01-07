@@ -33,7 +33,7 @@ $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1'
 $purplship->utils->references();
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
@@ -74,7 +74,7 @@ $purplship->utils->printLabel([
 ]);
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';

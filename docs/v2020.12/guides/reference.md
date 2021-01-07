@@ -37,7 +37,7 @@ pip install purplship-python
 composer require purplship/purplship-php
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```shell
 yarn add purplship
@@ -74,7 +74,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $purplship = new \Purplship\Purplship('<api_key>', 'https://<server_address>/v1');
 ```
 
-#### **Typescript**
+#### **Node**
 
 ```javascript
 import Purplship from 'purplship';
